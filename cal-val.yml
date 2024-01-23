@@ -1,0 +1,19 @@
+name: cal-val
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - cartopy
+  - h5py
+  - jupyter
+  - xarray
+  - netcdf4
+  - pandas
+  - matplotlib=3.4.3
+  - proplot=0.9.7
+  - python=3.10
+  - rasterio
+  - skyfield
+  - scikit-image
+  - scikit-learn
+prefix: /opt/miniconda3/envs/cal-val

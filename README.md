@@ -2,7 +2,7 @@
 Code and data supporting the calibration and validation of the Ice Floe Tracker algorithm. 
 
 ## Software setup
-Python scripts and environment. I used `micromamba`, a faster alternative to `conda`, to set up the environment for python scripts. The full list of package versions on my computer for the cal-val environment is included as `cal-val_env_list.txt`. The main external packages needed are `proplot` for images, which at present requires 
+The calibration and validation code includes both Python and Julia scripts. 
 
 
 ## Sample selection
