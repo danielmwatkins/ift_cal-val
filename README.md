@@ -13,6 +13,8 @@ Sample selection is described and carried out in the Jupyter notebook `sample_se
 * Table 1: Study regions (text in Jupyter notebook)
 * Figure 1: Map of study regions
 * Table 2: Number of images of each size
+The notebook `IFT case specifications.ipynb` produces CSV files to be fed into the IFT pipeline with the parameters of scenes to download. The specification files have a "location" column with entries in the format 
+
 
 ## Calibration
 The goal of the calibration is to identify an "optimal" set of parameters for the IFT algorithm. Optimal is in quotes because optimization requires a set of metrics, and there isn't just one set of ways that something can be optimized. Hence, we need to describe a set of metrics, which will be used both for calibration and for reporting the uncertainties in the validation section.
@@ -31,7 +33,7 @@ Key properties that we need to account for, in no particular order
 
 ## Validation data
 - Manually identified floes
-- Manually verified tracking? How should that work?
+- Manually verified tracking? How should that work? Look into automated methods 
 
 
 
