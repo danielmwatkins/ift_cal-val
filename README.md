@@ -6,7 +6,6 @@ The goal of the calibration and validation process is to identify the best choic
 TBD: Overview of IFT algorithm. Stages of the algorithm that need calibrating, and what knobs we can turn.  
 TBD: Overview of the IFT output. What comes out of the algorithm, and what do we need to know to use the data?
 
-
 ## Software setup
 The calibration and validation code includes both Python and Julia scripts. The file `cal-val.yml` contains a list of the package dependencies. Using `micromamba`, you can create an environment with the command 
 
