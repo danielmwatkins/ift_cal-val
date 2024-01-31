@@ -6,7 +6,7 @@ import os
 
 def image_process(manual_path: str, ift_path: str, date: str, 
                 satellite: str, land_mask_path: str, save_images: bool = False):
-
+  
     # Retrieve IFT floes from hdf5 file
     with h5py.File(ift_path, "r") as ift_image:
         properties = ift_image['floe_properties']
@@ -84,6 +84,7 @@ def image_process(manual_path: str, ift_path: str, date: str,
 
         overlaid_im = Image.blend(labeled_image_im, new_img_im, 0.2)
         overlaid_im.save("./out_images/overlaid/overlaid_" + date + satellite + ".jpg")
+
 
     # Compute absolute confusion matrix
 
