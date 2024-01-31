@@ -2,21 +2,19 @@ import imageio.v3 as iio
 import h5py
 from PIL import Image
 import numpy as np
-import random
 import os
 
-def image_process(manual_path: str, ift_path: str, date: str, satellite: str, save_images: bool = False):
-
+def image_process(manual_path: str, ift_path: str, date: str, 
+                satellite: str, land_mask_path: str, save_images: bool = False):
+  
     # Retrieve IFT floes from hdf5 file
     with h5py.File(ift_path, "r") as ift_image:
         properties = ift_image['floe_properties']
 
         labeled_image = properties['labeled_image'][:].astype('uint8')
 
-        for i in range(len(labeled_image)):
-            for j in range(len(labeled_image[i])):
-                if labeled_image[i][j] != 0:
-                    labeled_image[i][j] = 255
+    # Retrieve land mask
+    land_mask_img = iio.imread(land_mask_path)
 
     labeled_image = np.flipud(labeled_image)
     labeled_image = np.rot90(labeled_image, 3)
@@ -31,35 +29,62 @@ def image_process(manual_path: str, ift_path: str, date: str, satellite: str, sa
 
     new_img = np.zeros((len(manual_image), len(manual_image[0])))
 
+    # Loop through pixels in the manually masked image
     for i in range(len(manual_image)):
             for j in range(len(manual_image[i])):
-                if labeled_image[i][j] != 0 and manual_image[i][j][0] != 0:
-                    true_pos += 1
-                    new_img[i][j] = 255
-                elif labeled_image[i][j] == 0 and manual_image[i][j][0] != 0:
-                    new_img[i][j] = 255
-                    false_neg += 1
-                elif labeled_image[i][j] != 0 and manual_image[i][j][0] == 0:
-                    false_pos += 1
+                # Only consider pixels where the landmask is not present when calculating t/f p/n rates.
+                if land_mask_img[i][j][0] == 0:
+                    if labeled_image[i][j] != 0 and manual_image[i][j][0] != 0:
+                        true_pos += 1
+                        labeled_image[i][j] = 255
+                        new_img[i][j] = 255
+                    elif labeled_image[i][j] == 0 and manual_image[i][j][0] != 0:
+                        new_img[i][j] = 255
+                        false_neg += 1
+                    elif labeled_image[i][j] != 0 and manual_image[i][j][0] == 0:
+                        labeled_image[i][j] = 255
+                        false_pos += 1
+                    else:
+                        true_neg += 1
+
+                # For the purposes of output image, black out all landmasked pixels
                 else:
-                    true_neg += 1
+                    if labeled_image[i][j] != 0 and manual_image[i][j][0] != 0:
+                        labeled_image[i][j] = 0
+                        new_img[i][j] = 0
+                    elif labeled_image[i][j] == 0 and manual_image[i][j][0] != 0:
+                        new_img[i][j] = 0
+                    elif labeled_image[i][j] != 0 and manual_image[i][j][0] == 0:
+                        labeled_image[i][j] = 0
 
     manual_size = new_img.shape
     
+    
     if save_images:
-
         if not os.path.exists('./out_images'):
             os.mkdir('./out_images')
+        if not os.path.exists('./out_images/manual'):
+            os.mkdir('./out_images/manual')
+        if not os.path.exists('./out_images/landmask'):
+            os.mkdir('./out_images/landmask')
+        if not os.path.exists('./out_images/ift'):
+            os.mkdir('./out_images/ift')
+        if not os.path.exists('./out_images/overlaid'):
+            os.mkdir('./out_images/overlaid')
 
         new_img_im = Image.fromarray(new_img.astype('uint8'))
-        new_img_im.save("./out_images/results_manual_" + date + satellite + ".jpg")
+        new_img_im.save("./out_images/manual/results_manual_" + date + satellite + ".jpg")
+
+        land_img_im = Image.fromarray(land_mask_img.astype('uint8'))
+        land_img_im.save("./out_images/landmask/results_landmask_" + date + satellite + ".jpg")
 
         labeled_image_im = Image.fromarray(labeled_image)
         labeled_image_im.thumbnail(manual_size)
-        labeled_image_im.save("./out_images/results_ift_" + date + satellite + ".jpg")
+        labeled_image_im.save("./out_images/ift/results_ift_" + date + satellite + ".jpg")
 
         overlaid_im = Image.blend(labeled_image_im, new_img_im, 0.2)
-        overlaid_im.save("./out_images/overlaid_" + date + satellite + ".jpg")
+        overlaid_im.save("./out_images/overlaid/overlaid_" + date + satellite + ".jpg")
+
 
     # Compute absolute confusion matrix
 
