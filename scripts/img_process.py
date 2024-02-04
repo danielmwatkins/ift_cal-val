@@ -31,7 +31,7 @@ def image_process(
 
         pixel_distance = int(round(land_dilation_distance_km * img_size[0] / image_width_km))
         
-        kernel = np.ones((2 * pixel_distance + 1, 2 * pixel_distance + 1), np.uint8)
+        kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (pixel_distance, pixel_distance))
 
         land_mask_img = cv2.dilate(land_mask_img, kernel)
 
