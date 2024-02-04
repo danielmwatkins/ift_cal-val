@@ -36,7 +36,7 @@ def get_images(ift_path, validation_path, land_path):
 
     # Get all images from the cca case overview where floe masks have been generated successfully
     try: 
-        cca_csv_df = pd.read_csv('data/cca_cases_overview.csv')
+        cca_csv_df = pd.read_csv('../data/cca_cases_overview.csv')
     except Exception as e:
         print(e)
         sys.exit(1)

@@ -1,8 +1,4 @@
 from img_process import image_process
-import pandas as pd
-import sys
-import os
-import matplotlib.pyplot as plt
 from tqdm import tqdm
 from getimages import get_images
 
@@ -10,10 +6,10 @@ from getimages import get_images
 def main():
     # Run image processor
 
-    IFT_RESULTS_PATH = 'data/ift_results'
-    VALIDATION_IMG_PATH = 'data/validation_images/labeled_floes_png'
+    IFT_RESULTS_PATH = '../data/ift_results'
+    VALIDATION_IMG_PATH = '../data/validation_images/labeled_floes_png'
 
-    LAND_MASK_PATH = 'data/validation_images/landmask'
+    LAND_MASK_PATH = '../data/validation_images/landmask'
 
     complete_cases = get_images(IFT_RESULTS_PATH, VALIDATION_IMG_PATH, LAND_MASK_PATH)
 
@@ -26,7 +22,7 @@ def main():
 
     for index, row in tqdm(complete_cases.iterrows()):
         pix_conf_mx = image_process(row['manual_path'], row['ift_path'], row['start_date'], 
-        row['satellite'], str(row['land_mask_path']), True)
+                                    row['satellite'], float(row['dx_km']), str(row['land_mask_path']), 4, True)
 
         false_neg.append(pix_conf_mx['f_neg'])
         true_neg.append(pix_conf_mx['t_neg'])

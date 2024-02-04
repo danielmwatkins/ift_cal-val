@@ -3,9 +3,18 @@ import h5py
 from PIL import Image
 import numpy as np
 import os
+import cv2
 
-def image_process(manual_path: str, ift_path: str, date: str, 
-                satellite: str, land_mask_path: str, save_images: bool = False):
+def image_process(
+                manual_path: str, 
+                ift_path: str, 
+                date: str, 
+                satellite: str, 
+                image_width_km: float,
+                land_mask_path: str, 
+                land_dilation_distance_km: float = 0, 
+                save_images: bool = False
+                ):
   
     # Retrieve IFT floes from hdf5 file
     with h5py.File(ift_path, "r") as ift_image:
@@ -13,8 +22,19 @@ def image_process(manual_path: str, ift_path: str, date: str,
 
         labeled_image = properties['labeled_image'][:].astype('uint8')
 
-    # Retrieve land mask
+    img_size = labeled_image.shape
+
+    # Retrieve land mask and dilate if desired.
     land_mask_img = iio.imread(land_mask_path)
+
+    if land_dilation_distance_km != 0:
+
+        pixel_distance = int(round(land_dilation_distance_km * img_size[0] / image_width_km))
+        
+        kernel = np.ones((2 * pixel_distance + 1, 2 * pixel_distance + 1), np.uint8)
+
+        land_mask_img = cv2.dilate(land_mask_img, kernel)
+
 
     labeled_image = np.flipud(labeled_image)
     labeled_image = np.rot90(labeled_image, 3)
@@ -56,8 +76,6 @@ def image_process(manual_path: str, ift_path: str, date: str,
                         new_img[i][j] = 0
                     elif labeled_image[i][j] != 0 and manual_image[i][j][0] == 0:
                         labeled_image[i][j] = 0
-
-    manual_size = new_img.shape
     
     
     if save_images:
@@ -79,7 +97,6 @@ def image_process(manual_path: str, ift_path: str, date: str,
         land_img_im.save("./out_images/landmask/results_landmask_" + date + satellite + ".jpg")
 
         labeled_image_im = Image.fromarray(labeled_image)
-        labeled_image_im.thumbnail(manual_size)
         labeled_image_im.save("./out_images/ift/results_ift_" + date + satellite + ".jpg")
 
         overlaid_im = Image.blend(labeled_image_im, new_img_im, 0.2)
