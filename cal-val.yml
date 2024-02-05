@@ -1,4 +1,4 @@
-name: cal-val
+name: 'cal-val'
 channels:
   - conda-forge
   - defaults

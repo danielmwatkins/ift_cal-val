@@ -17,11 +17,17 @@ For Julia, `IceFloeTracker.jl` requires at least Julia 1.9. Instructions for ins
 TBD: Check whether we need to explicitly include `iJulia` in the `micromamba` yaml file in order to run Julia notebooks.
 
 ## Sample selection
-Sample selection is described and carried out in the Jupyter notebook `sample_selection.ipynb`. The notebook produces the following:
+Sample selection is described and carried out in the Jupyter notebook `sample_selection.ipynb`. We sample scenes from 9 regions spanning the circumpolar Arctic, as seen in the figure below.
+![North polar stereographic map of the Arctic showing the 9 study regions. Regions are marked with color and pattern-coded boxes.](/figures/fig01_region_map.png?raw=true "Map of the sample locations")
+
+
+The notebook produces the following:
 * Table 1: Study regions (text in Jupyter notebook)
 * Figure 1: Map of study regions
 * Table 2: Number of images of each size
-The notebook `IFT case specifications.ipynb` produces CSV files to be fed into the IFT pipeline with the parameters of scenes to download. The specification files have a "location" column with entries in the format 
+The notebook `IFT case specifications.ipynb` produces CSV files to be fed into the IFT pipeline with the parameters of scenes to download. The specification files have a "location" column with entries in the format `<region_name>_<case_number>`.
+
+
 
 
 ## Calibration
