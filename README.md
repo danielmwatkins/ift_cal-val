@@ -19,7 +19,7 @@ TBD: Check whether we need to explicitly include `iJulia` in the `micromamba` ya
 ## Sample selection
 Sample selection is described and carried out in the Jupyter notebook `sample_selection.ipynb`. We sample scenes from 9 regions spanning the circumpolar Arctic, as seen in the figure below.
 <!-- ![North polar stereographic map of the Arctic showing the 9 study regions. Regions are marked with color and pattern-coded boxes.](/figures/fig01_region_map.png?raw=true "Map of the sample locations") -->
-<img align="right" src="/figures/fig01_region_map.png" width="150">
+<img align="right" src="/figures/fig01_region_map.png" width="300">
 
 The notebook produces the following:
 * Table 1: Study regions (text in Jupyter notebook)
