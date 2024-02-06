@@ -1,17 +1,17 @@
+"""
+Specify the center points and region names in the table "data". From there, the script identifies the location of the large-scale bounding box corners defining the study regions. 
+"""
+
 import pandas as pd
-import proplot as pplt
 import pyproj
 import numpy as np
 import os
-import xarray as xr
 import warnings
-import cartopy.crs as ccrs
 
 warnings.simplefilter('ignore')
-np.random.seed = 20230922
 
 # Define the center coordinates and names for each region here
-columns = ['location',
+columns = ['region',
            'center_lat',
            'center_lon']
 
@@ -25,23 +25,11 @@ data = [['bering_strait', 65,  -170],
         ['laptev_sea',  75, 125],
         ['chukchi-east_siberian_sea', 75,   166]]
 
-def draw_box(center_lon, center_lat, length_x, length_y, return_coords='stere'):
-    """Return the corner coordinates for a box centered at center_lon, center_lat
-    with side lengths given by length_x and length_y."""
-    
-    data = find_box(center_lon, center_lat, length_x, length_y, return_coords)
-
-    if return_coords=='stere':
-        return([data['left_x'], data['left_x'], data['right_x'], data['right_x'], data['left_x']],
-               [data['lower_y'], data['top_y'], data['top_y'], data['lower_y'], data['lower_y']])
-    else:
-        return (data[['lower_left_lon', 'top_left_lon', 'top_right_lon', 'lower_right_lon', 'lower_left_lon']],
-                data[['lower_left_lat', 'top_left_lat', 'top_right_lat', 'lower_right_lat', 'lower_left_lat']])
-
 def find_box(center_lon, center_lat, length_x, length_y, return_coords='stere'):
-    """Find the coordinates of each corner for a box centered at center_lon, center_lat with
-    side lengths in meters specified by length_x and length_y. If return_coords is stere, then
-    use the NSIDC polar stereographic, otherwise return latitude and longitude."""
+    """Find the coordinates of each corner for a box centered at center_lon,
+    center_lat with side lengths in meters specified by length_x and length_y.
+    If return_coords is stere, then use the NSIDC polar stereographic,
+    otherwise return latitude and longitude."""
     
     crs0 = pyproj.CRS('WGS84')
     crs1 = pyproj.CRS('epsg:3413')
@@ -63,18 +51,16 @@ def find_box(center_lon, center_lat, length_x, length_y, return_coords='stere'):
     return pd.Series([topleft_lat, topright_lat, bottomleft_lat, bottomright_lat,
                       topleft_lon, topright_lon, bottomleft_lon, bottomright_lon,
                       left, right, bottom, top],
-                      index=['top_left_lat', 'top_right_lat', 'lower_left_lat', 'lower_right_lat',
-                             'top_left_lon', 'top_right_lon', 'lower_left_lon', 'lower_right_lon',
-                             'left_x', 'right_x', 'lower_y', 'top_y']).round(5)
+                      index=['top_left_lat', 'top_right_lat',
+                             'lower_left_lat', 'lower_right_lat',
+                             'top_left_lon', 'top_right_lon',
+                             'lower_left_lon', 'lower_right_lon',
+                             'left_x', 'right_x',
+                             'lower_y', 'top_y']).round(5)
 
-locations = pd.DataFrame(data, columns=columns).set_index('location')
+locations = pd.DataFrame(data, columns=columns).set_index('region')
 locations = locations.sort_index()
 
-# Add colors using proplot cycle
-colors = {region: c['color'] for region, c in zip(
-            locations.index,
-            pplt.Cycle('dark2', len(locations)))}
-locations['color'] = [colors[r] for r in locations.index]
 
 locations['center_x'] = np.nan
 locations['center_y'] = np.nan
@@ -90,29 +76,58 @@ for region in locations.index:
 
 locations['print_title'] = [c.replace('_', ' ').title().replace('Of', 'of') for c in locations.index]
 
-locations_pretty = locations.copy()
-locations_pretty.rename({'center_lat': 'Latitude',
-                  'center_lon': 'Longitude'}, inplace=True, axis=1)
-locations_pretty.set_index('print_title', drop=True, inplace=True)
-
-print(locations_pretty.loc[:, ['Latitude', 'Longitude']].style.to_latex(hrules=True))
 
 # Add columns for bounding box coordinates to the locations
 # These will be used in defining the case boundaries.
-new_columns = ['top_left_lat', 'top_left_lon', 'lower_left_lat', 'lower_left_lon',
-               'top_right_lat', 'top_right_lon', 'lower_right_lat', 'lower_right_lon',
-               'left_x', 'right_x', 'lower_y', 'top_y']
+# Can adjust this if you want the lat/lon for the bounding boxes.
+# new_columns = ['top_left_lat', 'top_left_lon', 'lower_left_lat', 'lower_left_lon',
+#                'top_right_lat', 'top_right_lon', 'lower_right_lat', 'lower_right_lon',
+#                'left_x', 'right_x', 'lower_y', 'top_y']
+
+new_columns = ['left_x', 'right_x', 'lower_y', 'top_y']
+
+# initialize
 for c in new_columns:
     locations[c] = np.nan
-locations['dx'] = np.nan
-locations['dy'] = np.nan
+locations['dx_km'] = 0
+locations['dy_km'] = 0
 
-corner_coords = find_box(center_lon=lon,
-                         center_lat=lat,
+for site, data in locations.iterrows():
+    
+
+    base_length=1500e3
+    if site == 'baffin_bay':
+        xlength = base_length * 0.75
+        ylength = base_length * 1/0.75
+        
+    elif site == 'greenland_sea':
+        xlength = base_length * 0.9
+        ylength = base_length * 1/0.9
+
+    else:
+        xlength = base_length
+        ylength = base_length
+        
+    corner_coords = find_box(center_lon=data.center_lon,
+                         center_lat=data.center_lat,
                          length_x=xlength,
                          length_y=ylength)
-for c in new_columns:
-    locations.loc[site, c] = corner_coords[c]
+
+    locations.loc[site, 'dx_km'] = int(np.round(xlength/1e3, 0))
+    locations.loc[site, 'dy_km'] = int(np.round(ylength/1e3, 0))
+    
+    for c in new_columns:    
+        locations.loc[site, c] = corner_coords[c]
+        
+locations_pretty = locations.copy()
+locations_pretty.rename({'center_lat': 'Latitude',
+                  'center_lon': 'Longitude',
+                         'dx_km': '$\Delta X$ (km)',
+                         'dy_km': '$\Delta Y$ (km)'
+                        }, inplace=True, axis=1)
+locations_pretty.set_index('print_title', drop=True, inplace=True)
+
+print(locations_pretty.loc[:, ['Latitude', 'Longitude', '$\Delta X$ (km)', '$\Delta Y$ (km)']].style.to_latex(hrules=True))
     
 # Save the names and mid points
 locations.loc[:, ['center_lat', 'center_lon', 'center_x', 'center_y', 'left_x', 'right_x', 'lower_y', 'top_y']].to_csv('../data/site_locations.csv')
