@@ -1,43 +1,43 @@
 case_number,long_name,region,start_date,end_date,satellite,dx_km,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction,cloud_category,artifacts,qa_analyst,qa_reviewer,fl_analyst,fl_reviewer,notes
-295,295-hudson_bay-100km_by_100km-20030825-20030826,hudson_bay,2003-08-25,2003-08-26,aqua,100,no,,no,0.5,scattered,no,emma,,,,
-295,295-hudson_bay-100km_by_100km-20030825-20030826,hudson_bay,2003-08-25,2003-08-26,terra,100,no,,no,0.4,scattered,yes,emma,,,,
-296,296-hudson_bay-100km_by_100km-20040706-20040707,hudson_bay,2004-07-06,2004-07-07,aqua,100,yes,,yes,0.9,scattered,no,emma,,,,
-296,296-hudson_bay-100km_by_100km-20040706-20040707,hudson_bay,2004-07-06,2004-07-07,terra,100,yes,,yes,0.9,scattered,no,emma,,,,
-297,297-hudson_bay-100km_by_100km-20040903-20040904,hudson_bay,2004-09-03,2004-09-04,aqua,100,no,,no,0.7,scattered,no,emma,,,,
-297,297-hudson_bay-100km_by_100km-20040903-20040904,hudson_bay,2004-09-03,2004-09-04,terra,100,no,,no,0.7,scattered,no,emma,,,,
-298,298-hudson_bay-100km_by_100km-20050409-20050410,hudson_bay,2005-04-09,2005-04-10,aqua,100,yes,,yes,0.1,thin,no,emma,,,,
-298,298-hudson_bay-100km_by_100km-20050409-20050410,hudson_bay,2005-04-09,2005-04-10,terra,100,yes,,yes,0.1,thin,no,emma,,,,
-300,300-hudson_bay-100km_by_100km-20050613-20050614,hudson_bay,2005-06-13,2005-06-14,aqua,100,yes,,yes,0.1,scattered,no,emma,,,,
-300,300-hudson_bay-100km_by_100km-20050613-20050614,hudson_bay,2005-06-13,2005-06-14,terra,100,yes,,yes,0.2,scattered,no,emma,,,,
-301,301-hudson_bay-100km_by_100km-20060329-20060330,hudson_bay,2006-03-29,2006-03-30,aqua,100,yes,,yes,0.9,scattered,no,emma,,,,
-301,301-hudson_bay-100km_by_100km-20060329-20060330,hudson_bay,2006-03-29,2006-03-30,terra,100,yes,,yes,0.9,scattered,no,emma,,,,
-302,302-hudson_bay-100km_by_100km-20060403-20060404,hudson_bay,2006-04-03,2006-04-04,aqua,100,yes,,yes,0.8,scattered,no,emma,,,,
-302,302-hudson_bay-100km_by_100km-20060403-20060404,hudson_bay,2006-04-03,2006-04-04,terra,100,yes,,yes,0.9,scattered,yes,emma,,,,
-309,309-hudson_bay-100km_by_100km-20060918-20060919,hudson_bay,2006-09-18,2006-09-19,aqua,100,no,,no,0.6,scattered,no,emma,,,,
-309,309-hudson_bay-100km_by_100km-20060918-20060919,hudson_bay,2006-09-18,2006-09-19,terra,100,no,,no,0.6,scattered,yes,emma,,,,
-311,311-hudson_bay-100km_by_100km-20070428-20070429,hudson_bay,2007-04-28,2007-04-29,aqua,100,yes,,yes,1.0,scattered,no,emma,,,,
-311,311-hudson_bay-100km_by_100km-20070428-20070429,hudson_bay,2007-04-28,2007-04-29,terra,100,yes,,yes,1.0,scattered,yes,emma,,,,
-318,318-hudson_bay-100km_by_100km-20080813-20080814,hudson_bay,2008-08-13,2008-08-14,aqua,100,yes,,yes,0.8,scattered,yes,emma,,,,
-318,318-hudson_bay-100km_by_100km-20080813-20080814,hudson_bay,2008-08-13,2008-08-14,terra,100,yes,,yes,0.8,scattered,no,emma,,,,
-319,319-hudson_bay-100km_by_100km-20090605-20090606,hudson_bay,2009-06-05,2009-06-06,aqua,100,yes,,yes,0.8,scattered,no,emma,,,,
-319,319-hudson_bay-100km_by_100km-20090605-20090606,hudson_bay,2009-06-05,2009-06-06,terra,100,yes,,yes,0.9,scattered,yes,emma,,,,
-320,320-hudson_bay-100km_by_100km-20090615-20090616,hudson_bay,2009-06-15,2009-06-16,aqua,100,yes,,yes,0.9,scattered,no,emma,,,,
-320,320-hudson_bay-100km_by_100km-20090615-20090616,hudson_bay,2009-06-15,2009-06-16,terra,100,yes,,yes,0.9,scattered,yes,emma,,,,
-324,324-hudson_bay-100km_by_100km-20110323-20110324,hudson_bay,2011-03-23,2011-03-24,aqua,100,yes,,yes,0.9,scattered,no,emma,,,,
-324,324-hudson_bay-100km_by_100km-20110323-20110324,hudson_bay,2011-03-23,2011-03-24,terra,100,yes,,yes,0.9,scattered,no,emma,,,,
-325,325-hudson_bay-100km_by_100km-20110327-20110328,hudson_bay,2011-03-27,2011-03-28,aqua,100,yes,,yes,0.2,thin,no,emma,,,,
-325,325-hudson_bay-100km_by_100km-20110327-20110328,hudson_bay,2011-03-27,2011-03-28,terra,100,yes,,yes,0.2,thin,no,emma,,,,
-329,329-hudson_bay-100km_by_100km-20130510-20130511,hudson_bay,2013-05-10,2013-05-11,aqua,100,yes,,yes,0.8,scattered,no,emma,,,,
-329,329-hudson_bay-100km_by_100km-20130510-20130511,hudson_bay,2013-05-10,2013-05-11,terra,100,yes,,yes,0.8,scattered,no,emma,,,,
-330,330-hudson_bay-100km_by_100km-20150720-20150721,hudson_bay,2015-07-20,2015-07-21,aqua,100,no,,no,0.9,opaque,no,emma,,,,
-330,330-hudson_bay-100km_by_100km-20150720-20150721,hudson_bay,2015-07-20,2015-07-21,terra,100,no,,no,1.0,opaque,no,emma,,,,
-334,334-hudson_bay-100km_by_100km-20170716-20170717,hudson_bay,2017-07-16,2017-07-17,aqua,100,,,,,,,emma,,,,missing image
-334,334-hudson_bay-100km_by_100km-20170716-20170717,hudson_bay,2017-07-16,2017-07-17,terra,100,yes,,yes,0.7,scattered,no,emma,,,,no falsecolor 
-339,339-hudson_bay-100km_by_100km-20200509-20200510,hudson_bay,2020-05-09,2020-05-10,aqua,100,yes,,yes,0.1,scattered,no,emma,,,,
-339,339-hudson_bay-100km_by_100km-20200509-20200510,hudson_bay,2020-05-09,2020-05-10,terra,100,yes,,yes,0.1,scattered,no,emma,,,,
-340,340-hudson_bay-100km_by_100km-20210518-20210519,hudson_bay,2021-05-18,2021-05-19,aqua,100,yes,,yes,0.9,opaque,no,emma,,,,
-340,340-hudson_bay-100km_by_100km-20210518-20210519,hudson_bay,2021-05-18,2021-05-19,terra,100,yes,,yes,0.9,opaque,no,emma,,,,
-341,341-hudson_bay-100km_by_100km-20210915-20210916,hudson_bay,2021-09-15,2021-09-16,aqua,100,yes,,no,0.5,scattered,no,emma,,,,
-341,341-hudson_bay-100km_by_100km-20210915-20210916,hudson_bay,2021-09-15,2021-09-16,terra,100,yes,,no,0.4,scattered,no,emma,,,,
-342,342-hudson_bay-100km_by_100km-20220826-20220827,hudson_bay,2022-08-26,2022-08-27,aqua,100,yes,,yes,0.8,scattered,no,emma,,,,
-342,342-hudson_bay-100km_by_100km-20220826-20220827,hudson_bay,2022-08-26,2022-08-27,terra,100,yes,,yes,0.8,scattered,no,emma,,,,
+295,295-hudson_bay-100km_by_100km-20030825-20030826,hudson_bay,2003-08-25,2003-08-26,aqua,100,no,no,no,0.6,scattered,no,emma,daniel,,,
+295,295-hudson_bay-100km_by_100km-20030825-20030826,hudson_bay,2003-08-25,2003-08-26,terra,100,no,no,no,0.4,scattered,yes,emma,daniel,,,
+296,296-hudson_bay-100km_by_100km-20040706-20040707,hudson_bay,2004-07-06,2004-07-07,aqua,100,yes,no,yes,0.9,scattered,no,emma,daniel,,,
+296,296-hudson_bay-100km_by_100km-20040706-20040707,hudson_bay,2004-07-06,2004-07-07,terra,100,yes,no,yes,0.9,scattered,no,emma,daniel,,,
+297,297-hudson_bay-100km_by_100km-20040903-20040904,hudson_bay,2004-09-03,2004-09-04,aqua,100,no,no,no,0.8,scattered,no,emma,daniel,,,
+297,297-hudson_bay-100km_by_100km-20040903-20040904,hudson_bay,2004-09-03,2004-09-04,terra,100,no,no,no,0.8,scattered,no,emma,daniel,,,
+298,298-hudson_bay-100km_by_100km-20050409-20050410,hudson_bay,2005-04-09,2005-04-10,aqua,100,yes,yes,yes,0.1,thin,no,emma,daniel,,,
+298,298-hudson_bay-100km_by_100km-20050409-20050410,hudson_bay,2005-04-09,2005-04-10,terra,100,yes,yes,yes,0.1,thin,no,emma,daniel,,,
+300,300-hudson_bay-100km_by_100km-20050613-20050614,hudson_bay,2005-06-13,2005-06-14,aqua,100,yes,yes,yes,0.1,scattered,no,emma,daniel,,,
+300,300-hudson_bay-100km_by_100km-20050613-20050614,hudson_bay,2005-06-13,2005-06-14,terra,100,yes,yes,yes,0.2,scattered,no,emma,daniel,,,
+301,301-hudson_bay-100km_by_100km-20060329-20060330,hudson_bay,2006-03-29,2006-03-30,aqua,100,yes,no,yes,0.9,scattered,no,emma,daniel,,,
+301,301-hudson_bay-100km_by_100km-20060329-20060330,hudson_bay,2006-03-29,2006-03-30,terra,100,yes,no,yes,0.9,scattered,no,emma,daniel,,,
+302,302-hudson_bay-100km_by_100km-20060403-20060404,hudson_bay,2006-04-03,2006-04-04,aqua,100,yes,no,yes,0.8,scattered,no,emma,daniel,,,
+302,302-hudson_bay-100km_by_100km-20060403-20060404,hudson_bay,2006-04-03,2006-04-04,terra,100,yes,no,yes,0.9,scattered,yes,emma,daniel,,,
+309,309-hudson_bay-100km_by_100km-20060918-20060919,hudson_bay,2006-09-18,2006-09-19,aqua,100,no,no,no,0.6,scattered,no,emma,daniel,,,
+309,309-hudson_bay-100km_by_100km-20060918-20060919,hudson_bay,2006-09-18,2006-09-19,terra,100,no,no,no,0.6,scattered,yes,emma,daniel,,,
+311,311-hudson_bay-100km_by_100km-20070428-20070429,hudson_bay,2007-04-28,2007-04-29,aqua,100,yes,no,yes,1,thin,no,emma,daniel,,,changed clouds to thin
+311,311-hudson_bay-100km_by_100km-20070428-20070429,hudson_bay,2007-04-28,2007-04-29,terra,100,yes,no,yes,1,thin,yes,emma,daniel,,,changed clouds to thin
+318,318-hudson_bay-100km_by_100km-20080813-20080814,hudson_bay,2008-08-13,2008-08-14,aqua,100,yes,yes,yes,0.4,scattered,yes,emma,daniel,,,
+318,318-hudson_bay-100km_by_100km-20080813-20080814,hudson_bay,2008-08-13,2008-08-14,terra,100,yes,yes,yes,0.4,scattered,no,emma,daniel,,,
+319,319-hudson_bay-100km_by_100km-20090605-20090606,hudson_bay,2009-06-05,2009-06-06,aqua,100,yes,yes,yes,0.8,thin,no,emma,daniel,,,changed clouds to thin
+319,319-hudson_bay-100km_by_100km-20090605-20090606,hudson_bay,2009-06-05,2009-06-06,terra,100,yes,yes,yes,0.9,opaque,yes,emma,daniel,,,changed clouds to opaque
+320,320-hudson_bay-100km_by_100km-20090615-20090616,hudson_bay,2009-06-15,2009-06-16,aqua,100,yes,no,no,0.9,scattered,no,emma,daniel,,,"changed visible_floes to ""no"""
+320,320-hudson_bay-100km_by_100km-20090615-20090616,hudson_bay,2009-06-15,2009-06-16,terra,100,yes,no,no,0.9,scattered,yes,emma,daniel,,,"changed visible_floes to ""no"""
+324,324-hudson_bay-100km_by_100km-20110323-20110324,hudson_bay,2011-03-23,2011-03-24,aqua,100,yes,no,yes,0.9,scattered,no,emma,daniel,,,
+324,324-hudson_bay-100km_by_100km-20110323-20110324,hudson_bay,2011-03-23,2011-03-24,terra,100,yes,no,yes,0.9,scattered,no,emma,daniel,,,
+325,325-hudson_bay-100km_by_100km-20110327-20110328,hudson_bay,2011-03-27,2011-03-28,aqua,100,yes,yes,yes,0.2,thin,no,emma,daniel,,,
+325,325-hudson_bay-100km_by_100km-20110327-20110328,hudson_bay,2011-03-27,2011-03-28,terra,100,yes,yes,yes,0.2,thin,no,emma,daniel,,,
+329,329-hudson_bay-100km_by_100km-20130510-20130511,hudson_bay,2013-05-10,2013-05-11,aqua,100,yes,yes,yes,0.8,thin,no,emma,daniel,,,changed clouds to thin
+329,329-hudson_bay-100km_by_100km-20130510-20130511,hudson_bay,2013-05-10,2013-05-11,terra,100,yes,yes,yes,0.8,thin,no,emma,daniel,,,changed clouds to thin
+330,330-hudson_bay-100km_by_100km-20150720-20150721,hudson_bay,2015-07-20,2015-07-21,aqua,100,no,no,no,0.9,opaque,no,emma,daniel,,,
+330,330-hudson_bay-100km_by_100km-20150720-20150721,hudson_bay,2015-07-20,2015-07-21,terra,100,no,no,no,1,opaque,no,emma,daniel,,,
+334,334-hudson_bay-100km_by_100km-20170716-20170717,hudson_bay,2017-07-16,2017-07-17,aqua,100,,,,,,,emma,daniel,,,missing image
+334,334-hudson_bay-100km_by_100km-20170716-20170717,hudson_bay,2017-07-16,2017-07-17,terra,100,yes,no,yes,0.7,scattered,no,emma,daniel,,,"no falsecolor, shape is wrong"
+339,339-hudson_bay-100km_by_100km-20200509-20200510,hudson_bay,2020-05-09,2020-05-10,aqua,100,yes,yes,yes,0.1,scattered,no,emma,daniel,,,
+339,339-hudson_bay-100km_by_100km-20200509-20200510,hudson_bay,2020-05-09,2020-05-10,terra,100,yes,yes,yes,0.1,scattered,no,emma,daniel,,,
+340,340-hudson_bay-100km_by_100km-20210518-20210519,hudson_bay,2021-05-18,2021-05-19,aqua,100,yes,yes,yes,0.9,opaque,no,emma,daniel,,,
+340,340-hudson_bay-100km_by_100km-20210518-20210519,hudson_bay,2021-05-18,2021-05-19,terra,100,yes,yes,yes,0.9,opaque,no,emma,daniel,,,
+341,341-hudson_bay-100km_by_100km-20210915-20210916,hudson_bay,2021-09-15,2021-09-16,aqua,100,no,no,no,0.5,scattered,no,emma,daniel,,,"changed visible_sea_ice to ""no"""
+341,341-hudson_bay-100km_by_100km-20210915-20210916,hudson_bay,2021-09-15,2021-09-16,terra,100,no,no,no,0.4,scattered,no,emma,daniel,,,"changed visible_sea_ice to ""no"""
+342,342-hudson_bay-100km_by_100km-20220826-20220827,hudson_bay,2022-08-26,2022-08-27,aqua,100,no,no,no,0.8,scattered,no,emma,daniel,,,"changed visible_sea_ice to ""no"""
+342,342-hudson_bay-100km_by_100km-20220826-20220827,hudson_bay,2022-08-26,2022-08-27,terra,100,no,no,no,0.8,scattered,no,emma,daniel,,,"changed visible_sea_ice to ""no"""

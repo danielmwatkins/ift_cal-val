@@ -8,6 +8,8 @@ warnings.simplefilter('ignore')
 locations = pd.read_csv('../data/site_locations.csv', index_col=0)
 
 pplt.rc['reso'] = 'med'
+pplt.rc['cartopy.circular'] = False
+
 colors = {region: c['color'] for region, c in zip(
             locations.index,
             pplt.Cycle('dark2', len(locations)))}
