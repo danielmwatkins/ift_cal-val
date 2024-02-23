@@ -1,0 +1,16 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 743355
+##  Job Name : pulljuliaimage.20240222T1657Z.bering_strait/run1
+##  Nodelist : node1926
+##      CPUs : 
+##  Mem/Node : 32768 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Thu Feb 22 11:57:20 AM EST 2024
+###############################################################################
+Workflow : bering_strait/run1
+Job : 20240222T1657Z/pulljuliaimage/01 (try 1)
+User@Host: dwatkin2@node1926.oscar.ccv.brown.edu
+
+2024-02-22T11:57:27-05:00 INFO - started
+2024-02-22T11:57:46-05:00 INFO - succeeded
+[H[2J[3J

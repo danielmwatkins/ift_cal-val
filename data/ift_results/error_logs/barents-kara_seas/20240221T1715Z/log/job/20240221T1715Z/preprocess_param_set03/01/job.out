@@ -1,0 +1,15 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 707495
+##  Job Name : preprocess_param_set03.20240221T1715Z.barents-kara_seas/run1
+##  Nodelist : node2332
+##      CPUs : 
+##   Mem/CPU : 12288 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Wed Feb 21 12:36:08 PM EST 2024
+###############################################################################
+Workflow : barents-kara_seas/run1
+Job : 20240221T1715Z/preprocess_param_set03/01 (try 1)
+User@Host: dwatkin2@node2332.oscar.ccv.brown.edu
+
+2024-02-21T12:36:10-05:00 INFO - started
+[H[2J[3J

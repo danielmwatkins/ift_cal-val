@@ -1,0 +1,19 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 743403
+##  Job Name : soit_param_set19.20240222T1657Z.bering_strait/run1
+##  Nodelist : node1742
+##      CPUs : 
+##  Mem/Node : 12288 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Thu Feb 22 12:21:25 PM EST 2024
+###############################################################################
+Workflow : bering_strait/run1
+Job : 20240222T1657Z/soit_param_set19/01 (try 1)
+User@Host: dwatkin2@node1742.oscar.ccv.brown.edu
+
+2024-02-22T12:21:28-05:00 INFO - started
+Outpath /tmp
+Timeframe starts on ['06', '28', '2020'], and ends on ['06', '29', '2020']
+Coordinates (x, y): (71.50592842, -164.2611986)
+2024-02-22T12:21:30-05:00 INFO - succeeded
+[H[2J[3J

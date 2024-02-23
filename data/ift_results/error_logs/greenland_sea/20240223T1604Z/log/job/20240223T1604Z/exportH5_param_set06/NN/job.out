@@ -1,0 +1,17 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 762110
+##  Job Name : exportH5_param_set06.20240223T1604Z.greenland_sea/run1
+##  Nodelist : node2347
+##      CPUs : 
+##  Mem/Node : 18432 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Fri Feb 23 11:49:09 AM EST 2024
+###############################################################################
+Workflow : greenland_sea/run1
+Job : 20240223T1604Z/exportH5_param_set06/01 (try 1)
+User@Host: dwatkin2@node2347.oscar.ccv.brown.edu
+
+2024-02-23T11:49:12-05:00 INFO - started
+  4.343319 seconds (3.14 M allocations: 215.573 MiB, 2.82% gc time, 88.79% compilation time: 4% of which was recompilation)
+2024-02-23T11:49:37-05:00 INFO - succeeded
+[H[2J[3J

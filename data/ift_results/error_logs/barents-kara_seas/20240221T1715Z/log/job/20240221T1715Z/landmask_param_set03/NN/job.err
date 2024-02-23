@@ -1,0 +1,360 @@
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for ColorVectorSpace [c3611d14-8923-5661-9e6a-0046d554d3a4]
+│   exception = Required dependency SpecialFunctions [276daf66-3868-5448-9aa4-cd146d93841b] failed to load from a cache file.
+└ @ Base loading.jl:1818
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for MosaicViews [e94cdb99-869f-56ef-bcf0-1ae2bcbe0389]
+│   exception = Required dependency StackViews [cae243ae-269e-4f55-b966-ac2d0dc13c15] failed to load from a cache file.
+└ @ Base loading.jl:1818
+┌ Warning: Module ImageCore with build ID ffffffff-ffff-ffff-000d-3f74236d509f is missing from the cache.
+│ This may mean ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for DataStructures [864edb3b-99cc-5e75-8d2d-829cb0a9cfe8]
+│   exception = Required dependency Compat [34da2185-b29b-5c13-b0c7-acf172513d20] failed to load from a cache file.
+└ @ Base loading.jl:1818
+┌ Warning: Module ImageCore with build ID ffffffff-ffff-ffff-000d-3f74236d509f is missing from the cache.
+│ This may mean ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module WoodburyMatrices with build ID fafbfcfd-2ed9-747c-000d-4003bb7a4fd2 is missing from the cache.
+│ This may mean WoodburyMatrices [efce3f68-66dc-5838-9240-27a6d6f5f9b6] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module Ratios with build ID fafbfcfd-f91a-9c35-000d-3f798b1e0642 is missing from the cache.
+│ This may mean Ratios [c84ed2f1-dad5-54f0-aa8e-dbefe2724439] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ChainRulesCore with build ID fafbfcfd-45fb-fd0e-000d-3f79e62d8b66 is missing from the cache.
+│ This may mean ChainRulesCore [d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ChainRulesCore with build ID fafbfcfd-45fb-fd0e-000d-3f79e62d8b66 is missing from the cache.
+│ This may mean ChainRulesCore [d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ChainRulesCore with build ID fafbfcfd-45fb-fd0e-000d-3f79e62d8b66 is missing from the cache.
+│ This may mean ChainRulesCore [d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ChainRulesCore with build ID fafbfcfd-45fb-fd0e-000d-3f79e62d8b66 is missing from the cache.
+│ This may mean ChainRulesCore [d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ChainRulesCore with build ID fafbfcfd-45fb-fd0e-000d-3f79e62d8b66 is missing from the cache.
+│ This may mean ChainRulesCore [d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for AxisArrays [39de3d68-74b9-583c-8d2d-e117c070f3a9]
+│   exception = Required dependency IterTools [c8e1da08-722c-5040-9ed9-7db0dc04731e] failed to load from a cache file.
+└ @ Base loading.jl:1818
+┌ Warning: Module ImageAxes with build ID ffffffff-ffff-ffff-000d-3f7c9c6e319f is missing from the cache.
+│ This may mean ImageAxes [2803e5a7-5153-5ecf-9a86-9b4c37f5f5ac] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for FFTW [7a1cc6ca-52ef-59f5-83cd-3a7055c09341]
+│   exception = Required dependency FFTW_jll [f5851436-0d7a-5f13-b9de-f02708fd171a] failed to load from a cache file.
+└ @ Base loading.jl:1818
+┌ Warning: Module ImageCore with build ID ffffffff-ffff-ffff-000d-3f74236d509f is missing from the cache.
+│ This may mean ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ImageCore with build ID ffffffff-ffff-ffff-000d-3f74236d509f is missing from the cache.
+│ This may mean ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ChainRulesCore with build ID fafbfcfd-45fb-fd0e-000d-3f79e62d8b66 is missing from the cache.
+│ This may mean ChainRulesCore [d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ImageCore with build ID ffffffff-ffff-ffff-000d-3f74236d509f is missing from the cache.
+│ This may mean ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ImageCore with build ID ffffffff-ffff-ffff-000d-3f74236d509f is missing from the cache.
+│ This may mean ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module StaticArraysStatisticsExt with build ID fafbfcfd-3656-4b07-000d-3f742e22ff18 is missing from the cache.
+│ This may mean StaticArraysStatisticsExt [3453fcb0-342e-5e4a-a93b-f2e19ba3ba0f] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Error: Error during loading of extension StaticArraysStatisticsExt of StaticArrays, use `Base.retry_load_extensions()` to retry.
+│   exception =
+│    1-element ExceptionStack:
+│    Declaring __precompile__(false) is not allowed in files that are being precompiled.
+│    Stacktrace:
+│      [1] _require(pkg::Base.PkgId, env::Nothing)
+│        @ Base ./loading.jl:1797
+│      [2] _require_prelocked(uuidkey::Base.PkgId, env::Nothing)
+│        @ Base ./loading.jl:1660
+│      [3] _require_prelocked(uuidkey::Base.PkgId)
+│        @ Base ./loading.jl:1658
+│      [4] run_extension_callbacks(extid::Base.ExtensionId)
+│        @ Base ./loading.jl:1255
+│      [5] run_extension_callbacks(pkgid::Base.PkgId)
+│        @ Base ./loading.jl:1290
+│      [6] run_package_callbacks(modkey::Base.PkgId)
+│        @ Base ./loading.jl:1124
+│      [7] _require_prelocked(uuidkey::Base.PkgId, env::String)
+│        @ Base ./loading.jl:1667
+│      [8] macro expansion
+│        @ ./loading.jl:1648 [inlined]
+│      [9] macro expansion
+│        @ ./lock.jl:267 [inlined]
+│     [10] require(into::Module, mod::Symbol)
+│        @ Base ./loading.jl:1611
+│     [11] include
+│        @ ./Base.jl:457 [inlined]
+│     [12] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::String)
+│        @ Base ./loading.jl:2049
+│     [13] top-level scope
+│        @ stdin:3
+│     [14] eval
+│        @ ./boot.jl:370 [inlined]
+│     [15] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+│        @ Base ./loading.jl:1903
+│     [16] include_string
+│        @ ./loading.jl:1913 [inlined]
+│     [17] exec_options(opts::Base.JLOptions)
+│        @ Base ./client.jl:305
+│     [18] _start()
+│        @ Base ./client.jl:522
+└ @ Base loading.jl:1261
+┌ Warning: Module ImageCore with build ID ffffffff-ffff-ffff-000d-3f74236d509f is missing from the cache.
+│ This may mean ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module StaticArraysStatisticsExt with build ID fafbfcfd-3656-4b07-000d-3f742e22ff18 is missing from the cache.
+│ This may mean StaticArraysStatisticsExt [3453fcb0-342e-5e4a-a93b-f2e19ba3ba0f] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Error: Error during loading of extension StaticArraysStatisticsExt of StaticArrays, use `Base.retry_load_extensions()` to retry.
+│   exception =
+│    1-element ExceptionStack:
+│    Declaring __precompile__(false) is not allowed in files that are being precompiled.
+│    Stacktrace:
+│      [1] _require(pkg::Base.PkgId, env::Nothing)
+│        @ Base ./loading.jl:1797
+│      [2] _require_prelocked(uuidkey::Base.PkgId, env::Nothing)
+│        @ Base ./loading.jl:1660
+│      [3] _require_prelocked(uuidkey::Base.PkgId)
+│        @ Base ./loading.jl:1658
+│      [4] run_extension_callbacks(extid::Base.ExtensionId)
+│        @ Base ./loading.jl:1255
+│      [5] run_extension_callbacks(pkgid::Base.PkgId)
+│        @ Base ./loading.jl:1290
+│      [6] run_package_callbacks(modkey::Base.PkgId)
+│        @ Base ./loading.jl:1124
+│      [7] _tryrequire_from_serialized(modkey::Base.PkgId, path::String, ocachepath::String, sourcepath::String, depmods::Vector{Any})
+│        @ Base ./loading.jl:1398
+│      [8] _require_search_from_serialized(pkg::Base.PkgId, sourcepath::String, build_id::UInt128)
+│        @ Base ./loading.jl:1494
+│      [9] _require(pkg::Base.PkgId, env::String)
+│        @ Base ./loading.jl:1783
+│     [10] _require_prelocked(uuidkey::Base.PkgId, env::String)
+│        @ Base ./loading.jl:1660
+│     [11] macro expansion
+│        @ ./loading.jl:1648 [inlined]
+│     [12] macro expansion
+│        @ ./lock.jl:267 [inlined]
+│     [13] require(into::Module, mod::Symbol)
+│        @ Base ./loading.jl:1611
+│     [14] include
+│        @ ./Base.jl:457 [inlined]
+│     [15] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::String)
+│        @ Base ./loading.jl:2049
+│     [16] top-level scope
+│        @ stdin:3
+│     [17] eval
+│        @ ./boot.jl:370 [inlined]
+│     [18] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+│        @ Base ./loading.jl:1903
+│     [19] include_string
+│        @ ./loading.jl:1913 [inlined]
+│     [20] exec_options(opts::Base.JLOptions)
+│        @ Base ./client.jl:305
+│     [21] _start()
+│        @ Base ./client.jl:522
+└ @ Base loading.jl:1261
+┌ Warning: Module StatsBase with build ID ffffffff-ffff-ffff-000d-3f772278dcf7 is missing from the cache.
+│ This may mean StatsBase [2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module StaticArraysStatisticsExt with build ID fafbfcfd-3656-4b07-000d-3f742e22ff18 is missing from the cache.
+│ This may mean StaticArraysStatisticsExt [3453fcb0-342e-5e4a-a93b-f2e19ba3ba0f] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Error: Error during loading of extension StaticArraysStatisticsExt of StaticArrays, use `Base.retry_load_extensions()` to retry.
+│   exception =
+│    1-element ExceptionStack:
+│    Declaring __precompile__(false) is not allowed in files that are being precompiled.
+│    Stacktrace:
+│      [1] _require(pkg::Base.PkgId, env::Nothing)
+│        @ Base ./loading.jl:1797
+│      [2] _require_prelocked(uuidkey::Base.PkgId, env::Nothing)
+│        @ Base ./loading.jl:1660
+│      [3] _require_prelocked(uuidkey::Base.PkgId)
+│        @ Base ./loading.jl:1658
+│      [4] run_extension_callbacks(extid::Base.ExtensionId)
+│        @ Base ./loading.jl:1255
+│      [5] run_extension_callbacks(pkgid::Base.PkgId)
+│        @ Base ./loading.jl:1290
+│      [6] run_package_callbacks(modkey::Base.PkgId)
+│        @ Base ./loading.jl:1124
+│      [7] _require_prelocked(uuidkey::Base.PkgId, env::String)
+│        @ Base ./loading.jl:1667
+│      [8] macro expansion
+│        @ ./loading.jl:1648 [inlined]
+│      [9] macro expansion
+│        @ ./lock.jl:267 [inlined]
+│     [10] require(into::Module, mod::Symbol)
+│        @ Base ./loading.jl:1611
+│     [11] include
+│        @ ./Base.jl:457 [inlined]
+│     [12] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::String)
+│        @ Base ./loading.jl:2049
+│     [13] top-level scope
+│        @ stdin:3
+│     [14] eval
+│        @ ./boot.jl:370 [inlined]
+│     [15] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+│        @ Base ./loading.jl:1903
+│     [16] include_string
+│        @ ./loading.jl:1913 [inlined]
+│     [17] exec_options(opts::Base.JLOptions)
+│        @ Base ./client.jl:305
+│     [18] _start()
+│        @ Base ./client.jl:522
+└ @ Base loading.jl:1261
+┌ Warning: Module FileIO with build ID fafbfcfd-125a-ff4a-000d-3f755abecf0c is missing from the cache.
+│ This may mean FileIO [5789e2e9-d7fb-5bc7-8068-2c6fae9b9549] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module StaticArraysStatisticsExt with build ID fafbfcfd-3656-4b07-000d-3f742e22ff18 is missing from the cache.
+│ This may mean StaticArraysStatisticsExt [3453fcb0-342e-5e4a-a93b-f2e19ba3ba0f] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Error: Error during loading of extension StaticArraysStatisticsExt of StaticArrays, use `Base.retry_load_extensions()` to retry.
+│   exception =
+│    1-element ExceptionStack:
+│    Declaring __precompile__(false) is not allowed in files that are being precompiled.
+│    Stacktrace:
+│      [1] _require(pkg::Base.PkgId, env::Nothing)
+│        @ Base ./loading.jl:1797
+│      [2] _require_prelocked(uuidkey::Base.PkgId, env::Nothing)
+│        @ Base ./loading.jl:1660
+│      [3] _require_prelocked(uuidkey::Base.PkgId)
+│        @ Base ./loading.jl:1658
+│      [4] run_extension_callbacks(extid::Base.ExtensionId)
+│        @ Base ./loading.jl:1255
+│      [5] run_extension_callbacks(pkgid::Base.PkgId)
+│        @ Base ./loading.jl:1290
+│      [6] run_package_callbacks(modkey::Base.PkgId)
+│        @ Base ./loading.jl:1124
+│      [7] _tryrequire_from_serialized(modkey::Base.PkgId, path::String, ocachepath::String, sourcepath::String, depmods::Vector{Any})
+│        @ Base ./loading.jl:1398
+│      [8] _require_search_from_serialized(pkg::Base.PkgId, sourcepath::String, build_id::UInt128)
+│        @ Base ./loading.jl:1494
+│      [9] _require(pkg::Base.PkgId, env::String)
+│        @ Base ./loading.jl:1783
+│     [10] _require_prelocked(uuidkey::Base.PkgId, env::String)
+│        @ Base ./loading.jl:1660
+│     [11] macro expansion
+│        @ ./loading.jl:1648 [inlined]
+│     [12] macro expansion
+│        @ ./lock.jl:267 [inlined]
+│     [13] require(into::Module, mod::Symbol)
+│        @ Base ./loading.jl:1611
+│     [14] include
+│        @ ./Base.jl:457 [inlined]
+│     [15] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::String)
+│        @ Base ./loading.jl:2049
+│     [16] top-level scope
+│        @ stdin:3
+│     [17] eval
+│        @ ./boot.jl:370 [inlined]
+│     [18] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+│        @ Base ./loading.jl:1903
+│     [19] include_string
+│        @ ./loading.jl:1913 [inlined]
+│     [20] exec_options(opts::Base.JLOptions)
+│        @ Base ./client.jl:305
+│     [21] _start()
+│        @ Base ./client.jl:522
+└ @ Base loading.jl:1261
+┌ Warning: Module FileIO with build ID fafbfcfd-125a-ff4a-000d-3f755abecf0c is missing from the cache.
+│ This may mean FileIO [5789e2e9-d7fb-5bc7-8068-2c6fae9b9549] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module StaticArraysStatisticsExt with build ID fafbfcfd-3656-4b07-000d-3f742e22ff18 is missing from the cache.
+│ This may mean StaticArraysStatisticsExt [3453fcb0-342e-5e4a-a93b-f2e19ba3ba0f] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Error: Error during loading of extension StaticArraysStatisticsExt of StaticArrays, use `Base.retry_load_extensions()` to retry.
+│   exception =
+│    1-element ExceptionStack:
+│    Declaring __precompile__(false) is not allowed in files that are being precompiled.
+│    Stacktrace:
+│      [1] _require(pkg::Base.PkgId, env::Nothing)
+│        @ Base ./loading.jl:1797
+│      [2] _require_prelocked(uuidkey::Base.PkgId, env::Nothing)
+│        @ Base ./loading.jl:1660
+│      [3] _require_prelocked(uuidkey::Base.PkgId)
+│        @ Base ./loading.jl:1658
+│      [4] run_extension_callbacks(extid::Base.ExtensionId)
+│        @ Base ./loading.jl:1255
+│      [5] run_extension_callbacks(pkgid::Base.PkgId)
+│        @ Base ./loading.jl:1290
+│      [6] run_package_callbacks(modkey::Base.PkgId)
+│        @ Base ./loading.jl:1124
+│      [7] _tryrequire_from_serialized(modkey::Base.PkgId, path::String, ocachepath::String, sourcepath::String, depmods::Vector{Any})
+│        @ Base ./loading.jl:1398
+│      [8] _require_search_from_serialized(pkg::Base.PkgId, sourcepath::String, build_id::UInt128)
+│        @ Base ./loading.jl:1494
+│      [9] _require(pkg::Base.PkgId, env::String)
+│        @ Base ./loading.jl:1783
+│     [10] _require_prelocked(uuidkey::Base.PkgId, env::String)
+│        @ Base ./loading.jl:1660
+│     [11] macro expansion
+│        @ ./loading.jl:1648 [inlined]
+│     [12] macro expansion
+│        @ ./lock.jl:267 [inlined]
+│     [13] require(into::Module, mod::Symbol)
+│        @ Base ./loading.jl:1611
+│     [14] include
+│        @ ./Base.jl:457 [inlined]
+│     [15] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt128}}, source::String)
+│        @ Base ./loading.jl:2049
+│     [16] top-level scope
+│        @ stdin:3
+│     [17] eval
+│        @ ./boot.jl:370 [inlined]
+│     [18] include_string(mapexpr::typeof(identity), mod::Module, code::String, filename::String)
+│        @ Base ./loading.jl:1903
+│     [19] include_string
+│        @ ./loading.jl:1913 [inlined]
+│     [20] exec_options(opts::Base.JLOptions)
+│        @ Base ./client.jl:305
+│     [21] _start()
+│        @ Base ./client.jl:522
+└ @ Base loading.jl:1261
+┌ Warning: Module FileIO with build ID fafbfcfd-125a-ff4a-000d-3f755abecf0c is missing from the cache.
+│ This may mean FileIO [5789e2e9-d7fb-5bc7-8068-2c6fae9b9549] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module SortingAlgorithms with build ID fafbfcfd-66be-2093-000d-3f779a6495ea is missing from the cache.
+│ This may mean SortingAlgorithms [a2af1166-a08f-5f64-846c-94a0d3cef48c] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mThe call to compilecache failed to create a usable precompiled cache file for Conda [8f4d0f93-b110-5947-807f-2305c1781a2d]
+[33m[1m│ [22m[39m  exception = Required dependency JSON [682c06a0-de6a-54ab-a142-c8b1cf79cde6] failed to load from a cache file.
+[33m[1m└ [22m[39m[90m@ Base loading.jl:1818[39m
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mModule ChainRulesCore with build ID fafbfcfd-45fb-fd0e-000d-3f79e62d8b66 is missing from the cache.
+[33m[1m│ [22m[39mThis may mean ChainRulesCore [d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4] does not support precompilation but is imported by a module that does.
+[33m[1m└ [22m[39m[90m@ Base loading.jl:1793[39m
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mModule LoopVectorization with build ID ffffffff-ffff-ffff-000d-3fae8c3cfb76 is missing from the cache.
+[33m[1m│ [22m[39mThis may mean LoopVectorization [bdcacae8-1622-11e9-2a5c-532679323890] does not support precompilation but is imported by a module that does.
+[33m[1m└ [22m[39m[90m@ Base loading.jl:1793[39m
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mModule IceFloeTracker with build ID ffffffff-ffff-ffff-000d-3f6b1e3d80ab is missing from the cache.
+[33m[1m│ [22m[39mThis may mean IceFloeTracker [04643c7a-9ac6-48c5-822f-2704f9e70bd3] does not support precompilation but is imported by a module that does.
+[33m[1m└ [22m[39m[90m@ Base loading.jl:1793[39m
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mModule ChainRulesCore with build ID fafbfcfd-45fb-fd0e-000d-3f79e62d8b66 is missing from the cache.
+[33m[1m│ [22m[39mThis may mean ChainRulesCore [d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4] does not support precompilation but is imported by a module that does.
+[33m[1m└ [22m[39m[90m@ Base loading.jl:1793[39m
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mModule DataFrames with build ID ffffffff-ffff-ffff-000d-3f898929e993 is missing from the cache.
+[33m[1m│ [22m[39mThis may mean DataFrames [a93c6f00-e57d-5684-b7b6-d8193f3e46c0] does not support precompilation but is imported by a module that does.
+[33m[1m└ [22m[39m[90m@ Base loading.jl:1793[39m
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mModule DataFrames with build ID ffffffff-ffff-ffff-000d-3f898929e993 is missing from the cache.
+[33m[1m│ [22m[39mThis may mean DataFrames [a93c6f00-e57d-5684-b7b6-d8193f3e46c0] does not support precompilation but is imported by a module that does.
+[33m[1m└ [22m[39m[90m@ Base loading.jl:1793[39m
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mModule FileIO with build ID fafbfcfd-125a-ff4a-000d-3f755abecf0c is missing from the cache.
+[33m[1m│ [22m[39mThis may mean FileIO [5789e2e9-d7fb-5bc7-8068-2c6fae9b9549] does not support precompilation but is imported by a module that does.
+[33m[1m└ [22m[39m[90m@ Base loading.jl:1793[39m
+[33m[1m┌ [22m[39m[33m[1mWarning: [22m[39mModule FileIO with build ID fafbfcfd-125a-ff4a-000d-3f755abecf0c is missing from the cache.
+[33m[1m│ [22m[39mThis may mean FileIO [5789e2e9-d7fb-5bc7-8068-2c6fae9b9549] does not support precompilation but is imported by a module that does.
+[33m[1m└ [22m[39m[90m@ Base loading.jl:1793[39m
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534]
+│   exception = ArgumentError: Invalid checksum in cache file /users/dwatkin2/.julia/compiled/v1.9/ImageCore/cqNLm_AgTo3.so.
+└ @ Base loading.jl:1818
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for Rotations [6038ab10-8711-5258-84ad-4b1120ba62dc]
+│   exception = Required dependency Quaternions [94ee1d12-ae83-5a48-8b1c-48b8ff168ae0] failed to load from a cache file.
+└ @ Base loading.jl:1818
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for PrettyTables [08abe8d2-0d0c-5749-adfa-8a2ac140af0d]
+│   exception = Required dependency StringManipulation [892a3eda-7b42-436c-8928-eab12a02cf0e] failed to load from a cache file.
+└ @ Base loading.jl:1818
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for LoopVectorization [bdcacae8-1622-11e9-2a5c-532679323890]
+│   exception = Required dependency VectorizationBase [3d5dd08c-fd9d-11e8-17fa-ed2836048c2f] failed to load from a cache file.
+└ @ Base loading.jl:1818

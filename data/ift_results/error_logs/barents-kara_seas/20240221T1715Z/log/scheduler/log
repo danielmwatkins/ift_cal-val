@@ -1,0 +1,1527 @@
+2024-02-21T12:14:49-05:00 INFO - Workflow: barents-kara_seas/run1
+2024-02-21T12:14:50-05:00 INFO - Scheduler: url=tcp://node1803.oscar.ccv.brown.edu:43055 pid=3204103
+2024-02-21T12:14:50-05:00 INFO - Workflow publisher: url=tcp://node1803.oscar.ccv.brown.edu:43097
+2024-02-21T12:14:50-05:00 INFO - Run: (re)start number=1, log rollover=1
+2024-02-21T12:14:50-05:00 INFO - Cylc version: 8.2.1
+2024-02-21T12:14:50-05:00 INFO - Run mode: live
+2024-02-21T12:14:50-05:00 INFO - Initial point: 20240221T1715Z
+2024-02-21T12:14:50-05:00 INFO - Final point: None
+2024-02-21T12:14:50-05:00 INFO - Cold start from 20240221T1715Z
+2024-02-21T12:14:50-05:00 INFO - New flow: 1 (original flow from 20240221T1715Z) 2024-02-21 12:14:50
+2024-02-21T12:14:50-05:00 INFO - [20240221T1715Z/global_setup waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:50-05:00 INFO - [20240221T1715Z/global_setup waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:50-05:00 INFO - [20240221T1715Z/global_setup waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:50-05:00 INFO - [20240221T1715Z/global_setup waiting job:01 flows:1] => preparing
+2024-02-21T12:14:51-05:00 INFO - [20240221T1715Z/global_setup preparing job:01 flows:1] submitted to localhost:background[3204168]
+2024-02-21T12:14:51-05:00 INFO - [20240221T1715Z/global_setup preparing job:01 flows:1] => submitted
+2024-02-21T12:14:51-05:00 INFO - [20240221T1715Z/global_setup submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/global_setup submitted job:01 flows:1] => running
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/global_setup running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/global_setup running job:01 flows:1] => succeeded
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set06 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set06 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set16 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set16 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set02 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set02 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set10 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set10 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set20 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set20 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set00 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set00 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set05 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set05 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set03 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set03 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set13 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set13 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set07 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set07 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set18 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set18 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set14 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set14 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set17 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set17 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set19 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set19 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set11 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set11 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set08 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set08 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set12 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set12 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set01 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set01 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set15 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set15 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set04 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set04 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set09 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:14:54-05:00 INFO - [20240221T1715Z/mkpaths_param_set09 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set06 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set16 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set02 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set10 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set20 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set00 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set05 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set03 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set13 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set07 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set18 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set14 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set17 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set19 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set11 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set08 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set12 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set01 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set15 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set04 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set09 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set03 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set08 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set17 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set05 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set12 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set14 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set00 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set18 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set20 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set01 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set07 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set10 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set15 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set02 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set04 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set19 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set16 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:55-05:00 INFO - [20240221T1715Z/mkpaths_param_set09 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:56-05:00 INFO - [20240221T1715Z/mkpaths_param_set06 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:56-05:00 INFO - [20240221T1715Z/mkpaths_param_set11 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:56-05:00 INFO - [20240221T1715Z/mkpaths_param_set13 waiting job:01 flows:1] => preparing
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set00 preparing job:01 flows:1] submitted to localhost:background[3204384]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set00 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set00 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set01 preparing job:01 flows:1] submitted to localhost:background[3204387]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set01 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set01 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set02 preparing job:01 flows:1] submitted to localhost:background[3204392]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set02 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set02 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set03 preparing job:01 flows:1] submitted to localhost:background[3204403]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set03 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set03 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set04 preparing job:01 flows:1] submitted to localhost:background[3204420]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set04 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set04 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set05 preparing job:01 flows:1] submitted to localhost:background[3204435]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set05 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set05 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set06 preparing job:01 flows:1] submitted to localhost:background[3204455]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set06 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set06 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set07 preparing job:01 flows:1] submitted to localhost:background[3204480]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set07 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set07 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set08 preparing job:01 flows:1] submitted to localhost:background[3204504]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set08 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set08 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set09 preparing job:01 flows:1] submitted to localhost:background[3204527]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set09 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set09 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set10 preparing job:01 flows:1] submitted to localhost:background[3204549]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set10 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set10 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set11 preparing job:01 flows:1] submitted to localhost:background[3204570]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set11 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set11 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set12 preparing job:01 flows:1] submitted to localhost:background[3204597]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set12 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set12 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set13 preparing job:01 flows:1] submitted to localhost:background[3204624]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set13 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set13 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set14 preparing job:01 flows:1] submitted to localhost:background[3204654]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set14 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set14 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set15 preparing job:01 flows:1] submitted to localhost:background[3204677]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set15 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set15 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set16 preparing job:01 flows:1] submitted to localhost:background[3204702]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set16 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set16 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set17 preparing job:01 flows:1] submitted to localhost:background[3204726]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set17 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set17 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set18 preparing job:01 flows:1] submitted to localhost:background[3204756]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set18 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set18 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set19 preparing job:01 flows:1] submitted to localhost:background[3204780]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set19 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set19 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set20 preparing job:01 flows:1] submitted to localhost:background[3204807]
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set20 preparing job:01 flows:1] => submitted
+2024-02-21T12:14:57-05:00 INFO - [20240221T1715Z/mkpaths_param_set20 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set06 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set06 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set16 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set16 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set02 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set02 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set10 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set10 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set20 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set20 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set00 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set00 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set05 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set05 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set03 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set03 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set13 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set13 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set07 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set07 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set18 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set18 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set14 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set14 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set17 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set17 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set19 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set19 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set11 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set11 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set08 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set08 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set12 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set12 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set01 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set01 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set15 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set15 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set04 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set04 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set09 submitted job:01 flows:1] => running
+2024-02-21T12:14:59-05:00 INFO - [20240221T1715Z/mkpaths_param_set09 running job:01 flows:1] health: execution timeout=None, polling intervals=PT15M,...
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set06 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/pullfetchimage waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/pulljuliaimage waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set16 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set02 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set10 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set20 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set00 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set05 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set03 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set13 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set07 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set18 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set14 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set17 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set19 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set11 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set08 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set12 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set01 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set15 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set04 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/mkpaths_param_set09 running job:01 flows:1] => succeeded
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/pullfetchimage waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:15:00-05:00 INFO - [20240221T1715Z/pulljuliaimage waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:15:01-05:00 INFO - [20240221T1715Z/pullfetchimage waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:15:01-05:00 INFO - [20240221T1715Z/pulljuliaimage waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:15:01-05:00 INFO - [20240221T1715Z/pulljuliaimage waiting job:01 flows:1] => preparing
+2024-02-21T12:15:01-05:00 INFO - [20240221T1715Z/pullfetchimage waiting job:01 flows:1] => preparing
+2024-02-21T12:15:02-05:00 INFO - [20240221T1715Z/pullfetchimage preparing job:01 flows:1] submitted to oscar:slurm[707221]
+2024-02-21T12:15:02-05:00 INFO - [20240221T1715Z/pullfetchimage preparing job:01 flows:1] => submitted
+2024-02-21T12:15:02-05:00 INFO - [20240221T1715Z/pullfetchimage submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:15:02-05:00 INFO - [20240221T1715Z/pulljuliaimage preparing job:01 flows:1] submitted to oscar:slurm[707222]
+2024-02-21T12:15:02-05:00 INFO - [20240221T1715Z/pulljuliaimage preparing job:01 flows:1] => submitted
+2024-02-21T12:15:02-05:00 INFO - [20240221T1715Z/pulljuliaimage submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:15:08-05:00 INFO - [20240221T1715Z/pullfetchimage submitted job:01 flows:1] => running
+2024-02-21T12:15:08-05:00 INFO - [20240221T1715Z/pullfetchimage running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:15:14-05:00 INFO - [20240221T1715Z/pulljuliaimage submitted job:01 flows:1] => running
+2024-02-21T12:15:14-05:00 INFO - [20240221T1715Z/pulljuliaimage running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/pullfetchimage running job:01 flows:1] => succeeded
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set01 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set10 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set10 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set00 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set00 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set11 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set16 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set16 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set07 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set07 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set19 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set19 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set02 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set02 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set17 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set17 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set14 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set14 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set05 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set05 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set04 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set04 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set13 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set13 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set18 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set18 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set15 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set15 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set03 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set03 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set09 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set09 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set06 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set06 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set12 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set12 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set20 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set20 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set08 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:16:59-05:00 INFO - [20240221T1715Z/soit_param_set08 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/pulljuliaimage running job:01 flows:1] => succeeded
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set01 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set10 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set10 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set00 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set00 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set11 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set16 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set16 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set07 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set07 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set19 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set19 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set02 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set02 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set17 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set17 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set14 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set14 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set05 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set05 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set04 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set04 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set13 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set13 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set18 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set18 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set15 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set15 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set03 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set03 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set09 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set09 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set06 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set06 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set12 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set12 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set20 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set20 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/fetchdata_param_set08 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:58-05:00 INFO - [20240221T1715Z/soit_param_set08 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set01 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set10 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set10 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set00 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set00 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set11 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set16 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set16 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set07 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set07 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set19 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set19 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set02 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set02 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set17 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set17 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set14 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set14 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set05 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set05 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set04 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set04 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set13 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set13 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set18 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set18 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set15 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set15 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set03 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set03 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set09 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set09 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set06 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set06 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set12 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set12 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set20 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set20 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set08 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set08 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set16 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set04 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set08 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set02 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set03 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set04 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set20 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set19 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set03 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set11 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set05 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set20 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set19 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set15 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set00 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set05 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set12 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/soit_param_set07 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set15 waiting job:01 flows:1] => preparing
+2024-02-21T12:22:59-05:00 INFO - [20240221T1715Z/fetchdata_param_set09 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/fetchdata_param_set00 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/soit_param_set14 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/fetchdata_param_set12 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/soit_param_set18 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/soit_param_set10 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/fetchdata_param_set14 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/soit_param_set06 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/fetchdata_param_set18 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/soit_param_set17 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/fetchdata_param_set10 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/fetchdata_param_set07 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/fetchdata_param_set06 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/soit_param_set13 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/fetchdata_param_set17 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/soit_param_set09 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/fetchdata_param_set01 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/fetchdata_param_set13 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/soit_param_set08 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/soit_param_set02 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:00-05:00 INFO - [20240221T1715Z/soit_param_set16 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set00 preparing job:01 flows:1] submitted to oscar:slurm[707288]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set00 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set00 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set01 preparing job:01 flows:1] submitted to oscar:slurm[707289]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set01 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set01 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set02 preparing job:01 flows:1] submitted to oscar:slurm[707290]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set02 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set02 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set03 preparing job:01 flows:1] submitted to oscar:slurm[707291]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set03 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set03 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set04 preparing job:01 flows:1] submitted to oscar:slurm[707292]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set04 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set04 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set05 preparing job:01 flows:1] submitted to oscar:slurm[707293]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set05 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set05 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set06 preparing job:01 flows:1] submitted to oscar:slurm[707294]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set06 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set06 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set07 preparing job:01 flows:1] submitted to oscar:slurm[707295]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set07 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set07 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set08 preparing job:01 flows:1] submitted to oscar:slurm[707296]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set08 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set08 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set09 preparing job:01 flows:1] submitted to oscar:slurm[707297]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set09 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set09 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set10 preparing job:01 flows:1] submitted to oscar:slurm[707298]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set10 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set10 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set11 preparing job:01 flows:1] submitted to oscar:slurm[707299]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set11 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set11 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set12 preparing job:01 flows:1] submitted to oscar:slurm[707300]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set12 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set12 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set13 preparing job:01 flows:1] submitted to oscar:slurm[707301]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set13 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set13 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set14 preparing job:01 flows:1] submitted to oscar:slurm[707302]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set14 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set14 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set15 preparing job:01 flows:1] submitted to oscar:slurm[707303]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set15 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set15 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set16 preparing job:01 flows:1] submitted to oscar:slurm[707304]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set16 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set16 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set17 preparing job:01 flows:1] submitted to oscar:slurm[707305]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set17 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set17 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set18 preparing job:01 flows:1] submitted to oscar:slurm[707306]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set18 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set18 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set19 preparing job:01 flows:1] submitted to oscar:slurm[707307]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set19 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set19 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set20 preparing job:01 flows:1] submitted to oscar:slurm[707308]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set20 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/fetchdata_param_set20 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set00 preparing job:01 flows:1] submitted to oscar:slurm[707309]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set00 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set00 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set01 preparing job:01 flows:1] submitted to oscar:slurm[707310]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set01 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set01 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set02 preparing job:01 flows:1] submitted to oscar:slurm[707311]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set02 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set02 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set03 preparing job:01 flows:1] submitted to oscar:slurm[707312]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set03 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set03 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set04 preparing job:01 flows:1] submitted to oscar:slurm[707313]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set04 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set04 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set05 preparing job:01 flows:1] submitted to oscar:slurm[707314]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set05 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set05 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set06 preparing job:01 flows:1] submitted to oscar:slurm[707315]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set06 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set06 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set07 preparing job:01 flows:1] submitted to oscar:slurm[707316]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set07 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set07 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set08 preparing job:01 flows:1] submitted to oscar:slurm[707317]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set08 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set08 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set09 preparing job:01 flows:1] submitted to oscar:slurm[707318]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set09 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set09 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set10 preparing job:01 flows:1] submitted to oscar:slurm[707319]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set10 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set10 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set11 preparing job:01 flows:1] submitted to oscar:slurm[707320]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set11 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set11 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set12 preparing job:01 flows:1] submitted to oscar:slurm[707321]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set12 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set12 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set13 preparing job:01 flows:1] submitted to oscar:slurm[707322]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set13 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set13 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set14 preparing job:01 flows:1] submitted to oscar:slurm[707323]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set14 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set14 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set15 preparing job:01 flows:1] submitted to oscar:slurm[707324]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set15 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set15 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set16 preparing job:01 flows:1] submitted to oscar:slurm[707325]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set16 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set16 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set17 preparing job:01 flows:1] submitted to oscar:slurm[707326]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set17 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set17 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set18 preparing job:01 flows:1] submitted to oscar:slurm[707327]
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set18 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:02-05:00 INFO - [20240221T1715Z/soit_param_set18 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:03-05:00 INFO - [20240221T1715Z/soit_param_set19 preparing job:01 flows:1] submitted to oscar:slurm[707328]
+2024-02-21T12:23:03-05:00 INFO - [20240221T1715Z/soit_param_set19 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:03-05:00 INFO - [20240221T1715Z/soit_param_set19 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:03-05:00 INFO - [20240221T1715Z/soit_param_set20 preparing job:01 flows:1] submitted to oscar:slurm[707329]
+2024-02-21T12:23:03-05:00 INFO - [20240221T1715Z/soit_param_set20 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:03-05:00 INFO - [20240221T1715Z/soit_param_set20 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:07-05:00 INFO - [20240221T1715Z/fetchdata_param_set01 submitted job:01 flows:1] => running
+2024-02-21T12:23:07-05:00 INFO - [20240221T1715Z/fetchdata_param_set01 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:07-05:00 INFO - [20240221T1715Z/fetchdata_param_set00 submitted job:01 flows:1] => running
+2024-02-21T12:23:07-05:00 INFO - [20240221T1715Z/fetchdata_param_set00 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:07-05:00 INFO - [20240221T1715Z/fetchdata_param_set02 submitted job:01 flows:1] => running
+2024-02-21T12:23:07-05:00 INFO - [20240221T1715Z/fetchdata_param_set02 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:07-05:00 INFO - [20240221T1715Z/fetchdata_param_set03 submitted job:01 flows:1] => running
+2024-02-21T12:23:07-05:00 INFO - [20240221T1715Z/fetchdata_param_set03 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:09-05:00 INFO - [20240221T1715Z/fetchdata_param_set07 submitted job:01 flows:1] => running
+2024-02-21T12:23:09-05:00 INFO - [20240221T1715Z/fetchdata_param_set07 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:09-05:00 INFO - [20240221T1715Z/fetchdata_param_set05 submitted job:01 flows:1] => running
+2024-02-21T12:23:09-05:00 INFO - [20240221T1715Z/fetchdata_param_set05 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:09-05:00 INFO - [20240221T1715Z/fetchdata_param_set04 submitted job:01 flows:1] => running
+2024-02-21T12:23:09-05:00 INFO - [20240221T1715Z/fetchdata_param_set04 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:09-05:00 INFO - [20240221T1715Z/fetchdata_param_set06 submitted job:01 flows:1] => running
+2024-02-21T12:23:09-05:00 INFO - [20240221T1715Z/fetchdata_param_set06 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:10-05:00 INFO - [20240221T1715Z/fetchdata_param_set01 running job:01 flows:1] => succeeded
+2024-02-21T12:23:10-05:00 INFO - [20240221T1715Z/landmask_param_set01 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:10-05:00 INFO - [20240221T1715Z/fetchdata_param_set00 running job:01 flows:1] => succeeded
+2024-02-21T12:23:10-05:00 INFO - [20240221T1715Z/landmask_param_set00 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:10-05:00 INFO - [20240221T1715Z/fetchdata_param_set02 running job:01 flows:1] => succeeded
+2024-02-21T12:23:10-05:00 INFO - [20240221T1715Z/landmask_param_set02 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:11-05:00 INFO - [20240221T1715Z/fetchdata_param_set05 running job:01 flows:1] => succeeded
+2024-02-21T12:23:11-05:00 INFO - [20240221T1715Z/landmask_param_set05 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:11-05:00 INFO - [20240221T1715Z/fetchdata_param_set03 running job:01 flows:1] => succeeded
+2024-02-21T12:23:11-05:00 INFO - [20240221T1715Z/landmask_param_set03 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:11-05:00 INFO - [20240221T1715Z/fetchdata_param_set06 running job:01 flows:1] => succeeded
+2024-02-21T12:23:11-05:00 INFO - [20240221T1715Z/landmask_param_set06 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:12-05:00 INFO - [20240221T1715Z/fetchdata_param_set07 running job:01 flows:1] => succeeded
+2024-02-21T12:23:12-05:00 INFO - [20240221T1715Z/landmask_param_set07 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:12-05:00 INFO - [20240221T1715Z/fetchdata_param_set04 running job:01 flows:1] => succeeded
+2024-02-21T12:23:12-05:00 INFO - [20240221T1715Z/landmask_param_set04 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:15-05:00 INFO - [20240221T1715Z/fetchdata_param_set10 submitted job:01 flows:1] => running
+2024-02-21T12:23:15-05:00 INFO - [20240221T1715Z/fetchdata_param_set10 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:15-05:00 INFO - [20240221T1715Z/fetchdata_param_set11 submitted job:01 flows:1] => running
+2024-02-21T12:23:15-05:00 INFO - [20240221T1715Z/fetchdata_param_set11 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:15-05:00 INFO - [20240221T1715Z/fetchdata_param_set08 submitted job:01 flows:1] => running
+2024-02-21T12:23:15-05:00 INFO - [20240221T1715Z/fetchdata_param_set08 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:16-05:00 INFO - [20240221T1715Z/fetchdata_param_set14 submitted job:01 flows:1] => running
+2024-02-21T12:23:16-05:00 INFO - [20240221T1715Z/fetchdata_param_set14 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:16-05:00 INFO - [20240221T1715Z/fetchdata_param_set13 submitted job:01 flows:1] => running
+2024-02-21T12:23:16-05:00 INFO - [20240221T1715Z/fetchdata_param_set13 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:16-05:00 INFO - [20240221T1715Z/fetchdata_param_set15 submitted job:01 flows:1] => running
+2024-02-21T12:23:16-05:00 INFO - [20240221T1715Z/fetchdata_param_set15 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:16-05:00 INFO - [20240221T1715Z/fetchdata_param_set09 submitted job:01 flows:1] => running
+2024-02-21T12:23:16-05:00 INFO - [20240221T1715Z/fetchdata_param_set09 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:16-05:00 INFO - [20240221T1715Z/fetchdata_param_set12 submitted job:01 flows:1] => running
+2024-02-21T12:23:16-05:00 INFO - [20240221T1715Z/fetchdata_param_set12 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:19-05:00 INFO - [20240221T1715Z/fetchdata_param_set10 running job:01 flows:1] => succeeded
+2024-02-21T12:23:19-05:00 INFO - [20240221T1715Z/landmask_param_set10 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:19-05:00 INFO - [20240221T1715Z/fetchdata_param_set11 running job:01 flows:1] => succeeded
+2024-02-21T12:23:19-05:00 INFO - [20240221T1715Z/landmask_param_set11 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:19-05:00 INFO - [20240221T1715Z/fetchdata_param_set08 running job:01 flows:1] => succeeded
+2024-02-21T12:23:19-05:00 INFO - [20240221T1715Z/landmask_param_set08 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:20-05:00 INFO - [20240221T1715Z/fetchdata_param_set14 running job:01 flows:1] => succeeded
+2024-02-21T12:23:20-05:00 INFO - [20240221T1715Z/landmask_param_set14 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:20-05:00 INFO - [20240221T1715Z/fetchdata_param_set13 running job:01 flows:1] => succeeded
+2024-02-21T12:23:20-05:00 INFO - [20240221T1715Z/landmask_param_set13 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:20-05:00 INFO - [20240221T1715Z/fetchdata_param_set15 running job:01 flows:1] => succeeded
+2024-02-21T12:23:20-05:00 INFO - [20240221T1715Z/landmask_param_set15 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:20-05:00 INFO - [20240221T1715Z/fetchdata_param_set09 running job:01 flows:1] => succeeded
+2024-02-21T12:23:20-05:00 INFO - [20240221T1715Z/landmask_param_set09 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:20-05:00 INFO - [20240221T1715Z/fetchdata_param_set12 running job:01 flows:1] => succeeded
+2024-02-21T12:23:20-05:00 INFO - [20240221T1715Z/landmask_param_set12 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:22-05:00 INFO - [20240221T1715Z/fetchdata_param_set16 submitted job:01 flows:1] => running
+2024-02-21T12:23:22-05:00 INFO - [20240221T1715Z/fetchdata_param_set16 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:23-05:00 INFO - [20240221T1715Z/fetchdata_param_set17 submitted job:01 flows:1] => running
+2024-02-21T12:23:23-05:00 INFO - [20240221T1715Z/fetchdata_param_set17 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:23-05:00 INFO - [20240221T1715Z/fetchdata_param_set18 submitted job:01 flows:1] => running
+2024-02-21T12:23:23-05:00 INFO - [20240221T1715Z/fetchdata_param_set18 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:24-05:00 INFO - [20240221T1715Z/soit_param_set01 submitted job:01 flows:1] => running
+2024-02-21T12:23:24-05:00 INFO - [20240221T1715Z/soit_param_set01 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:24-05:00 INFO - [20240221T1715Z/soit_param_set00 submitted job:01 flows:1] => running
+2024-02-21T12:23:24-05:00 INFO - [20240221T1715Z/soit_param_set00 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:24-05:00 INFO - [20240221T1715Z/fetchdata_param_set19 submitted job:01 flows:1] => running
+2024-02-21T12:23:24-05:00 INFO - [20240221T1715Z/fetchdata_param_set19 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:24-05:00 INFO - [20240221T1715Z/fetchdata_param_set20 submitted job:01 flows:1] => running
+2024-02-21T12:23:24-05:00 INFO - [20240221T1715Z/fetchdata_param_set20 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:25-05:00 INFO - [20240221T1715Z/soit_param_set02 submitted job:01 flows:1] => running
+2024-02-21T12:23:25-05:00 INFO - [20240221T1715Z/soit_param_set02 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:26-05:00 INFO - [20240221T1715Z/fetchdata_param_set17 running job:01 flows:1] => succeeded
+2024-02-21T12:23:26-05:00 INFO - [20240221T1715Z/landmask_param_set17 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:27-05:00 INFO - [20240221T1715Z/soit_param_set01 running job:01 flows:1] => waiting
+2024-02-21T12:23:27-05:00 WARNING - [20240221T1715Z/soit_param_set01 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:23:33-05:00)
+2024-02-21T12:23:27-05:00 INFO - [20240221T1715Z/soit_param_set00 running job:01 flows:1] => succeeded
+2024-02-21T12:23:27-05:00 INFO - [20240221T1715Z/landmask_param_set00 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:23:27-05:00 INFO - [20240221T1715Z/soit_param_set02 running job:01 flows:1] => succeeded
+2024-02-21T12:23:27-05:00 INFO - [20240221T1715Z/landmask_param_set02 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:23:27-05:00 INFO - [20240221T1715Z/fetchdata_param_set18 running job:01 flows:1] => succeeded
+2024-02-21T12:23:27-05:00 INFO - [20240221T1715Z/landmask_param_set18 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:28-05:00 INFO - [20240221T1715Z/landmask_param_set00 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:23:28-05:00 INFO - [20240221T1715Z/landmask_param_set02 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:23:28-05:00 INFO - [20240221T1715Z/landmask_param_set02 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:28-05:00 INFO - [20240221T1715Z/landmask_param_set00 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:28-05:00 INFO - [20240221T1715Z/fetchdata_param_set16 running job:01 flows:1] => succeeded
+2024-02-21T12:23:28-05:00 INFO - [20240221T1715Z/landmask_param_set16 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:28-05:00 INFO - [20240221T1715Z/fetchdata_param_set20 running job:01 flows:1] => succeeded
+2024-02-21T12:23:28-05:00 INFO - [20240221T1715Z/landmask_param_set20 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:29-05:00 INFO - [20240221T1715Z/soit_param_set05 submitted job:01 flows:1] => running
+2024-02-21T12:23:29-05:00 INFO - [20240221T1715Z/soit_param_set05 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:29-05:00 INFO - [20240221T1715Z/soit_param_set04 submitted job:01 flows:1] => running
+2024-02-21T12:23:29-05:00 INFO - [20240221T1715Z/soit_param_set04 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:29-05:00 INFO - [20240221T1715Z/landmask_param_set00 preparing job:01 flows:1] submitted to oscar:slurm[707350]
+2024-02-21T12:23:29-05:00 INFO - [20240221T1715Z/landmask_param_set00 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:29-05:00 INFO - [20240221T1715Z/landmask_param_set00 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:29-05:00 INFO - [20240221T1715Z/landmask_param_set02 preparing job:01 flows:1] submitted to oscar:slurm[707351]
+2024-02-21T12:23:29-05:00 INFO - [20240221T1715Z/landmask_param_set02 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:29-05:00 INFO - [20240221T1715Z/landmask_param_set02 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:29-05:00 INFO - [20240221T1715Z/fetchdata_param_set19 running job:01 flows:1] => succeeded
+2024-02-21T12:23:29-05:00 INFO - [20240221T1715Z/landmask_param_set19 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:23:29-05:00 INFO - [20240221T1715Z/soit_param_set03 submitted job:01 flows:1] => running
+2024-02-21T12:23:29-05:00 INFO - [20240221T1715Z/soit_param_set03 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:29-05:00 INFO - [20240221T1715Z/soit_param_set06 submitted job:01 flows:1] => running
+2024-02-21T12:23:29-05:00 INFO - [20240221T1715Z/soit_param_set06 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:30-05:00 INFO - [20240221T1715Z/soit_param_set07 submitted job:01 flows:1] => running
+2024-02-21T12:23:30-05:00 INFO - [20240221T1715Z/soit_param_set07 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:31-05:00 INFO - [20240221T1715Z/soit_param_set05 running job:01 flows:1] => succeeded
+2024-02-21T12:23:31-05:00 INFO - [20240221T1715Z/landmask_param_set05 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:23:31-05:00 INFO - [20240221T1715Z/soit_param_set04 running job:01 flows:1] => succeeded
+2024-02-21T12:23:31-05:00 INFO - [20240221T1715Z/landmask_param_set04 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:23:31-05:00 INFO - [20240221T1715Z/soit_param_set03 running job:01 flows:1] => succeeded
+2024-02-21T12:23:31-05:00 INFO - [20240221T1715Z/landmask_param_set03 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:23:31-05:00 INFO - [20240221T1715Z/soit_param_set09 submitted job:01 flows:1] => running
+2024-02-21T12:23:31-05:00 INFO - [20240221T1715Z/soit_param_set09 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:31-05:00 INFO - [20240221T1715Z/soit_param_set08 submitted job:01 flows:1] => running
+2024-02-21T12:23:31-05:00 INFO - [20240221T1715Z/soit_param_set08 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:32-05:00 INFO - [20240221T1715Z/landmask_param_set05 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:23:32-05:00 INFO - [20240221T1715Z/landmask_param_set04 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:23:32-05:00 INFO - [20240221T1715Z/landmask_param_set03 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:23:32-05:00 INFO - [20240221T1715Z/landmask_param_set04 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:32-05:00 INFO - [20240221T1715Z/landmask_param_set05 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:32-05:00 INFO - [20240221T1715Z/landmask_param_set03 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:33-05:00 INFO - [20240221T1715Z/soit_param_set07 running job:01 flows:1] => succeeded
+2024-02-21T12:23:33-05:00 INFO - [20240221T1715Z/landmask_param_set07 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:23:33-05:00 INFO - [20240221T1715Z/soit_param_set06 running job:01 flows:1] => succeeded
+2024-02-21T12:23:33-05:00 INFO - [20240221T1715Z/landmask_param_set06 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:23:33-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/soit_param_set01 = wall_clock(trigger_time=1708536213.376298)
+2024-02-21T12:23:33-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:23:33-05:00 INFO - [20240221T1715Z/landmask_param_set07 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:23:33-05:00 INFO - [20240221T1715Z/landmask_param_set06 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:23:33-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:23:33-05:00 INFO - [20240221T1715Z/landmask_param_set07 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:33-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting job:02 flows:1] => preparing
+2024-02-21T12:23:33-05:00 INFO - [20240221T1715Z/landmask_param_set06 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:33-05:00 INFO - [20240221T1715Z/soit_param_set08 running job:01 flows:1] => succeeded
+2024-02-21T12:23:33-05:00 INFO - [20240221T1715Z/landmask_param_set08 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:23:33-05:00 INFO - [20240221T1715Z/landmask_param_set08 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:23:33-05:00 INFO - [20240221T1715Z/landmask_param_set08 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:33-05:00 INFO - [20240221T1715Z/soit_param_set09 running job:01 flows:1] => succeeded
+2024-02-21T12:23:33-05:00 INFO - [20240221T1715Z/landmask_param_set09 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set03 preparing job:01 flows:1] submitted to oscar:slurm[707352]
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set03 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set03 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set04 preparing job:01 flows:1] submitted to oscar:slurm[707353]
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set04 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set04 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set05 preparing job:01 flows:1] submitted to oscar:slurm[707354]
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set05 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set05 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set09 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set09 waiting job:01 flows:1] => preparing
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set00 submitted job:01 flows:1] => running
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set00 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set06 preparing job:01 flows:1] submitted to oscar:slurm[707355]
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set06 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set06 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set07 preparing job:01 flows:1] submitted to oscar:slurm[707356]
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set07 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/landmask_param_set07 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/soit_param_set01 preparing job:02 flows:1] submitted to oscar:slurm[707357]
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/soit_param_set01 preparing job:02 flows:1] => submitted
+2024-02-21T12:23:34-05:00 INFO - [20240221T1715Z/soit_param_set01 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:35-05:00 INFO - [20240221T1715Z/landmask_param_set08 preparing job:01 flows:1] submitted to oscar:slurm[707358]
+2024-02-21T12:23:35-05:00 INFO - [20240221T1715Z/landmask_param_set08 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:35-05:00 INFO - [20240221T1715Z/landmask_param_set08 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:35-05:00 INFO - [20240221T1715Z/landmask_param_set02 submitted job:01 flows:1] => running
+2024-02-21T12:23:35-05:00 INFO - [20240221T1715Z/landmask_param_set02 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:35-05:00 INFO - [20240221T1715Z/landmask_param_set09 preparing job:01 flows:1] submitted to oscar:slurm[707359]
+2024-02-21T12:23:35-05:00 INFO - [20240221T1715Z/landmask_param_set09 preparing job:01 flows:1] => submitted
+2024-02-21T12:23:35-05:00 INFO - [20240221T1715Z/landmask_param_set09 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:23:40-05:00 INFO - [20240221T1715Z/landmask_param_set04 submitted job:01 flows:1] => running
+2024-02-21T12:23:40-05:00 INFO - [20240221T1715Z/landmask_param_set04 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:23:41-05:00 INFO - [20240221T1715Z/landmask_param_set03 submitted job:01 flows:1] => running
+2024-02-21T12:23:41-05:00 INFO - [20240221T1715Z/landmask_param_set03 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:29:41-05:00 INFO - [20240221T1715Z/landmask_param_set04 running job:01 flows:1] => succeeded
+2024-02-21T12:29:41-05:00 INFO - [20240221T1715Z/preprocess_param_set04 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:29:41-05:00 INFO - [20240221T1715Z/preprocess_param_set04 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:29:42-05:00 INFO - [20240221T1715Z/preprocess_param_set04 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:29:42-05:00 INFO - [20240221T1715Z/preprocess_param_set04 waiting job:01 flows:1] => preparing
+2024-02-21T12:29:43-05:00 INFO - [20240221T1715Z/landmask_param_set03 running job:01 flows:1] => succeeded
+2024-02-21T12:29:43-05:00 INFO - [20240221T1715Z/preprocess_param_set03 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:29:43-05:00 INFO - [20240221T1715Z/preprocess_param_set03 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:29:44-05:00 INFO - [20240221T1715Z/preprocess_param_set04 preparing job:01 flows:1] submitted to oscar:slurm[707494]
+2024-02-21T12:29:44-05:00 INFO - [20240221T1715Z/preprocess_param_set04 preparing job:01 flows:1] => submitted
+2024-02-21T12:29:44-05:00 INFO - [20240221T1715Z/preprocess_param_set04 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:29:44-05:00 INFO - [20240221T1715Z/preprocess_param_set03 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:29:44-05:00 INFO - [20240221T1715Z/preprocess_param_set03 waiting job:01 flows:1] => preparing
+2024-02-21T12:29:45-05:00 INFO - [20240221T1715Z/preprocess_param_set03 preparing job:01 flows:1] submitted to oscar:slurm[707495]
+2024-02-21T12:29:45-05:00 INFO - [20240221T1715Z/preprocess_param_set03 preparing job:01 flows:1] => submitted
+2024-02-21T12:29:45-05:00 INFO - [20240221T1715Z/preprocess_param_set03 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:29:47-05:00 INFO - [20240221T1715Z/landmask_param_set00 running job:01 flows:1] => succeeded
+2024-02-21T12:29:47-05:00 INFO - [20240221T1715Z/preprocess_param_set00 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:29:47-05:00 INFO - [20240221T1715Z/preprocess_param_set00 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:29:47-05:00 INFO - [20240221T1715Z/landmask_param_set05 submitted job:01 flows:1] => running
+2024-02-21T12:29:47-05:00 INFO - [20240221T1715Z/landmask_param_set05 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:29:47-05:00 INFO - [20240221T1715Z/landmask_param_set06 submitted job:01 flows:1] => running
+2024-02-21T12:29:47-05:00 INFO - [20240221T1715Z/landmask_param_set06 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:29:48-05:00 INFO - [20240221T1715Z/preprocess_param_set00 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:29:48-05:00 INFO - [20240221T1715Z/preprocess_param_set00 waiting job:01 flows:1] => preparing
+2024-02-21T12:29:49-05:00 INFO - [20240221T1715Z/preprocess_param_set00 preparing job:01 flows:1] submitted to oscar:slurm[707496]
+2024-02-21T12:29:49-05:00 INFO - [20240221T1715Z/preprocess_param_set00 preparing job:01 flows:1] => submitted
+2024-02-21T12:29:49-05:00 INFO - [20240221T1715Z/preprocess_param_set00 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:29:52-05:00 INFO - [20240221T1715Z/landmask_param_set07 submitted job:01 flows:1] => running
+2024-02-21T12:29:52-05:00 INFO - [20240221T1715Z/landmask_param_set07 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:30:29-05:00 INFO - [20240221T1715Z/landmask_param_set02 running job:01 flows:1] => succeeded
+2024-02-21T12:30:29-05:00 INFO - [20240221T1715Z/preprocess_param_set02 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:30:29-05:00 INFO - [20240221T1715Z/preprocess_param_set02 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:30:30-05:00 INFO - [20240221T1715Z/preprocess_param_set02 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:30:30-05:00 INFO - [20240221T1715Z/preprocess_param_set02 waiting job:01 flows:1] => preparing
+2024-02-21T12:30:31-05:00 INFO - [20240221T1715Z/preprocess_param_set02 preparing job:01 flows:1] submitted to oscar:slurm[707509]
+2024-02-21T12:30:31-05:00 INFO - [20240221T1715Z/preprocess_param_set02 preparing job:01 flows:1] => submitted
+2024-02-21T12:30:31-05:00 INFO - [20240221T1715Z/preprocess_param_set02 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:30:37-05:00 INFO - [20240221T1715Z/landmask_param_set08 submitted job:01 flows:1] => running
+2024-02-21T12:30:37-05:00 INFO - [20240221T1715Z/landmask_param_set08 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:32:34-05:00 INFO - [20240221T1715Z/landmask_param_set05 running job:01 flows:1] => succeeded
+2024-02-21T12:32:34-05:00 INFO - [20240221T1715Z/preprocess_param_set05 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:32:34-05:00 INFO - [20240221T1715Z/preprocess_param_set05 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:32:34-05:00 INFO - [20240221T1715Z/landmask_param_set06 running job:01 flows:1] => succeeded
+2024-02-21T12:32:34-05:00 INFO - [20240221T1715Z/preprocess_param_set06 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:32:34-05:00 INFO - [20240221T1715Z/preprocess_param_set06 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:32:35-05:00 INFO - [20240221T1715Z/preprocess_param_set05 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:32:35-05:00 INFO - [20240221T1715Z/preprocess_param_set06 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:32:35-05:00 INFO - [20240221T1715Z/preprocess_param_set05 waiting job:01 flows:1] => preparing
+2024-02-21T12:32:35-05:00 INFO - [20240221T1715Z/preprocess_param_set06 waiting job:01 flows:1] => preparing
+2024-02-21T12:32:37-05:00 INFO - [20240221T1715Z/preprocess_param_set05 preparing job:01 flows:1] submitted to oscar:slurm[707531]
+2024-02-21T12:32:37-05:00 INFO - [20240221T1715Z/preprocess_param_set05 preparing job:01 flows:1] => submitted
+2024-02-21T12:32:37-05:00 INFO - [20240221T1715Z/preprocess_param_set05 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:32:37-05:00 INFO - [20240221T1715Z/preprocess_param_set06 preparing job:01 flows:1] submitted to oscar:slurm[707532]
+2024-02-21T12:32:37-05:00 INFO - [20240221T1715Z/preprocess_param_set06 preparing job:01 flows:1] => submitted
+2024-02-21T12:32:37-05:00 INFO - [20240221T1715Z/preprocess_param_set06 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:32:38-05:00 INFO - [20240221T1715Z/soit_param_set13 submitted job:01 flows:1] => running
+2024-02-21T12:32:38-05:00 INFO - [20240221T1715Z/soit_param_set13 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:32:38-05:00 INFO - [20240221T1715Z/soit_param_set12 submitted job:01 flows:1] => running
+2024-02-21T12:32:38-05:00 INFO - [20240221T1715Z/soit_param_set12 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:32:39-05:00 INFO - [20240221T1715Z/soit_param_set10 submitted job:01 flows:1] => running
+2024-02-21T12:32:39-05:00 INFO - [20240221T1715Z/soit_param_set10 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:32:39-05:00 INFO - [20240221T1715Z/soit_param_set11 submitted job:01 flows:1] => running
+2024-02-21T12:32:39-05:00 INFO - [20240221T1715Z/soit_param_set11 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:32:40-05:00 INFO - [20240221T1715Z/soit_param_set13 running job:01 flows:1] => succeeded
+2024-02-21T12:32:40-05:00 INFO - [20240221T1715Z/landmask_param_set13 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:32:40-05:00 INFO - [20240221T1715Z/soit_param_set12 running job:01 flows:1] => succeeded
+2024-02-21T12:32:40-05:00 INFO - [20240221T1715Z/landmask_param_set12 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:32:41-05:00 INFO - [20240221T1715Z/landmask_param_set13 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:32:41-05:00 INFO - [20240221T1715Z/landmask_param_set12 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:32:41-05:00 INFO - [20240221T1715Z/landmask_param_set13 waiting job:01 flows:1] => preparing
+2024-02-21T12:32:41-05:00 INFO - [20240221T1715Z/landmask_param_set12 waiting job:01 flows:1] => preparing
+2024-02-21T12:32:41-05:00 INFO - [20240221T1715Z/soit_param_set10 running job:01 flows:1] => succeeded
+2024-02-21T12:32:41-05:00 INFO - [20240221T1715Z/landmask_param_set10 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:32:41-05:00 INFO - [20240221T1715Z/soit_param_set11 running job:01 flows:1] => waiting
+2024-02-21T12:32:41-05:00 WARNING - [20240221T1715Z/soit_param_set11 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:32:47-05:00)
+2024-02-21T12:32:41-05:00 INFO - [20240221T1715Z/landmask_param_set10 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:32:41-05:00 INFO - [20240221T1715Z/landmask_param_set10 waiting job:01 flows:1] => preparing
+2024-02-21T12:32:42-05:00 INFO - [20240221T1715Z/landmask_param_set12 preparing job:01 flows:1] submitted to oscar:slurm[707533]
+2024-02-21T12:32:42-05:00 INFO - [20240221T1715Z/landmask_param_set12 preparing job:01 flows:1] => submitted
+2024-02-21T12:32:42-05:00 INFO - [20240221T1715Z/landmask_param_set12 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:32:42-05:00 INFO - [20240221T1715Z/landmask_param_set13 preparing job:01 flows:1] submitted to oscar:slurm[707534]
+2024-02-21T12:32:42-05:00 INFO - [20240221T1715Z/landmask_param_set13 preparing job:01 flows:1] => submitted
+2024-02-21T12:32:42-05:00 INFO - [20240221T1715Z/landmask_param_set13 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:32:42-05:00 INFO - [20240221T1715Z/landmask_param_set07 running job:01 flows:1] => succeeded
+2024-02-21T12:32:42-05:00 INFO - [20240221T1715Z/preprocess_param_set07 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:32:42-05:00 INFO - [20240221T1715Z/preprocess_param_set07 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:32:42-05:00 INFO - [20240221T1715Z/landmask_param_set10 preparing job:01 flows:1] submitted to oscar:slurm[707535]
+2024-02-21T12:32:42-05:00 INFO - [20240221T1715Z/landmask_param_set10 preparing job:01 flows:1] => submitted
+2024-02-21T12:32:42-05:00 INFO - [20240221T1715Z/landmask_param_set10 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:32:42-05:00 INFO - [20240221T1715Z/preprocess_param_set07 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:32:42-05:00 INFO - [20240221T1715Z/preprocess_param_set07 waiting job:01 flows:1] => preparing
+2024-02-21T12:32:43-05:00 INFO - [20240221T1715Z/preprocess_param_set07 preparing job:01 flows:1] submitted to oscar:slurm[707536]
+2024-02-21T12:32:43-05:00 INFO - [20240221T1715Z/preprocess_param_set07 preparing job:01 flows:1] => submitted
+2024-02-21T12:32:43-05:00 INFO - [20240221T1715Z/preprocess_param_set07 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:32:43-05:00 INFO - [20240221T1715Z/soit_param_set14 submitted job:01 flows:1] => running
+2024-02-21T12:32:43-05:00 INFO - [20240221T1715Z/soit_param_set14 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:32:43-05:00 INFO - [20240221T1715Z/soit_param_set15 submitted job:01 flows:1] => running
+2024-02-21T12:32:43-05:00 INFO - [20240221T1715Z/soit_param_set15 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:32:45-05:00 INFO - [20240221T1715Z/soit_param_set19 submitted job:01 flows:1] => running
+2024-02-21T12:32:45-05:00 INFO - [20240221T1715Z/soit_param_set19 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:32:45-05:00 INFO - [20240221T1715Z/soit_param_set14 running job:01 flows:1] => succeeded
+2024-02-21T12:32:45-05:00 INFO - [20240221T1715Z/landmask_param_set14 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:32:45-05:00 INFO - [20240221T1715Z/soit_param_set18 submitted job:01 flows:1] => running
+2024-02-21T12:32:45-05:00 INFO - [20240221T1715Z/soit_param_set18 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:32:45-05:00 INFO - [20240221T1715Z/soit_param_set15 running job:01 flows:1] => succeeded
+2024-02-21T12:32:45-05:00 INFO - [20240221T1715Z/landmask_param_set15 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:32:46-05:00 INFO - [20240221T1715Z/landmask_param_set14 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:32:46-05:00 INFO - [20240221T1715Z/landmask_param_set15 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:32:46-05:00 INFO - [20240221T1715Z/landmask_param_set15 waiting job:01 flows:1] => preparing
+2024-02-21T12:32:46-05:00 INFO - [20240221T1715Z/landmask_param_set14 waiting job:01 flows:1] => preparing
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/landmask_param_set08 running job:01 flows:1] => succeeded
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/preprocess_param_set08 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/preprocess_param_set08 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/preprocess_param_set08 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/preprocess_param_set08 waiting job:01 flows:1] => preparing
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/soit_param_set19 running job:01 flows:1] => succeeded
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/landmask_param_set19 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/soit_param_set18 running job:01 flows:1] => succeeded
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/landmask_param_set18 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/landmask_param_set14 preparing job:01 flows:1] submitted to oscar:slurm[707537]
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/landmask_param_set14 preparing job:01 flows:1] => submitted
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/landmask_param_set14 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/landmask_param_set15 preparing job:01 flows:1] submitted to oscar:slurm[707538]
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/landmask_param_set15 preparing job:01 flows:1] => submitted
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/landmask_param_set15 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:32:47-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/soit_param_set11 = wall_clock(trigger_time=1708536767.4995193)
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/landmask_param_set19 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/landmask_param_set18 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:32:47-05:00 INFO - [20240221T1715Z/landmask_param_set19 waiting job:01 flows:1] => preparing
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting job:02 flows:1] => preparing
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/landmask_param_set18 waiting job:01 flows:1] => preparing
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/soit_param_set16 submitted job:01 flows:1] => running
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/soit_param_set16 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/soit_param_set17 submitted job:01 flows:1] => running
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/soit_param_set17 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/preprocess_param_set08 preparing job:01 flows:1] submitted to oscar:slurm[707539]
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/preprocess_param_set08 preparing job:01 flows:1] => submitted
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/preprocess_param_set08 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/soit_param_set01 submitted job:02 flows:1] => running
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/soit_param_set01 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/soit_param_set20 submitted job:01 flows:1] => running
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/soit_param_set20 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/landmask_param_set18 preparing job:01 flows:1] submitted to oscar:slurm[707540]
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/landmask_param_set18 preparing job:01 flows:1] => submitted
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/landmask_param_set18 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/landmask_param_set19 preparing job:01 flows:1] submitted to oscar:slurm[707541]
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/landmask_param_set19 preparing job:01 flows:1] => submitted
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/landmask_param_set19 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/soit_param_set11 preparing job:02 flows:1] submitted to oscar:slurm[707542]
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/soit_param_set11 preparing job:02 flows:1] => submitted
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/soit_param_set11 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/soit_param_set16 running job:01 flows:1] => succeeded
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/landmask_param_set16 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/soit_param_set17 running job:01 flows:1] => succeeded
+2024-02-21T12:32:48-05:00 INFO - [20240221T1715Z/landmask_param_set17 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:32:49-05:00 INFO - [20240221T1715Z/landmask_param_set16 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:32:49-05:00 INFO - [20240221T1715Z/landmask_param_set17 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:32:49-05:00 INFO - [20240221T1715Z/landmask_param_set16 waiting job:01 flows:1] => preparing
+2024-02-21T12:32:49-05:00 INFO - [20240221T1715Z/landmask_param_set17 waiting job:01 flows:1] => preparing
+2024-02-21T12:32:50-05:00 INFO - [20240221T1715Z/soit_param_set20 running job:01 flows:1] => succeeded
+2024-02-21T12:32:50-05:00 INFO - [20240221T1715Z/landmask_param_set20 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:32:50-05:00 INFO - [20240221T1715Z/landmask_param_set16 preparing job:01 flows:1] submitted to oscar:slurm[707543]
+2024-02-21T12:32:50-05:00 INFO - [20240221T1715Z/landmask_param_set16 preparing job:01 flows:1] => submitted
+2024-02-21T12:32:50-05:00 INFO - [20240221T1715Z/landmask_param_set16 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:32:50-05:00 INFO - [20240221T1715Z/landmask_param_set17 preparing job:01 flows:1] submitted to oscar:slurm[707544]
+2024-02-21T12:32:50-05:00 INFO - [20240221T1715Z/landmask_param_set17 preparing job:01 flows:1] => submitted
+2024-02-21T12:32:50-05:00 INFO - [20240221T1715Z/landmask_param_set17 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:32:50-05:00 INFO - [20240221T1715Z/landmask_param_set20 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:32:50-05:00 INFO - [20240221T1715Z/landmask_param_set20 waiting job:01 flows:1] => preparing
+2024-02-21T12:32:51-05:00 INFO - [20240221T1715Z/soit_param_set01 running job:02 flows:1] => waiting
+2024-02-21T12:32:51-05:00 WARNING - [20240221T1715Z/soit_param_set01 waiting job:02 flows:1] retrying in PT6S (after 2024-02-21T12:32:57-05:00)
+2024-02-21T12:32:51-05:00 INFO - [20240221T1715Z/landmask_param_set12 submitted job:01 flows:1] => running
+2024-02-21T12:32:51-05:00 INFO - [20240221T1715Z/landmask_param_set12 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:32:51-05:00 INFO - [20240221T1715Z/landmask_param_set20 preparing job:01 flows:1] submitted to oscar:slurm[707545]
+2024-02-21T12:32:51-05:00 INFO - [20240221T1715Z/landmask_param_set20 preparing job:01 flows:1] => submitted
+2024-02-21T12:32:51-05:00 INFO - [20240221T1715Z/landmask_param_set20 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:32:51-05:00 INFO - [20240221T1715Z/landmask_param_set09 submitted job:01 flows:1] => running
+2024-02-21T12:32:51-05:00 INFO - [20240221T1715Z/landmask_param_set09 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:32:52-05:00 INFO - [20240221T1715Z/landmask_param_set13 submitted job:01 flows:1] => running
+2024-02-21T12:32:52-05:00 INFO - [20240221T1715Z/landmask_param_set13 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:32:54-05:00 INFO - [20240221T1715Z/landmask_param_set10 submitted job:01 flows:1] => running
+2024-02-21T12:32:54-05:00 INFO - [20240221T1715Z/landmask_param_set10 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:32:57-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/soit_param_set01 = wall_clock(trigger_time=1708536777.0184445)
+2024-02-21T12:32:57-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting job:02 flows:1] => waiting(queued)
+2024-02-21T12:32:57-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting(queued) job:02 flows:1] => waiting
+2024-02-21T12:32:57-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting job:03 flows:1] => preparing
+2024-02-21T12:32:58-05:00 INFO - [20240221T1715Z/soit_param_set01 preparing job:03 flows:1] submitted to oscar:slurm[707546]
+2024-02-21T12:32:58-05:00 INFO - [20240221T1715Z/soit_param_set01 preparing job:03 flows:1] => submitted
+2024-02-21T12:32:58-05:00 INFO - [20240221T1715Z/soit_param_set01 submitted job:03 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:33:42-05:00 INFO - [20240221T1715Z/landmask_param_set09 running job:01 flows:1] => succeeded
+2024-02-21T12:33:42-05:00 INFO - [20240221T1715Z/preprocess_param_set09 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:33:42-05:00 INFO - [20240221T1715Z/preprocess_param_set09 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:33:42-05:00 INFO - [20240221T1715Z/landmask_param_set13 running job:01 flows:1] => succeeded
+2024-02-21T12:33:42-05:00 INFO - [20240221T1715Z/preprocess_param_set13 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:33:42-05:00 INFO - [20240221T1715Z/preprocess_param_set13 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:33:43-05:00 INFO - [20240221T1715Z/preprocess_param_set09 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:33:43-05:00 INFO - [20240221T1715Z/preprocess_param_set13 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:33:43-05:00 INFO - [20240221T1715Z/preprocess_param_set09 waiting job:01 flows:1] => preparing
+2024-02-21T12:33:43-05:00 INFO - [20240221T1715Z/preprocess_param_set13 waiting job:01 flows:1] => preparing
+2024-02-21T12:33:44-05:00 INFO - [20240221T1715Z/preprocess_param_set09 preparing job:01 flows:1] submitted to oscar:slurm[707751]
+2024-02-21T12:33:44-05:00 INFO - [20240221T1715Z/preprocess_param_set09 preparing job:01 flows:1] => submitted
+2024-02-21T12:33:44-05:00 INFO - [20240221T1715Z/preprocess_param_set09 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:33:44-05:00 INFO - [20240221T1715Z/preprocess_param_set13 preparing job:01 flows:1] submitted to oscar:slurm[707752]
+2024-02-21T12:33:44-05:00 INFO - [20240221T1715Z/preprocess_param_set13 preparing job:01 flows:1] => submitted
+2024-02-21T12:33:44-05:00 INFO - [20240221T1715Z/preprocess_param_set13 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:33:45-05:00 INFO - [20240221T1715Z/landmask_param_set12 running job:01 flows:1] => succeeded
+2024-02-21T12:33:45-05:00 INFO - [20240221T1715Z/preprocess_param_set12 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:33:45-05:00 INFO - [20240221T1715Z/preprocess_param_set12 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:33:46-05:00 INFO - [20240221T1715Z/preprocess_param_set12 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:33:46-05:00 INFO - [20240221T1715Z/preprocess_param_set12 waiting job:01 flows:1] => preparing
+2024-02-21T12:33:46-05:00 INFO - [20240221T1715Z/landmask_param_set10 running job:01 flows:1] => succeeded
+2024-02-21T12:33:46-05:00 INFO - [20240221T1715Z/preprocess_param_set10 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:33:46-05:00 INFO - [20240221T1715Z/preprocess_param_set10 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:33:47-05:00 INFO - [20240221T1715Z/preprocess_param_set10 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:33:47-05:00 INFO - [20240221T1715Z/preprocess_param_set10 waiting job:01 flows:1] => preparing
+2024-02-21T12:33:47-05:00 INFO - [20240221T1715Z/preprocess_param_set12 preparing job:01 flows:1] submitted to oscar:slurm[707753]
+2024-02-21T12:33:47-05:00 INFO - [20240221T1715Z/preprocess_param_set12 preparing job:01 flows:1] => submitted
+2024-02-21T12:33:47-05:00 INFO - [20240221T1715Z/preprocess_param_set12 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:33:48-05:00 INFO - [20240221T1715Z/preprocess_param_set10 preparing job:01 flows:1] submitted to oscar:slurm[707754]
+2024-02-21T12:33:48-05:00 INFO - [20240221T1715Z/preprocess_param_set10 preparing job:01 flows:1] => submitted
+2024-02-21T12:33:48-05:00 INFO - [20240221T1715Z/preprocess_param_set10 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:33:48-05:00 INFO - [20240221T1715Z/landmask_param_set14 submitted job:01 flows:1] => running
+2024-02-21T12:33:48-05:00 INFO - [20240221T1715Z/landmask_param_set14 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:33:50-05:00 INFO - [20240221T1715Z/landmask_param_set19 submitted job:01 flows:1] => running
+2024-02-21T12:33:50-05:00 INFO - [20240221T1715Z/landmask_param_set19 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:33:52-05:00 INFO - [20240221T1715Z/landmask_param_set15 submitted job:01 flows:1] => running
+2024-02-21T12:33:52-05:00 INFO - [20240221T1715Z/landmask_param_set15 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:33:52-05:00 INFO - [20240221T1715Z/landmask_param_set18 submitted job:01 flows:1] => running
+2024-02-21T12:33:52-05:00 INFO - [20240221T1715Z/landmask_param_set18 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:34:15-05:00 INFO - [20240221T1715Z/landmask_param_set14 running job:01 flows:1] => succeeded
+2024-02-21T12:34:15-05:00 INFO - [20240221T1715Z/preprocess_param_set14 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:34:15-05:00 INFO - [20240221T1715Z/preprocess_param_set14 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:34:16-05:00 INFO - [20240221T1715Z/preprocess_param_set14 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:34:16-05:00 INFO - [20240221T1715Z/preprocess_param_set14 waiting job:01 flows:1] => preparing
+2024-02-21T12:34:16-05:00 INFO - [20240221T1715Z/landmask_param_set19 running job:01 flows:1] => succeeded
+2024-02-21T12:34:16-05:00 INFO - [20240221T1715Z/preprocess_param_set19 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:34:16-05:00 INFO - [20240221T1715Z/preprocess_param_set19 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:34:16-05:00 INFO - [20240221T1715Z/preprocess_param_set19 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:34:16-05:00 INFO - [20240221T1715Z/preprocess_param_set19 waiting job:01 flows:1] => preparing
+2024-02-21T12:34:17-05:00 INFO - [20240221T1715Z/preprocess_param_set14 preparing job:01 flows:1] submitted to oscar:slurm[707755]
+2024-02-21T12:34:17-05:00 INFO - [20240221T1715Z/preprocess_param_set14 preparing job:01 flows:1] => submitted
+2024-02-21T12:34:17-05:00 INFO - [20240221T1715Z/preprocess_param_set14 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:34:17-05:00 INFO - [20240221T1715Z/preprocess_param_set19 preparing job:01 flows:1] submitted to oscar:slurm[707756]
+2024-02-21T12:34:17-05:00 INFO - [20240221T1715Z/preprocess_param_set19 preparing job:01 flows:1] => submitted
+2024-02-21T12:34:17-05:00 INFO - [20240221T1715Z/preprocess_param_set19 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:34:18-05:00 INFO - [20240221T1715Z/landmask_param_set16 submitted job:01 flows:1] => running
+2024-02-21T12:34:18-05:00 INFO - [20240221T1715Z/landmask_param_set16 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:34:19-05:00 INFO - [20240221T1715Z/landmask_param_set18 running job:01 flows:1] => succeeded
+2024-02-21T12:34:19-05:00 INFO - [20240221T1715Z/preprocess_param_set18 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:34:19-05:00 INFO - [20240221T1715Z/preprocess_param_set18 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:34:20-05:00 INFO - [20240221T1715Z/preprocess_param_set18 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:34:20-05:00 INFO - [20240221T1715Z/preprocess_param_set18 waiting job:01 flows:1] => preparing
+2024-02-21T12:34:20-05:00 INFO - [20240221T1715Z/landmask_param_set17 submitted job:01 flows:1] => running
+2024-02-21T12:34:20-05:00 INFO - [20240221T1715Z/landmask_param_set17 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:34:21-05:00 INFO - [20240221T1715Z/preprocess_param_set18 preparing job:01 flows:1] submitted to oscar:slurm[707758]
+2024-02-21T12:34:21-05:00 INFO - [20240221T1715Z/preprocess_param_set18 preparing job:01 flows:1] => submitted
+2024-02-21T12:34:21-05:00 INFO - [20240221T1715Z/preprocess_param_set18 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:34:22-05:00 INFO - [20240221T1715Z/landmask_param_set15 running job:01 flows:1] => succeeded
+2024-02-21T12:34:22-05:00 INFO - [20240221T1715Z/preprocess_param_set15 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:34:22-05:00 INFO - [20240221T1715Z/preprocess_param_set15 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:34:23-05:00 INFO - [20240221T1715Z/preprocess_param_set15 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:34:23-05:00 INFO - [20240221T1715Z/preprocess_param_set15 waiting job:01 flows:1] => preparing
+2024-02-21T12:34:23-05:00 INFO - [20240221T1715Z/landmask_param_set20 submitted job:01 flows:1] => running
+2024-02-21T12:34:23-05:00 INFO - [20240221T1715Z/landmask_param_set20 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:34:24-05:00 INFO - [20240221T1715Z/preprocess_param_set15 preparing job:01 flows:1] submitted to oscar:slurm[707759]
+2024-02-21T12:34:24-05:00 INFO - [20240221T1715Z/preprocess_param_set15 preparing job:01 flows:1] => submitted
+2024-02-21T12:34:24-05:00 INFO - [20240221T1715Z/preprocess_param_set15 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:34:26-05:00 INFO - [20240221T1715Z/soit_param_set01 submitted job:03 flows:1] => running
+2024-02-21T12:34:26-05:00 INFO - [20240221T1715Z/soit_param_set01 running job:03 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:34:26-05:00 INFO - [20240221T1715Z/soit_param_set11 submitted job:02 flows:1] => running
+2024-02-21T12:34:26-05:00 INFO - [20240221T1715Z/soit_param_set11 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:34:29-05:00 INFO - [20240221T1715Z/soit_param_set01 running job:03 flows:1] => waiting
+2024-02-21T12:34:29-05:00 WARNING - [20240221T1715Z/soit_param_set01 waiting job:03 flows:1] retrying in PT6S (after 2024-02-21T12:34:35-05:00)
+2024-02-21T12:34:29-05:00 INFO - [20240221T1715Z/soit_param_set11 running job:02 flows:1] => waiting
+2024-02-21T12:34:29-05:00 WARNING - [20240221T1715Z/soit_param_set11 waiting job:02 flows:1] retrying in PT6S (after 2024-02-21T12:34:35-05:00)
+2024-02-21T12:34:35-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/soit_param_set01 = wall_clock(trigger_time=1708536875.679497)
+2024-02-21T12:34:35-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting job:03 flows:1] => waiting(queued)
+2024-02-21T12:34:35-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/soit_param_set11 = wall_clock(trigger_time=1708536875.6817918)
+2024-02-21T12:34:35-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting job:02 flows:1] => waiting(queued)
+2024-02-21T12:34:35-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting(queued) job:03 flows:1] => waiting
+2024-02-21T12:34:35-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting(queued) job:02 flows:1] => waiting
+2024-02-21T12:34:35-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting job:03 flows:1] => preparing
+2024-02-21T12:34:35-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting job:04 flows:1] => preparing
+2024-02-21T12:34:36-05:00 INFO - [20240221T1715Z/soit_param_set01 preparing job:04 flows:1] submitted to oscar:slurm[707763]
+2024-02-21T12:34:36-05:00 INFO - [20240221T1715Z/soit_param_set01 preparing job:04 flows:1] => submitted
+2024-02-21T12:34:36-05:00 INFO - [20240221T1715Z/soit_param_set01 submitted job:04 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:34:36-05:00 INFO - [20240221T1715Z/soit_param_set11 preparing job:03 flows:1] submitted to oscar:slurm[707764]
+2024-02-21T12:34:36-05:00 INFO - [20240221T1715Z/soit_param_set11 preparing job:03 flows:1] => submitted
+2024-02-21T12:34:36-05:00 INFO - [20240221T1715Z/soit_param_set11 submitted job:03 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:34:39-05:00 INFO - [20240221T1715Z/soit_param_set01 submitted job:04 flows:1] => running
+2024-02-21T12:34:39-05:00 INFO - [20240221T1715Z/soit_param_set01 running job:04 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:34:39-05:00 INFO - [20240221T1715Z/soit_param_set11 submitted job:03 flows:1] => running
+2024-02-21T12:34:39-05:00 INFO - [20240221T1715Z/soit_param_set11 running job:03 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:34:41-05:00 INFO - [20240221T1715Z/soit_param_set01 running job:04 flows:1] => waiting
+2024-02-21T12:34:41-05:00 WARNING - [20240221T1715Z/soit_param_set01 waiting job:04 flows:1] retrying in PT6S (after 2024-02-21T12:34:47-05:00)
+2024-02-21T12:34:42-05:00 INFO - [20240221T1715Z/soit_param_set11 running job:03 flows:1] => waiting
+2024-02-21T12:34:42-05:00 WARNING - [20240221T1715Z/soit_param_set11 waiting job:03 flows:1] retrying in PT6S (after 2024-02-21T12:34:48-05:00)
+2024-02-21T12:34:43-05:00 INFO - [20240221T1715Z/landmask_param_set16 running job:01 flows:1] => succeeded
+2024-02-21T12:34:43-05:00 INFO - [20240221T1715Z/preprocess_param_set16 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:34:43-05:00 INFO - [20240221T1715Z/preprocess_param_set16 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:34:44-05:00 INFO - [20240221T1715Z/preprocess_param_set16 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:34:44-05:00 INFO - [20240221T1715Z/preprocess_param_set16 waiting job:01 flows:1] => preparing
+2024-02-21T12:34:45-05:00 INFO - [20240221T1715Z/preprocess_param_set16 preparing job:01 flows:1] submitted to oscar:slurm[707765]
+2024-02-21T12:34:45-05:00 INFO - [20240221T1715Z/preprocess_param_set16 preparing job:01 flows:1] => submitted
+2024-02-21T12:34:45-05:00 INFO - [20240221T1715Z/preprocess_param_set16 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:34:46-05:00 INFO - [20240221T1715Z/landmask_param_set17 running job:01 flows:1] => succeeded
+2024-02-21T12:34:46-05:00 INFO - [20240221T1715Z/preprocess_param_set17 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:34:46-05:00 INFO - [20240221T1715Z/preprocess_param_set17 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:34:47-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/soit_param_set01 = wall_clock(trigger_time=1708536887.6995065)
+2024-02-21T12:34:47-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting job:04 flows:1] => waiting(queued)
+2024-02-21T12:34:47-05:00 INFO - [20240221T1715Z/preprocess_param_set17 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:34:47-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting(queued) job:04 flows:1] => waiting
+2024-02-21T12:34:47-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting job:05 flows:1] => preparing
+2024-02-21T12:34:47-05:00 INFO - [20240221T1715Z/preprocess_param_set17 waiting job:01 flows:1] => preparing
+2024-02-21T12:34:48-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/soit_param_set11 = wall_clock(trigger_time=1708536888.7011812)
+2024-02-21T12:34:48-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting job:03 flows:1] => waiting(queued)
+2024-02-21T12:34:48-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting(queued) job:03 flows:1] => waiting
+2024-02-21T12:34:48-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting job:04 flows:1] => preparing
+2024-02-21T12:34:49-05:00 INFO - [20240221T1715Z/preprocess_param_set17 preparing job:01 flows:1] submitted to oscar:slurm[707766]
+2024-02-21T12:34:49-05:00 INFO - [20240221T1715Z/preprocess_param_set17 preparing job:01 flows:1] => submitted
+2024-02-21T12:34:49-05:00 INFO - [20240221T1715Z/preprocess_param_set17 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:34:49-05:00 INFO - [20240221T1715Z/soit_param_set01 preparing job:05 flows:1] submitted to oscar:slurm[707767]
+2024-02-21T12:34:49-05:00 INFO - [20240221T1715Z/soit_param_set01 preparing job:05 flows:1] => submitted
+2024-02-21T12:34:49-05:00 INFO - [20240221T1715Z/soit_param_set01 submitted job:05 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:34:49-05:00 INFO - [20240221T1715Z/landmask_param_set20 running job:01 flows:1] => succeeded
+2024-02-21T12:34:49-05:00 INFO - [20240221T1715Z/preprocess_param_set20 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:34:49-05:00 INFO - [20240221T1715Z/preprocess_param_set20 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:34:49-05:00 INFO - [20240221T1715Z/soit_param_set11 preparing job:04 flows:1] submitted to oscar:slurm[707768]
+2024-02-21T12:34:49-05:00 INFO - [20240221T1715Z/soit_param_set11 preparing job:04 flows:1] => submitted
+2024-02-21T12:34:49-05:00 INFO - [20240221T1715Z/soit_param_set11 submitted job:04 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:34:49-05:00 INFO - [20240221T1715Z/preprocess_param_set20 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:34:49-05:00 INFO - [20240221T1715Z/preprocess_param_set20 waiting job:01 flows:1] => preparing
+2024-02-21T12:34:50-05:00 INFO - [20240221T1715Z/preprocess_param_set20 preparing job:01 flows:1] submitted to oscar:slurm[707769]
+2024-02-21T12:34:50-05:00 INFO - [20240221T1715Z/preprocess_param_set20 preparing job:01 flows:1] => submitted
+2024-02-21T12:34:50-05:00 INFO - [20240221T1715Z/preprocess_param_set20 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:34:57-05:00 INFO - [20240221T1715Z/preprocess_param_set04 submitted job:01 flows:1] => running
+2024-02-21T12:34:57-05:00 INFO - [20240221T1715Z/preprocess_param_set04 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:36:07-05:00 INFO - [20240221T1715Z/preprocess_param_set04 running job:01 flows:1] => waiting
+2024-02-21T12:36:07-05:00 WARNING - [20240221T1715Z/preprocess_param_set04 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:36:13-05:00)
+2024-02-21T12:36:10-05:00 INFO - [20240221T1715Z/preprocess_param_set03 submitted job:01 flows:1] => running
+2024-02-21T12:36:10-05:00 INFO - [20240221T1715Z/preprocess_param_set03 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:36:13-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/preprocess_param_set04 = wall_clock(trigger_time=1708536973.8595312)
+2024-02-21T12:36:13-05:00 INFO - [20240221T1715Z/preprocess_param_set04 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:36:13-05:00 INFO - [20240221T1715Z/preprocess_param_set04 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:36:13-05:00 INFO - [20240221T1715Z/preprocess_param_set04 waiting job:02 flows:1] => preparing
+2024-02-21T12:36:15-05:00 INFO - [20240221T1715Z/preprocess_param_set04 preparing job:02 flows:1] submitted to oscar:slurm[707775]
+2024-02-21T12:36:15-05:00 INFO - [20240221T1715Z/preprocess_param_set04 preparing job:02 flows:1] => submitted
+2024-02-21T12:36:15-05:00 INFO - [20240221T1715Z/preprocess_param_set04 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:37:09-05:00 INFO - [20240221T1715Z/preprocess_param_set03 running job:01 flows:1] => waiting
+2024-02-21T12:37:09-05:00 WARNING - [20240221T1715Z/preprocess_param_set03 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:37:15-05:00)
+2024-02-21T12:37:15-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/preprocess_param_set03 = wall_clock(trigger_time=1708537035.4661925)
+2024-02-21T12:37:15-05:00 INFO - [20240221T1715Z/preprocess_param_set03 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:37:15-05:00 INFO - [20240221T1715Z/preprocess_param_set03 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:37:15-05:00 INFO - [20240221T1715Z/preprocess_param_set03 waiting job:02 flows:1] => preparing
+2024-02-21T12:37:15-05:00 INFO - [20240221T1715Z/preprocess_param_set00 submitted job:01 flows:1] => running
+2024-02-21T12:37:15-05:00 INFO - [20240221T1715Z/preprocess_param_set00 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:37:16-05:00 INFO - [20240221T1715Z/preprocess_param_set03 preparing job:02 flows:1] submitted to oscar:slurm[707780]
+2024-02-21T12:37:16-05:00 INFO - [20240221T1715Z/preprocess_param_set03 preparing job:02 flows:1] => submitted
+2024-02-21T12:37:16-05:00 INFO - [20240221T1715Z/preprocess_param_set03 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:38:14-05:00 INFO - [20240221T1715Z/preprocess_param_set00 running job:01 flows:1] => waiting
+2024-02-21T12:38:14-05:00 WARNING - [20240221T1715Z/preprocess_param_set00 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:38:20-05:00)
+2024-02-21T12:38:18-05:00 INFO - [20240221T1715Z/preprocess_param_set02 submitted job:01 flows:1] => running
+2024-02-21T12:38:18-05:00 INFO - [20240221T1715Z/preprocess_param_set02 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:38:20-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/preprocess_param_set00 = wall_clock(trigger_time=1708537100.0939934)
+2024-02-21T12:38:20-05:00 INFO - [20240221T1715Z/preprocess_param_set00 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:38:20-05:00 INFO - [20240221T1715Z/preprocess_param_set00 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:38:20-05:00 INFO - [20240221T1715Z/preprocess_param_set00 waiting job:02 flows:1] => preparing
+2024-02-21T12:38:21-05:00 INFO - [20240221T1715Z/preprocess_param_set00 preparing job:02 flows:1] submitted to oscar:slurm[707789]
+2024-02-21T12:38:21-05:00 INFO - [20240221T1715Z/preprocess_param_set00 preparing job:02 flows:1] => submitted
+2024-02-21T12:38:21-05:00 INFO - [20240221T1715Z/preprocess_param_set00 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:39:16-05:00 INFO - [20240221T1715Z/preprocess_param_set02 running job:01 flows:1] => waiting
+2024-02-21T12:39:16-05:00 WARNING - [20240221T1715Z/preprocess_param_set02 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:39:22-05:00)
+2024-02-21T12:39:19-05:00 INFO - [20240221T1715Z/preprocess_param_set05 submitted job:01 flows:1] => running
+2024-02-21T12:39:19-05:00 INFO - [20240221T1715Z/preprocess_param_set05 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:39:22-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/preprocess_param_set02 = wall_clock(trigger_time=1708537162.7364993)
+2024-02-21T12:39:22-05:00 INFO - [20240221T1715Z/preprocess_param_set02 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:39:22-05:00 INFO - [20240221T1715Z/preprocess_param_set02 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:39:22-05:00 INFO - [20240221T1715Z/preprocess_param_set02 waiting job:02 flows:1] => preparing
+2024-02-21T12:39:24-05:00 INFO - [20240221T1715Z/preprocess_param_set02 preparing job:02 flows:1] submitted to oscar:slurm[707802]
+2024-02-21T12:39:24-05:00 INFO - [20240221T1715Z/preprocess_param_set02 preparing job:02 flows:1] => submitted
+2024-02-21T12:39:24-05:00 INFO - [20240221T1715Z/preprocess_param_set02 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:40:18-05:00 INFO - [20240221T1715Z/preprocess_param_set05 running job:01 flows:1] => waiting
+2024-02-21T12:40:18-05:00 WARNING - [20240221T1715Z/preprocess_param_set05 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:40:24-05:00)
+2024-02-21T12:40:22-05:00 INFO - [20240221T1715Z/preprocess_param_set06 submitted job:01 flows:1] => running
+2024-02-21T12:40:22-05:00 INFO - [20240221T1715Z/preprocess_param_set06 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:40:24-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/preprocess_param_set05 = wall_clock(trigger_time=1708537224.3861294)
+2024-02-21T12:40:24-05:00 INFO - [20240221T1715Z/preprocess_param_set05 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:40:24-05:00 INFO - [20240221T1715Z/preprocess_param_set05 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:40:24-05:00 INFO - [20240221T1715Z/preprocess_param_set05 waiting job:02 flows:1] => preparing
+2024-02-21T12:40:25-05:00 INFO - [20240221T1715Z/preprocess_param_set05 preparing job:02 flows:1] submitted to oscar:slurm[707817]
+2024-02-21T12:40:25-05:00 INFO - [20240221T1715Z/preprocess_param_set05 preparing job:02 flows:1] => submitted
+2024-02-21T12:40:25-05:00 INFO - [20240221T1715Z/preprocess_param_set05 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:41:20-05:00 INFO - [20240221T1715Z/preprocess_param_set06 running job:01 flows:1] => waiting
+2024-02-21T12:41:20-05:00 WARNING - [20240221T1715Z/preprocess_param_set06 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:41:26-05:00)
+2024-02-21T12:41:23-05:00 INFO - [20240221T1715Z/preprocess_param_set07 submitted job:01 flows:1] => running
+2024-02-21T12:41:23-05:00 INFO - [20240221T1715Z/preprocess_param_set07 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:41:27-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/preprocess_param_set06 = wall_clock(trigger_time=1708537286.9840088)
+2024-02-21T12:41:27-05:00 INFO - [20240221T1715Z/preprocess_param_set06 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:41:27-05:00 INFO - [20240221T1715Z/preprocess_param_set06 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:41:27-05:00 INFO - [20240221T1715Z/preprocess_param_set06 waiting job:02 flows:1] => preparing
+2024-02-21T12:41:28-05:00 INFO - [20240221T1715Z/preprocess_param_set06 preparing job:02 flows:1] submitted to oscar:slurm[707835]
+2024-02-21T12:41:28-05:00 INFO - [20240221T1715Z/preprocess_param_set06 preparing job:02 flows:1] => submitted
+2024-02-21T12:41:28-05:00 INFO - [20240221T1715Z/preprocess_param_set06 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:42:22-05:00 INFO - [20240221T1715Z/preprocess_param_set07 running job:01 flows:1] => waiting
+2024-02-21T12:42:22-05:00 WARNING - [20240221T1715Z/preprocess_param_set07 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:42:28-05:00)
+2024-02-21T12:42:26-05:00 INFO - [20240221T1715Z/preprocess_param_set08 submitted job:01 flows:1] => running
+2024-02-21T12:42:26-05:00 INFO - [20240221T1715Z/preprocess_param_set08 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:42:28-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/preprocess_param_set07 = wall_clock(trigger_time=1708537348.6048052)
+2024-02-21T12:42:28-05:00 INFO - [20240221T1715Z/preprocess_param_set07 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:42:28-05:00 INFO - [20240221T1715Z/preprocess_param_set07 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:42:28-05:00 INFO - [20240221T1715Z/preprocess_param_set07 waiting job:02 flows:1] => preparing
+2024-02-21T12:42:30-05:00 INFO - [20240221T1715Z/preprocess_param_set07 preparing job:02 flows:1] submitted to oscar:slurm[707871]
+2024-02-21T12:42:30-05:00 INFO - [20240221T1715Z/preprocess_param_set07 preparing job:02 flows:1] => submitted
+2024-02-21T12:42:30-05:00 INFO - [20240221T1715Z/preprocess_param_set07 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:43:26-05:00 INFO - [20240221T1715Z/preprocess_param_set08 running job:01 flows:1] => waiting
+2024-02-21T12:43:26-05:00 WARNING - [20240221T1715Z/preprocess_param_set08 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:43:32-05:00)
+2024-02-21T12:43:29-05:00 INFO - [20240221T1715Z/preprocess_param_set09 submitted job:01 flows:1] => running
+2024-02-21T12:43:29-05:00 INFO - [20240221T1715Z/preprocess_param_set09 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:43:32-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/preprocess_param_set08 = wall_clock(trigger_time=1708537412.2072341)
+2024-02-21T12:43:32-05:00 INFO - [20240221T1715Z/preprocess_param_set08 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:43:32-05:00 INFO - [20240221T1715Z/preprocess_param_set08 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:43:32-05:00 INFO - [20240221T1715Z/preprocess_param_set08 waiting job:02 flows:1] => preparing
+2024-02-21T12:43:33-05:00 INFO - [20240221T1715Z/preprocess_param_set08 preparing job:02 flows:1] submitted to oscar:slurm[707882]
+2024-02-21T12:43:33-05:00 INFO - [20240221T1715Z/preprocess_param_set08 preparing job:02 flows:1] => submitted
+2024-02-21T12:43:33-05:00 INFO - [20240221T1715Z/preprocess_param_set08 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:44:36-05:00 INFO - [20240221T1715Z/preprocess_param_set09 running job:01 flows:1] => waiting
+2024-02-21T12:44:36-05:00 WARNING - [20240221T1715Z/preprocess_param_set09 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:44:42-05:00)
+2024-02-21T12:44:40-05:00 INFO - [20240221T1715Z/preprocess_param_set13 submitted job:01 flows:1] => running
+2024-02-21T12:44:40-05:00 INFO - [20240221T1715Z/preprocess_param_set13 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:44:42-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/preprocess_param_set09 = wall_clock(trigger_time=1708537482.8421342)
+2024-02-21T12:44:42-05:00 INFO - [20240221T1715Z/preprocess_param_set09 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:44:42-05:00 INFO - [20240221T1715Z/preprocess_param_set09 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:44:42-05:00 INFO - [20240221T1715Z/preprocess_param_set09 waiting job:02 flows:1] => preparing
+2024-02-21T12:44:44-05:00 INFO - [20240221T1715Z/preprocess_param_set09 preparing job:02 flows:1] submitted to oscar:slurm[707899]
+2024-02-21T12:44:44-05:00 INFO - [20240221T1715Z/preprocess_param_set09 preparing job:02 flows:1] => submitted
+2024-02-21T12:44:44-05:00 INFO - [20240221T1715Z/preprocess_param_set09 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:45:48-05:00 INFO - [20240221T1715Z/preprocess_param_set13 running job:01 flows:1] => succeeded
+2024-02-21T12:45:48-05:00 INFO - [20240221T1715Z/extractfeatures_param_set13 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:45:48-05:00 INFO - [20240221T1715Z/extractfeatures_param_set13 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:45:49-05:00 INFO - [20240221T1715Z/extractfeatures_param_set13 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:45:49-05:00 INFO - [20240221T1715Z/extractfeatures_param_set13 waiting job:01 flows:1] => preparing
+2024-02-21T12:45:50-05:00 INFO - [20240221T1715Z/extractfeatures_param_set13 preparing job:01 flows:1] submitted to oscar:slurm[707918]
+2024-02-21T12:45:50-05:00 INFO - [20240221T1715Z/extractfeatures_param_set13 preparing job:01 flows:1] => submitted
+2024-02-21T12:45:50-05:00 INFO - [20240221T1715Z/extractfeatures_param_set13 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:45:56-05:00 INFO - [20240221T1715Z/preprocess_param_set12 submitted job:01 flows:1] => running
+2024-02-21T12:45:56-05:00 INFO - [20240221T1715Z/preprocess_param_set12 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:47:08-05:00 INFO - [20240221T1715Z/preprocess_param_set12 running job:01 flows:1] => waiting
+2024-02-21T12:47:08-05:00 WARNING - [20240221T1715Z/preprocess_param_set12 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:47:14-05:00)
+2024-02-21T12:47:12-05:00 INFO - [20240221T1715Z/preprocess_param_set10 submitted job:01 flows:1] => running
+2024-02-21T12:47:12-05:00 INFO - [20240221T1715Z/preprocess_param_set10 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:47:14-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/preprocess_param_set12 = wall_clock(trigger_time=1708537634.131142)
+2024-02-21T12:47:14-05:00 INFO - [20240221T1715Z/preprocess_param_set12 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:47:14-05:00 INFO - [20240221T1715Z/preprocess_param_set12 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:47:14-05:00 INFO - [20240221T1715Z/preprocess_param_set12 waiting job:02 flows:1] => preparing
+2024-02-21T12:47:15-05:00 INFO - [20240221T1715Z/preprocess_param_set12 preparing job:02 flows:1] submitted to oscar:slurm[707940]
+2024-02-21T12:47:15-05:00 INFO - [20240221T1715Z/preprocess_param_set12 preparing job:02 flows:1] => submitted
+2024-02-21T12:47:15-05:00 INFO - [20240221T1715Z/preprocess_param_set12 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:48:12-05:00 INFO - [20240221T1715Z/preprocess_param_set10 running job:01 flows:1] => waiting
+2024-02-21T12:48:12-05:00 WARNING - [20240221T1715Z/preprocess_param_set10 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:48:18-05:00)
+2024-02-21T12:48:16-05:00 INFO - [20240221T1715Z/preprocess_param_set14 submitted job:01 flows:1] => running
+2024-02-21T12:48:16-05:00 INFO - [20240221T1715Z/preprocess_param_set14 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:48:18-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/preprocess_param_set10 = wall_clock(trigger_time=1708537698.7541142)
+2024-02-21T12:48:18-05:00 INFO - [20240221T1715Z/preprocess_param_set10 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:48:18-05:00 INFO - [20240221T1715Z/preprocess_param_set10 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:48:18-05:00 INFO - [20240221T1715Z/preprocess_param_set10 waiting job:02 flows:1] => preparing
+2024-02-21T12:48:20-05:00 INFO - [20240221T1715Z/preprocess_param_set10 preparing job:02 flows:1] submitted to oscar:slurm[707952]
+2024-02-21T12:48:20-05:00 INFO - [20240221T1715Z/preprocess_param_set10 preparing job:02 flows:1] => submitted
+2024-02-21T12:48:20-05:00 INFO - [20240221T1715Z/preprocess_param_set10 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:49:17-05:00 INFO - [20240221T1715Z/preprocess_param_set14 running job:01 flows:1] => waiting
+2024-02-21T12:49:17-05:00 WARNING - [20240221T1715Z/preprocess_param_set14 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:49:23-05:00)
+2024-02-21T12:49:18-05:00 INFO - [20240221T1715Z/preprocess_param_set19 submitted job:01 flows:1] poll now, (next in PT15M (after 2024-02-21T13:04:18-05:00))
+2024-02-21T12:49:19-05:00 INFO - [20240221T1715Z/preprocess_param_set19 submitted job:01 flows:1] (polled)submitted at 2024-02-21T12:34:17-05:00
+2024-02-21T12:49:20-05:00 INFO - [20240221T1715Z/preprocess_param_set19 submitted job:01 flows:1] => running
+2024-02-21T12:49:20-05:00 INFO - [20240221T1715Z/preprocess_param_set19 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:49:21-05:00 INFO - [20240221T1715Z/preprocess_param_set18 submitted job:01 flows:1] poll now, (next in PT15M (after 2024-02-21T13:04:21-05:00))
+2024-02-21T12:49:22-05:00 INFO - [20240221T1715Z/preprocess_param_set18 submitted job:01 flows:1] (polled)submitted at 2024-02-21T12:34:21-05:00
+2024-02-21T12:49:23-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/preprocess_param_set14 = wall_clock(trigger_time=1708537763.361128)
+2024-02-21T12:49:23-05:00 INFO - [20240221T1715Z/preprocess_param_set14 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:49:23-05:00 INFO - [20240221T1715Z/preprocess_param_set14 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:49:23-05:00 INFO - [20240221T1715Z/preprocess_param_set14 waiting job:02 flows:1] => preparing
+2024-02-21T12:49:24-05:00 INFO - [20240221T1715Z/preprocess_param_set14 preparing job:02 flows:1] submitted to oscar:slurm[708162]
+2024-02-21T12:49:24-05:00 INFO - [20240221T1715Z/preprocess_param_set14 preparing job:02 flows:1] => submitted
+2024-02-21T12:49:24-05:00 INFO - [20240221T1715Z/preprocess_param_set14 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:49:25-05:00 INFO - [20240221T1715Z/preprocess_param_set15 submitted job:01 flows:1] poll now, (next in PT15M (after 2024-02-21T13:04:25-05:00))
+2024-02-21T12:49:25-05:00 INFO - [20240221T1715Z/preprocess_param_set15 submitted job:01 flows:1] (polled)submitted at 2024-02-21T12:34:24-05:00
+2024-02-21T12:49:45-05:00 INFO - [20240221T1715Z/preprocess_param_set16 submitted job:01 flows:1] poll now, (next in PT15M (after 2024-02-21T13:04:45-05:00))
+2024-02-21T12:49:46-05:00 INFO - [20240221T1715Z/preprocess_param_set16 submitted job:01 flows:1] (polled)submitted at 2024-02-21T12:34:45-05:00
+2024-02-21T12:49:49-05:00 INFO - [20240221T1715Z/soit_param_set01 submitted job:05 flows:1] poll now, (next in PT15M (after 2024-02-21T13:04:49-05:00))
+2024-02-21T12:49:49-05:00 INFO - [20240221T1715Z/soit_param_set11 submitted job:04 flows:1] poll now, (next in PT15M (after 2024-02-21T13:04:49-05:00))
+2024-02-21T12:49:49-05:00 INFO - [20240221T1715Z/preprocess_param_set17 submitted job:01 flows:1] poll now, (next in PT15M (after 2024-02-21T13:04:49-05:00))
+2024-02-21T12:49:50-05:00 INFO - [20240221T1715Z/preprocess_param_set20 submitted job:01 flows:1] poll now, (next in PT15M (after 2024-02-21T13:04:50-05:00))
+2024-02-21T12:49:51-05:00 INFO - [20240221T1715Z/preprocess_param_set17 submitted job:01 flows:1] (polled)submitted at 2024-02-21T12:34:48-05:00
+2024-02-21T12:49:51-05:00 INFO - [20240221T1715Z/soit_param_set01 submitted job:05 flows:1] (polled)submitted at 2024-02-21T12:34:48-05:00
+2024-02-21T12:49:51-05:00 INFO - [20240221T1715Z/soit_param_set11 submitted job:04 flows:1] (polled)submitted at 2024-02-21T12:34:49-05:00
+2024-02-21T12:49:51-05:00 INFO - [20240221T1715Z/preprocess_param_set20 submitted job:01 flows:1] (polled)submitted at 2024-02-21T12:34:50-05:00
+2024-02-21T12:50:20-05:00 INFO - [20240221T1715Z/preprocess_param_set19 running job:01 flows:1] => waiting
+2024-02-21T12:50:20-05:00 WARNING - [20240221T1715Z/preprocess_param_set19 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:50:26-05:00)
+2024-02-21T12:50:26-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/preprocess_param_set19 = wall_clock(trigger_time=1708537826.9728637)
+2024-02-21T12:50:26-05:00 INFO - [20240221T1715Z/preprocess_param_set19 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:50:26-05:00 INFO - [20240221T1715Z/preprocess_param_set19 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:50:26-05:00 INFO - [20240221T1715Z/preprocess_param_set19 waiting job:02 flows:1] => preparing
+2024-02-21T12:50:27-05:00 INFO - [20240221T1715Z/preprocess_param_set18 submitted job:01 flows:1] => running
+2024-02-21T12:50:27-05:00 INFO - [20240221T1715Z/preprocess_param_set18 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:50:28-05:00 INFO - [20240221T1715Z/preprocess_param_set19 preparing job:02 flows:1] submitted to oscar:slurm[708173]
+2024-02-21T12:50:28-05:00 INFO - [20240221T1715Z/preprocess_param_set19 preparing job:02 flows:1] => submitted
+2024-02-21T12:50:28-05:00 INFO - [20240221T1715Z/preprocess_param_set19 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:51:15-05:00 INFO - [20240221T1715Z/preprocess_param_set04 submitted job:02 flows:1] poll now, (next in PT15M (after 2024-02-21T13:06:15-05:00))
+2024-02-21T12:51:17-05:00 INFO - [20240221T1715Z/preprocess_param_set04 submitted job:02 flows:1] (polled)submitted at 2024-02-21T12:36:14-05:00
+2024-02-21T12:51:28-05:00 INFO - [20240221T1715Z/preprocess_param_set18 running job:01 flows:1] => waiting
+2024-02-21T12:51:28-05:00 WARNING - [20240221T1715Z/preprocess_param_set18 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:51:34-05:00)
+2024-02-21T12:51:33-05:00 INFO - [20240221T1715Z/preprocess_param_set15 submitted job:01 flows:1] => running
+2024-02-21T12:51:33-05:00 INFO - [20240221T1715Z/preprocess_param_set15 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:51:34-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/preprocess_param_set18 = wall_clock(trigger_time=1708537894.1231494)
+2024-02-21T12:51:34-05:00 INFO - [20240221T1715Z/preprocess_param_set18 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:51:34-05:00 INFO - [20240221T1715Z/preprocess_param_set18 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:51:34-05:00 INFO - [20240221T1715Z/preprocess_param_set18 waiting job:02 flows:1] => preparing
+2024-02-21T12:51:35-05:00 INFO - [20240221T1715Z/preprocess_param_set18 preparing job:02 flows:1] submitted to oscar:slurm[708389]
+2024-02-21T12:51:35-05:00 INFO - [20240221T1715Z/preprocess_param_set18 preparing job:02 flows:1] => submitted
+2024-02-21T12:51:35-05:00 INFO - [20240221T1715Z/preprocess_param_set18 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:52:17-05:00 INFO - [20240221T1715Z/preprocess_param_set03 submitted job:02 flows:1] poll now, (next in PT15M (after 2024-02-21T13:07:17-05:00))
+2024-02-21T12:52:18-05:00 INFO - [20240221T1715Z/preprocess_param_set03 submitted job:02 flows:1] (polled)submitted at 2024-02-21T12:37:16-05:00
+2024-02-21T12:52:32-05:00 INFO - [20240221T1715Z/preprocess_param_set15 running job:01 flows:1] => waiting
+2024-02-21T12:52:32-05:00 WARNING - [20240221T1715Z/preprocess_param_set15 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:52:38-05:00)
+2024-02-21T12:52:37-05:00 INFO - [20240221T1715Z/preprocess_param_set16 submitted job:01 flows:1] => running
+2024-02-21T12:52:37-05:00 INFO - [20240221T1715Z/preprocess_param_set16 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:52:38-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/preprocess_param_set15 = wall_clock(trigger_time=1708537958.7360556)
+2024-02-21T12:52:38-05:00 INFO - [20240221T1715Z/preprocess_param_set15 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:52:38-05:00 INFO - [20240221T1715Z/preprocess_param_set15 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:52:38-05:00 INFO - [20240221T1715Z/preprocess_param_set15 waiting job:02 flows:1] => preparing
+2024-02-21T12:52:39-05:00 INFO - [20240221T1715Z/preprocess_param_set15 preparing job:02 flows:1] submitted to oscar:slurm[708398]
+2024-02-21T12:52:39-05:00 INFO - [20240221T1715Z/preprocess_param_set15 preparing job:02 flows:1] => submitted
+2024-02-21T12:52:39-05:00 INFO - [20240221T1715Z/preprocess_param_set15 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:53:21-05:00 INFO - [20240221T1715Z/preprocess_param_set00 submitted job:02 flows:1] poll now, (next in PT15M (after 2024-02-21T13:08:21-05:00))
+2024-02-21T12:53:23-05:00 INFO - [20240221T1715Z/preprocess_param_set00 submitted job:02 flows:1] (polled)submitted at 2024-02-21T12:38:21-05:00
+2024-02-21T12:53:44-05:00 INFO - [20240221T1715Z/preprocess_param_set16 running job:01 flows:1] => succeeded
+2024-02-21T12:53:44-05:00 INFO - [20240221T1715Z/extractfeatures_param_set16 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T12:53:44-05:00 INFO - [20240221T1715Z/extractfeatures_param_set16 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T12:53:45-05:00 INFO - [20240221T1715Z/extractfeatures_param_set16 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T12:53:45-05:00 INFO - [20240221T1715Z/extractfeatures_param_set16 waiting job:01 flows:1] => preparing
+2024-02-21T12:53:46-05:00 INFO - [20240221T1715Z/extractfeatures_param_set16 preparing job:01 flows:1] submitted to oscar:slurm[708419]
+2024-02-21T12:53:46-05:00 INFO - [20240221T1715Z/extractfeatures_param_set16 preparing job:01 flows:1] => submitted
+2024-02-21T12:53:46-05:00 INFO - [20240221T1715Z/extractfeatures_param_set16 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:53:48-05:00 INFO - [20240221T1715Z/preprocess_param_set17 submitted job:01 flows:1] => running
+2024-02-21T12:53:48-05:00 INFO - [20240221T1715Z/preprocess_param_set17 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:54:24-05:00 INFO - [20240221T1715Z/preprocess_param_set02 submitted job:02 flows:1] poll now, (next in PT15M (after 2024-02-21T13:09:24-05:00))
+2024-02-21T12:54:25-05:00 INFO - [20240221T1715Z/preprocess_param_set02 submitted job:02 flows:1] (polled)submitted at 2024-02-21T12:39:23-05:00
+2024-02-21T12:54:48-05:00 INFO - [20240221T1715Z/preprocess_param_set17 running job:01 flows:1] => waiting
+2024-02-21T12:54:48-05:00 WARNING - [20240221T1715Z/preprocess_param_set17 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:54:54-05:00)
+2024-02-21T12:54:52-05:00 INFO - [20240221T1715Z/preprocess_param_set20 submitted job:01 flows:1] => running
+2024-02-21T12:54:52-05:00 INFO - [20240221T1715Z/preprocess_param_set20 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:54:54-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/preprocess_param_set17 = wall_clock(trigger_time=1708538094.017879)
+2024-02-21T12:54:54-05:00 INFO - [20240221T1715Z/preprocess_param_set17 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:54:54-05:00 INFO - [20240221T1715Z/preprocess_param_set17 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:54:54-05:00 INFO - [20240221T1715Z/preprocess_param_set17 waiting job:02 flows:1] => preparing
+2024-02-21T12:54:55-05:00 INFO - [20240221T1715Z/preprocess_param_set17 preparing job:02 flows:1] submitted to oscar:slurm[708431]
+2024-02-21T12:54:55-05:00 INFO - [20240221T1715Z/preprocess_param_set17 preparing job:02 flows:1] => submitted
+2024-02-21T12:54:55-05:00 INFO - [20240221T1715Z/preprocess_param_set17 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:55:26-05:00 INFO - [20240221T1715Z/preprocess_param_set05 submitted job:02 flows:1] poll now, (next in PT15M (after 2024-02-21T13:10:26-05:00))
+2024-02-21T12:55:27-05:00 INFO - [20240221T1715Z/preprocess_param_set05 submitted job:02 flows:1] (polled)submitted at 2024-02-21T12:40:25-05:00
+2024-02-21T12:55:52-05:00 INFO - [20240221T1715Z/preprocess_param_set20 running job:01 flows:1] => waiting
+2024-02-21T12:55:52-05:00 WARNING - [20240221T1715Z/preprocess_param_set20 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T12:55:58-05:00)
+2024-02-21T12:55:57-05:00 INFO - [20240221T1715Z/preprocess_param_set04 submitted job:02 flows:1] => running
+2024-02-21T12:55:57-05:00 INFO - [20240221T1715Z/preprocess_param_set04 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:55:58-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/preprocess_param_set20 = wall_clock(trigger_time=1708538158.136507)
+2024-02-21T12:55:58-05:00 INFO - [20240221T1715Z/preprocess_param_set20 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T12:55:58-05:00 INFO - [20240221T1715Z/preprocess_param_set20 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T12:55:58-05:00 INFO - [20240221T1715Z/preprocess_param_set20 waiting job:02 flows:1] => preparing
+2024-02-21T12:55:59-05:00 INFO - [20240221T1715Z/preprocess_param_set20 preparing job:02 flows:1] submitted to oscar:slurm[708456]
+2024-02-21T12:55:59-05:00 INFO - [20240221T1715Z/preprocess_param_set20 preparing job:02 flows:1] => submitted
+2024-02-21T12:55:59-05:00 INFO - [20240221T1715Z/preprocess_param_set20 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T12:56:28-05:00 INFO - [20240221T1715Z/preprocess_param_set06 submitted job:02 flows:1] poll now, (next in PT15M (after 2024-02-21T13:11:28-05:00))
+2024-02-21T12:56:29-05:00 INFO - [20240221T1715Z/preprocess_param_set06 submitted job:02 flows:1] (polled)submitted at 2024-02-21T12:41:28-05:00
+2024-02-21T12:57:05-05:00 INFO - [20240221T1715Z/preprocess_param_set04 running job:02 flows:1] => failed
+2024-02-21T12:57:05-05:00 WARNING - [20240221T1715Z/preprocess_param_set04 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T12:57:09-05:00 INFO - [20240221T1715Z/preprocess_param_set03 submitted job:02 flows:1] => running
+2024-02-21T12:57:09-05:00 INFO - [20240221T1715Z/preprocess_param_set03 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:57:30-05:00 INFO - [20240221T1715Z/preprocess_param_set07 submitted job:02 flows:1] poll now, (next in PT15M (after 2024-02-21T13:12:30-05:00))
+2024-02-21T12:57:32-05:00 INFO - [20240221T1715Z/preprocess_param_set07 submitted job:02 flows:1] (polled)submitted at 2024-02-21T12:42:29-05:00
+2024-02-21T12:58:09-05:00 INFO - [20240221T1715Z/preprocess_param_set03 running job:02 flows:1] => failed
+2024-02-21T12:58:09-05:00 WARNING - [20240221T1715Z/preprocess_param_set03 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T12:58:13-05:00 INFO - [20240221T1715Z/preprocess_param_set00 submitted job:02 flows:1] => running
+2024-02-21T12:58:13-05:00 INFO - [20240221T1715Z/preprocess_param_set00 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:58:34-05:00 INFO - [20240221T1715Z/preprocess_param_set08 submitted job:02 flows:1] poll now, (next in PT15M (after 2024-02-21T13:13:34-05:00))
+2024-02-21T12:58:35-05:00 INFO - [20240221T1715Z/preprocess_param_set08 submitted job:02 flows:1] (polled)submitted at 2024-02-21T12:43:33-05:00
+2024-02-21T12:59:12-05:00 INFO - [20240221T1715Z/preprocess_param_set00 running job:02 flows:1] => failed
+2024-02-21T12:59:12-05:00 WARNING - [20240221T1715Z/preprocess_param_set00 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T12:59:17-05:00 INFO - [20240221T1715Z/preprocess_param_set02 submitted job:02 flows:1] => running
+2024-02-21T12:59:17-05:00 INFO - [20240221T1715Z/preprocess_param_set02 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T12:59:45-05:00 INFO - [20240221T1715Z/preprocess_param_set09 submitted job:02 flows:1] poll now, (next in PT15M (after 2024-02-21T13:14:45-05:00))
+2024-02-21T12:59:46-05:00 INFO - [20240221T1715Z/preprocess_param_set09 submitted job:02 flows:1] (polled)submitted at 2024-02-21T12:44:43-05:00
+2024-02-21T13:00:16-05:00 INFO - [20240221T1715Z/preprocess_param_set02 running job:02 flows:1] => failed
+2024-02-21T13:00:16-05:00 WARNING - [20240221T1715Z/preprocess_param_set02 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T13:00:20-05:00 INFO - [20240221T1715Z/preprocess_param_set05 submitted job:02 flows:1] => running
+2024-02-21T13:00:20-05:00 INFO - [20240221T1715Z/preprocess_param_set05 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:00:51-05:00 INFO - [20240221T1715Z/extractfeatures_param_set13 submitted job:01 flows:1] poll now, (next in PT15M (after 2024-02-21T13:15:51-05:00))
+2024-02-21T13:00:52-05:00 INFO - [20240221T1715Z/extractfeatures_param_set13 submitted job:01 flows:1] (polled)submitted at 2024-02-21T12:45:50-05:00
+2024-02-21T13:01:20-05:00 INFO - [20240221T1715Z/preprocess_param_set05 running job:02 flows:1] => failed
+2024-02-21T13:01:20-05:00 WARNING - [20240221T1715Z/preprocess_param_set05 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T13:01:25-05:00 INFO - [20240221T1715Z/preprocess_param_set06 submitted job:02 flows:1] => running
+2024-02-21T13:01:25-05:00 INFO - [20240221T1715Z/preprocess_param_set06 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:02:15-05:00 INFO - [20240221T1715Z/preprocess_param_set12 submitted job:02 flows:1] poll now, (next in PT15M (after 2024-02-21T13:17:15-05:00))
+2024-02-21T13:02:17-05:00 INFO - [20240221T1715Z/preprocess_param_set12 submitted job:02 flows:1] (polled)submitted at 2024-02-21T12:47:15-05:00
+2024-02-21T13:02:26-05:00 INFO - [20240221T1715Z/preprocess_param_set06 running job:02 flows:1] => failed
+2024-02-21T13:02:26-05:00 WARNING - [20240221T1715Z/preprocess_param_set06 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T13:02:31-05:00 INFO - [20240221T1715Z/preprocess_param_set07 submitted job:02 flows:1] => running
+2024-02-21T13:02:31-05:00 INFO - [20240221T1715Z/preprocess_param_set07 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:03:20-05:00 INFO - [20240221T1715Z/preprocess_param_set10 submitted job:02 flows:1] poll now, (next in PT15M (after 2024-02-21T13:18:20-05:00))
+2024-02-21T13:03:22-05:00 INFO - [20240221T1715Z/preprocess_param_set10 submitted job:02 flows:1] (polled)submitted at 2024-02-21T12:48:19-05:00
+2024-02-21T13:03:32-05:00 INFO - [20240221T1715Z/preprocess_param_set07 running job:02 flows:1] => failed
+2024-02-21T13:03:32-05:00 WARNING - [20240221T1715Z/preprocess_param_set07 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T13:03:38-05:00 INFO - [20240221T1715Z/preprocess_param_set08 submitted job:02 flows:1] => running
+2024-02-21T13:03:38-05:00 INFO - [20240221T1715Z/preprocess_param_set08 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:04:25-05:00 INFO - [20240221T1715Z/preprocess_param_set14 submitted job:02 flows:1] poll now, (next in PT15M (after 2024-02-21T13:19:25-05:00))
+2024-02-21T13:04:26-05:00 INFO - [20240221T1715Z/preprocess_param_set14 submitted job:02 flows:1] (polled)submitted at 2024-02-21T12:49:24-05:00
+2024-02-21T13:04:39-05:00 INFO - [20240221T1715Z/preprocess_param_set08 running job:02 flows:1] => failed
+2024-02-21T13:04:39-05:00 WARNING - [20240221T1715Z/preprocess_param_set08 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T13:04:43-05:00 INFO - [20240221T1715Z/preprocess_param_set09 submitted job:02 flows:1] => running
+2024-02-21T13:04:43-05:00 INFO - [20240221T1715Z/preprocess_param_set09 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:04:50-05:00 INFO - [20240221T1715Z/soit_param_set01 submitted job:05 flows:1] poll now, (next in PT15M (after 2024-02-21T13:19:50-05:00))
+2024-02-21T13:04:50-05:00 INFO - [20240221T1715Z/soit_param_set11 submitted job:04 flows:1] poll now, (next in PT15M (after 2024-02-21T13:19:50-05:00))
+2024-02-21T13:04:51-05:00 INFO - [20240221T1715Z/soit_param_set01 submitted job:05 flows:1] (polled)submitted at 2024-02-21T12:34:48-05:00
+2024-02-21T13:04:51-05:00 INFO - [20240221T1715Z/soit_param_set11 submitted job:04 flows:1] (polled)submitted at 2024-02-21T12:34:49-05:00
+2024-02-21T13:05:28-05:00 INFO - [20240221T1715Z/preprocess_param_set19 submitted job:02 flows:1] poll now, (next in PT15M (after 2024-02-21T13:20:28-05:00))
+2024-02-21T13:05:30-05:00 INFO - [20240221T1715Z/preprocess_param_set19 submitted job:02 flows:1] (polled)submitted at 2024-02-21T12:50:28-05:00
+2024-02-21T13:05:53-05:00 INFO - [20240221T1715Z/preprocess_param_set09 running job:02 flows:1] => failed
+2024-02-21T13:05:53-05:00 WARNING - [20240221T1715Z/preprocess_param_set09 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T13:05:57-05:00 INFO - [20240221T1715Z/preprocess_param_set12 submitted job:02 flows:1] => running
+2024-02-21T13:05:57-05:00 INFO - [20240221T1715Z/preprocess_param_set12 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:06:35-05:00 INFO - [20240221T1715Z/preprocess_param_set18 submitted job:02 flows:1] poll now, (next in PT15M (after 2024-02-21T13:21:35-05:00))
+2024-02-21T13:06:36-05:00 INFO - [20240221T1715Z/preprocess_param_set18 submitted job:02 flows:1] (polled)submitted at 2024-02-21T12:51:35-05:00
+2024-02-21T13:07:06-05:00 INFO - [20240221T1715Z/preprocess_param_set12 running job:02 flows:1] => failed
+2024-02-21T13:07:06-05:00 WARNING - [20240221T1715Z/preprocess_param_set12 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T13:07:10-05:00 INFO - [20240221T1715Z/preprocess_param_set10 submitted job:02 flows:1] => running
+2024-02-21T13:07:10-05:00 INFO - [20240221T1715Z/preprocess_param_set10 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:07:39-05:00 INFO - [20240221T1715Z/preprocess_param_set15 submitted job:02 flows:1] poll now, (next in PT15M (after 2024-02-21T13:22:39-05:00))
+2024-02-21T13:07:41-05:00 INFO - [20240221T1715Z/preprocess_param_set15 submitted job:02 flows:1] (polled)submitted at 2024-02-21T12:52:39-05:00
+2024-02-21T13:08:11-05:00 INFO - [20240221T1715Z/preprocess_param_set10 running job:02 flows:1] => failed
+2024-02-21T13:08:11-05:00 WARNING - [20240221T1715Z/preprocess_param_set10 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T13:08:16-05:00 INFO - [20240221T1715Z/preprocess_param_set14 submitted job:02 flows:1] => running
+2024-02-21T13:08:16-05:00 INFO - [20240221T1715Z/preprocess_param_set14 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:08:46-05:00 INFO - [20240221T1715Z/extractfeatures_param_set16 submitted job:01 flows:1] poll now, (next in PT15M (after 2024-02-21T13:23:46-05:00))
+2024-02-21T13:08:48-05:00 INFO - [20240221T1715Z/extractfeatures_param_set16 submitted job:01 flows:1] (polled)submitted at 2024-02-21T12:53:46-05:00
+2024-02-21T13:09:17-05:00 INFO - [20240221T1715Z/preprocess_param_set14 running job:02 flows:1] => failed
+2024-02-21T13:09:17-05:00 WARNING - [20240221T1715Z/preprocess_param_set14 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T13:09:23-05:00 INFO - [20240221T1715Z/preprocess_param_set19 submitted job:02 flows:1] => running
+2024-02-21T13:09:23-05:00 INFO - [20240221T1715Z/preprocess_param_set19 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:09:55-05:00 INFO - [20240221T1715Z/preprocess_param_set17 submitted job:02 flows:1] poll now, (next in PT15M (after 2024-02-21T13:24:55-05:00))
+2024-02-21T13:09:56-05:00 INFO - [20240221T1715Z/preprocess_param_set17 submitted job:02 flows:1] (polled)submitted at 2024-02-21T12:54:54-05:00
+2024-02-21T13:10:22-05:00 INFO - [20240221T1715Z/preprocess_param_set19 running job:02 flows:1] => failed
+2024-02-21T13:10:22-05:00 WARNING - [20240221T1715Z/preprocess_param_set19 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T13:10:26-05:00 INFO - [20240221T1715Z/preprocess_param_set18 submitted job:02 flows:1] => running
+2024-02-21T13:10:26-05:00 INFO - [20240221T1715Z/preprocess_param_set18 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:10:59-05:00 INFO - [20240221T1715Z/preprocess_param_set20 submitted job:02 flows:1] poll now, (next in PT15M (after 2024-02-21T13:25:59-05:00))
+2024-02-21T13:11:01-05:00 INFO - [20240221T1715Z/preprocess_param_set20 submitted job:02 flows:1] (polled)submitted at 2024-02-21T12:55:59-05:00
+2024-02-21T13:11:28-05:00 INFO - [20240221T1715Z/preprocess_param_set18 running job:02 flows:1] => failed
+2024-02-21T13:11:28-05:00 WARNING - [20240221T1715Z/preprocess_param_set18 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T13:11:31-05:00 INFO - [20240221T1715Z/preprocess_param_set15 submitted job:02 flows:1] => running
+2024-02-21T13:11:31-05:00 INFO - [20240221T1715Z/preprocess_param_set15 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:12:32-05:00 INFO - [20240221T1715Z/preprocess_param_set15 running job:02 flows:1] => failed
+2024-02-21T13:12:32-05:00 WARNING - [20240221T1715Z/preprocess_param_set15 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T13:12:35-05:00 INFO - [20240221T1715Z/preprocess_param_set17 submitted job:02 flows:1] => running
+2024-02-21T13:12:35-05:00 INFO - [20240221T1715Z/preprocess_param_set17 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:13:35-05:00 INFO - [20240221T1715Z/preprocess_param_set17 running job:02 flows:1] => failed
+2024-02-21T13:13:35-05:00 WARNING - [20240221T1715Z/preprocess_param_set17 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T13:13:41-05:00 INFO - [20240221T1715Z/preprocess_param_set20 submitted job:02 flows:1] => running
+2024-02-21T13:13:41-05:00 INFO - [20240221T1715Z/preprocess_param_set20 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:14:42-05:00 INFO - [20240221T1715Z/preprocess_param_set20 running job:02 flows:1] => failed
+2024-02-21T13:14:42-05:00 WARNING - [20240221T1715Z/preprocess_param_set20 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T13:14:47-05:00 INFO - [20240221T1715Z/extractfeatures_param_set13 submitted job:01 flows:1] => running
+2024-02-21T13:14:47-05:00 INFO - [20240221T1715Z/extractfeatures_param_set13 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:14:47-05:00 INFO - [20240221T1715Z/extractfeatures_param_set16 submitted job:01 flows:1] => running
+2024-02-21T13:14:47-05:00 INFO - [20240221T1715Z/extractfeatures_param_set16 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:14:49-05:00 INFO - [20240221T1715Z/soit_param_set11 submitted job:04 flows:1] => running
+2024-02-21T13:14:49-05:00 INFO - [20240221T1715Z/soit_param_set11 running job:04 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:14:50-05:00 INFO - [20240221T1715Z/soit_param_set01 submitted job:05 flows:1] => running
+2024-02-21T13:14:50-05:00 INFO - [20240221T1715Z/soit_param_set01 running job:05 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:14:50-05:00 INFO - [20240221T1715Z/soit_param_set11 running job:04 flows:1] => waiting
+2024-02-21T13:14:50-05:00 WARNING - [20240221T1715Z/soit_param_set11 waiting job:04 flows:1] retrying in PT6S (after 2024-02-21T13:14:56-05:00)
+2024-02-21T13:14:54-05:00 INFO - [20240221T1715Z/soit_param_set01 running job:05 flows:1] => waiting
+2024-02-21T13:14:54-05:00 WARNING - [20240221T1715Z/soit_param_set01 waiting job:05 flows:1] retrying in PT6S (after 2024-02-21T13:15:00-05:00)
+2024-02-21T13:14:56-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/soit_param_set11 = wall_clock(trigger_time=1708539296.6364121)
+2024-02-21T13:14:56-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting job:04 flows:1] => waiting(queued)
+2024-02-21T13:14:56-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting(queued) job:04 flows:1] => waiting
+2024-02-21T13:14:56-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting job:05 flows:1] => preparing
+2024-02-21T13:14:58-05:00 INFO - [20240221T1715Z/soit_param_set11 preparing job:05 flows:1] submitted to oscar:slurm[709165]
+2024-02-21T13:14:58-05:00 INFO - [20240221T1715Z/soit_param_set11 preparing job:05 flows:1] => submitted
+2024-02-21T13:14:58-05:00 INFO - [20240221T1715Z/soit_param_set11 submitted job:05 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T13:15:01-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/soit_param_set01 = wall_clock(trigger_time=1708539300.6461635)
+2024-02-21T13:15:01-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting job:05 flows:1] => waiting(queued)
+2024-02-21T13:15:01-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting(queued) job:05 flows:1] => waiting
+2024-02-21T13:15:01-05:00 INFO - [20240221T1715Z/soit_param_set01 waiting job:06 flows:1] => preparing
+2024-02-21T13:15:01-05:00 INFO - [20240221T1715Z/soit_param_set11 submitted job:05 flows:1] => running
+2024-02-21T13:15:01-05:00 INFO - [20240221T1715Z/soit_param_set11 running job:05 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:15:02-05:00 INFO - [20240221T1715Z/soit_param_set01 preparing job:06 flows:1] submitted to oscar:slurm[709166]
+2024-02-21T13:15:02-05:00 INFO - [20240221T1715Z/soit_param_set01 preparing job:06 flows:1] => submitted
+2024-02-21T13:15:02-05:00 INFO - [20240221T1715Z/soit_param_set01 submitted job:06 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T13:15:03-05:00 INFO - [20240221T1715Z/soit_param_set11 running job:05 flows:1] => waiting
+2024-02-21T13:15:03-05:00 WARNING - [20240221T1715Z/soit_param_set11 waiting job:05 flows:1] retrying in PT6S (after 2024-02-21T13:15:09-05:00)
+2024-02-21T13:15:06-05:00 INFO - [20240221T1715Z/soit_param_set01 submitted job:06 flows:1] => running
+2024-02-21T13:15:06-05:00 INFO - [20240221T1715Z/soit_param_set01 running job:06 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:15:08-05:00 INFO - [20240221T1715Z/soit_param_set01 running job:06 flows:1] => failed
+2024-02-21T13:15:08-05:00 WARNING - [20240221T1715Z/soit_param_set01 failed job:06 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T13:15:09-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/soit_param_set11 = wall_clock(trigger_time=1708539309.1619098)
+2024-02-21T13:15:09-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting job:05 flows:1] => waiting(queued)
+2024-02-21T13:15:09-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting(queued) job:05 flows:1] => waiting
+2024-02-21T13:15:09-05:00 INFO - [20240221T1715Z/soit_param_set11 waiting job:06 flows:1] => preparing
+2024-02-21T13:15:10-05:00 INFO - [20240221T1715Z/soit_param_set11 preparing job:06 flows:1] submitted to oscar:slurm[709167]
+2024-02-21T13:15:10-05:00 INFO - [20240221T1715Z/soit_param_set11 preparing job:06 flows:1] => submitted
+2024-02-21T13:15:10-05:00 INFO - [20240221T1715Z/soit_param_set11 submitted job:06 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T13:15:12-05:00 INFO - [20240221T1715Z/extractfeatures_param_set16 running job:01 flows:1] => succeeded
+2024-02-21T13:15:12-05:00 INFO - [20240221T1715Z/tracking_param_set16 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T13:15:12-05:00 INFO - [20240221T1715Z/tracking_param_set16 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T13:15:12-05:00 INFO - [20240221T1715Z/exportH5_param_set16 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T13:15:12-05:00 INFO - [20240221T1715Z/exportH5_param_set16 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T13:15:13-05:00 INFO - [20240221T1715Z/tracking_param_set16 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T13:15:13-05:00 INFO - [20240221T1715Z/exportH5_param_set16 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T13:15:13-05:00 INFO - [20240221T1715Z/exportH5_param_set16 waiting job:01 flows:1] => preparing
+2024-02-21T13:15:13-05:00 INFO - [20240221T1715Z/tracking_param_set16 waiting job:01 flows:1] => preparing
+2024-02-21T13:15:14-05:00 INFO - [20240221T1715Z/exportH5_param_set16 preparing job:01 flows:1] submitted to oscar:slurm[709168]
+2024-02-21T13:15:14-05:00 INFO - [20240221T1715Z/exportH5_param_set16 preparing job:01 flows:1] => submitted
+2024-02-21T13:15:14-05:00 INFO - [20240221T1715Z/exportH5_param_set16 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T13:15:14-05:00 INFO - [20240221T1715Z/tracking_param_set16 preparing job:01 flows:1] submitted to oscar:slurm[709169]
+2024-02-21T13:15:14-05:00 INFO - [20240221T1715Z/tracking_param_set16 preparing job:01 flows:1] => submitted
+2024-02-21T13:15:14-05:00 INFO - [20240221T1715Z/tracking_param_set16 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T13:15:15-05:00 INFO - [20240221T1715Z/soit_param_set11 submitted job:06 flows:1] => running
+2024-02-21T13:15:15-05:00 INFO - [20240221T1715Z/soit_param_set11 running job:06 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:15:17-05:00 INFO - [20240221T1715Z/soit_param_set11 running job:06 flows:1] => failed
+2024-02-21T13:15:17-05:00 WARNING - [20240221T1715Z/soit_param_set11 failed job:06 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T13:15:19-05:00 INFO - [20240221T1715Z/extractfeatures_param_set13 running job:01 flows:1] => succeeded
+2024-02-21T13:15:19-05:00 INFO - [20240221T1715Z/tracking_param_set13 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T13:15:19-05:00 INFO - [20240221T1715Z/tracking_param_set13 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T13:15:19-05:00 INFO - [20240221T1715Z/exportH5_param_set13 waiting(runahead) job:00 flows:1] => waiting
+2024-02-21T13:15:19-05:00 INFO - [20240221T1715Z/exportH5_param_set13 waiting job:00 flows:1] => waiting(queued)
+2024-02-21T13:15:20-05:00 INFO - [20240221T1715Z/tracking_param_set13 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T13:15:20-05:00 INFO - [20240221T1715Z/exportH5_param_set13 waiting(queued) job:00 flows:1] => waiting
+2024-02-21T13:15:20-05:00 INFO - [20240221T1715Z/tracking_param_set13 waiting job:01 flows:1] => preparing
+2024-02-21T13:15:20-05:00 INFO - [20240221T1715Z/exportH5_param_set13 waiting job:01 flows:1] => preparing
+2024-02-21T13:15:21-05:00 INFO - [20240221T1715Z/exportH5_param_set13 preparing job:01 flows:1] submitted to oscar:slurm[709170]
+2024-02-21T13:15:21-05:00 INFO - [20240221T1715Z/exportH5_param_set13 preparing job:01 flows:1] => submitted
+2024-02-21T13:15:21-05:00 INFO - [20240221T1715Z/exportH5_param_set13 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T13:15:21-05:00 INFO - [20240221T1715Z/tracking_param_set13 preparing job:01 flows:1] submitted to oscar:slurm[709171]
+2024-02-21T13:15:21-05:00 INFO - [20240221T1715Z/tracking_param_set13 preparing job:01 flows:1] => submitted
+2024-02-21T13:15:21-05:00 INFO - [20240221T1715Z/tracking_param_set13 submitted job:01 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T13:15:21-05:00 INFO - [20240221T1715Z/exportH5_param_set16 submitted job:01 flows:1] => running
+2024-02-21T13:15:21-05:00 INFO - [20240221T1715Z/exportH5_param_set16 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:15:22-05:00 INFO - [20240221T1715Z/tracking_param_set16 submitted job:01 flows:1] => running
+2024-02-21T13:15:22-05:00 INFO - [20240221T1715Z/tracking_param_set16 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:15:28-05:00 INFO - [20240221T1715Z/exportH5_param_set13 submitted job:01 flows:1] => running
+2024-02-21T13:15:28-05:00 INFO - [20240221T1715Z/exportH5_param_set13 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:15:29-05:00 INFO - [20240221T1715Z/tracking_param_set13 submitted job:01 flows:1] => running
+2024-02-21T13:15:29-05:00 INFO - [20240221T1715Z/tracking_param_set13 running job:01 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:15:51-05:00 INFO - [20240221T1715Z/exportH5_param_set16 running job:01 flows:1] => succeeded
+2024-02-21T13:15:52-05:00 INFO - [20240221T1715Z/exportH5_param_set13 running job:01 flows:1] => succeeded
+2024-02-21T13:16:10-05:00 INFO - [20240221T1715Z/tracking_param_set16 running job:01 flows:1] => succeeded
+2024-02-21T13:16:19-05:00 INFO - [20240221T1715Z/tracking_param_set13 running job:01 flows:1] => waiting
+2024-02-21T13:16:19-05:00 WARNING - [20240221T1715Z/tracking_param_set13 waiting job:01 flows:1] retrying in PT6S (after 2024-02-21T13:16:25-05:00)
+2024-02-21T13:16:25-05:00 INFO - xtrigger satisfied: _cylc_retry_20240221T1715Z/tracking_param_set13 = wall_clock(trigger_time=1708539385.31084)
+2024-02-21T13:16:25-05:00 INFO - [20240221T1715Z/tracking_param_set13 waiting job:01 flows:1] => waiting(queued)
+2024-02-21T13:16:25-05:00 INFO - [20240221T1715Z/tracking_param_set13 waiting(queued) job:01 flows:1] => waiting
+2024-02-21T13:16:25-05:00 INFO - [20240221T1715Z/tracking_param_set13 waiting job:02 flows:1] => preparing
+2024-02-21T13:16:26-05:00 INFO - [20240221T1715Z/tracking_param_set13 preparing job:02 flows:1] submitted to oscar:slurm[709185]
+2024-02-21T13:16:26-05:00 INFO - [20240221T1715Z/tracking_param_set13 preparing job:02 flows:1] => submitted
+2024-02-21T13:16:26-05:00 INFO - [20240221T1715Z/tracking_param_set13 submitted job:02 flows:1] health: submission timeout=None, polling intervals=PT15M,...
+2024-02-21T13:16:31-05:00 INFO - [20240221T1715Z/tracking_param_set13 submitted job:02 flows:1] => running
+2024-02-21T13:16:31-05:00 INFO - [20240221T1715Z/tracking_param_set13 running job:02 flows:1] health: execution timeout=None, polling intervals=4*PT15M,PT1M,PT2M,PT7M,...
+2024-02-21T13:17:09-05:00 INFO - [20240221T1715Z/tracking_param_set13 running job:02 flows:1] => failed
+2024-02-21T13:17:09-05:00 WARNING - [20240221T1715Z/tracking_param_set13 failed job:02 flows:1] did not complete required outputs: ['succeeded']
+2024-02-21T13:17:10-05:00 ERROR - Incomplete tasks:
+      * 20240221T1715Z/soit_param_set01 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/soit_param_set11 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/preprocess_param_set04 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/preprocess_param_set03 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/preprocess_param_set00 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/preprocess_param_set02 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/preprocess_param_set05 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/preprocess_param_set06 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/preprocess_param_set07 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/preprocess_param_set08 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/preprocess_param_set09 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/preprocess_param_set12 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/preprocess_param_set10 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/preprocess_param_set14 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/preprocess_param_set19 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/preprocess_param_set18 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/preprocess_param_set15 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/preprocess_param_set17 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/preprocess_param_set20 did not complete required outputs: ['succeeded']
+      * 20240221T1715Z/tracking_param_set13 did not complete required outputs: ['succeeded']
+2024-02-21T13:17:10-05:00 WARNING - Partially satisfied prerequisites:
+      * 20240221T1715Z/landmask_param_set01 is waiting on ['20240221T1715Z/soit_param_set01:succeeded']
+      * 20240221T1715Z/landmask_param_set11 is waiting on ['20240221T1715Z/soit_param_set11:succeeded']
+2024-02-21T13:17:10-05:00 CRITICAL - Workflow stalled
+2024-02-21T13:17:10-05:00 WARNING - PT1H stall timer starts NOW
+2024-02-21T14:17:10-05:00 WARNING - stall timer timed out after PT1H
+2024-02-21T14:17:10-05:00 ERROR - Workflow shutting down - "abort on stall timeout" is set
+[0m2024-02-21T14:17:10-05:00 INFO - DONE

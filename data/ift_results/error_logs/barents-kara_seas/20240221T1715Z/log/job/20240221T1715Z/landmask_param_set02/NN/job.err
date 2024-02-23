@@ -1,0 +1,90 @@
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for OpenSpecFun_jll [efe28fd5-8261-553b-a9e1-b2916fc3738e]
+│   exception = ArgumentError: Invalid checksum in cache file /users/dwatkin2/.julia/compiled/v1.9/OpenSpecFun_jll/TDl1L_AgTo3.so.
+└ @ Base loading.jl:1818
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for PaddedViews [5432bcbf-9aad-5242-b902-cca2824c8663]
+│   exception = Required dependency OffsetArrays [6fe1bfb0-de20-5000-8ca7-80f57d26f881] failed to load from a cache file.
+└ @ Base loading.jl:1818
+┌ Warning: Module ImageCore with build ID ffffffff-ffff-ffff-000d-3fff5fa807da is missing from the cache.
+│ This may mean ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module DataStructures with build ID fafbfcfd-c077-107f-000d-4001623784fa is missing from the cache.
+│ This may mean DataStructures [864edb3b-99cc-5e75-8d2d-829cb0a9cfe8] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ImageCore with build ID ffffffff-ffff-ffff-000d-3fff5fa807da is missing from the cache.
+│ This may mean ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module WoodburyMatrices with build ID fafbfcfd-2ed9-747c-000d-4003bb7a4fd2 is missing from the cache.
+│ This may mean WoodburyMatrices [efce3f68-66dc-5838-9240-27a6d6f5f9b6] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module Ratios with build ID fafbfcfd-f91a-9c35-000d-3f798b1e0642 is missing from the cache.
+│ This may mean Ratios [c84ed2f1-dad5-54f0-aa8e-dbefe2724439] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ChainRulesCore with build ID fafbfcfd-bca2-fa43-000d-400438e7e3b9 is missing from the cache.
+│ This may mean ChainRulesCore [d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ChainRulesCore with build ID fafbfcfd-bca2-fa43-000d-400438e7e3b9 is missing from the cache.
+│ This may mean ChainRulesCore [d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ChainRulesCore with build ID fafbfcfd-bca2-fa43-000d-400438e7e3b9 is missing from the cache.
+│ This may mean ChainRulesCore [d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ChainRulesCore with build ID fafbfcfd-bca2-fa43-000d-400438e7e3b9 is missing from the cache.
+│ This may mean ChainRulesCore [d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ChainRulesCore with build ID fafbfcfd-bca2-fa43-000d-400438e7e3b9 is missing from the cache.
+│ This may mean ChainRulesCore [d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for AxisArrays [39de3d68-74b9-583c-8d2d-e117c070f3a9]
+│   exception = Required dependency IterTools [c8e1da08-722c-5040-9ed9-7db0dc04731e] failed to load from a cache file.
+└ @ Base loading.jl:1818
+┌ Warning: Module ImageAxes with build ID ffffffff-ffff-ffff-000d-4006f4b09317 is missing from the cache.
+│ This may mean ImageAxes [2803e5a7-5153-5ecf-9a86-9b4c37f5f5ac] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ImageCore with build ID ffffffff-ffff-ffff-000d-3fff5fa807da is missing from the cache.
+│ This may mean ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ImageCore with build ID ffffffff-ffff-ffff-000d-3fff5fa807da is missing from the cache.
+│ This may mean ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ImageCore with build ID ffffffff-ffff-ffff-000d-3fff5fa807da is missing from the cache.
+│ This may mean ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ChainRulesCore with build ID fafbfcfd-bca2-fa43-000d-400438e7e3b9 is missing from the cache.
+│ This may mean ChainRulesCore [d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ImageCore with build ID ffffffff-ffff-ffff-000d-3fff5fa807da is missing from the cache.
+│ This may mean ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ImageCore with build ID ffffffff-ffff-ffff-000d-3fff5fa807da is missing from the cache.
+│ This may mean ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ImageCore with build ID ffffffff-ffff-ffff-000d-3fff5fa807da is missing from the cache.
+│ This may mean ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module StatsBase with build ID ffffffff-ffff-ffff-000d-4001df2b215e is missing from the cache.
+│ This may mean StatsBase [2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module Graphs with build ID fafbfcfd-6c59-defa-000d-400ed3f2deda is missing from the cache.
+│ This may mean Graphs [86223c79-3864-5bf0-83f7-82e725a168b6] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ImageCore with build ID ffffffff-ffff-ffff-000d-3fff5fa807da is missing from the cache.
+│ This may mean ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module FFTW with build ID fafbfcfd-21f3-baac-000d-4007ace4ec2b is missing from the cache.
+│ This may mean FFTW [7a1cc6ca-52ef-59f5-83cd-3a7055c09341] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module FFTW with build ID fafbfcfd-21f3-baac-000d-4007ace4ec2b is missing from the cache.
+│ This may mean FFTW [7a1cc6ca-52ef-59f5-83cd-3a7055c09341] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ChainRulesCore with build ID fafbfcfd-bca2-fa43-000d-400438e7e3b9 is missing from the cache.
+│ This may mean ChainRulesCore [d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module IceFloeTracker with build ID ffffffff-ffff-ffff-000d-3ff4408688c2 is missing from the cache.
+│ This may mean IceFloeTracker [04643c7a-9ac6-48c5-822f-2704f9e70bd3] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: Module ChainRulesCore with build ID fafbfcfd-bca2-fa43-000d-400438e7e3b9 is missing from the cache.
+│ This may mean ChainRulesCore [d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534]
+│   exception = Invalid input in module list: expected AbstractFFTsTestExt.
+└ @ Base loading.jl:1818

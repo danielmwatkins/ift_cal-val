@@ -1,0 +1,15 @@
+# Auto-generated diff of uncommitted changes in the Cylc workflow repository:
+#   /oscar/home/dwatkin2/ice-floe-tracker-pipeline/config/cylc_hpc
+diff --git a/config/cylc_hpc/flow_template_hpc.j2 b/config/cylc_hpc/flow_template_hpc.j2
+index c0f6022..dcfbf9a 100644
+--- a/config/cylc_hpc/flow_template_hpc.j2
++++ b/config/cylc_hpc/flow_template_hpc.j2
+@@ -96,7 +96,7 @@
+             centroid_x_array=( $(echo $centroid_x| sed -e 's/,/ /g') )
+             centroid_y_array=( $(echo $centroid_y | sed -e 's/,/ /g') )
+ 
+-            apptainer exec --bind $results_dir/${location_array[$i]}/soit:/tmp $project_dir/fetchdata.simg python3 /usr/local/bin/pass_time_cylc.py --startdate ${startdate_array[$i]} --enddate ${enddate_array[$i]} --csvoutpath /tmp --centroid_x ${centroid_x_array[$i]} --centroid_y ${centroid_y_array[$i]} --SPACEUSER $SPACEUSER --SPACEPSWD $SPACEPSWD
++            apptainer exec --bind $results_dir/${location_array[$i]}/soit:/tmp $project_dir/fetchdata.simg python3 /usr/local/bin/pass_time_cylc.py --startdate ${startdate_array[$i]} --enddate ${enddate_array[$i]} --csvoutpath /tmp --centroid_lat ${centroid_x_array[$i]} --centroid_lon ${centroid_y_array[$i]} --SPACEUSER $SPACEUSER --SPACEPSWD $SPACEPSWD
+         """
+         platform = oscar
+         execution time limit = PT1H

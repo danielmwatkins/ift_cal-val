@@ -1,0 +1,17 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 743982
+##  Job Name : extractfeatures_param_set15.20240222T1657Z.bering_strait/run1
+##  Nodelist : node1326
+##      CPUs : 
+##  Mem/Node : 18432 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Thu Feb 22 01:31:37 PM EST 2024
+###############################################################################
+Workflow : bering_strait/run1
+Job : 20240222T1657Z/extractfeatures_param_set15/01 (try 1)
+User@Host: dwatkin2@node1326.oscar.ccv.brown.edu
+
+2024-02-22T13:31:43-05:00 INFO - started
+  3.582278 seconds (2.16 M allocations: 144.575 MiB, 2.21% gc time, 85.02% compilation time: 8% of which was recompilation)
+2024-02-22T13:32:14-05:00 INFO - succeeded
+[H[2J[3J

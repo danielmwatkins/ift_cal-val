@@ -1,0 +1,9 @@
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for Interpolations [a98d9a8b-a2ab-59e6-89dd-64a1c18fca59]
+│   exception = ArgumentError: Invalid checksum in cache file /users/dwatkin2/.julia/compiled/v1.9/Interpolations/VpKVx_AgTo3.so.
+└ @ Base loading.jl:1818
+┌ Warning: Module IceFloeTracker with build ID ffffffff-ffff-ffff-000d-40623bfe69a4 is missing from the cache.
+│ This may mean IceFloeTracker [04643c7a-9ac6-48c5-822f-2704f9e70bd3] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1793
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for Images [916415d5-f1e6-5110-898d-aaa5f9f070e0]
+│   exception = Required dependency ImageMetadata [bc367c6b-8a6b-528e-b4bd-a4b897500b49] failed to load from a cache file.
+└ @ Base loading.jl:1818

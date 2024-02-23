@@ -1,0 +1,15 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 709171
+##  Job Name : tracking_param_set13.20240221T1715Z.barents-kara_seas/run1
+##  Nodelist : node1737
+##      CPUs : 
+##  Mem/Node : 20480 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Wed Feb 21 01:15:24 PM EST 2024
+###############################################################################
+Workflow : barents-kara_seas/run1
+Job : 20240221T1715Z/tracking_param_set13/01 (try 1)
+User@Host: dwatkin2@node1737.oscar.ccv.brown.edu
+
+2024-02-21T13:15:28-05:00 INFO - started
+[H[2J[3J

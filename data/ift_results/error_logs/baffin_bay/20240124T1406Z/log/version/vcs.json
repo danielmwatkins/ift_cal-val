@@ -1,0 +1,13 @@
+{
+    "version control system": "git",
+    "repository version": "afa9717-dirty",
+    "commit": "afa9717893f2e99bde99978d5be82e830843e5f4",
+    "working copy root path": "/oscar/home/dwatkin2/ice-floe-tracker-pipeline/config/cylc_hpc",
+    "status": [
+        " M flow_template_hpc.j2",
+        "?? ../../.bash_profile",
+        "?? ../baffin_bay_100km_cases.csv",
+        "?? flow.cylc",
+        "?? ../site_locations.csv"
+    ]
+}

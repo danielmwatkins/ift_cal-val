@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/usr/local/bin/pass_time_cylc.py", line 482, in <module>
+    main()
+  File "/usr/local/bin/pass_time_cylc.py", line 477, in main
+    get_passtimes(**vars(args))
+  File "/usr/local/bin/pass_time_cylc.py", line 251, in get_passtimes
+    if (pass_dict["rise_lat"] < pass_dict["over_lat"]) and (
+KeyError: 'over_lat'
+2024-02-21T12:32:50-05:00 CRITICAL - failed/ERR

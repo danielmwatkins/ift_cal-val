@@ -1,0 +1,87 @@
+#!/bin/bash -l
+#
+# ++++ THIS IS A CYLC JOB SCRIPT ++++
+# Workflow: bering_strait/run1
+# Task: 20240222T1657Z/soit_param_set17
+# Job log directory: 20240222T1657Z/soit_param_set17/01
+# Job runner: slurm
+# Execution time limit: 3600.0
+
+# DIRECTIVES:
+#SBATCH --job-name=soit_param_set17.20240222T1657Z.bering_strait/run1
+#SBATCH --output=cylc-run/bering_strait/run1/log/job/20240222T1657Z/soit_param_set17/01/job.out
+#SBATCH --error=cylc-run/bering_strait/run1/log/job/20240222T1657Z/soit_param_set17/01/job.err
+#SBATCH --time=60:00
+#SBATCH --mem=12G
+#SBATCH --cpus-per-task=4
+if [[ $1 == 'noreinvoke' ]]; then
+    shift
+else
+    exec bash -l "$0" noreinvoke "$@"
+fi
+
+CYLC_FAIL_SIGNALS='EXIT ERR TERM XCPU'
+export CYLC_VERBOSE=false
+export CYLC_DEBUG=false
+export CYLC_VERSION='8.2.1'
+export CYLC_WORKFLOW_ID="bering_strait/run1"
+
+cylc__job__inst__cylc_env() {
+    # CYLC WORKFLOW ENVIRONMENT:
+    export CYLC_CYCLING_MODE="gregorian"
+    export CYLC_UTC="False"
+    export CYLC_WORKFLOW_FINAL_CYCLE_POINT="None"
+    export CYLC_WORKFLOW_INITIAL_CYCLE_POINT="20240222T1657Z"
+    export CYLC_WORKFLOW_NAME="bering_strait"
+    export CYLC_WORKFLOW_NAME_BASE="bering_strait"
+    export CYLC_WORKFLOW_UUID="3d00d2f9-0e81-4b30-996f-15321e703211"
+
+    # CYLC TASK ENVIRONMENT:
+    export CYLC_TASK_COMMS_METHOD=zmq
+    export CYLC_TASK_JOB="20240222T1657Z/soit_param_set17/01"
+    export CYLC_TASK_NAMESPACE_HIERARCHY="root soit_param_set17"
+    export CYLC_TASK_DEPENDENCIES="20240222T1657Z/pullfetchimage 20240222T1657Z/pulljuliaimage"
+    export CYLC_TASK_TRY_NUMBER=1
+    export CYLC_TASK_FLOW_NUMBERS=1
+    export CYLC_TASK_PARAM_param_set="17"
+}
+
+cylc__job__inst__user_env() {
+    # TASK RUNTIME ENVIRONMENT:
+    export location startdate enddate crs bounding_box centroid_x centroid_y minfloearea maxfloearea project_dir t julia_exec report_dir results_dir fetchdata_dir truecolor_dir reflectance_dir
+    location="bering_strait-100km_by_100km-20040620-20040621,bering_strait-100km_by_100km-20040823-20040824,bering_strait-100km_by_100km-20050303-20050304,bering_strait-100km_by_100km-20050705-20050706,bering_strait-100km_by_100km-20050917-20050918,bering_strait-100km_by_100km-20070726-20070727,bering_strait-100km_by_100km-20080418-20080419,bering_strait-100km_by_100km-20090523-20090524,bering_strait-100km_by_100km-20090802-20090803,bering_strait-100km_by_100km-20110319-20110320,bering_strait-100km_by_100km-20120513-20120514,bering_strait-100km_by_100km-20120523-20120524,bering_strait-100km_by_100km-20120607-20120608,bering_strait-100km_by_100km-20120812-20120813,bering_strait-100km_by_100km-20130423-20130424,bering_strait-100km_by_100km-20150320-20150321,bering_strait-100km_by_100km-20160415-20160416,bering_strait-100km_by_100km-20160901-20160902,bering_strait-100km_by_100km-20180723-20180724,bering_strait-100km_by_100km-20200628-20200629,bering_strait-100km_by_100km-20220909-20220910"
+    startdate="2004-06-20,2004-08-23,2005-03-03,2005-07-05,2005-09-17,2007-07-26,2008-04-18,2009-05-23,2009-08-02,2011-03-19,2012-05-13,2012-05-23,2012-06-07,2012-08-12,2013-04-23,2015-03-20,2016-04-15,2016-09-01,2018-07-23,2020-06-28,2022-09-09"
+    enddate="2004-06-21,2004-08-24,2005-03-04,2005-07-06,2005-09-18,2007-07-27,2008-04-19,2009-05-24,2009-08-03,2011-03-20,2012-05-14,2012-05-24,2012-06-08,2012-08-13,2013-04-24,2015-03-21,2016-04-16,2016-09-02,2018-07-24,2020-06-29,2022-09-10"
+    crs="epsg3413"
+    bounding_box="-1887500.00027@1262499.99936@-1787500.00027@1162499.99936,-2212500.0003@1537499.99999@-2112500.0003@1437499.99999,-2712500.00111@2037499.99937@-2612500.00111@1937499.99937,-1737499.99902@1237500.00121@-1637499.99902@1137500.00121,-1987500.0016@1912499.99836@-1887500.0016@1812499.99836,-2587499.9999@1312500.00014@-2487499.9999@1212500.00014,-2912499.99931@2037499.99999@-2812499.99931@1937499.99999,-2562500.00191@1887499.99816@-2462500.00191@1787499.99816,-2212500.0003@1537499.99999@-2112500.0003@1437499.99999,-2312500.00116@2112499.99855@-2212500.00116@2012499.99855,-2612499.99958@1787500.00112@-2512499.99958@1687500.00112,-2537500.00029@1687500.00011@-2437500.00029@1587500.00011,-2637500.00002@2012500.00033@-2537500.00002@1912500.00033,-1712500.0@1012499.99915@-1612500.0@912499.99915,-2837499.99889@2212500.0014@-2737499.99889@2112500.0014,-2362499.99961@1862500.00093@-2262499.99961@1762500.00093,-2862500.00124@1737499.9986@-2762500.00124@1637499.9986,-2012499.99854@1912500.00115@-1912499.99854@1812500.00115,-1687499.99973@1012499.99949@-1587499.99973@912499.99949,-1812499.99935@1037500.00115@-1712499.99935@937500.00115,-2512500.00021@1437500.0005@-2412500.00021@1337500.0005"
+    centroid_x="69.87844541,66.10893483,60.00562854,71.11761232,65.55342987,64.26080087,58.60837597,61.82447916,66.10893483,62.27074228,61.96997611,62.9992035,60.65389165,72.40063848,58.23860958,63.34872592,60.37378491,65.39378895,72.59554737,71.50592842,64.3287477"
+    centroid_y="-168.4193808,-169.5225764,-171.740562,-170.1341931,-178.869309,-161.4520419,-169.7731423,-171.1796204,-169.5225764,-177.3523703,-169.1391854,-168.3565685,-172.1786479,-165.0685828,-172.8037646,-173.0887729,-165.9637565,-178.5024123,-165.4464272,-164.2611986,-164.3991622"
+    minfloearea="300"
+    maxfloearea="90000"
+    project_dir=~/"ice-floe-tracker-pipeline"
+    t="${CYLC_WORKFLOW_INITIAL_CYCLE_POINT}"
+    julia_exec="/usr/local/julia/bin/julia"
+    report_dir="$project_dir/"workflow/report""
+    results_dir="$project_dir/"results"/$t"
+    fetchdata_dir="$project_dir/"resources"/$t"
+    truecolor_dir="$fetchdata_dir/"truecolor""
+    reflectance_dir="$fetchdata_dir/"reflectance""
+}
+
+cylc__job__inst__script() {
+# SCRIPT:
+i=${CYLC_TASK_PARAM_param_set}
+location_array=( $(echo $location | sed -e 's/,/ /g') )
+startdate_array=( $(echo $startdate | sed -e 's/,/ /g') )
+enddate_array=( $(echo $enddate | sed -e 's/,/ /g') )
+centroid_x_array=( $(echo $centroid_x| sed -e 's/,/ /g') )
+centroid_y_array=( $(echo $centroid_y | sed -e 's/,/ /g') )
+
+apptainer exec --bind $results_dir/${location_array[$i]}/soit:/tmp $project_dir/fetchdata.simg python3 /usr/local/bin/pass_time_cylc.py --startdate ${startdate_array[$i]} --enddate ${enddate_array[$i]} --csvoutpath /tmp --centroid_lat ${centroid_x_array[$i]} --centroid_lon ${centroid_y_array[$i]} --SPACEUSER $SPACEUSER --SPACEPSWD $SPACEPSWD
+}
+
+CYLC_RUN_DIR="${CYLC_RUN_DIR:-$HOME/cylc-run}"
+. "${CYLC_RUN_DIR}/${CYLC_WORKFLOW_ID}/.service/etc/job.sh"
+cylc__job__main
+
+#EOF: 20240222T1657Z/soit_param_set17/01

@@ -1,0 +1,21 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 759873
+##  Job Name : fetchdata_param_set05.20240223T1406Z.chukchi-east_siberian_sea/run1
+##  Nodelist : node2304
+##      CPUs : 
+##  Mem/Node : 12288 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Fri Feb 23 09:05:51 AM EST 2024
+###############################################################################
+Workflow : chukchi-east_siberian_sea/run1
+Job : 20240223T1406Z/fetchdata_param_set05/01 (try 1)
+User@Host: dwatkin2@node2304.oscar.ccv.brown.edu
+
+downloading landmask
+downloading true color images
+2024-02-23T09:05:57-05:00 INFO - started
+.
+downloading reflectance color images
+.
+2024-02-23T09:05:59-05:00 INFO - succeeded
+[H[2J[3J

@@ -1,0 +1,17 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 215716
+##  Job Name : preprocess_param_set16.20240124T1406Z.baffin_bay/run4
+##  Nodelist : node2342
+##      CPUs : 
+##   Mem/CPU : 12288 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Wed Jan 24 09:33:18 AM EST 2024
+###############################################################################
+Workflow : baffin_bay/run4
+Job : 20240124T1406Z/preprocess_param_set16/01 (try 1)
+User@Host: dwatkin2@node2342.oscar.ccv.brown.edu
+
+2024-01-24T09:33:20-05:00 INFO - started
+ 49.138780 seconds (219.29 M allocations: 11.411 GiB, 8.58% gc time, 1277.53% compilation time: <1% of which was recompilation)
+2024-01-24T09:34:30-05:00 INFO - succeeded
+[H[2J[3J

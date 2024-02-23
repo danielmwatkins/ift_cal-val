@@ -1,0 +1,15 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 759942
+##  Job Name : preprocess_param_set01.20240223T1406Z.chukchi-east_siberian_sea/run1
+##  Nodelist : node1929
+##      CPUs : 
+##   Mem/CPU : 12288 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Fri Feb 23 09:11:41 AM EST 2024
+###############################################################################
+Workflow : chukchi-east_siberian_sea/run1
+Job : 20240223T1406Z/preprocess_param_set01/01 (try 1)
+User@Host: dwatkin2@node1929.oscar.ccv.brown.edu
+
+2024-02-23T09:11:43-05:00 INFO - started
+[H[2J[3J

@@ -1,0 +1,15 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 219410
+##  Job Name : tracking_param_set20.20240124T1618Z.beaufort_sea/run2
+##  Nodelist : node2334
+##      CPUs : 
+##  Mem/Node : 20480 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Wed Jan 24 12:31:23 PM EST 2024
+###############################################################################
+Workflow : beaufort_sea/run2
+Job : 20240124T1618Z/tracking_param_set20/02 (try 2)
+User@Host: dwatkin2@node2334.oscar.ccv.brown.edu
+
+2024-01-24T12:31:26-05:00 INFO - started
+[H[2J[3J

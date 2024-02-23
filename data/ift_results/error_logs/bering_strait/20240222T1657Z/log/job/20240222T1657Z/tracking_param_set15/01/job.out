@@ -1,0 +1,15 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 745118
+##  Job Name : tracking_param_set15.20240222T1657Z.bering_strait/run1
+##  Nodelist : node2301
+##      CPUs : 
+##  Mem/Node : 20480 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Thu Feb 22 01:41:39 PM EST 2024
+###############################################################################
+Workflow : bering_strait/run1
+Job : 20240222T1657Z/tracking_param_set15/01 (try 1)
+User@Host: dwatkin2@node2301.oscar.ccv.brown.edu
+
+2024-02-22T13:41:43-05:00 INFO - started
+[H[2J[3J

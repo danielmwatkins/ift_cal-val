@@ -1,0 +1,16 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 761452
+##  Job Name : pulljuliaimage.20240223T1604Z.greenland_sea/run1
+##  Nodelist : node2333
+##      CPUs : 
+##  Mem/Node : 32768 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Fri Feb 23 11:04:10 AM EST 2024
+###############################################################################
+Workflow : greenland_sea/run1
+Job : 20240223T1604Z/pulljuliaimage/01 (try 1)
+User@Host: dwatkin2@node2333.oscar.ccv.brown.edu
+
+2024-02-23T11:04:14-05:00 INFO - started
+2024-02-23T11:04:33-05:00 INFO - succeeded
+[H[2J[3J

@@ -1,0 +1,17 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 760496
+##  Job Name : extractfeatures_param_set13.20240223T1406Z.chukchi-east_siberian_sea/run1
+##  Nodelist : node2341
+##      CPUs : 
+##  Mem/Node : 18432 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Fri Feb 23 09:49:47 AM EST 2024
+###############################################################################
+Workflow : chukchi-east_siberian_sea/run1
+Job : 20240223T1406Z/extractfeatures_param_set13/01 (try 1)
+User@Host: dwatkin2@node2341.oscar.ccv.brown.edu
+
+2024-02-23T09:49:50-05:00 INFO - started
+  3.560869 seconds (2.16 M allocations: 144.590 MiB, 2.11% gc time, 72.07% compilation time: 8% of which was recompilation)
+2024-02-23T09:50:12-05:00 INFO - succeeded
+[H[2J[3J

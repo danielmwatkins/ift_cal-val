@@ -1,0 +1,17 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 707918
+##  Job Name : extractfeatures_param_set13.20240221T1715Z.barents-kara_seas/run1
+##  Nodelist : node1738
+##      CPUs : 
+##  Mem/Node : 18432 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Wed Feb 21 01:14:44 PM EST 2024
+###############################################################################
+Workflow : barents-kara_seas/run1
+Job : 20240221T1715Z/extractfeatures_param_set13/01 (try 1)
+User@Host: dwatkin2@node1738.oscar.ccv.brown.edu
+
+2024-02-21T13:14:47-05:00 INFO - started
+  2.964293 seconds (2.16 M allocations: 144.597 MiB, 1.59% gc time, 89.00% compilation time: 8% of which was recompilation)
+2024-02-21T13:15:18-05:00 INFO - succeeded
+[H[2J[3J

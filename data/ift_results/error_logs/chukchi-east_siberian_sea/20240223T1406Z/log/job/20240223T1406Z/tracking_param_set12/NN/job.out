@@ -1,0 +1,15 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 760804
+##  Job Name : tracking_param_set12.20240223T1406Z.chukchi-east_siberian_sea/run1
+##  Nodelist : node2339
+##      CPUs : 
+##  Mem/Node : 20480 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Fri Feb 23 09:51:13 AM EST 2024
+###############################################################################
+Workflow : chukchi-east_siberian_sea/run1
+Job : 20240223T1406Z/tracking_param_set12/02 (try 2)
+User@Host: dwatkin2@node2339.oscar.ccv.brown.edu
+
+2024-02-23T09:51:17-05:00 INFO - started
+[H[2J[3J

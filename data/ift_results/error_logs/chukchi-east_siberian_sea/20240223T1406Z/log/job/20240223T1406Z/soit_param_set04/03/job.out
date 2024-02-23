@@ -1,0 +1,18 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 759947
+##  Job Name : soit_param_set04.20240223T1406Z.chukchi-east_siberian_sea/run1
+##  Nodelist : node2301
+##      CPUs : 
+##  Mem/Node : 12288 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Fri Feb 23 09:08:09 AM EST 2024
+###############################################################################
+Workflow : chukchi-east_siberian_sea/run1
+Job : 20240223T1406Z/soit_param_set04/03 (try 3)
+User@Host: dwatkin2@node2301.oscar.ccv.brown.edu
+
+Outpath /tmp
+Timeframe starts on ['07', '23', '2007'], and ends on ['07', '24', '2007']
+Coordinates (x, y): (76.06543315, 158.8186505)
+2024-02-23T09:08:11-05:00 INFO - started
+[H[2J[3J
