@@ -5,7 +5,7 @@ import numpy as np
 import os
 import cv2
 
-def image_process(
+def pixel_image_process(
                 manual_path: str, 
                 ift_path: str, 
                 date: str, 
@@ -46,7 +46,6 @@ def image_process(
 
     # Retrieve manual floes from PNG and calculate intersections
     manual_image = iio.imread(manual_path)
-
     new_img = np.zeros((len(manual_image), len(manual_image[0])))
 
     # Loop through pixels in the manually masked image

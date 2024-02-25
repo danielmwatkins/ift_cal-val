@@ -1,4 +1,4 @@
-from img_process import image_process
+from pixel_img_process import pixel_image_process
 from tqdm import tqdm
 from getimages import get_images
 
@@ -21,8 +21,8 @@ def main():
 
 
     for index, row in tqdm(complete_cases.iterrows()):
-        pix_conf_mx = image_process(row['manual_path'], row['ift_path'], row['start_date'], 
-                                    row['satellite'], float(row['dx_km']), str(row['land_mask_path']), 4, True)
+        pix_conf_mx = pixel_image_process(row['manual_path'], row['ift_path'], row['start_date'], 
+                                    row['satellite'], float(row['dx_km']), str(row['land_mask_path']), 15, True)
 
         false_neg.append(pix_conf_mx['f_neg'])
         true_neg.append(pix_conf_mx['t_neg'])
