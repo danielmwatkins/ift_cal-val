@@ -1,0 +1,15 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 969120
+##  Job Name : tracking_param_set14.20240306T1439Z.laptev_sea/run1
+##  Nodelist : node1318
+##      CPUs : 
+##  Mem/Node : 20480 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Wed Mar  6 10:29:40 AM EST 2024
+###############################################################################
+Workflow : laptev_sea/run1
+Job : 20240306T1439Z/tracking_param_set14/02 (try 2)
+User@Host: dwatkin2@node1318.oscar.ccv.brown.edu
+
+2024-03-06T10:29:43-05:00 INFO - started
+[H[2J[3J

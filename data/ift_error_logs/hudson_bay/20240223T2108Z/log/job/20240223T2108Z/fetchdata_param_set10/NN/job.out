@@ -1,0 +1,21 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 765231
+##  Job Name : fetchdata_param_set10.20240223T2108Z.hudson_bay/run1
+##  Nodelist : node1359
+##      CPUs : 
+##  Mem/Node : 12288 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Fri Feb 23 04:09:04 PM EST 2024
+###############################################################################
+Workflow : hudson_bay/run1
+Job : 20240223T2108Z/fetchdata_param_set10/01 (try 1)
+User@Host: dwatkin2@node1359.oscar.ccv.brown.edu
+
+downloading landmask
+2024-02-23T16:09:06-05:00 INFO - started
+downloading true color images
+.
+downloading reflectance color images
+.
+2024-02-23T16:09:11-05:00 INFO - succeeded
+[H[2J[3J

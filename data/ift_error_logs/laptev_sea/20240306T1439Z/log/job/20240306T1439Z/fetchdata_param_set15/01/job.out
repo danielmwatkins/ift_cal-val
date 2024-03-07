@@ -1,0 +1,21 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 965736
+##  Job Name : fetchdata_param_set15.20240306T1439Z.laptev_sea/run1
+##  Nodelist : node1325
+##      CPUs : 
+##  Mem/Node : 12288 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Wed Mar  6 09:39:16 AM EST 2024
+###############################################################################
+Workflow : laptev_sea/run1
+Job : 20240306T1439Z/fetchdata_param_set15/01 (try 1)
+User@Host: dwatkin2@node1325.oscar.ccv.brown.edu
+
+2024-03-06T09:39:18-05:00 INFO - started
+downloading landmask
+downloading true color images
+.
+downloading reflectance color images
+.
+2024-03-06T09:39:21-05:00 INFO - succeeded
+[H[2J[3J

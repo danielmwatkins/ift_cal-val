@@ -1,0 +1,86 @@
+#!/bin/bash -l
+#
+# ++++ THIS IS A CYLC JOB SCRIPT ++++
+# Workflow: laptev_sea/run1
+# Task: 20240306T1439Z/fetchdata_param_set06
+# Job log directory: 20240306T1439Z/fetchdata_param_set06/01
+# Job runner: slurm
+# Execution time limit: 3600.0
+
+# DIRECTIVES:
+#SBATCH --job-name=fetchdata_param_set06.20240306T1439Z.laptev_sea/run1
+#SBATCH --output=cylc-run/laptev_sea/run1/log/job/20240306T1439Z/fetchdata_param_set06/01/job.out
+#SBATCH --error=cylc-run/laptev_sea/run1/log/job/20240306T1439Z/fetchdata_param_set06/01/job.err
+#SBATCH --time=60:00
+#SBATCH --mem=12G
+#SBATCH --cpus-per-task=4
+if [[ $1 == 'noreinvoke' ]]; then
+    shift
+else
+    exec bash -l "$0" noreinvoke "$@"
+fi
+
+CYLC_FAIL_SIGNALS='EXIT ERR TERM XCPU'
+export CYLC_VERBOSE=false
+export CYLC_DEBUG=false
+export CYLC_VERSION='8.2.1'
+export CYLC_WORKFLOW_ID="laptev_sea/run1"
+
+cylc__job__inst__cylc_env() {
+    # CYLC WORKFLOW ENVIRONMENT:
+    export CYLC_CYCLING_MODE="gregorian"
+    export CYLC_UTC="False"
+    export CYLC_WORKFLOW_FINAL_CYCLE_POINT="None"
+    export CYLC_WORKFLOW_INITIAL_CYCLE_POINT="20240306T1439Z"
+    export CYLC_WORKFLOW_NAME="laptev_sea"
+    export CYLC_WORKFLOW_NAME_BASE="laptev_sea"
+    export CYLC_WORKFLOW_UUID="245f0fc2-e24c-4ada-a11a-f263413de9dc"
+
+    # CYLC TASK ENVIRONMENT:
+    export CYLC_TASK_COMMS_METHOD=zmq
+    export CYLC_TASK_JOB="20240306T1439Z/fetchdata_param_set06/01"
+    export CYLC_TASK_NAMESPACE_HIERARCHY="root fetchdata_param_set06"
+    export CYLC_TASK_DEPENDENCIES="20240306T1439Z/pullfetchimage 20240306T1439Z/pulljuliaimage"
+    export CYLC_TASK_TRY_NUMBER=1
+    export CYLC_TASK_FLOW_NUMBERS=1
+    export CYLC_TASK_PARAM_param_set="6"
+}
+
+cylc__job__inst__user_env() {
+    # TASK RUNTIME ENVIRONMENT:
+    export location startdate enddate crs bounding_box centroid_x centroid_y minfloearea maxfloearea project_dir t julia_exec report_dir results_dir fetchdata_dir truecolor_dir reflectance_dir
+    location="laptev_sea-100km_by_100km-20040602-20040603,laptev_sea-100km_by_100km-20040923-20040924,laptev_sea-100km_by_100km-20060806-20060807,laptev_sea-100km_by_100km-20070405-20070406,laptev_sea-100km_by_100km-20070504-20070505,laptev_sea-100km_by_100km-20070712-20070713,laptev_sea-100km_by_100km-20080330-20080331,laptev_sea-100km_by_100km-20080508-20080509,laptev_sea-100km_by_100km-20080601-20080602,laptev_sea-100km_by_100km-20080720-20080721,laptev_sea-100km_by_100km-20110324-20110325,laptev_sea-100km_by_100km-20110514-20110515,laptev_sea-100km_by_100km-20130904-20130905,laptev_sea-100km_by_100km-20140301-20140302,laptev_sea-100km_by_100km-20140403-20140404,laptev_sea-100km_by_100km-20160402-20160403,laptev_sea-100km_by_100km-20160904-20160905,laptev_sea-100km_by_100km-20180601-20180602,laptev_sea-100km_by_100km-20180720-20180721,laptev_sea-100km_by_100km-20190816-20190817,laptev_sea-100km_by_100km-20210807-20210808"
+    startdate="2004-06-02,2004-09-23,2006-08-06,2007-04-05,2007-05-04,2007-07-12,2008-03-30,2008-05-08,2008-06-01,2008-07-20,2011-03-24,2011-05-14,2013-09-04,2014-03-01,2014-04-03,2016-04-02,2016-09-04,2018-06-01,2018-07-20,2019-08-16,2021-08-07"
+    enddate="2004-06-03,2004-09-24,2006-08-07,2007-04-06,2007-05-05,2007-07-13,2008-03-31,2008-05-09,2008-06-02,2008-07-21,2011-03-25,2011-05-15,2013-09-05,2014-03-02,2014-04-04,2016-04-03,2016-09-05,2018-06-02,2018-07-21,2019-08-17,2021-08-08"
+    crs="epsg3413"
+    bounding_box="62500.00001@1662499.99953@162500.00001@1562499.99953,737500.00018@1662499.99976@837500.00018@1562499.99976,-37499.99985@1362499.99954@62500.00015@1262499.99954,187499.99959@1737499.99982@287499.99959@1637499.99982,-112499.99947@1487500.00046@-12499.99947@1387500.00046,-212500.00106@1337500.00031@-112500.00106@1237500.00031,562499.99996@1237499.9996@662499.99996@1137499.9996,712500.00065@1162500.00018@812500.00065@1062500.00018,437499.99919@1462500.00074@537499.99919@1362500.00074,112499.99998@1612499.99971@212499.99998@1512499.99971,612500.0@1162500.00006@712500.0@1062500.00006,712499.99934@1187499.99997@812499.99934@1087499.99997,712500.00065@1162500.00018@812500.00065@1062500.00018,512500.00014@1187500.00003@612500.00014@1087500.00003,162500.00141@1737499.99952@262500.00141@1637499.99952,537499.99953@1087500.00063@637499.99953@987500.00063,-87499.9992@1162499.99987@12500.0008@1062499.99987,-387500.00014@1512499.99965@-287500.00014@1412499.99965,-312499.99897@1787499.99978@-212499.99897@1687499.99978,262499.99972@1187499.99989@362499.99972@1087499.99989,-162499.99979@1137500.00055@-62499.99979@1037500.00055"
+    centroid_x="75.15856633,73.54374897,77.92646286,74.3625584,76.77416431,78.06206368,77.71099328,77.59624115,76.26949993,75.57197452,78.08849234,77.40738053,77.59624115,78.32461575,74.39251731,79.02592398,79.75068046,76.20870909,73.88148748,79.1416659,79.93234417"
+    centroid_y="131.0090869,108.9704078,134.4543424,126.9887684,137.4895529,142.1934701,107.7157927,100.5735234,115.9587693,129.0625839,104.2259639,101.1648802,100.5735234,108.6873515,127.8227541,105.4786382,136.9305874,147.9946168,143.5912254,119.6383837,140.9061411"
+    minfloearea="300"
+    maxfloearea="90000"
+    project_dir=~/"ice-floe-tracker-pipeline"
+    t="${CYLC_WORKFLOW_INITIAL_CYCLE_POINT}"
+    julia_exec="/usr/local/julia/bin/julia"
+    report_dir="$project_dir/"workflow/report""
+    results_dir="$project_dir/"results"/$t"
+    fetchdata_dir="$project_dir/"resources"/$t"
+    truecolor_dir="$fetchdata_dir/"truecolor""
+    reflectance_dir="$fetchdata_dir/"reflectance""
+}
+
+cylc__job__inst__script() {
+# SCRIPT:
+i=${CYLC_TASK_PARAM_param_set}
+bbox_array=( $(echo $bounding_box | sed -e 's/,/ /g') )
+location_array=( $(echo $location | sed -e 's/,/ /g') )
+startdate_array=( $(echo $startdate | sed -e 's/,/ /g') )
+enddate_array=( $(echo $enddate | sed -e 's/,/ /g') )
+
+apptainer exec --bind $fetchdata_dir/${location_array[$i]}:/tmp $project_dir/fetchdata.simg /usr/local/bin/fetchdata.sh -o /tmp -s ${startdate_array[$i]} -e ${enddate_array[$i]} -c $crs -b ${bbox_array[$i]}
+}
+
+CYLC_RUN_DIR="${CYLC_RUN_DIR:-$HOME/cylc-run}"
+. "${CYLC_RUN_DIR}/${CYLC_WORKFLOW_ID}/.service/etc/job.sh"
+cylc__job__main
+
+#EOF: 20240306T1439Z/fetchdata_param_set06/01

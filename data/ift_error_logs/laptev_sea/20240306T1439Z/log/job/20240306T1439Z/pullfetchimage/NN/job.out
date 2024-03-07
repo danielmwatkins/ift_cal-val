@@ -1,0 +1,16 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 965718
+##  Job Name : pullfetchimage.20240306T1439Z.laptev_sea/run1
+##  Nodelist : node1318
+##      CPUs : 
+##  Mem/Node : 12288 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Wed Mar  6 09:38:33 AM EST 2024
+###############################################################################
+Workflow : laptev_sea/run1
+Job : 20240306T1439Z/pullfetchimage/01 (try 1)
+User@Host: dwatkin2@node1318.oscar.ccv.brown.edu
+
+2024-03-06T09:38:37-05:00 INFO - started
+2024-03-06T09:38:40-05:00 INFO - succeeded
+[H[2J[3J
