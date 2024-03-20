@@ -1,0 +1,23 @@
+{
+    "version control system": "git",
+    "repository version": "423b277-dirty",
+    "commit": "423b2773027fba756dac7c4a386f9ffc682c479f",
+    "working copy root path": "/oscar/home/dwatkin2/ice-floe-tracker-pipeline/config/cylc_hpc",
+    "status": [
+        " M flow_template_hpc.j2",
+        " M ../../workflow/scripts/flow_generator.py",
+        "?? ../../.bash_profile",
+        "?? ../baffin_bay_100km_cases.csv",
+        "?? ../barents-kara_seas_100km_cases.csv",
+        "?? ../beaufort_sea_100km_cases.csv",
+        "?? ../bering_strait_100km_cases.csv",
+        "?? ../chukchi-east_siberian_sea_100km_cases.csv",
+        "?? flow.cylc",
+        "?? ../greenland_sea_100km_cases.csv",
+        "?? ../hudson_bay_100km_cases.csv",
+        "?? ../laptev_sea_100km_cases.csv",
+        "?? ../sea_of_okhostk_100km_cases.csv",
+        "?? ../site_locations.csv",
+        "?? ../viirs_comp.csv"
+    ]
+}

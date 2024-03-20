@@ -1,0 +1,15 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1117320
+##  Job Name : tracking_param_set12.20240318T2123Z.baffin_bay/run3
+##  Nodelist : node1915
+##      CPUs : 
+##  Mem/Node : 20480 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Mon Mar 18 06:36:26 PM EDT 2024
+###############################################################################
+Workflow : baffin_bay/run3
+Job : 20240318T2123Z/tracking_param_set12/02 (try 2)
+User@Host: dwatkin2@node1915.oscar.ccv.brown.edu
+
+2024-03-18T18:36:31-04:00 INFO - started
+[H[2J[3J

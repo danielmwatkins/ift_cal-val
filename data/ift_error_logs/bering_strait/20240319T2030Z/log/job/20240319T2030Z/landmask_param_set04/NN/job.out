@@ -1,0 +1,17 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1123590
+##  Job Name : landmask_param_set04.20240319T2030Z.bering_strait/run2
+##  Nodelist : node1742
+##      CPUs : 
+##   Mem/CPU : 4096 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Tue Mar 19 04:32:14 PM EDT 2024
+###############################################################################
+Workflow : bering_strait/run2
+Job : 20240319T2030Z/landmask_param_set04/01 (try 1)
+User@Host: dwatkin2@node1742.oscar.ccv.brown.edu
+
+2024-03-19T16:32:16-04:00 INFO - started
+  7.315417 seconds (6.08 M allocations: 395.580 MiB, 2.99% gc time, 76.12% compilation time: 24% of which was recompilation)
+2024-03-19T16:32:41-04:00 INFO - succeeded
+[H[2J[3J

@@ -1,0 +1,17 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1121663
+##  Job Name : preprocess_param_set35.20240319T1535Z.beaufort_sea/run5
+##  Nodelist : node2324
+##      CPUs : 
+##   Mem/CPU : 12288 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Tue Mar 19 12:18:54 PM EDT 2024
+###############################################################################
+Workflow : beaufort_sea/run5
+Job : 20240319T1535Z/preprocess_param_set35/01 (try 1)
+User@Host: dwatkin2@node2324.oscar.ccv.brown.edu
+
+2024-03-19T12:18:56-04:00 INFO - started
+ 45.839116 seconds (220.12 M allocations: 11.173 GiB, 7.60% gc time, 1264.46% compilation time: <1% of which was recompilation)
+2024-03-19T12:20:01-04:00 INFO - succeeded
+[H[2J[3J

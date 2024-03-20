@@ -1,0 +1,17 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1124016
+##  Job Name : exportH5_param_set14.20240319T2030Z.bering_strait/run2
+##  Nodelist : node1733
+##      CPUs : 
+##  Mem/Node : 18432 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Tue Mar 19 05:17:48 PM EDT 2024
+###############################################################################
+Workflow : bering_strait/run2
+Job : 20240319T2030Z/exportH5_param_set14/01 (try 1)
+User@Host: dwatkin2@node1733.oscar.ccv.brown.edu
+
+2024-03-19T17:17:50-04:00 INFO - started
+  4.153263 seconds (3.13 M allocations: 214.649 MiB, 2.71% gc time, 85.04% compilation time: 5% of which was recompilation)
+2024-03-19T17:18:14-04:00 INFO - succeeded
+[H[2J[3J

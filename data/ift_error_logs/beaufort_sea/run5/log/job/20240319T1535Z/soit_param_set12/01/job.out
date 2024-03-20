@@ -1,0 +1,19 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1121427
+##  Job Name : soit_param_set12.20240319T1535Z.beaufort_sea/run5
+##  Nodelist : node1734
+##      CPUs : 
+##  Mem/Node : 12288 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Tue Mar 19 11:36:12 AM EDT 2024
+###############################################################################
+Workflow : beaufort_sea/run5
+Job : 20240319T1535Z/soit_param_set12/01 (try 1)
+User@Host: dwatkin2@node1734.oscar.ccv.brown.edu
+
+2024-03-19T11:36:14-04:00 INFO - started
+Outpath /tmp
+Timeframe starts on ['03', '30', '2010'], and ends on ['03', '31', '2010']
+Coordinates (x, y): (74.83217276, -116.0167829)
+2024-03-19T11:36:16-04:00 INFO - succeeded
+[H[2J[3J

@@ -1,0 +1,17 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1122264
+##  Job Name : exportH5_param_set03.20240319T1535Z.beaufort_sea/run5
+##  Nodelist : node1327
+##      CPUs : 
+##  Mem/Node : 18432 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Tue Mar 19 12:56:40 PM EDT 2024
+###############################################################################
+Workflow : beaufort_sea/run5
+Job : 20240319T1535Z/exportH5_param_set03/01 (try 1)
+User@Host: dwatkin2@node1327.oscar.ccv.brown.edu
+
+2024-03-19T12:56:43-04:00 INFO - started
+  4.450179 seconds (3.13 M allocations: 214.669 MiB, 3.00% gc time, 88.74% compilation time: 5% of which was recompilation)
+2024-03-19T12:57:09-04:00 INFO - succeeded
+[H[2J[3J

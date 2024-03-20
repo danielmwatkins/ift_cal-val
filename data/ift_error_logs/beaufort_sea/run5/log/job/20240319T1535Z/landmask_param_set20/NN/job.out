@@ -1,0 +1,17 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1121522
+##  Job Name : landmask_param_set20.20240319T1535Z.beaufort_sea/run5
+##  Nodelist : node1736
+##      CPUs : 
+##   Mem/CPU : 4096 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Tue Mar 19 11:39:57 AM EDT 2024
+###############################################################################
+Workflow : beaufort_sea/run5
+Job : 20240319T1535Z/landmask_param_set20/01 (try 1)
+User@Host: dwatkin2@node1736.oscar.ccv.brown.edu
+
+2024-03-19T11:39:59-04:00 INFO - started
+  7.783355 seconds (6.08 M allocations: 395.580 MiB, 2.66% gc time, 68.08% compilation time: 24% of which was recompilation)
+2024-03-19T11:40:25-04:00 INFO - succeeded
+[H[2J[3J

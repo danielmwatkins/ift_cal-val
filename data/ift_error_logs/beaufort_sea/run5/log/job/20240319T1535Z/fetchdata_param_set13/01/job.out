@@ -1,0 +1,21 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1121386
+##  Job Name : fetchdata_param_set13.20240319T1535Z.beaufort_sea/run5
+##  Nodelist : node1737
+##      CPUs : 
+##  Mem/Node : 12288 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Tue Mar 19 11:35:35 AM EDT 2024
+###############################################################################
+Workflow : beaufort_sea/run5
+Job : 20240319T1535Z/fetchdata_param_set13/01 (try 1)
+User@Host: dwatkin2@node1737.oscar.ccv.brown.edu
+
+2024-03-19T11:35:37-04:00 INFO - started
+downloading landmask
+downloading true color images
+.
+downloading falsecolor color images
+.
+2024-03-19T11:35:41-04:00 INFO - succeeded
+[H[2J[3J

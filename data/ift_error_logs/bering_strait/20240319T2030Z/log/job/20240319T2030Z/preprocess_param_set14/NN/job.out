@@ -1,0 +1,17 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1123634
+##  Job Name : preprocess_param_set14.20240319T2030Z.bering_strait/run2
+##  Nodelist : node1811
+##      CPUs : 
+##   Mem/CPU : 12288 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Tue Mar 19 04:49:18 PM EDT 2024
+###############################################################################
+Workflow : bering_strait/run2
+Job : 20240319T2030Z/preprocess_param_set14/01 (try 1)
+User@Host: dwatkin2@node1811.oscar.ccv.brown.edu
+
+2024-03-19T16:49:20-04:00 INFO - started
+ 46.202120 seconds (221.74 M allocations: 11.408 GiB, 7.81% gc time, 1254.91% compilation time: <1% of which was recompilation)
+2024-03-19T16:50:26-04:00 INFO - succeeded
+[H[2J[3J
