@@ -1,0 +1,38 @@
+ERROR: LoadError: ArgumentError: column name :latitude not found in the data frame
+Stacktrace:
+  [1] lookupname
+    @ /opt/julia/packages/DataFrames/58MUJ/src/other/index.jl:413 [inlined]
+  [2] getindex
+    @ /opt/julia/packages/DataFrames/58MUJ/src/other/index.jl:422 [inlined]
+  [3] (::DataFrames.var"#37#38"{DataFrames.Index})(i::Symbol)
+    @ DataFrames ./none:0
+  [4] iterate
+    @ ./generator.jl:47 [inlined]
+  [5] collect_to!
+    @ ./array.jl:840 [inlined]
+  [6] collect_to_with_first!
+    @ ./array.jl:818 [inlined]
+  [7] collect(itr::Base.Generator{Vector{Symbol}, DataFrames.var"#37#38"{DataFrames.Index}})
+    @ Base ./array.jl:792
+  [8] getindex
+    @ /opt/julia/packages/DataFrames/58MUJ/src/other/index.jl:428 [inlined]
+  [9] getindex(df::DataFrame, row_ind::Colon, col_inds::Vector{Symbol})
+    @ DataFrames /opt/julia/packages/DataFrames/58MUJ/src/dataframe/dataframe.jl:627
+ [10] pairfloes(segmented_imgs::Vector{BitMatrix}, props::Vector{DataFrame}, passtimes::Vector{DateTime}, latlonrefimage::String, condition_thresholds::NamedTuple{(:t1, :t2, :t3), Tuple{NamedTuple{(:dt, :dist), Tuple{Vector{Int64}, Vector{Int64}}}, NamedTuple{(:area, :arearatio, :convexarearatio, :majaxisratio, :minaxisratio), Tuple{Int64, Vararg{Float64, 4}}}, NamedTuple{(:area, :arearatio, :convexarearatio, :majaxisratio, :minaxisratio), Tuple{Int64, Vararg{Float64, 4}}}}}, mc_thresholds::NamedTuple{(:comp, :goodness), Tuple{NamedTuple{(:mxrot, :sz, :comp, :mm, :psi), Tuple{Int64, Int64, Float64, Float64, Float64}}, NamedTuple{(:corr, :area2, :area3), Tuple{Float64, Float64, Float64}}}})
+    @ IceFloeTracker /opt/julia/packages/IceFloeTracker/b2B4v/src/tracker/tracker.jl:244
+ [11] track(; args::Base.Pairs{Symbol, Any, NTuple{25, Symbol}, NamedTuple{(:dt_thresh, :Larearatio, :Lminaxisratio, :Lconvexarearatio, :output, :params, :Sarearatio, :latlon, :Smajaxisratio, :area3, :area2, :psi, :Sminaxisratio, :Sconvexarearatio, :sz, :imgs, :passtimes, :dist, :comp, :mm, :props, :corr, :mxrot, :area, :Lmajaxisratio), Tuple{String, Float64, Float64, Float64, String, Nothing, Float64, String, Float64, Float64, Float64, Float64, Float64, Float64, Int64, String, String, String, Float64, Float64, String, Float64, Int64, Int64, Float64}}})
+    @ IFTPipeline /opt/ice-floe-tracker-pipeline/src/tracker.jl:19
+ [12] macro expansion
+    @ ./timing.jl:273 [inlined]
+ [13] (::var"#6#8"{typeof(track), Dict{Symbol, Any}})()
+    @ Main /usr/local/bin/ice-floe-tracker.jl:85
+ [14] with_logstate(f::Function, logstate::Any)
+    @ Base.CoreLogging ./logging.jl:514
+ [15] with_logger(f::Function, logger::TeeLogger{Tuple{EarlyFilteredLogger{FileLogger, var"#3#4"}}})
+    @ Base.CoreLogging ./logging.jl:626
+ [16] main(args::Vector{String})
+    @ Main /usr/local/bin/ice-floe-tracker.jl:84
+ [17] top-level scope
+    @ /usr/local/bin/ice-floe-tracker.jl:90
+in expression starting at /usr/local/bin/ice-floe-tracker.jl:90
+2024-03-19T12:58:16-04:00 CRITICAL - failed/ERR

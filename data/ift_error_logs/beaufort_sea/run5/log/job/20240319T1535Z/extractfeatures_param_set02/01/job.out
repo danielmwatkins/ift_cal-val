@@ -1,0 +1,17 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1121711
+##  Job Name : extractfeatures_param_set02.20240319T1535Z.beaufort_sea/run5
+##  Nodelist : node1328
+##      CPUs : 
+##  Mem/Node : 18432 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Tue Mar 19 12:55:40 PM EDT 2024
+###############################################################################
+Workflow : beaufort_sea/run5
+Job : 20240319T1535Z/extractfeatures_param_set02/01 (try 1)
+User@Host: dwatkin2@node1328.oscar.ccv.brown.edu
+
+2024-03-19T12:55:44-04:00 INFO - started
+  3.959182 seconds (2.16 M allocations: 145.027 MiB, 2.00% gc time, 71.83% compilation time: 8% of which was recompilation)
+2024-03-19T12:56:15-04:00 INFO - succeeded
+[H[2J[3J
