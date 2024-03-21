@@ -1,0 +1,52 @@
+INFO:    Environment variable SINGULARITY_CACHEDIR is set, but APPTAINER_CACHEDIR is preferred
+INFO:    Converting OCI blobs to SIF format
+INFO:    Starting build...
+Getting image source signatures
+Copying blob sha256:dc75d34bdf34ff12eea97297cf1eece1f8e8dac79de940bbd2276d10296917ed
+Copying blob sha256:ec335f17d0c74f7a270925cb1bbd29acc72ae904c6f4570f9ae369e3eebb64ed
+Copying blob sha256:d2b4675e1918dcb7f5c9bfedbb5a8634d2459306d1f3b91f08c7293380f10585
+Copying blob sha256:7f67b1746a83d257a6398cf8eec47bfa1f854670097ea4234f12857cfc7d5932
+Copying blob sha256:7e6939aa9b63c6ee738fb4a9904fac366ecb96aec3d980993009e3b7ee3f7516
+Copying blob sha256:c14a5db05c76694bd381fad729de15a9fbe5d595b7df77fec1917efb1a117853
+Copying blob sha256:fe403ec43009e414c8676cba843de39aad673b490ee388fba68f5f0638eb3737
+Copying blob sha256:b9e3984c8e25efa7f372fbb306c3b0ded7a3bfa2a9c76ef7edd31119264b6ec9
+Copying blob sha256:f7e1e7ea1069825831ae3dd463dc2470305ac3281ed278cf3ceb0d117ac5526d
+Copying blob sha256:40409c510bd1aedd0f3dce54fb8d4d9afa7cd299d605d90bb48fdf5674ebe8f0
+Copying blob sha256:b46c3c2ec14b095ffdacff321b3de3fdce9808380bf00ecc605485ba5dc980d9
+Copying blob sha256:7f986477a5ea766b212e3cf1b4cd450f18f3150ab5a047d453e4454c853bb725
+Copying blob sha256:d0528737a6dae83f8c65416b4e0474ca49536ca906261821586180a9ea7960c5
+Copying blob sha256:080d176aad270e5bab648c3bacd84356b250d001557dee95ee7d050eddfaba22
+Copying blob sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1
+Copying config sha256:f5caac1d56fefbed0fb1c2a523d9880c8ffe294ac2199bed5b212a4d35f2b4a9
+Writing manifest to image destination
+Storing signatures
+2024/03/20 16:45:52  info unpack layer: sha256:ec335f17d0c74f7a270925cb1bbd29acc72ae904c6f4570f9ae369e3eebb64ed
+2024/03/20 16:45:52  warn xattr{etc/gshadow} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2024/03/20 16:45:52  warn xattr{/tmp/build-temp-2545175710/rootfs/etc/gshadow} destination filesystem does not support xattrs, further warnings will be suppressed
+2024/03/20 16:45:53  info unpack layer: sha256:d2b4675e1918dcb7f5c9bfedbb5a8634d2459306d1f3b91f08c7293380f10585
+2024/03/20 16:45:54  warn xattr{var/cache/apt/archives/partial} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2024/03/20 16:45:54  warn xattr{/tmp/build-temp-2545175710/rootfs/var/cache/apt/archives/partial} destination filesystem does not support xattrs, further warnings will be suppressed
+2024/03/20 16:45:54  info unpack layer: sha256:7f67b1746a83d257a6398cf8eec47bfa1f854670097ea4234f12857cfc7d5932
+2024/03/20 16:45:54  warn xattr{etc/gshadow} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2024/03/20 16:45:54  warn xattr{/tmp/build-temp-2545175710/rootfs/etc/gshadow} destination filesystem does not support xattrs, further warnings will be suppressed
+2024/03/20 16:45:55  info unpack layer: sha256:7e6939aa9b63c6ee738fb4a9904fac366ecb96aec3d980993009e3b7ee3f7516
+2024/03/20 16:45:58  warn xattr{usr/local/share/fonts} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2024/03/20 16:45:58  warn xattr{/tmp/build-temp-2545175710/rootfs/usr/local/share/fonts} destination filesystem does not support xattrs, further warnings will be suppressed
+2024/03/20 16:45:59  info unpack layer: sha256:c14a5db05c76694bd381fad729de15a9fbe5d595b7df77fec1917efb1a117853
+2024/03/20 16:45:59  warn xattr{var/cache/apt/archives/partial} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2024/03/20 16:45:59  warn xattr{/tmp/build-temp-2545175710/rootfs/var/cache/apt/archives/partial} destination filesystem does not support xattrs, further warnings will be suppressed
+2024/03/20 16:45:59  info unpack layer: sha256:dc75d34bdf34ff12eea97297cf1eece1f8e8dac79de940bbd2276d10296917ed
+2024/03/20 16:45:59  info unpack layer: sha256:fe403ec43009e414c8676cba843de39aad673b490ee388fba68f5f0638eb3737
+2024/03/20 16:45:59  info unpack layer: sha256:b9e3984c8e25efa7f372fbb306c3b0ded7a3bfa2a9c76ef7edd31119264b6ec9
+2024/03/20 16:45:59  info unpack layer: sha256:f7e1e7ea1069825831ae3dd463dc2470305ac3281ed278cf3ceb0d117ac5526d
+2024/03/20 16:46:00  warn xattr{var/lib/apt/lists/auxfiles} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2024/03/20 16:46:00  warn xattr{/tmp/build-temp-2545175710/rootfs/var/lib/apt/lists/auxfiles} destination filesystem does not support xattrs, further warnings will be suppressed
+2024/03/20 16:46:00  info unpack layer: sha256:40409c510bd1aedd0f3dce54fb8d4d9afa7cd299d605d90bb48fdf5674ebe8f0
+2024/03/20 16:46:01  warn xattr{var/log/apt/term.log} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2024/03/20 16:46:01  warn xattr{/tmp/build-temp-2545175710/rootfs/var/log/apt/term.log} destination filesystem does not support xattrs, further warnings will be suppressed
+2024/03/20 16:46:01  info unpack layer: sha256:b46c3c2ec14b095ffdacff321b3de3fdce9808380bf00ecc605485ba5dc980d9
+2024/03/20 16:46:02  info unpack layer: sha256:7f986477a5ea766b212e3cf1b4cd450f18f3150ab5a047d453e4454c853bb725
+2024/03/20 16:46:02  info unpack layer: sha256:d0528737a6dae83f8c65416b4e0474ca49536ca906261821586180a9ea7960c5
+2024/03/20 16:46:02  info unpack layer: sha256:080d176aad270e5bab648c3bacd84356b250d001557dee95ee7d050eddfaba22
+2024/03/20 16:46:02  info unpack layer: sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1
+INFO:    Creating SIF file...

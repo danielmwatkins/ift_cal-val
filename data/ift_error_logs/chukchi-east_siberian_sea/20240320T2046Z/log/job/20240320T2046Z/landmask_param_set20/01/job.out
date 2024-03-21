@@ -1,0 +1,17 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1137182
+##  Job Name : landmask_param_set20.20240320T2046Z.chukchi-east_siberian_sea/run2
+##  Nodelist : node1748
+##      CPUs : 
+##   Mem/CPU : 4096 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Wed Mar 20 05:02:53 PM EDT 2024
+###############################################################################
+Workflow : chukchi-east_siberian_sea/run2
+Job : 20240320T2046Z/landmask_param_set20/01 (try 1)
+User@Host: dwatkin2@node1748.oscar.ccv.brown.edu
+
+2024-03-20T17:02:56-04:00 INFO - started
+ 16.142304 seconds (9.80 M allocations: 637.295 MiB, 2.20% gc time, 47.71% compilation time: 19% of which was recompilation)
+2024-03-20T17:03:32-04:00 INFO - succeeded
+[H[2J[3J

@@ -1,0 +1,17 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1138132
+##  Job Name : exportH5_param_set13.20240320T2046Z.chukchi-east_siberian_sea/run2
+##  Nodelist : node1322
+##      CPUs : 
+##  Mem/Node : 18432 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Wed Mar 20 05:43:45 PM EDT 2024
+###############################################################################
+Workflow : chukchi-east_siberian_sea/run2
+Job : 20240320T2046Z/exportH5_param_set13/01 (try 1)
+User@Host: dwatkin2@node1322.oscar.ccv.brown.edu
+
+2024-03-20T17:43:47-04:00 INFO - started
+  4.115904 seconds (3.13 M allocations: 214.287 MiB, 2.18% gc time, 88.07% compilation time: 4% of which was recompilation)
+2024-03-20T17:44:12-04:00 INFO - succeeded
+[H[2J[3J

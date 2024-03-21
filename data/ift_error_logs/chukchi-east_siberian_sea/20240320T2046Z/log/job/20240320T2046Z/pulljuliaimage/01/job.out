@@ -1,0 +1,16 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1136929
+##  Job Name : pulljuliaimage.20240320T2046Z.chukchi-east_siberian_sea/run2
+##  Nodelist : node1734
+##      CPUs : 
+##  Mem/Node : 32768 MB
+## Directory : /oscar/home/dwatkin2
+##   Job Started : Wed Mar 20 04:45:40 PM EDT 2024
+###############################################################################
+Workflow : chukchi-east_siberian_sea/run2
+Job : 20240320T2046Z/pulljuliaimage/01 (try 1)
+User@Host: dwatkin2@node1734.oscar.ccv.brown.edu
+
+2024-03-20T16:45:47-04:00 INFO - started
+2024-03-20T16:53:54-04:00 INFO - succeeded
+[H[2J[3J

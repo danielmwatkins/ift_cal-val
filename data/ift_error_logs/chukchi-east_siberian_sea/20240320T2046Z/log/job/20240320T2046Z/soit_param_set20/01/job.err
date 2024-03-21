@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/usr/local/bin/pass_time_cylc.py", line 482, in <module>
+    main()
+  File "/usr/local/bin/pass_time_cylc.py", line 477, in main
+    get_passtimes(**vars(args))
+  File "/usr/local/bin/pass_time_cylc.py", line 74, in get_passtimes
+    raise MyError(resp, "GET fail on request")
+__main__.MyError: (<Response [500]>, 'GET fail on request')
+2024-03-20T16:54:59-04:00 CRITICAL - failed/ERR
