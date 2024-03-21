@@ -27,11 +27,11 @@ The notebook produces the following:
 * Table 2: Number of images of each size
 The notebook `IFT case specifications.ipynb` produces CSV files to be fed into the IFT pipeline with the parameters of scenes to download. The specification files have a "location" column with entries in the format `<region_name>_<case_number>`.
 
-
-
-
 ## Calibration
 The goal of the calibration is to identify an "optimal" set of parameters for the IFT algorithm. Optimal is in quotes because optimization requires a set of metrics, and there isn't just one set of ways that something can be optimized. Hence, we need to describe a set of metrics, which will be used both for calibration and for reporting the uncertainties in the validation section.
+
+### Data
+Results from the IFT-pipeline runs are placed in the data folder, with `data/ift_results` holding the algorithm output and the error logs being placed in `data/ift_error_logs`. The bounding boxes for each individual case are stored in `data/ift_case_definitions`. IFT-pipeline was run with the default settings first (minimum area = 300), then with the minimum area changed to 100 pixels. The file `data/ift_case_definitions/ift_runs_key.csv` contains the information on which folder in each region correspond to the min=300 and min=100 runs. A summary CSV file showing which stages of the aglorithm were completed successfully is included, so for example for the 20240124T1406Z run of baffin bay, that file is stored in `data/ift_results/baffin_bay/20240124T1406Z/baffin_bay_evaluation_table.csv`.
 
 ## Validation
 Key properties that we need to account for, in no particular order
@@ -45,11 +45,8 @@ Key properties that we need to account for, in no particular order
 - Tracking (similar set of tests, but testing whether a floe can be tracked, rather than whether a floe can be identified)
 - Is there a limit on shapes and sizes of floes for them to be trackable?
 
-
-
 ## Validation data
-- Manually identified floes
-- Manually verified tracking? How should that work? Look into automated methods 
+The validation data consists of a set of 100 km by 100 km images, randomly sampled across spring and summer months, within 9 regions of the Arctic Ocean and its marginal seas. The folder `data/validation_tables` contains two folders. In the folder `data/validation_tables/quantitative_assessment_tables/`, there are CSV files for each region as well as a file `all_100km_cases.csv` that is a simple concatenation of the other files. The CSV files include case metadata, including a case number, the file name (`long_name`), the region name, start and end dates, satellite name, and image size. The quantitative assessment results are "yes/no" data for `visible_sea_ice`, `visible_landfast_ice`, `visible_floes`, and  `artifacts` (errors in the image, missing data, or obvious overlap of different images), manual assessment of cloud fraction (0 to 1, to the nearest 0.1), and cloud category (none, thin, scattered, opaque). These values were first estimated by `qa_analyst`, then checked by `qa_reviewer`. Adjustments to the values in the first assessment are noted in `notes`. The columns `fl_analyst` and `fl_reviewer` indicate the analysts who manually labeled the images and who reviewed and/or corrected the manual labeling. 
 
-
+The floe labeling task was carried out by first selecting all the images where the quantitative assessment indicated visible ice floes, then randomly dividing the images between the 5 analysts. The images in Baffin Bay were each labeled twice to provide a measure of the subjectivity in floe labeling. Floe labeling ass
 
