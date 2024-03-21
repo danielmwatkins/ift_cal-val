@@ -1,4 +1,5 @@
 import cv2
+from copy import deepcopy
 import numpy as np
 import h5py
 from PIL import Image
@@ -88,7 +89,7 @@ def floewise_img_process(
         else:
             if 0 in overlapping_manual:
                 overlapping_manual.remove(0)
-            ift_to_manual_floes[i] = overlapping_manual
+            ift_to_manual_floes[int(i)] = overlapping_manual
 
             # Remove false negatives
             for floe in overlapping_manual:
@@ -101,8 +102,28 @@ def floewise_img_process(
 
         # Create list for all real floes matching this predicted floe.
         new_val = []
+
+
+        # Generate countours of this floe for boundary iou
+        floe_img_idx = ift_labels[:,:] == key
+        binary_img = np.zeros_like(floe_img_idx, dtype=np.uint8)
+        binary_img[floe_img_idx] = 255
+        contours, _ = cv2.findContours(binary_img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        contour_img = np.zeros_like(binary_img)
+        cv2.drawContours(contour_img, contours, 0, (255))
+        kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (10, 10))
+        dilated_predicted_boundary = cv2.dilate(contour_img, kernel, iterations=1)
+
+        dilated_pred_boundary_idx = np.logical_and(dilated_predicted_boundary[:,:] > 0, ift_labels[:,:] != key)
+        dilated_predicted_boundary = np.zeros_like(dilated_pred_boundary_idx, dtype=np.uint8)
+        dilated_predicted_boundary[dilated_pred_boundary_idx] = 255
+
+        dilated_predicted_area = np.sum(dilated_predicted_boundary[:,:] == 255)
+        
         
         for real_floe in value:
+
+
             intersection_stats = {}
 
             intersection_idx = np.logical_and(ift_labels[:,:] == key, man_labels[:,:] == real_floe)
@@ -114,12 +135,41 @@ def floewise_img_process(
             centroid_distance_px = np.sqrt((man_centroids[real_floe][0] - ift_centroids[key][0])**2 + 
                                 (man_centroids[real_floe][1] - ift_centroids[key][1])**2)
 
-            intersection_stats['real_floe'] = real_floe
+
+            # Get dilated real floe boundary
+            floe_img_idx = man_labels[:,:] == real_floe
+            binary_img = np.zeros_like(floe_img_idx, dtype=np.uint8)
+            binary_img[floe_img_idx] = 255
+            contours, _ = cv2.findContours(binary_img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            contour_img = np.zeros_like(binary_img)
+            cv2.drawContours(contour_img, contours, 0, (255))
+            kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (10, 10))
+            dilated_real_boundary = cv2.dilate(contour_img, kernel, iterations=1)
+
+
+            dilated_real_boundary_idx = np.logical_and(dilated_real_boundary[:,:] > 0, man_labels[:,:] == real_floe)
+            dilated_real_boundary = np.zeros_like(dilated_real_boundary_idx, dtype=np.uint8)
+            dilated_real_boundary[dilated_real_boundary_idx] = 255
+
+            dilated_real_area = np.sum(dilated_real_boundary[:,:] == 255)
+
+
+            # Calculate boundary iou
+            intersection_idx = np.logical_and(dilated_real_boundary[:,:] == 255, dilated_predicted_boundary[:,:] == 255)
+            bound_intersection_area = np.sum(intersection_idx)
+            boundary_iou = bound_intersection_area / (dilated_real_area + dilated_predicted_area - bound_intersection_area)
+
+            intersection_stats['area_percent_difference'] = (ift_stats[key][4] - man_stats[real_floe][4]) / man_stats[real_floe][4]
+            intersection_stats['real_floe'] = int(real_floe)
             intersection_stats['iou'] = iou
             intersection_stats['centroid_distance'] = centroid_distance_px
+            intersection_stats['boundary_iou'] = boundary_iou
             new_val.append(intersection_stats)
 
         ift_to_manual_floes[key] = new_val
+
+    # Copy intersection stats for later
+    intersections = deepcopy(ift_to_manual_floes)
 
 
     # Non-max suppression
@@ -127,14 +177,16 @@ def floewise_img_process(
     for ift, reals in ift_to_manual_floes.items():
 
         # Gets index of best matching real floe for IFT floe
-        possible_match_idx = max(enumerate(reals), key=lambda x: x[1]['iou'])[0]
+        possible_match_idx = max(enumerate(reals), key=lambda x: x[1]['boundary_iou'])[0] #changed
         
         # Removes best matching from list of IFT floes
         possible_match = reals.pop(possible_match_idx)
 
         # Adds remainder of floes (besides best match) to false negative list
         for non_match in reals:
-            false_negatives.append(non_match['real_floe'])
+            real_floe_number = non_match['real_floe']
+            false_negatives.append({'floe_number': real_floe_number, 
+                                    'floe_area': int(man_stats[real_floe_number][4]), 'overlap': True})
 
         # Sets ift_to_manual key to remaining best match
         ift_to_manual_floes[ift] = possible_match
@@ -148,12 +200,13 @@ def floewise_img_process(
 
         for ift2, real2 in ift_to_manual_floes.items():
 
-            if ift1 != ift2 and real1['real_floe'] == real2['real_floe'] and real1['iou'] > real2['iou']:
+            if ift1 != ift2 and real1['real_floe'] == real2['real_floe'] and real1['boundary_iou'] > real2['boundary_iou']:
                 to_remove.add(ift2)
 
+    
     for idx in list(to_remove):
-        false_positives.append(idx)
-        false_negatives.append(ift_to_manual_floes[idx]['real_floe'])
+        false_positives.append({'floe_number': idx, 
+                                    'floe_area': int(ift_stats[idx][4]), 'overlap': True})
         del ift_to_manual_floes[idx]
 
     """
@@ -164,29 +217,49 @@ def floewise_img_process(
 
     to_remove = []
     for ift, real in ift_to_manual_floes.items():
-        if real['iou'] < IOU_THRESHOLD:
+        if real['boundary_iou'] < IOU_THRESHOLD: # changed
             to_remove.append(ift)
 
     for idx in to_remove:
-        false_positives.append(idx)
-        false_negatives.append(ift_to_manual_floes[idx]['real_floe'])
+        false_positives.append({'floe_number': idx, 
+                                'floe_area': int(ift_stats[idx][4]), 'overlap': True})
+        real_floe_number = ift_to_manual_floes[idx]['real_floe']
+        false_negatives.append({'floe_number': real_floe_number, 
+                                'floe_area': int(man_stats[real_floe_number][4]), 'overlap': True})
         del ift_to_manual_floes[idx]
 
     # Modify false positives to include floe information
     for i in range(len(false_positives)):
-        floe_number = false_positives[i]
-        floe_dict = {}
-        floe_dict['floe_number'] = floe_number
-        floe_dict['floe_area'] = ift_stats[floe_number][4]
-        false_positives[i] = floe_dict
+        if isinstance(false_positives[i], dict):
+            continue
+        else:
+            floe_number = false_positives[i]
+            floe_dict = {}
+            floe_dict['floe_number'] = int(floe_number)
+            floe_dict['floe_area'] = int(ift_stats[floe_number][4])
+            floe_dict['overlap'] = False
+            false_positives[i] = floe_dict
 
         
     # Modify false negatives to include floe information
     for i in range(len(false_negatives)):
-        floe_number = false_negatives[i]
-        floe_dict = {}
-        floe_dict['floe_number'] = floe_number
-        floe_dict['floe_area'] = man_stats[floe_number][4]
-        false_negatives[i] = floe_dict
+        if isinstance(false_negatives[i], dict):
+            continue
+        else:
+            floe_number = false_negatives[i]
+            floe_dict = {}
+            floe_dict['floe_number'] = int(floe_number)
+            floe_dict['floe_area'] = int(man_stats[floe_number][4])
+            floe_dict['overlap'] = False
+            false_negatives[i] = floe_dict
 
-    return false_positives, false_negatives, ift_to_manual_floes
+    floe_conf_matrix = {'t_pos_floes': len(ift_to_manual_floes), 'f_pos_floes': len(false_positives), 
+                        'f_neg_floes': len(false_negatives), 't_neg_floes': 1}
+
+
+    ift_to_manual_tp = {}
+    for k, v in ift_to_manual_floes.items():
+        ift_to_manual_tp[k] = {'real_floe': v['real_floe'], 'real_floe_area': int(man_stats[v['real_floe']][4]),
+                                'ift_floe_area': int(ift_stats[k][4])}
+
+    return floe_conf_matrix, false_positives, false_negatives, ift_to_manual_tp, intersections

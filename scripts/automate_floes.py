@@ -1,26 +1,43 @@
 from floewise_img_process import floewise_img_process
+from pixel_img_process import pixel_image_process
 from tqdm import tqdm
 from getimages import get_images
-import time
+import json
 
 # Generates CSV with pixel confusion matrix for each image.
-def main():
+def process_floes(ift_path, validation_path, land_mask_path):
     # Run image processor
 
-    IFT_RESULTS_PATH = '../data/ift_results'
-    VALIDATION_IMG_PATH = '../data/validation_images/labeled_floes_png'
+    complete_cases = get_images(ift_path, validation_path, land_mask_path)
 
-    LAND_MASK_PATH = '../data/validation_images/landmask'
-
-    complete_cases = get_images(IFT_RESULTS_PATH, VALIDATION_IMG_PATH, LAND_MASK_PATH)
+    results = {}
 
 
+    for _, row in tqdm(complete_cases.iterrows(), total=len(complete_cases)):
 
-    for index, row in tqdm(complete_cases.iterrows()):
+
+        case = str(row['case_number']) + "_" + row['satellite']
+
+        case_dict = row.to_dict()
+
+
+        floe_conf_mx, fps, fns, ift_to_man, intersections = floewise_img_process(row['manual_path'], row['ift_path'], 
+                                                    row['start_date'], row['satellite'], float(row['dx_km']), 
+                                                    str(row['land_mask_path']), 15)
+
+        pix_conf_mx = pixel_image_process(row['manual_path'], row['ift_path'], row['start_date'], 
+                                    row['satellite'], float(row['dx_km']), str(row['land_mask_path']), 15, True)
+
+        case_dict.update(pix_conf_mx)
+        case_dict.update(floe_conf_mx)
         
-        fps, fns, ift_to_man = floewise_img_process(row['manual_path'], row['ift_path'], row['start_date'], 
-                                    row['satellite'], float(row['dx_km']), str(row['land_mask_path']), 15)
-    
 
-if __name__ == '__main__':
-    main()
+        case_dict['fp_floes'] = fps
+        case_dict['fn_floes'] = fns
+        case_dict['ift_to_man'] = ift_to_man
+        case_dict['intersections'] = intersections
+
+        results[case] = case_dict
+
+    with open('out.json', 'w') as f:
+        json.dump(results, f)

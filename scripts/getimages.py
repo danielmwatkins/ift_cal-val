@@ -15,7 +15,7 @@ def get_images(ift_path, validation_path, land_path):
 
         csv_filename = ''
 
-        for root, subdirs, files in os.walk(ift_path + "/" + location):
+        for _, _, files in os.walk(ift_path + "/" + location):
             for filename in files:
                 if "evaluation_table.csv" in filename:
                     csv_filename = filename
@@ -48,7 +48,7 @@ def get_images(ift_path, validation_path, land_path):
     for location, filelist in file_lists.items():
 
         for file in filelist:
-            loc, dim, start_date, end_date = file.split('-')
+            loc, dim, start_date, _ = file.split('-')
 
             start_date = start_date[:4] + '-' + start_date[4:6] + '-' + start_date[6:]
             xdim = int(dim.split('km')[0])
@@ -56,7 +56,7 @@ def get_images(ift_path, validation_path, land_path):
             mask = (cca_csv_df['region'] == loc) & (cca_csv_df['start_date'] == start_date) & (cca_csv_df['dx_km'] == xdim)
             result = cca_csv_df[mask]
 
-            for index, row in result.iterrows():
+            for _, row in result.iterrows():
                 if row['satellite'] == 'aqua':
                     ift_positive_dates.append(ift_path + '/' + location + '/' + file + '/preprocess/hdf5-files/' +
                         [x for x in os.listdir(ift_path + '/' + location + '/' + file + '/preprocess/hdf5-files') if 'aqua' in x][0])
@@ -72,7 +72,7 @@ def get_images(ift_path, validation_path, land_path):
     land_masks = []
     
     # Add manual files to DF
-    for index, row in complete_cases.iterrows():
+    for _, row in complete_cases.iterrows():
 
         manual_filename = [x for x in os.listdir(validation_path) if (x.startswith("{:03d}".format(row['case_number']) + '_') and x.endswith(row['satellite'] + '.png'))][0]
         landmask_filename = [x for x in os.listdir(land_path) if (x.startswith("{:03d}".format(row['case_number']) + '_') and x.endswith('landmask.tiff'))][0]

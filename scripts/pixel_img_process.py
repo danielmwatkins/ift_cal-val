@@ -46,35 +46,16 @@ def pixel_image_process(
 
     # Retrieve manual floes from PNG and calculate intersections
     manual_image = iio.imread(manual_path)
-    new_img = np.zeros((len(manual_image), len(manual_image[0])))
+    new_img = np.zeros_like(manual_image[:,:,0])
 
-    # Loop through pixels in the manually masked image
-    for i in range(len(manual_image)):
-            for j in range(len(manual_image[i])):
-                # Only consider pixels where the landmask is not present when calculating t/f p/n rates.
-                if land_mask_img[i][j][0] == 0:
-                    if labeled_image[i][j] != 0 and manual_image[i][j][0] != 0:
-                        true_pos += 1
-                        labeled_image[i][j] = 255
-                        new_img[i][j] = 255
-                    elif labeled_image[i][j] == 0 and manual_image[i][j][0] != 0:
-                        new_img[i][j] = 255
-                        false_neg += 1
-                    elif labeled_image[i][j] != 0 and manual_image[i][j][0] == 0:
-                        labeled_image[i][j] = 255
-                        false_pos += 1
-                    else:
-                        true_neg += 1
+    labeled_image[labeled_image[:,:] > 0] = 255
+    labeled_image[land_mask_img[:,:,0] > 0] = 0
+    new_img[manual_image[:,:,0] > 0] = 255
 
-                # For the purposes of output image, black out all landmasked pixels
-                else:
-                    if labeled_image[i][j] != 0 and manual_image[i][j][0] != 0:
-                        labeled_image[i][j] = 0
-                        new_img[i][j] = 0
-                    elif labeled_image[i][j] == 0 and manual_image[i][j][0] != 0:
-                        new_img[i][j] = 0
-                    elif labeled_image[i][j] != 0 and manual_image[i][j][0] == 0:
-                        labeled_image[i][j] = 0
+    true_pos = np.sum(np.logical_and(labeled_image[:,:] > 0, new_img[:,:] > 0))
+    false_pos = np.sum(np.logical_and(labeled_image[:,:] > 0, new_img[:,:] == 0))
+    false_neg = np.sum(np.logical_and(labeled_image[:,:] == 0, new_img[:,:] > 0))
+    true_neg = np.sum(np.logical_and(labeled_image[:,:] == 0, new_img[:,:] == 0))
     
     
     if save_images:
@@ -104,7 +85,8 @@ def pixel_image_process(
 
     # Compute absolute confusion matrix
 
-    pixel_confusion_mx_absolute = {'t_pos': true_pos, 'f_pos': false_pos, 'f_neg': false_neg, 't_neg': true_neg}
+    pixel_confusion_mx_absolute = {'t_pos_pix': int(true_pos), 'f_pos_pix': int(false_pos), 
+                                    'f_neg_pix': int(false_neg), 't_neg_pix': int(true_neg)}
 
 
 

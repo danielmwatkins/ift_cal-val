@@ -3,15 +3,9 @@ from tqdm import tqdm
 from getimages import get_images
 
 # Generates CSV with pixel confusion matrix for each image.
-def main():
-    # Run image processor
+def process_pixels(ift_path, validation_path, land_mask_path):
 
-    IFT_RESULTS_PATH = '../data/ift_results'
-    VALIDATION_IMG_PATH = '../data/validation_images/labeled_floes_png'
-
-    LAND_MASK_PATH = '../data/validation_images/landmask'
-
-    complete_cases = get_images(IFT_RESULTS_PATH, VALIDATION_IMG_PATH, LAND_MASK_PATH)
+    complete_cases = get_images(ift_path, validation_path, land_mask_path)
 
 
     false_neg = []
@@ -35,7 +29,4 @@ def main():
     complete_cases.insert(23, "true_positive", true_pos)
     complete_cases.insert(24, "true_negative", true_neg)
     complete_cases.to_csv('out.csv')
-    
 
-if __name__ == '__main__':
-    main()
