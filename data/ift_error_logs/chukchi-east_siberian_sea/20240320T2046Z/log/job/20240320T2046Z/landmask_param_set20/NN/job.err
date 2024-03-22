@@ -1,1 +1,0 @@
-WARNING: both ImageMetadata and ImageAxes export "data"; uses of it in module Images must be qualified

@@ -1,9 +1,0 @@
-Traceback (most recent call last):
-  File "/usr/local/bin/pass_time_cylc.py", line 482, in <module>
-    main()
-  File "/usr/local/bin/pass_time_cylc.py", line 477, in main
-    get_passtimes(**vars(args))
-  File "/usr/local/bin/pass_time_cylc.py", line 118, in get_passtimes
-    aqua_tleline1 = aquaData[aqua_i]["TLE_LINE1"]
-IndexError: list index out of range
-2024-02-21T12:34:29-05:00 CRITICAL - failed/ERR
