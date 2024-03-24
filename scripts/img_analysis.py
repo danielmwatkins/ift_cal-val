@@ -9,6 +9,7 @@ from automate_floes import process_floes
 def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True, algorithm_name: str = ''):
 
     if process:
+        print('Processing ' + algorithm_name + ' results:')
         process_floes(ift_path, validation_path, land_mask_path)
 
 
@@ -68,10 +69,11 @@ def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True
     plt.ylabel('Cumulative Probability')
 
     plt.tight_layout()
-    if not os.path.exists('./out_plots'):
-        os.mkdir('./out_plots')
+    dir_name = './out_plots_' + algorithm_name
+    if not os.path.exists(dir_name):
+        os.mkdir(dir_name)
 
-    plt.savefig('./out_plots/centroid_error_all_pdf_cdf.png')
+    plt.savefig(dir_name + '/centroid_error_all_pdf_cdf.png')
 
 
     # Now, just for floes identified as TP
@@ -101,7 +103,7 @@ def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True
     plt.xlabel('Value (px)')
     plt.ylabel('Cumulative Probability')
 
-    plt.savefig('./out_plots/centroid_error_tp_pdf_cdf.png')
+    plt.savefig(dir_name + '/centroid_error_tp_pdf_cdf.png')
 
 
     # Calculation of area percent error plots
@@ -146,7 +148,7 @@ def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True
 
     plt.tight_layout()
 
-    plt.savefig('./out_plots/area_error_all_pdf_cdf.png')
+    plt.savefig(dir_name + '/area_error_all_pdf_cdf.png')
 
 
     # Now, just for floes identified as TP
@@ -176,7 +178,7 @@ def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True
     plt.xlabel('Value')
     plt.ylabel('Cumulative Probability')
 
-    plt.savefig('./out_plots/area_error_tp_pdf_cdf.png')
+    plt.savefig(dir_name + '/area_error_tp_pdf_cdf.png')
 
 
 def calculate_performance_params(values, object_wise: bool):
