@@ -19,6 +19,12 @@ def main():
                 process=True, 
                 algorithm_name='minarea100_ift')
 
+    analyze_algo(ift_path= '../data/ift_data/EB_seg/ift_results', 
+                validation_path= '../data/validation_images/labeled_floes_png', 
+                land_mask_path= '../data/validation_images/landmask',
+                process=True, 
+                algorithm_name='ellen_algo')
+
 
 if __name__ == '__main__':
     main()

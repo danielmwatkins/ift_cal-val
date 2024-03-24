@@ -13,18 +13,17 @@ def get_images(ift_path, validation_path, land_path):
     
     for location in locations:
 
-        csv_filename = ''
+        eval_table_dir = ift_path + '/../eval_tables/'
 
-        for _, _, files in os.walk(ift_path + "/" + location):
-            for filename in files:
-                if "evaluation_table.csv" in filename:
-                    csv_filename = filename
-
-        try: 
-            ift_csv_df = pd.read_csv(ift_path + "/" + location + "/" + csv_filename)
-        except Exception as e:
-            # raise Exception(f"No evaluation table was found for {location}")
+        try:
+            csv_filename = eval_table_dir + [x for x in os.listdir(eval_table_dir) if location in x][0]
+            ift_csv_df = pd.read_csv(csv_filename)
+        except IndexError as e:
+            print(f"No evaluation table found for {location}")
             continue
+        except FileNotFoundError as e:
+            print(e)
+            sys.exit(1)
 
         passed_files = []
 

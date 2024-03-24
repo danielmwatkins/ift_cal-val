@@ -12,6 +12,8 @@ def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True
         print('Processing ' + algorithm_name + ' results:')
         process_floes(ift_path, validation_path, land_mask_path)
 
+    print(f'Analyzing results for {algorithm_name}...', end='')
+
 
     with open('out.json', 'r') as f:
         processed_floes = json.load(f)
@@ -179,6 +181,8 @@ def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True
     plt.ylabel('Cumulative Probability')
 
     plt.savefig(dir_name + '/area_error_tp_pdf_cdf.png')
+
+    print('done.')
 
 
 def calculate_performance_params(values, object_wise: bool):
