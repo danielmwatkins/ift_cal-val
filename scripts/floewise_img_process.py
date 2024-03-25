@@ -18,31 +18,25 @@ def floewise_img_process(
                 land_dilation_distance_km: float = 0, 
                 ):
     
+    if ift_path.endswith('.h5'):
         # Retrieve IFT floes from hdf5 file
-    with h5py.File(ift_path, "r") as ift_image:
-        properties = ift_image['floe_properties']
+        with h5py.File(ift_path, "r") as ift_image:
+            properties = ift_image['floe_properties']
 
-        labeled_image = properties['labeled_image'][:].astype('uint8')
+            labeled_image = properties['labeled_image'][:].astype('uint8')
+
+            labeled_image = np.flipud(labeled_image)
+            labeled_image = np.rot90(labeled_image, 3)
+
+    elif ift_path.endswith('.tif') or ift_path.endswith('.tiff'):
+        labeled_image = iio.imread(ift_path)
 
     img_size = labeled_image.shape
-
-    # Rotate to proper orientation
-    labeled_image = np.flipud(labeled_image)
-    labeled_image = np.rot90(labeled_image, 3)
 
     # Retrieve land mask and dilate if desired.
     land_mask_img = iio.imread(land_mask_path)
 
-    if land_dilation_distance_km != 0:
-
-        pixel_distance = int(round(land_dilation_distance_km * img_size[0] / image_width_km))
-        
-        kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (pixel_distance, pixel_distance))
-
-        land_mask_img = cv2.dilate(land_mask_img, kernel)
-
     idx_landmass = land_mask_img[:,:,0] > 0
-    labeled_image[idx_landmass] = 0
 
     # Get rid of gray, only B/W.
     idx_contrast = labeled_image[:,:] > 0
@@ -73,6 +67,13 @@ def floewise_img_process(
 
         # Get indices of points in ift image corresponding to floes
         idx = ift_labels[:,:] == i
+
+        # Check if this floe intersects the landmask
+        landmask_intersection = np.logical_and(idx, idx_landmass)
+
+        # If it does, skip this floe for the purposes of calculation
+        if np.sum(landmask_intersection) > 0:
+            continue
 
         # Get manual floes in that area.
         manual_area = man_labels[idx]

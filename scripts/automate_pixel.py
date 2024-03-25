@@ -14,7 +14,7 @@ def process_pixels(ift_path, validation_path, land_mask_path):
     true_pos = []
 
 
-    for index, row in tqdm(complete_cases.iterrows()):
+    for _, row in tqdm(complete_cases.iterrows()):
         pix_conf_mx = pixel_image_process(row['manual_path'], row['ift_path'], row['start_date'], 
                                     row['satellite'], float(row['dx_km']), str(row['land_mask_path']), 15, True)
 

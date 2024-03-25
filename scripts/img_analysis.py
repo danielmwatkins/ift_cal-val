@@ -3,20 +3,25 @@ import os
 import json
 import numpy as np
 import matplotlib.pyplot as plt
-from automate_pixel import process_pixels
 from automate_floes import process_floes
 
 def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True, algorithm_name: str = ''):
 
+    if not os.path.exists('./process_results'):
+        os.mkdir('./process_results')
+
     if process:
         print('Processing ' + algorithm_name + ' results:')
-        process_floes(ift_path, validation_path, land_mask_path)
+        process_floes(ift_path, validation_path, land_mask_path, algorithm_name)
 
     print(f'Analyzing results for {algorithm_name}...', end='')
 
 
-    with open('out.json', 'r') as f:
-        processed_floes = json.load(f)
+    try:
+        with open(f'process_results/out_{algorithm_name}.json', 'r') as f:
+            processed_floes = json.load(f)
+    except FileNotFoundError:
+        print(f"Can't find results for {algorithm_name} processing. Try rerunning with processing.")
 
     # Get number of t/f p/n floes/pixels in all images
     pix_vals = {"t_pos": 0, "f_pos": 0, "t_neg": 0, "f_neg": 0}
@@ -69,14 +74,15 @@ def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True
     plt.title('Abs. centroid error CDF')
     plt.xlabel('Value (px)')
     plt.ylabel('Cumulative Probability')
-
     plt.tight_layout()
-    dir_name = './out_plots_' + algorithm_name
+
+    dir_name = './out_' + algorithm_name + '/plots'
+    if not os.path.exists('./out_' + algorithm_name):
+        os.mkdir('./out_' + algorithm_name)
     if not os.path.exists(dir_name):
         os.mkdir(dir_name)
 
     plt.savefig(dir_name + '/centroid_error_all_pdf_cdf.png')
-
 
     # Now, just for floes identified as TP
     centroid_errors_tp = [item for sublist in centroid_errors_tp for item in sublist]
@@ -118,8 +124,6 @@ def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True
         for ift, man in image['ift_to_man'].items():
             area_errors.append(image['intersections'][ift][0]['area_percent_difference'])
         area_errors_tp.append(area_errors)
-
-    
 
     
     area_errors_all = [item for sublist in area_errors_all for item in sublist]
@@ -184,28 +188,30 @@ def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True
 
     print('done.')
 
+    return pix_params, floe_params
+
 
 def calculate_performance_params(values, object_wise: bool):
     tp, tn, fp, fn = values['t_pos'], values['t_neg'], values['f_pos'], values['f_neg']
 
-    tpr = tp / (tp + fn)
-    tnr = tn / (tn + fp) # not for obia
-    ppv = tp / (tp + fp)
-    npv = tn / (tn + fn) # not for obia
+    tpr = (tp + fn) and tp / (tp + fn) or 0
+    tnr = (tn + fp) and tn / (tn + fp) or 0 # not for obia
+    ppv = (tp + fp) and tp / (tp + fp) or 0
+    npv = (tn + fn) and tn / (tn + fn) or 0 # not for obia
     
-    accuracy = (tp + tn) / (tp + tn + fp + fn) # not for obia
+    accuracy = (tp + tn + fp + fn) and (tp + tn) / (tp + tn + fp + fn) or 0 # not for obia
     balanced_accuracy = (tpr + tnr) / 2 # not for obia
-    f1 = (2 * ppv * tpr) / (ppv + tpr)
+    f1 = (ppv + tpr) and (2 * ppv * tpr) / (ppv + tpr) or 0
     fowlkes_mallows = np.sqrt(ppv * tpr)
 
     fpr, FOR = 1 - tnr, 1 - npv # not for obia
     fdr, fnr = 1 - ppv, 1 - tpr
 
     mcc = np.sqrt(tpr * tnr * ppv * npv) - np.sqrt(fpr * FOR * fdr * fnr) # not for obia
-    lr_pos = tpr / fpr # not for obia
-    lr_neg = fnr / tnr # not for obia
-    dor = lr_pos / lr_neg # not for obia
-    iou = tp / (fp + fn + tp)
+    lr_pos = fpr and tpr / fpr  or 0 # not for obia
+    lr_neg = tnr and fnr / tnr or 0 # not for obia
+    dor = lr_neg and lr_pos / lr_neg or 0 # not for obia
+    iou = (fp + fn + tp) and tp / (fp + fn + tp) or 0
 
 
 

@@ -74,8 +74,4 @@ def get_images(ift_path, validation_path, land_path):
                     to_append = to_append.assign(manual_path=[potential_man_file], ift_path=[file_path], land_mask_path=[landmask_path])
                     complete_cases = pd.concat([complete_cases, to_append])
 
-    complete_cases.to_csv('check_outcome.csv')
-
-            
-
     return complete_cases

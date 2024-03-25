@@ -5,7 +5,7 @@ from getimages import get_images
 import json
 
 # Generates CSV with pixel confusion matrix for each image.
-def process_floes(ift_path, validation_path, land_mask_path):
+def process_floes(ift_path, validation_path, land_mask_path, algo_name):
     # Run image processor
 
     complete_cases = get_images(ift_path, validation_path, land_mask_path)
@@ -26,7 +26,7 @@ def process_floes(ift_path, validation_path, land_mask_path):
                                                     str(row['land_mask_path']), 15)
 
         pix_conf_mx = pixel_image_process(row['manual_path'], row['ift_path'], row['start_date'], 
-                                    row['satellite'], float(row['dx_km']), str(row['land_mask_path']), 15, True)
+                                    row['satellite'], float(row['dx_km']), str(row['land_mask_path']), algo_name, 15, save_images=True)
 
         case_dict.update(pix_conf_mx)
         case_dict.update(floe_conf_mx)
@@ -39,5 +39,5 @@ def process_floes(ift_path, validation_path, land_mask_path):
 
         results[case] = case_dict
 
-    with open('out.json', 'w') as f:
+    with open(f'process_results/out_{algo_name}.json', 'w') as f:
         json.dump(results, f)
