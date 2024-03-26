@@ -25,6 +25,5 @@ def main():
                 process=True, 
                 algorithm_name='ellen_algo')
 
-
 if __name__ == '__main__':
     main()

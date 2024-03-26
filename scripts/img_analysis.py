@@ -1,14 +1,19 @@
-import sys
 import os
+import io
+import sys
+import powerlaw
 import json
 import numpy as np
 import matplotlib.pyplot as plt
 from automate_floes import process_floes
 
-def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True, algorithm_name: str = ''):
+def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True, algorithm_name: str = '', fsd: bool = False):
 
     if not os.path.exists('./process_results'):
         os.mkdir('./process_results')
+
+    process = False
+    fsd = True
 
     if process:
         print('Processing ' + algorithm_name + ' results:')
@@ -186,9 +191,64 @@ def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True
 
     plt.savefig(dir_name + '/area_error_tp_pdf_cdf.png')
 
+    if fsd:
+        fsd_for_images(processed_floes, dir_name)
+
     print('done.')
 
     return pix_params, floe_params
+
+
+def fsd_for_images(processed_floes: str, dir_name: str):
+    # FSD Power Law Distr.
+    for case_no, image in processed_floes.items():
+
+        # Suppress printlines from powerlaw package
+        sys.stdout = open(os.devnull, 'w')
+        sys.stderr = open(os.devnull, 'w')
+
+        predicted = [floe['floe_area'] for floe in image['fp_floes']] + [floe['ift_floe_area'] for floe in image['ift_to_man'].values()]
+
+        actual = [floe['floe_area'] for floe in image['fn_floes']] + [floe['ift_floe_area'] for floe in image['ift_to_man'].values()]
+
+        actual_results = powerlaw.Fit(actual)
+        predicted_results = powerlaw.Fit(predicted)
+
+        man_alpha, ift_alpha = actual_results.power_law.alpha, predicted_results.power_law.alpha
+
+        
+        # Enable printlines again
+        sys.stdout = sys.__stdout__
+        sys.stderr = sys.__stderr__
+
+        try:
+            plt.figure(figsize=(5, 5))
+            
+            fig2 = actual_results.plot_pdf(color='b', linewidth=2, label='Manual FSD')
+            actual_results.power_law.plot_pdf(color='b', linestyle='--', ax=fig2, label=f"Manual fit line, alpha = {str(round(man_alpha, 3))}")
+            fig2 = predicted_results.plot_pdf(color='r', linewidth=2, ax=fig2, label='IFT FSD')
+            predicted_results.power_law.plot_pdf(color='r', linestyle='--', ax=fig2, label=f"IFT fit line, alpha = {str(round(ift_alpha, 3))}")
+            
+            plt.title(f"FSD for case {image['case_number']}, {image['satellite']}")
+            plt.xlabel('Floe area x')
+            plt.ylabel('Probability P(x)')
+
+            plt.text(3, 8, 'Inset Label', fontsize=12, bbox=dict(facecolor='black', alpha=0.5))
+
+            loc_dir = dir_name + '/' + case_no
+            if not os.path.exists(loc_dir):
+                os.mkdir(loc_dir)
+
+            plt.legend()
+
+            plt.savefig(f"{loc_dir}/{case_no}_fsd.png")
+
+            plt.close()
+
+        except ValueError:
+            plt.close()
+            continue
+
 
 
 def calculate_performance_params(values, object_wise: bool):
@@ -212,8 +272,6 @@ def calculate_performance_params(values, object_wise: bool):
     lr_neg = tnr and fnr / tnr or 0 # not for obia
     dor = lr_neg and lr_pos / lr_neg or 0 # not for obia
     iou = (fp + fn + tp) and tp / (fp + fn + tp) or 0
-
-
 
     if not object_wise:
 
