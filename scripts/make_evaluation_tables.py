@@ -8,7 +8,7 @@ import pandas as pd
 results_loc = '../data/ift_data/'
 case_loc = '../data/ift_data/ift_case_definitions/'
 scenarios = ['ift_pipeline_default', 'ift_pipeline_minarea_100px']
-regions = ['baffin_bay', 'beaufort_sea', 'barents-kara_seas', 'chukchi-east_siberian_sea',
+regions = ['baffin_bay','bering_strait', 'beaufort_sea', 'barents-kara_seas', 'chukchi-east_siberian_sea',
         'greenland_sea', 'hudson_bay', 'laptev_sea', 'sea_of_okhostk']
 
 for scenario in scenarios:
