@@ -105,7 +105,7 @@ def floewise_img_process(
         new_val = []
 
 
-        # Generate countours of this floe for boundary iou
+        # Generate countours of this floe for boundary iou and dilate
         floe_img_idx = ift_labels[:,:] == key
         binary_img = np.zeros_like(floe_img_idx, dtype=np.uint8)
         binary_img[floe_img_idx] = 255
@@ -119,6 +119,7 @@ def floewise_img_process(
         dilated_predicted_boundary = np.zeros_like(dilated_pred_boundary_idx, dtype=np.uint8)
         dilated_predicted_boundary[dilated_pred_boundary_idx] = 255
 
+        # Get dilated area
         dilated_predicted_area = np.sum(dilated_predicted_boundary[:,:] == 255)
         
         
@@ -178,7 +179,7 @@ def floewise_img_process(
     for ift, reals in ift_to_manual_floes.items():
 
         # Gets index of best matching real floe for IFT floe
-        possible_match_idx = max(enumerate(reals), key=lambda x: x[1]['boundary_iou'])[0] #changed
+        possible_match_idx = max(enumerate(reals), key=lambda x: x[1]['iou'])[0]
         
         # Removes best matching from list of IFT floes
         possible_match = reals.pop(possible_match_idx)
@@ -187,7 +188,8 @@ def floewise_img_process(
         for non_match in reals:
             real_floe_number = non_match['real_floe']
             false_negatives.append({'floe_number': real_floe_number, 
-                                    'floe_area': int(man_stats[real_floe_number][4]), 'overlap': True})
+                                    'floe_area': int(man_stats[real_floe_number][4]), 
+                                    'overlap': True})
 
         # Sets ift_to_manual key to remaining best match
         ift_to_manual_floes[ift] = possible_match
@@ -201,7 +203,7 @@ def floewise_img_process(
 
         for ift2, real2 in ift_to_manual_floes.items():
 
-            if ift1 != ift2 and real1['real_floe'] == real2['real_floe'] and real1['boundary_iou'] > real2['boundary_iou']:
+            if ift1 != ift2 and real1['real_floe'] == real2['real_floe'] and real1['iou'] > real2['iou']:
                 to_remove.add(ift2)
 
     
@@ -218,7 +220,7 @@ def floewise_img_process(
 
     to_remove = []
     for ift, real in ift_to_manual_floes.items():
-        if real['boundary_iou'] < IOU_THRESHOLD: # changed
+        if real['boundary_iou'] < IOU_THRESHOLD and real['iou'] < IOU_THRESHOLD:
             to_remove.append(ift)
 
     for idx in to_remove:

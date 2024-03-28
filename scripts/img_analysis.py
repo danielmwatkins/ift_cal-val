@@ -6,20 +6,23 @@ import json
 import numpy as np
 import matplotlib.pyplot as plt
 from automate_floes import process_floes
+import warnings
 
-def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True, algorithm_name: str = '', fsd: bool = False):
+def analyze_algo(ift_path, 
+                validation_path, 
+                land_mask_path, 
+                process: bool = True, 
+                algorithm_name: str = '', 
+                fsd: bool = False):
 
     if not os.path.exists('./process_results'):
         os.mkdir('./process_results')
 
     process = False
-    fsd = True
 
     if process:
         print('Processing ' + algorithm_name + ' results:')
         process_floes(ift_path, validation_path, land_mask_path, algorithm_name)
-
-    print(f'Analyzing results for {algorithm_name}...', end='')
 
 
     try:
@@ -94,7 +97,8 @@ def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True
     centroid_errors_tp = np.sort(centroid_errors_tp)
 
     # Calculate the histogram and bin edges for the PDF
-    hist, bin_edges = np.histogram(centroid_errors_tp, bins=10, density=True)
+    bins = int(len(centroid_errors_tp)/8) + 2
+    hist, bin_edges = np.histogram(centroid_errors_tp, bins=bins, density=True)
     pdf = hist / np.sum(hist)
     bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
 
@@ -135,7 +139,8 @@ def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True
     area_errors_all = np.sort(area_errors_all)
 
     # Calculate the histogram and bin edges for the PDF
-    hist, bin_edges = np.histogram(area_errors_all, bins=200, density=True)
+    bins = int(len(centroid_errors_all)/8) + 2
+    hist, bin_edges = np.histogram(area_errors_all, bins=bins, density=True)
     pdf = hist / np.sum(hist)
     bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
 
@@ -194,22 +199,106 @@ def analyze_algo(ift_path, validation_path, land_mask_path, process: bool = True
     if fsd:
         fsd_for_images(processed_floes, dir_name)
 
+    area_plots(processed_floes, dir_name)
+
     print('done.')
 
     return pix_params, floe_params
+
+
+def area_plots(processed_floes: str, dir_name: str):
+
+    pred_areas = []
+    real_areas = []
+    
+    for case, image in processed_floes.items():
+
+        real = []
+        pred = []
+
+        for floe in image['ift_to_man'].values():
+
+            pred.append(floe['ift_floe_area'])
+            real.append(floe['real_floe_area'])
+
+        pred_areas += pred
+        real_areas += real
+
+        try:
+            
+            with warnings.catch_warnings(action="ignore"):
+                # Perform linear regression to get the line of best fit
+                m, b = np.polyfit(real, pred, 1)
+                x_line = np.array([min(real), max(real)])
+                y_line = m * x_line + b
+
+            plt.figure(figsize=(5, 5))
+
+            # Plot the scatter plot and line of best fit
+            plt.scatter(real, pred, label='Matched Floes')
+            plt.plot(x_line, y_line, color='red', label=f"Line of Best Fit: A(x) = {round(m, 3)}x + {round(b)}")
+            plt.plot(x_line, x_line, '--', color='black', label='Perfect Match: A(x) = x')
+
+            # Add labels and legend
+            plt.xlabel('Real floe area (px)')
+            plt.ylabel('Predicted floe area (px)')
+            plt.title(f"Predicted vs. real floe area  for case {image['case_number']}, {image['satellite'].title()}")
+            plt.legend()
+
+            # Show plot
+            loc_dir = dir_name + '/' + case
+            if not os.path.exists(loc_dir):
+                os.mkdir(loc_dir)
+
+            plt.savefig(f"{loc_dir}/{case}_area_comparisons.png")
+
+        except TypeError:
+            continue
+
+    try:
+            
+        # Perform linear regression to get the line of best fit
+        m, b = np.polyfit(real_areas, pred_areas, 1)
+        x_line = np.array([min(real_areas), max(real_areas)])
+        y_line = m * x_line + b
+
+
+        plt.figure(figsize=(5, 5))
+
+        # Plot the scatter plot and line of best fit
+        plt.scatter(real_areas, pred_areas, label='Matched Floes')
+        plt.plot(x_line, y_line, color='red', label=f"Line of Best Fit: A(x) = {round(m, 3)}x + {round(b)}")
+        plt.plot(x_line, x_line, '--', color='black', label='Perfect Match: A(x) = x')
+
+        # Add labels and legend
+        plt.xlabel('Real floe area (px)')
+        plt.ylabel('Predicted floe area (px)')
+        plt.title(f"Predicted vs. real floe area for all cases")
+        plt.legend()
+
+        # Show plot
+        if not os.path.exists(dir_name):
+            os.mkdir(dir_name)
+
+        plt.savefig(f"{dir_name}/area_comparisons.png")
+
+    except TypeError as e:
+        print(e)
+        print('Unable to generate predicted area vs. real area plot for algorithm')
 
 
 def fsd_for_images(processed_floes: str, dir_name: str):
     # FSD Power Law Distr.
     for case_no, image in processed_floes.items():
 
+        predicted = [floe['floe_area'] for floe in image['fp_floes']] + [floe['ift_floe_area'] for floe in image['ift_to_man'].values()]
+
+        actual = [floe['floe_area'] for floe in image['fn_floes']] + [floe['real_floe_area'] for floe in image['ift_to_man'].values()]
+
+
         # Suppress printlines from powerlaw package
         sys.stdout = open(os.devnull, 'w')
         sys.stderr = open(os.devnull, 'w')
-
-        predicted = [floe['floe_area'] for floe in image['fp_floes']] + [floe['ift_floe_area'] for floe in image['ift_to_man'].values()]
-
-        actual = [floe['floe_area'] for floe in image['fn_floes']] + [floe['ift_floe_area'] for floe in image['ift_to_man'].values()]
 
         actual_results = powerlaw.Fit(actual)
         predicted_results = powerlaw.Fit(predicted)
