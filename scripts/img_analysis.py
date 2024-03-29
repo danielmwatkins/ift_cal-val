@@ -19,6 +19,7 @@ def analyze_algo(ift_path,
         os.mkdir('./process_results')
 
     process = False
+    fsd = True
 
     if process:
         print('Processing ' + algorithm_name + ' results:')
@@ -288,12 +289,22 @@ def area_plots(processed_floes: str, dir_name: str):
 
 
 def fsd_for_images(processed_floes: str, dir_name: str):
+
+    predicted_all = []
+    actual_all = []
+    tp_all = []
+
     # FSD Power Law Distr.
     for case_no, image in processed_floes.items():
 
         predicted = [floe['floe_area'] for floe in image['fp_floes']] + [floe['ift_floe_area'] for floe in image['ift_to_man'].values()]
+        predicted_all += predicted
+
+        tp = [floe['ift_floe_area'] for floe in image['ift_to_man'].values()]
+        tp_all += tp
 
         actual = [floe['floe_area'] for floe in image['fn_floes']] + [floe['real_floe_area'] for floe in image['ift_to_man'].values()]
+        actual_all += actual
 
 
         # Suppress printlines from powerlaw package
@@ -302,8 +313,9 @@ def fsd_for_images(processed_floes: str, dir_name: str):
 
         actual_results = powerlaw.Fit(actual)
         predicted_results = powerlaw.Fit(predicted)
+        tp_results = powerlaw.Fit(tp)
 
-        man_alpha, ift_alpha = actual_results.power_law.alpha, predicted_results.power_law.alpha
+        man_alpha, ift_alpha, tp_alpha = actual_results.power_law.alpha, predicted_results.power_law.alpha, tp_results.power_law.alpha
 
         
         # Enable printlines again
@@ -315,8 +327,16 @@ def fsd_for_images(processed_floes: str, dir_name: str):
             
             fig2 = actual_results.plot_pdf(color='b', linewidth=2, label='Manual FSD')
             actual_results.power_law.plot_pdf(color='b', linestyle='--', ax=fig2, label=f"Manual fit line, alpha = {str(round(man_alpha, 3))}")
-            fig2 = predicted_results.plot_pdf(color='r', linewidth=2, ax=fig2, label='IFT FSD')
-            predicted_results.power_law.plot_pdf(color='r', linestyle='--', ax=fig2, label=f"IFT fit line, alpha = {str(round(ift_alpha, 3))}")
+            fig2 = predicted_results.plot_pdf(color='r', linewidth=2, ax=fig2, label='IFT FSD, all floes')
+            predicted_results.power_law.plot_pdf(color='r', linestyle='--', ax=fig2, label=f"IFT fit line, all floes, alpha = {str(round(ift_alpha, 3))}")
+
+            try:
+                fig2 = tp_results.plot_pdf(color='g', linewidth=2, ax=fig2, label='IFT FSD, TP floes')
+                tp_results.power_law.plot_pdf(color='g', linestyle='--', ax=fig2, label=f"IFT fit line, TP floes, alpha = {str(round(tp_alpha, 3))}")
+            except ValueError:
+                pass
+
+
             
             plt.title(f"FSD for case {image['case_number']}, {image['satellite']}")
             plt.xlabel('Floe area x')
@@ -337,6 +357,52 @@ def fsd_for_images(processed_floes: str, dir_name: str):
         except ValueError:
             plt.close()
             continue
+
+    # Suppress printlines from powerlaw package
+    sys.stdout = open(os.devnull, 'w')
+    sys.stderr = open(os.devnull, 'w')
+
+    actual_results = powerlaw.Fit(actual_all)
+    predicted_results = powerlaw.Fit(predicted_all)
+    tp_results = powerlaw.Fit(tp_all)
+
+    man_alpha, ift_alpha, tp_alpha = actual_results.power_law.alpha, predicted_results.power_law.alpha, tp_results.power_law.alpha
+
+    # Enable printlines again
+    sys.stdout = sys.__stdout__
+    sys.stderr = sys.__stderr__
+
+    try:
+        plt.figure(figsize=(5, 5))
+        
+        fig2 = actual_results.plot_pdf(color='b', linewidth=2, label='Manual FSD')
+        actual_results.power_law.plot_pdf(color='b', linestyle='--', ax=fig2, label=f"Manual fit line, alpha = {str(round(man_alpha, 3))}")
+        fig2 = predicted_results.plot_pdf(color='r', linewidth=2, ax=fig2, label='IFT FSD, all floes')
+        predicted_results.power_law.plot_pdf(color='r', linestyle='--', ax=fig2, label=f"IFT fit line, all floes, alpha = {str(round(ift_alpha, 3))}")
+
+        try:
+            fig2 = tp_results.plot_pdf(color='g', linewidth=2, ax=fig2, label='IFT FSD, TP floes')
+            tp_results.power_law.plot_pdf(color='g', linestyle='--', ax=fig2, label=f"IFT fit line, TP floes, alpha = {str(round(tp_alpha, 3))}")
+        except ValueError:
+            pass
+        
+        plt.title(f"FSD for all cases")
+        plt.xlabel('Floe area x')
+        plt.ylabel('Probability P(x)')
+
+        plt.text(3, 8, 'Inset Label', fontsize=12, bbox=dict(facecolor='black', alpha=0.5))
+
+        if not os.path.exists(dir_name):
+            os.mkdir(dir_name)
+
+        plt.legend()
+
+        plt.savefig(f"{dir_name}/all_floes_fsd.png")
+
+        plt.close()
+
+    except ValueError:
+        plt.close()
 
 
 
