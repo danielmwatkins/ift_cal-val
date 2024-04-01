@@ -19,8 +19,8 @@ case_number,long_name,region,start_date,end_date,satellite,dx_km,visible_sea_ice
 406,406-sea_of_okhostk-100km_by_100km-20110828-20110829,sea_of_okhostk,2011-08-28,2011-08-29,terra,100,no,no,no,0.4,scattered,no,emma,ellen,,,
 418,418-sea_of_okhostk-100km_by_100km-20130614-20130615,sea_of_okhostk,2013-06-14,2013-06-15,aqua,100,no,no,no,0.9,opaque,no,emma,ellen,,,
 418,418-sea_of_okhostk-100km_by_100km-20130614-20130615,sea_of_okhostk,2013-06-14,2013-06-15,terra,100,no,no,no,0.9,opaque,no,emma,ellen,,,
-419,419-sea_of_okhostk-100km_by_100km-20130629-20130630,sea_of_okhostk,2013-06-29,2013-06-30,aqua,100,yes,yes,yes,0,thin,no,emma,ellen,,,changed frac from .5 to 0- i think its ice filaments not clouds
-419,419-sea_of_okhostk-100km_by_100km-20130629-20130630,sea_of_okhostk,2013-06-29,2013-06-30,terra,100,yes,yes,yes,0,thin,no,emma,ellen,,,changed frac from .5 to 0- i think its ice filaments not clouds
+419,419-sea_of_okhostk-100km_by_100km-20130629-20130630,sea_of_okhostk,2013-06-29,2013-06-30,aqua,100,yes,yes,yes,0,thin,no,emma,ellen,daniel,,changed frac from .5 to 0- i think its ice filaments not clouds
+419,419-sea_of_okhostk-100km_by_100km-20130629-20130630,sea_of_okhostk,2013-06-29,2013-06-30,terra,100,yes,yes,yes,0,thin,no,emma,ellen,daniel,,changed frac from .5 to 0- i think its ice filaments not clouds
 422,422-sea_of_okhostk-100km_by_100km-20140312-20140313,sea_of_okhostk,2014-03-12,2014-03-13,aqua,100,yes,no,no,0.1,thin,no,emma,ellen,,,
 422,422-sea_of_okhostk-100km_by_100km-20140312-20140313,sea_of_okhostk,2014-03-12,2014-03-13,terra,100,yes,no,no,0.2,thin,no,emma,ellen,,,
 430,430-sea_of_okhostk-100km_by_100km-20150712-20150713,sea_of_okhostk,2015-07-12,2015-07-13,aqua,100,no,no,no,1,opaque,yes,emma,ellen,,,
