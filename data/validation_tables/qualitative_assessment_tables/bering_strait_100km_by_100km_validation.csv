@@ -13,8 +13,8 @@ case_number,long_name,region,start_date,end_date,satellite,dx_km,visible_sea_ice
 161,161-bering_strait-100km_by_100km-20070726-20070727,bering_strait,2007-07-26,2007-07-27,terra,100,no,no,no,0.20,thin,no,ethan,daniel,,,
 163,163-bering_strait-100km_by_100km-20080418-20080419,bering_strait,2008-04-18,2008-04-19,aqua,100,no,no,no,1.00,opaque,no,ethan,daniel,,,
 163,163-bering_strait-100km_by_100km-20080418-20080419,bering_strait,2008-04-18,2008-04-19,terra,100,no,no,no,1.00,opaque,no,ethan,daniel,,,
-165,165-bering_strait-100km_by_100km-20090523-20090524,bering_strait,2009-05-23,2009-05-24,aqua,100,yes,yes,yes,1.00,thin,no,ethan,daniel,emma,,
-165,165-bering_strait-100km_by_100km-20090523-20090524,bering_strait,2009-05-23,2009-05-24,terra,100,yes,yes,yes,0.10,thin,no,ethan,daniel,emma,,"Changed cloud frac from 0 to 0.1, none to thin"
+165,165-bering_strait-100km_by_100km-20090523-20090524,bering_strait,2009-05-23,2009-05-24,aqua,100,yes,yes,yes,1.00,thin,no,ethan,daniel,emma,daniel,
+165,165-bering_strait-100km_by_100km-20090523-20090524,bering_strait,2009-05-23,2009-05-24,terra,100,yes,yes,yes,0.10,thin,no,ethan,daniel,emma,daniel,"Changed cloud frac from 0 to 0.1, none to thin"
 166,166-bering_strait-100km_by_100km-20090802-20090803,bering_strait,2009-08-02,2009-08-03,aqua,100,no,no,no,1.00,opaque,no,ethan,daniel,,,
 166,166-bering_strait-100km_by_100km-20090802-20090803,bering_strait,2009-08-02,2009-08-03,terra,100,no,no,no,1.00,opaque,no,ethan,daniel,,,
 168,168-bering_strait-100km_by_100km-20110319-20110320,bering_strait,2011-03-19,2011-03-20,aqua,100,no,no,no,1.00,opaque,no,ethan,daniel,,,
@@ -25,8 +25,8 @@ case_number,long_name,region,start_date,end_date,satellite,dx_km,visible_sea_ice
 171,171-bering_strait-100km_by_100km-20120523-20120524,bering_strait,2012-05-23,2012-05-24,terra,100,yes,yes,yes,1.00,thin,no,ethan,daniel,,,
 172,172-bering_strait-100km_by_100km-20120607-20120608,bering_strait,2012-06-07,2012-06-08,aqua,100,no,no,no,1.00,opaque,no,ethan,daniel,,,
 172,172-bering_strait-100km_by_100km-20120607-20120608,bering_strait,2012-06-07,2012-06-08,terra,100,yes,yes,yes,0.80,thin,no,ethan,daniel,,,
-173,173-bering_strait-100km_by_100km-20120812-20120813,bering_strait,2012-08-12,2012-08-13,aqua,100,yes,no,yes,0.40,scattered,no,ethan,daniel,,,"I don't see any landfast ice, changed yes to no. Changed cloud category to scattered."
-173,173-bering_strait-100km_by_100km-20120812-20120813,bering_strait,2012-08-12,2012-08-13,terra,100,yes,no,yes,0.50,scattered,no,ethan,daniel,,,"I don't see any landfast ice, changed yes to no. Changed cloud category to scattered."
+173,173-bering_strait-100km_by_100km-20120812-20120813,bering_strait,2012-08-12,2012-08-13,aqua,100,yes,no,yes,0.40,scattered,no,ethan,daniel,ethan,daniel,"I don't see any landfast ice, changed yes to no. Changed cloud category to scattered. Visible floes are too small for floe labeling."
+173,173-bering_strait-100km_by_100km-20120812-20120813,bering_strait,2012-08-12,2012-08-13,terra,100,yes,no,yes,0.50,scattered,no,ethan,daniel,ethan,daniel,"I don't see any landfast ice, changed yes to no. Changed cloud category to scattered. Visible floes are too small for floe labeling."
 176,176-bering_strait-100km_by_100km-20130423-20130424,bering_strait,2013-04-23,2013-04-24,aqua,100,yes,no,yes,0.70,thin,no,ethan,daniel,,,No landfast ice visible. Reduced cloud fraction from 1 to 0.7
 176,176-bering_strait-100km_by_100km-20130423-20130424,bering_strait,2013-04-23,2013-04-24,terra,100,yes,no,yes,0.80,thin,no,ethan,daniel,,,No landfast ice visible. Reduced cloud fraction from 1 to 0.8
 178,178-bering_strait-100km_by_100km-20150320-20150321,bering_strait,2015-03-20,2015-03-21,aqua,100,yes,no,yes,0.90,thin,no,ethan,daniel,,,Reduced cloud fraction from 1 to 0.9. No landfast ice.
