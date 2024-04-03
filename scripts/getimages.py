@@ -13,22 +13,21 @@ def get_images(ift_path, validation_path, land_path):
     
     for location in locations:
 
-        csv_filename = ''
+        eval_table_dir = ift_path + '/../eval_tables/'
 
-        for root, subdirs, files in os.walk(ift_path + "/" + location):
-            for filename in files:
-                if "evaluation_table.csv" in filename:
-                    csv_filename = filename
-
-        try: 
-            ift_csv_df = pd.read_csv(ift_path + "/" + location + "/" + csv_filename)
-        except Exception as e:
+        try:
+            csv_filename = eval_table_dir + [x for x in os.listdir(eval_table_dir) if location in x][0]
+            ift_csv_df = pd.read_csv(csv_filename)
+        except IndexError as e:
+            print(f"No evaluation table found for {location}")
+            continue
+        except FileNotFoundError as e:
             print(e)
             sys.exit(1)
 
         passed_files = []
 
-        for index, row in ift_csv_df.iterrows():
+        for _, row in ift_csv_df.iterrows():
             if row['extractH5'] == 'pass':
                 passed_files.append(row['location'])
 
@@ -36,55 +35,50 @@ def get_images(ift_path, validation_path, land_path):
 
     # Get all images from the cca case overview where floe masks have been generated successfully
     try: 
-        cca_csv_df = pd.read_csv('data/cca_cases_overview.csv')
+        cca_csv_df = pd.read_csv(validation_path + '/../../validation_tables/qualitative_assessment_tables/all_100km_cases.csv')
     except Exception as e:
         print(e)
         sys.exit(1)
-    cca_csv_df = cca_csv_df.drop(cca_csv_df[cca_csv_df.floe_mask != 'yes'].index)
 
-    # Get all cases where IFT has run successfully for an image which ALSO has masked floes
-    ift_positive_dates = []
+    # Get list of all validation masks
+    manual_files = [file for file in os.listdir(validation_path) if file.endswith('.png')]
+
     complete_cases = pd.DataFrame()
+
     for location, filelist in file_lists.items():
 
         for file in filelist:
-            loc, dim, start_date, end_date = file.split('-')
 
-            start_date = start_date[:4] + '-' + start_date[4:6] + '-' + start_date[6:]
-            xdim = int(dim.split('km')[0])
+            # Deal with unpredictable use of hyphens in region name
+            filename_parsed = file.split('-')
+            start_date, xdim, loc = filename_parsed[-2], filename_parsed[-3], filename_parsed[:len(filename_parsed)-3]
+            loc = '-'.join(loc)
+            startdate = start_date[:4] + '-' + start_date[4:6] + '-' + start_date[6:]
+            xdim = int(xdim.split('km')[0])
 
-            mask = (cca_csv_df['region'] == loc) & (cca_csv_df['start_date'] == start_date) & (cca_csv_df['dx_km'] == xdim)
+            mask = (cca_csv_df['region'] == loc) & (cca_csv_df['start_date'] == startdate) & (cca_csv_df['dx_km'] == xdim)
             result = cca_csv_df[mask]
 
-            for index, row in result.iterrows():
-                if row['satellite'] == 'aqua':
-                    ift_positive_dates.append(ift_path + '/' + location + '/' + file + '/preprocess/hdf5-files/' +
-                        [x for x in os.listdir(ift_path + '/' + location + '/' + file + '/preprocess/hdf5-files') if 'aqua' in x][0])
-                else:
-                    ift_positive_dates.append(ift_path + '/' + location + '/' + file + '/preprocess/hdf5-files/' +
-                        [x for x in os.listdir(ift_path + '/' + location + '/' + file + '/preprocess/hdf5-files') if 'terra' in x][0])
+            for _, row in result.iterrows():
+                case = row['case_number']
+                satellite = row['satellite']
 
+                potential_man_file = "{:03d}".format(case) + "_" + loc + "_" + start_date + "_" + satellite + "_labeled_floes.png"
 
-            complete_cases = pd.concat([complete_cases, result])
-
-    # Add file paths to dataframe
-    manual_paths = []
-    land_masks = []
-    
-    # Add manual files to DF
-    for index, row in complete_cases.iterrows():
-
-        manual_filename = [x for x in os.listdir(validation_path) if (x.startswith("{:03d}".format(row['case_number']) + '_') and x.endswith(row['satellite'] + '.png'))][0]
-        landmask_filename = [x for x in os.listdir(land_path) if (x.startswith("{:03d}".format(row['case_number']) + '_') and x.endswith('landmask.tiff'))][0]
-
-        manual_paths.append(validation_path + '/' + manual_filename)
-        land_masks.append(land_path + '/' + landmask_filename)
-
-    complete_cases.insert(19, "manual_path", manual_paths)
-    
-    #Add IFT files to df
-    complete_cases.insert(20, "ift_path", ift_positive_dates)
-
-    complete_cases.insert(21, "land_mask_path", land_masks)
+                if potential_man_file in manual_files:
+                    to_append = result[result['satellite'] == satellite]
+                    potential_man_file = validation_path + "/" + potential_man_file
+                    file_path = ift_path + f"/{location}/" + file + "/preprocess/hdf5-files/"
+                    file_path += [x for x in os.listdir(file_path) if satellite in x][0]
+                    fc_dir = f"{validation_path}/../falsecolor"
+                    tc_dir = f"{validation_path}/../truecolor"
+                    fc_filename = [x for x in os.listdir(fc_dir) if (satellite in x and "{:03d}".format(case) in x)][0]
+                    tc_filename = [x for x in os.listdir(tc_dir) if (satellite in x and "{:03d}".format(case) in x)][0]
+                    fc_path = f"{fc_dir}/{fc_filename}"
+                    tc_path = f"{tc_dir}/{tc_filename}"
+                    landmask_path = land_path + "/{:03d}_".format(case) + loc + '_landmask.tiff'
+                    to_append = to_append.assign(manual_path=[potential_man_file], ift_path=[file_path], land_mask_path=[landmask_path], 
+                                                                tc_path=[tc_path], fc_path=[fc_path])
+                    complete_cases = pd.concat([complete_cases, to_append])
 
     return complete_cases
