@@ -2,20 +2,18 @@ import cv2
 from copy import deepcopy
 import numpy as np
 import h5py
-from PIL import Image
-import os
-import imageio.v3 as iio
+import sys
+from filter_function import ift_filter
 
 IOU_THRESHOLD = 0.5
 
 def floewise_img_process(
                 manual_path: str, 
                 ift_path: str, 
-                date: str, 
-                satellite: str, 
-                image_width_km: float,
                 land_mask_path: str, 
-                land_dilation_distance_km: float = 0, 
+                tc_image_path: str,
+                fc_image_path: str,
+                threshold_params: dict = None
                 ):
     
     if ift_path.endswith('.h5'):
@@ -29,12 +27,19 @@ def floewise_img_process(
             labeled_image = np.rot90(labeled_image, 3)
 
     elif ift_path.endswith('.tif') or ift_path.endswith('.tiff'):
-        labeled_image = iio.imread(ift_path)
+        labeled_image = cv2.imread(ift_path)
+    else:
+        print('Invalid image type for IFT predicted floes. Must be .tiff or .h5')
+        sys.exit(1)
 
-    img_size = labeled_image.shape
+    tc_img = cv2.imread(tc_image_path)
+    fc_img = cv2.imread(fc_image_path)
+
+    if threshold_params:
+        labeled_image, _ = ift_filter(labeled_image, tc_img, fc_img, **threshold_params)
 
     # Retrieve land mask and dilate if desired.
-    land_mask_img = iio.imread(land_mask_path)
+    land_mask_img = cv2.imread(land_mask_path)
 
     idx_landmass = land_mask_img[:,:,0] > 0
 
@@ -47,7 +52,7 @@ def floewise_img_process(
                                                                 labeled_image, connectivity=8)
 
     # Manual image loading
-    raw_manual_img = iio.imread(manual_path)
+    raw_manual_img = cv2.imread(manual_path)
     manual_img = np.zeros((len(raw_manual_img), len(raw_manual_img[0])))
     idx = raw_manual_img[:,:,0] > 0
     manual_img[idx] = 255
@@ -265,4 +270,4 @@ def floewise_img_process(
         ift_to_manual_tp[k] = {'real_floe': v['real_floe'], 'real_floe_area': int(man_stats[v['real_floe']][4]),
                                 'ift_floe_area': int(ift_stats[k][4])}
 
-    return floe_conf_matrix, false_positives, false_negatives, ift_to_manual_tp, intersections
+    return floe_conf_matrix, false_positives, false_negatives, ift_to_manual_tp, intersections, labeled_image

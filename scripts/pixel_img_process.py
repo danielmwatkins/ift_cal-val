@@ -1,53 +1,23 @@
 import imageio.v3 as iio
-import h5py
 from PIL import Image
 import numpy as np
 import os
-import cv2
 
 def pixel_image_process(
                 manual_path: str, 
-                ift_path: str, 
-                date: str, 
+                ift_path: np.ndarray, 
+                case_no: str, 
                 satellite: str, 
-                image_width_km: float,
                 land_mask_path: str, 
                 algorithm_name: str,
-                land_dilation_distance_km: float = 0, 
                 save_images: bool = False
                 ):
   
     
-    if ift_path.endswith('.h5'):
-        # Retrieve IFT floes from hdf5 file
-        with h5py.File(ift_path, "r") as ift_image:
-            properties = ift_image['floe_properties']
-
-            labeled_image = properties['labeled_image'][:].astype('uint8')
-
-            labeled_image = np.flipud(labeled_image)
-            labeled_image = np.rot90(labeled_image, 3)
-
-    elif ift_path.endswith('.tif') or ift_path.endswith('.tiff'):
-        labeled_image = iio.imread(ift_path)
-
-    img_size = labeled_image.shape
+    labeled_image = ift_path
 
     # Retrieve land mask and dilate if desired.
     land_mask_img = iio.imread(land_mask_path)
-    idx_landmask = land_mask_img[:,:,0] > 0
- 
-    # Get individual ift floes
-    ift_num_labels, ift_labels, _, _ = cv2.connectedComponentsWithStats(
-                                                                labeled_image, connectivity=8)
-    
-    # Get rid of predicted floes intersecting with land mask
-    for i in range(1, ift_num_labels):
-
-        idx = ift_labels[:,:] == i
-
-        if np.sum(np.logical_and(idx, idx_landmask)) > 0:
-            labeled_image[idx] = 0
 
     false_pos = 0
     false_neg = 0
@@ -85,23 +55,21 @@ def pixel_image_process(
             os.mkdir(dir_name + '/overlaid')
 
         new_img_im = Image.fromarray(new_img.astype('uint8'))
-        new_img_im.save(dir_name + "/manual/results_manual_" + date + satellite + ".jpg")
+        new_img_im.save(dir_name + "/manual/results_manual_" + str(case_no) + satellite + ".jpg")
 
         land_img_im = Image.fromarray(land_mask_img.astype('uint8'))
-        land_img_im.save(dir_name + "/landmask/results_landmask_" + date + satellite + ".jpg")
+        land_img_im.save(dir_name + "/landmask/results_landmask_" + str(case_no) + satellite + ".jpg")
 
         labeled_image_im = Image.fromarray(labeled_image)
-        labeled_image_im.save(dir_name + "/ift/results_ift_" + date + satellite + ".jpg")
+        labeled_image_im.save(dir_name + "/ift/results_ift_" + str(case_no) + satellite + ".jpg")
 
         overlaid_im = Image.blend(labeled_image_im, new_img_im, 0.2)
-        overlaid_im.save(dir_name + "/overlaid/overlaid_" + date + satellite + ".jpg")
+        overlaid_im.save(dir_name + "/overlaid/overlaid_" + str(case_no) + satellite + ".jpg")
 
 
     # Compute absolute confusion matrix
 
     pixel_confusion_mx_absolute = {'t_pos_pix': int(true_pos), 'f_pos_pix': int(false_pos), 
                                     'f_neg_pix': int(false_neg), 't_neg_pix': int(true_neg)}
-
-
 
     return pixel_confusion_mx_absolute

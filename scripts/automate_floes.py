@@ -5,7 +5,7 @@ from getimages import get_images
 import json
 
 # Generates CSV with pixel confusion matrix for each image.
-def process_floes(ift_path, validation_path, land_mask_path, algo_name):
+def process_floes(ift_path, validation_path, land_mask_path, algo_name, threshold_params: dict = None, suppress_file_outputs: bool = True):
     # Run image processor
 
     complete_cases = get_images(ift_path, validation_path, land_mask_path)
@@ -21,12 +21,13 @@ def process_floes(ift_path, validation_path, land_mask_path, algo_name):
         case_dict = row.to_dict()
 
 
-        floe_conf_mx, fps, fns, ift_to_man, intersections = floewise_img_process(row['manual_path'], row['ift_path'], 
-                                                    row['start_date'], row['satellite'], float(row['dx_km']), 
-                                                    str(row['land_mask_path']), 15)
+        floe_conf_mx, fps, fns, ift_to_man, intersections, labeled_image = floewise_img_process(row['manual_path'], row['ift_path'],  
+                                                            row['land_mask_path'], row['tc_path'], row['fc_path'], threshold_params=threshold_params)
 
-        pix_conf_mx = pixel_image_process(row['manual_path'], row['ift_path'], row['start_date'], 
-                                    row['satellite'], float(row['dx_km']), str(row['land_mask_path']), algo_name, 15, save_images=True)
+        pix_conf_mx = pixel_image_process(row['manual_path'], labeled_image, row['case_number'], 
+                                    row['satellite'], str(row['land_mask_path']), algo_name, save_images=not suppress_file_outputs)
+
+        
 
         case_dict.update(pix_conf_mx)
         case_dict.update(floe_conf_mx)

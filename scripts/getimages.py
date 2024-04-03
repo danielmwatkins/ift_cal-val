@@ -70,8 +70,15 @@ def get_images(ift_path, validation_path, land_path):
                     potential_man_file = validation_path + "/" + potential_man_file
                     file_path = ift_path + f"/{location}/" + file + "/preprocess/hdf5-files/"
                     file_path += [x for x in os.listdir(file_path) if satellite in x][0]
+                    fc_dir = f"{validation_path}/../falsecolor"
+                    tc_dir = f"{validation_path}/../truecolor"
+                    fc_filename = [x for x in os.listdir(fc_dir) if (satellite in x and "{:03d}".format(case) in x)][0]
+                    tc_filename = [x for x in os.listdir(tc_dir) if (satellite in x and "{:03d}".format(case) in x)][0]
+                    fc_path = f"{fc_dir}/{fc_filename}"
+                    tc_path = f"{tc_dir}/{tc_filename}"
                     landmask_path = land_path + "/{:03d}_".format(case) + loc + '_landmask.tiff'
-                    to_append = to_append.assign(manual_path=[potential_man_file], ift_path=[file_path], land_mask_path=[landmask_path])
+                    to_append = to_append.assign(manual_path=[potential_man_file], ift_path=[file_path], land_mask_path=[landmask_path], 
+                                                                tc_path=[tc_path], fc_path=[fc_path])
                     complete_cases = pd.concat([complete_cases, to_append])
 
     return complete_cases

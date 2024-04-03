@@ -1,5 +1,4 @@
 import os
-import io
 import sys
 import powerlaw
 import json
@@ -12,25 +11,29 @@ def analyze_algo(ift_path,
                 validation_path, 
                 land_mask_path, 
                 process: bool = True, 
-                algorithm_name: str = '', 
-                fsd: bool = False):
+                algorithm_name: str = 'predicted', 
+                suppress_file_outputs = True,
+                fsd: bool = False, 
+                threshold_params: dict = None):
 
     if not os.path.exists('./process_results'):
         os.mkdir('./process_results')
 
-    process = False
-    fsd = True
-
     if process:
         print('Processing ' + algorithm_name + ' results:')
-        process_floes(ift_path, validation_path, land_mask_path, algorithm_name)
+        process_floes(ift_path, validation_path, land_mask_path, algorithm_name, threshold_params=threshold_params, suppress_file_outputs=suppress_file_outputs)
 
+    print(f"Analyzing {algorithm_name} results...", end='')
+    sys.stdout.flush()
 
     try:
         with open(f'process_results/out_{algorithm_name}.json', 'r') as f:
             processed_floes = json.load(f)
     except FileNotFoundError:
         print(f"Can't find results for {algorithm_name} processing. Try rerunning with processing.")
+
+    if suppress_file_outputs:
+        os.remove(f'process_results/out_{algorithm_name}.json')
 
     # Get number of t/f p/n floes/pixels in all images
     pix_vals = {"t_pos": 0, "f_pos": 0, "t_neg": 0, "f_neg": 0}
@@ -48,159 +51,160 @@ def analyze_algo(ift_path,
     pix_params = calculate_performance_params(pix_vals, object_wise=False)
     floe_params = calculate_performance_params(floe_vals, object_wise=True)
 
-    centroid_errors_all = []
-    centroid_errors_tp = []
-    for image in processed_floes.values():
-        centroid_errors_all.append([x[0]['centroid_distance'] for x in image['intersections'].values()])
 
-        centroid_errors = []
-        for ift, man in image['ift_to_man'].items():
-            centroid_errors.append(image['intersections'][ift][0]['centroid_distance'])
-        centroid_errors_tp.append(centroid_errors)
+    if not suppress_file_outputs:
+        centroid_errors_all = []
+        centroid_errors_tp = []
+        for image in processed_floes.values():
+            centroid_errors_all.append([x[0]['centroid_distance'] for x in image['intersections'].values()])
 
-    centroid_errors_all = [item for sublist in centroid_errors_all for item in sublist]
-    centroid_errors_all = np.sort(centroid_errors_all)
+            centroid_errors = []
+            for ift, man in image['ift_to_man'].items():
+                centroid_errors.append(image['intersections'][ift][0]['centroid_distance'])
+            centroid_errors_tp.append(centroid_errors)
 
-    # Calculate the histogram and bin edges for the PDF
-    hist, bin_edges = np.histogram(centroid_errors_all, bins=200, density=True)
-    pdf = hist / np.sum(hist)
-    bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
+        centroid_errors_all = [item for sublist in centroid_errors_all for item in sublist]
+        centroid_errors_all = np.sort(centroid_errors_all)
 
-    # Calculate the cumulative distribution function (CDF)
-    cdf = np.cumsum(pdf)
+        # Calculate the histogram and bin edges for the PDF
+        hist, bin_edges = np.histogram(centroid_errors_all, bins=200, density=True)
+        pdf = hist / np.sum(hist)
+        bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
 
-    # Plot the PDF
-    plt.figure(figsize=(10, 5))
-    plt.subplot(1, 2, 1)
-    plt.bar(bin_centers, pdf, width=0.5*(bin_centers[1]-bin_centers[0]))
-    plt.title('Abs. centroid error PDF')
-    plt.xlabel('Value (px)')
-    plt.ylabel('Probability')
+        # Calculate the cumulative distribution function (CDF)
+        cdf = np.cumsum(pdf)
 
-    # Plot the CDF
-    plt.subplot(1, 2, 2)
-    plt.plot(bin_edges[1:], cdf, marker='o')
-    plt.title('Abs. centroid error CDF')
-    plt.xlabel('Value (px)')
-    plt.ylabel('Cumulative Probability')
-    plt.tight_layout()
+        # Plot the PDF
+        plt.figure(figsize=(10, 5))
+        plt.subplot(1, 2, 1)
+        plt.bar(bin_centers, pdf, width=0.5*(bin_centers[1]-bin_centers[0]))
+        plt.title('Abs. centroid error PDF')
+        plt.xlabel('Value (px)')
+        plt.ylabel('Probability')
 
-    dir_name = './out_' + algorithm_name + '/plots'
-    if not os.path.exists('./out_' + algorithm_name):
-        os.mkdir('./out_' + algorithm_name)
-    if not os.path.exists(dir_name):
-        os.mkdir(dir_name)
+        # Plot the CDF
+        plt.subplot(1, 2, 2)
+        plt.plot(bin_edges[1:], cdf, marker='o')
+        plt.title('Abs. centroid error CDF')
+        plt.xlabel('Value (px)')
+        plt.ylabel('Cumulative Probability')
+        plt.tight_layout()
 
-    plt.savefig(dir_name + '/centroid_error_all_pdf_cdf.png')
+        dir_name = './out_' + algorithm_name + '/plots'
+        if not os.path.exists('./out_' + algorithm_name):
+            os.mkdir('./out_' + algorithm_name)
+        if not os.path.exists(dir_name):
+            os.mkdir(dir_name)
 
-    # Now, just for floes identified as TP
-    centroid_errors_tp = [item for sublist in centroid_errors_tp for item in sublist]
-    centroid_errors_tp = np.sort(centroid_errors_tp)
+        plt.savefig(dir_name + '/centroid_error_all_pdf_cdf.png', dpi=300)
 
-    # Calculate the histogram and bin edges for the PDF
-    bins = int(len(centroid_errors_tp)/8) + 2
-    hist, bin_edges = np.histogram(centroid_errors_tp, bins=bins, density=True)
-    pdf = hist / np.sum(hist)
-    bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
+        # Now, just for floes identified as TP
+        centroid_errors_tp = [item for sublist in centroid_errors_tp for item in sublist]
+        centroid_errors_tp = np.sort(centroid_errors_tp)
 
-    # Calculate the cumulative distribution function (CDF)
-    cdf = np.cumsum(pdf)
+        # Calculate the histogram and bin edges for the PDF
+        bins = int(len(centroid_errors_tp)/8) + 2
+        hist, bin_edges = np.histogram(centroid_errors_tp, bins=bins, density=True)
+        pdf = hist / np.sum(hist)
+        bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
 
-    # Plot the PDF
-    plt.figure(figsize=(10, 5))
-    plt.subplot(1, 2, 1)
-    plt.bar(bin_centers, pdf, width=0.5*(bin_centers[1]-bin_centers[0]))
-    plt.title('Abs. centroid error PDF')
-    plt.xlabel('Value (px)')
-    plt.ylabel('Probability')
+        # Calculate the cumulative distribution function (CDF)
+        cdf = np.cumsum(pdf)
 
-    # Plot the CDF
-    plt.subplot(1, 2, 2)
-    plt.plot(bin_edges[1:], cdf, marker='o')
-    plt.title('Abs. centroid error CDF')
-    plt.xlabel('Value (px)')
-    plt.ylabel('Cumulative Probability')
+        # Plot the PDF
+        plt.figure(figsize=(10, 5))
+        plt.subplot(1, 2, 1)
+        plt.bar(bin_centers, pdf, width=0.5*(bin_centers[1]-bin_centers[0]))
+        plt.title('Abs. centroid error PDF')
+        plt.xlabel('Value (px)')
+        plt.ylabel('Probability')
 
-    plt.savefig(dir_name + '/centroid_error_tp_pdf_cdf.png')
+        # Plot the CDF
+        plt.subplot(1, 2, 2)
+        plt.plot(bin_edges[1:], cdf, marker='o')
+        plt.title('Abs. centroid error CDF')
+        plt.xlabel('Value (px)')
+        plt.ylabel('Cumulative Probability')
 
-
-    # Calculation of area percent error plots
-    area_errors_all = []
-    area_errors_tp = []
-    for image in processed_floes.values():
-        area_errors_all.append([x[0]['area_percent_difference'] for x in image['intersections'].values() if x[0]['area_percent_difference'] < 5])
-
-        area_errors = []
-        for ift, man in image['ift_to_man'].items():
-            area_errors.append(image['intersections'][ift][0]['area_percent_difference'])
-        area_errors_tp.append(area_errors)
-
-    
-    area_errors_all = [item for sublist in area_errors_all for item in sublist]
-    area_errors_all = np.sort(area_errors_all)
-
-    # Calculate the histogram and bin edges for the PDF
-    bins = int(len(centroid_errors_all)/8) + 2
-    hist, bin_edges = np.histogram(area_errors_all, bins=bins, density=True)
-    pdf = hist / np.sum(hist)
-    bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
-
-    # Calculate the cumulative distribution function (CDF)
-    cdf = np.cumsum(pdf)
-
-    # Plot the PDF
-    plt.figure(figsize=(10, 5))
-    plt.subplot(1, 2, 1)
-    plt.bar(bin_centers, pdf, width=0.5*(bin_centers[1]-bin_centers[0]))
-    plt.title('Area percent error PDF')
-    plt.xlabel('Value')
-    plt.ylabel('Probability')
-
-    # Plot the CDF
-    plt.subplot(1, 2, 2)
-    plt.plot(bin_edges[1:], cdf, marker='o')
-    plt.title('Area percent error CDF')
-    plt.xlabel('Value')
-    plt.ylabel('Cumulative Probability')
-
-    plt.tight_layout()
-
-    plt.savefig(dir_name + '/area_error_all_pdf_cdf.png')
+        plt.savefig(dir_name + '/centroid_error_tp_pdf_cdf.png', dpi=300)
 
 
-    # Now, just for floes identified as TP
-    area_errors_tp = [item for sublist in area_errors_tp for item in sublist]
-    area_errors_tp = np.sort(area_errors_tp)
+        # Calculation of area percent error plots
+        area_errors_all = []
+        area_errors_tp = []
+        for image in processed_floes.values():
+            area_errors_all.append([x[0]['area_percent_difference'] for x in image['intersections'].values() if x[0]['area_percent_difference'] < 5])
 
-    # Calculate the histogram and bin edges for the PDF
-    hist, bin_edges = np.histogram(area_errors_tp, bins=10, density=True)
-    pdf = hist / np.sum(hist)
-    bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
+            area_errors = []
+            for ift, man in image['ift_to_man'].items():
+                area_errors.append(image['intersections'][ift][0]['area_percent_difference'])
+            area_errors_tp.append(area_errors)
 
-    # Calculate the cumulative distribution function (CDF)
-    cdf = np.cumsum(pdf)
+        
+        area_errors_all = [item for sublist in area_errors_all for item in sublist]
+        area_errors_all = np.sort(area_errors_all)
 
-    # Plot the PDF
-    plt.figure(figsize=(10, 5))
-    plt.subplot(1, 2, 1)
-    plt.bar(bin_centers, pdf, width=0.5*(bin_centers[1]-bin_centers[0]))
-    plt.title('Area percent error PDF')
-    plt.xlabel('Value')
-    plt.ylabel('Probability')
+        # Calculate the histogram and bin edges for the PDF
+        bins = int(len(centroid_errors_all)/8) + 2
+        hist, bin_edges = np.histogram(area_errors_all, bins=bins, density=True)
+        pdf = hist / np.sum(hist)
+        bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
 
-    # Plot the CDF
-    plt.subplot(1, 2, 2)
-    plt.plot(bin_edges[1:], cdf, marker='o')
-    plt.title('Area percent error CDF')
-    plt.xlabel('Value')
-    plt.ylabel('Cumulative Probability')
+        # Calculate the cumulative distribution function (CDF)
+        cdf = np.cumsum(pdf)
 
-    plt.savefig(dir_name + '/area_error_tp_pdf_cdf.png')
+        # Plot the PDF
+        plt.figure(figsize=(10, 5))
+        plt.subplot(1, 2, 1)
+        plt.bar(bin_centers, pdf, width=0.5*(bin_centers[1]-bin_centers[0]))
+        plt.title('Area percent error PDF')
+        plt.xlabel('Value')
+        plt.ylabel('Probability')
 
-    if fsd:
-        fsd_for_images(processed_floes, dir_name)
+        # Plot the CDF
+        plt.subplot(1, 2, 2)
+        plt.plot(bin_edges[1:], cdf, marker='o')
+        plt.title('Area percent error CDF')
+        plt.xlabel('Value')
+        plt.ylabel('Cumulative Probability')
 
-    area_plots(processed_floes, dir_name)
+        plt.tight_layout()
+
+        plt.savefig(dir_name + '/area_error_all_pdf_cdf.png', dpi=300)
+
+        # Now, just for floes identified as TP
+        area_errors_tp = [item for sublist in area_errors_tp for item in sublist]
+        area_errors_tp = np.sort(area_errors_tp)
+
+        # Calculate the histogram and bin edges for the PDF
+        hist, bin_edges = np.histogram(area_errors_tp, bins=10, density=True)
+        pdf = hist / np.sum(hist)
+        bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
+
+        # Calculate the cumulative distribution function (CDF)
+        cdf = np.cumsum(pdf)
+
+        # Plot the PDF
+        plt.figure(figsize=(10, 5))
+        plt.subplot(1, 2, 1)
+        plt.bar(bin_centers, pdf, width=0.5*(bin_centers[1]-bin_centers[0]))
+        plt.title('Area percent error PDF')
+        plt.xlabel('Value')
+        plt.ylabel('Probability')
+
+        # Plot the CDF
+        plt.subplot(1, 2, 2)
+        plt.plot(bin_edges[1:], cdf, marker='o')
+        plt.title('Area percent error CDF')
+        plt.xlabel('Value')
+        plt.ylabel('Cumulative Probability')
+
+        plt.savefig(dir_name + '/area_error_tp_pdf_cdf.png', dpi=300)
+
+        if fsd:
+            fsd_for_images(processed_floes, dir_name)
+
+        area_plots(processed_floes, dir_name)
 
     print('done.')
 
@@ -211,80 +215,102 @@ def area_plots(processed_floes: str, dir_name: str):
 
     pred_areas = []
     real_areas = []
+    pred_adj_areas = []
     
     for case, image in processed_floes.items():
 
         real = []
         pred = []
+        pred_adj = []
 
         for floe in image['ift_to_man'].values():
 
-            pred.append(floe['ift_floe_area'])
+            pred_area = floe['ift_floe_area']
+            pred.append(pred_area)
             real.append(floe['real_floe_area'])
+            # Area correction factor
+            adj_area = np.pi * (np.sqrt(pred_area / np.pi) + 6)**2
+            pred_adj.append(adj_area)
 
         pred_areas += pred
         real_areas += real
+        pred_adj_areas += pred_adj
 
         try:
             
-            with warnings.catch_warnings(action="ignore"):
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore")
                 # Perform linear regression to get the line of best fit
-                m, b = np.polyfit(real, pred, 1)
+                m1, b1 = np.polyfit(real, pred, 1)
+                m2, b2 = np.polyfit(real, pred_adj, 1)
                 x_line = np.array([min(real), max(real)])
-                y_line = m * x_line + b
+                y_line1 = m1 * x_line + b1
+                y_line2 = m2 * x_line + b2
+                corr_matrix1 = round(np.corrcoef(real, pred)[0, 1], 4)
+                corr_matrix2 = round(np.corrcoef(real, pred_adj)[0, 1], 4)
 
-            plt.figure(figsize=(5, 5))
+            plt.figure(figsize=(6, 5))
 
             # Plot the scatter plot and line of best fit
             plt.scatter(real, pred, label='Matched Floes')
-            plt.plot(x_line, y_line, color='red', label=f"Line of Best Fit: A(x) = {round(m, 3)}x + {round(b)}")
+            plt.scatter(real, pred_adj, label='Matched Floes, Area Adjusted')
+            plt.plot(x_line, y_line1, color='red', label=f"Line of Best Fit: A(x) = {round(m1, 3)}x + {round(b1)}, R = {corr_matrix1}")
+            plt.plot(x_line, y_line2, color='green', label=f"Adj. Line of Best Fit: A(x) = {round(m2, 3)}x + {round(b2)}, R = {corr_matrix2}")
             plt.plot(x_line, x_line, '--', color='black', label='Perfect Match: A(x) = x')
 
             # Add labels and legend
             plt.xlabel('Real floe area (px)')
             plt.ylabel('Predicted floe area (px)')
             plt.title(f"Predicted vs. real floe area  for case {image['case_number']}, {image['satellite'].title()}")
-            plt.legend()
+            plt.legend(prop={'size': 7})
 
             # Show plot
             loc_dir = dir_name + '/' + case
             if not os.path.exists(loc_dir):
                 os.mkdir(loc_dir)
 
-            plt.savefig(f"{loc_dir}/{case}_area_comparisons.png")
+            plt.savefig(f"{loc_dir}/{case}_area_comparisons.png", dpi=300)
+            
 
         except TypeError:
+            plt.close()
             continue
 
     try:
             
         # Perform linear regression to get the line of best fit
-        m, b = np.polyfit(real_areas, pred_areas, 1)
+        m1, b1 = np.polyfit(real_areas, pred_areas, 1)
+        m2, b2 = np.polyfit(real_areas, pred_adj_areas, 1)
         x_line = np.array([min(real_areas), max(real_areas)])
-        y_line = m * x_line + b
+        y_line1 = m1 * x_line + b1
+        y_line2 = m2 * x_line + b2
+        corr_matrix1 = round(np.corrcoef(real_areas, pred_areas)[0, 1], 4)
+        corr_matrix2 = round(np.corrcoef(real_areas, pred_adj_areas)[0, 1], 4)
+        
 
-
-        plt.figure(figsize=(5, 5))
+        plt.figure(figsize=(6, 5))
 
         # Plot the scatter plot and line of best fit
         plt.scatter(real_areas, pred_areas, label='Matched Floes')
-        plt.plot(x_line, y_line, color='red', label=f"Line of Best Fit: A(x) = {round(m, 3)}x + {round(b)}")
+        plt.scatter(real_areas, pred_adj_areas, label='Matched Floes, Area Adjusted')
+        plt.plot(x_line, y_line1, color='red', label=f"Line of Best Fit: A(x) = {round(m1, 3)}x + {round(b1)}, R = {corr_matrix1}")
+        plt.plot(x_line, y_line2, color='green', label=f"Adj. Line of Best Fit: A(x) = {round(m2, 3)}x + {round(b2)}, R = {corr_matrix2}")
         plt.plot(x_line, x_line, '--', color='black', label='Perfect Match: A(x) = x')
 
         # Add labels and legend
         plt.xlabel('Real floe area (px)')
         plt.ylabel('Predicted floe area (px)')
-        plt.title(f"Predicted vs. real floe area for all cases")
-        plt.legend()
+        plt.title(f"Figure X: Predicted vs. real floe area for all cases")
+        plt.legend(prop={'size': 7})
 
         # Show plot
         if not os.path.exists(dir_name):
             os.mkdir(dir_name)
 
-        plt.savefig(f"{dir_name}/area_comparisons.png")
+        plt.savefig(f"{dir_name}/area_comparisons.png", dpi=300)
 
     except TypeError as e:
-        print(e)
+        plt.close()
         print('Unable to generate predicted area vs. real area plot for algorithm')
 
 
@@ -342,15 +368,13 @@ def fsd_for_images(processed_floes: str, dir_name: str):
             plt.xlabel('Floe area x')
             plt.ylabel('Probability P(x)')
 
-            plt.text(3, 8, 'Inset Label', fontsize=12, bbox=dict(facecolor='black', alpha=0.5))
-
             loc_dir = dir_name + '/' + case_no
             if not os.path.exists(loc_dir):
                 os.mkdir(loc_dir)
 
-            plt.legend()
+            plt.legend(prop={'size': 7})
 
-            plt.savefig(f"{loc_dir}/{case_no}_fsd.png")
+            plt.savefig(f"{loc_dir}/{case_no}_fsd.png", dpi=300)
 
             plt.close()
 
@@ -395,9 +419,9 @@ def fsd_for_images(processed_floes: str, dir_name: str):
         if not os.path.exists(dir_name):
             os.mkdir(dir_name)
 
-        plt.legend()
+        plt.legend(prop={'size': 7})
 
-        plt.savefig(f"{dir_name}/all_floes_fsd.png")
+        plt.savefig(f"{dir_name}/all_floes_fsd.png", dpi=300)
 
         plt.close()
 
