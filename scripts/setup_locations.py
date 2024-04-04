@@ -130,4 +130,4 @@ locations_pretty.set_index('print_title', drop=True, inplace=True)
 print(locations_pretty.loc[:, ['Latitude', 'Longitude', '$\Delta X$ (km)', '$\Delta Y$ (km)']].style.to_latex(hrules=True))
     
 # Save the names and mid points
-locations.loc[:, ['center_lat', 'center_lon', 'center_x', 'center_y', 'left_x', 'right_x', 'lower_y', 'top_y']].to_csv('../data/site_locations.csv')
+locations.loc[:, ['center_lat', 'center_lon', 'center_x', 'center_y', 'left_x', 'right_x', 'lower_y', 'top_y']].to_csv('../data/region_definitions.csv')
