@@ -1,6 +1,8 @@
 import numpy as np
 from img_analysis import analyze_algo
 import matplotlib.pyplot as plt
+from sklearn.base import BaseEstimator, ClassifierMixin
+from sklearn.model_selection import GridSearchCV
 
 IFT_RESULTS_PATH = '../data/ift_results'
 VALIDATION_IMG_PATH = '../data/validation_images/labeled_floes_png'
@@ -9,25 +11,27 @@ LAND_MASK_PATH = '../data/validation_images/landmask'
 
 def main():
 
-    precisions = []
-    recalls = []
+    # precisions = []
+    # recalls = []
 
-    for i in range(100, 700, 50):
+    # for i in range(100, 700, 50):
 
-        original_pix, original_floe = analyze_algo(ift_path= '../data/ift_data/ift_pipeline_default/ift_results', 
-                    validation_path= '../data/validation_images/labeled_floes_png', 
-                    land_mask_path= '../data/validation_images/landmask',
-                    process = True,
-                    suppress_file_outputs = True,
-                    fsd = False, 
-                    algorithm_name='original_ift',
-                    threshold_params={'min_area': i})
+    #     original_pix, original_floe = analyze_algo(ift_path= '../data/ift_data/ift_pipeline_default/ift_results', 
+    #                 validation_path= '../data/validation_images/labeled_floes_png', 
+    #                 land_mask_path= '../data/validation_images/landmask',
+    #                 process = True,
+    #                 suppress_file_outputs = True,
+    #                 fsd = False, 
+    #                 algorithm_name='original_ift',
+    #                 threshold_params={'min_area': i})
 
-        precisions.append(original_floe['ppv'])
-        recalls.append(original_floe['tpr'])
+    #     precisions.append(original_floe['ppv'])
+    #     recalls.append(original_floe['tpr'])
 
-    generate_pr_curve(precisions, recalls)
-    
+    # generate_pr_curve(precisions, recalls)
+
+        
+    pass
 
 def generate_pr_curve(precisions, recalls):
 
