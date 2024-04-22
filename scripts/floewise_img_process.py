@@ -3,6 +3,7 @@ from copy import deepcopy
 import numpy as np
 import h5py
 import sys
+from pandas import Series
 from filter_function import ift_filter
 
 IOU_THRESHOLD = 0.5
@@ -15,12 +16,15 @@ def floewise_img_process(
                 fc_image_path: str,
                 threshold_params: dict = None
                 ):
+
+    
     
     if ift_path.endswith('.h5'):
+        h5 = True
         # Retrieve IFT floes from hdf5 file
         with h5py.File(ift_path, "r") as ift_image:
             properties = ift_image['floe_properties']
-
+            
             labeled_image = properties['labeled_image'][:].astype('uint8')
 
             labeled_image = np.flipud(labeled_image)
@@ -28,6 +32,8 @@ def floewise_img_process(
 
     elif ift_path.endswith('.tif') or ift_path.endswith('.tiff'):
         labeled_image = cv2.imread(ift_path)
+        
+        h5 = False
     else:
         print('Invalid image type for IFT predicted floes. Must be .tiff or .h5')
         sys.exit(1)
@@ -35,21 +41,29 @@ def floewise_img_process(
     tc_img = cv2.imread(tc_image_path)
     fc_img = cv2.imread(fc_image_path)
 
+    props = None
+
     if threshold_params:
-        labeled_image, _ = ift_filter(labeled_image, tc_img, fc_img, **threshold_params)
+        labeled_image, props = ift_filter(labeled_image, tc_img, fc_img, **threshold_params)
+        props = props[~props['flagged']]
 
     # Retrieve land mask and dilate if desired.
     land_mask_img = cv2.imread(land_mask_path)
 
     idx_landmass = land_mask_img[:,:,0] > 0
 
-    # Get rid of gray, only B/W.
-    idx_contrast = labeled_image[:,:] > 0
-    labeled_image[idx_contrast] = 255
-
     # Get individual ift floes
     ift_num_labels, ift_labels, ift_stats, ift_centroids = cv2.connectedComponentsWithStats(
                                                                 labeled_image, connectivity=8)
+
+    # Create map between original IFT labels and OpenCV results
+    # Should be removed when OpenCV removed as dependency
+    if threshold_params:
+        flat_opencv = Series(ift_labels.flatten()).unique()
+        flat_labeled = Series(labeled_image.flatten()).unique()
+        open_to_labeled_map = {opencv: labeled for (opencv, labeled) in zip(flat_opencv, flat_labeled)}
+        del open_to_labeled_map[0]
+
 
     # Manual image loading
     raw_manual_img = cv2.imread(manual_path)
@@ -270,4 +284,10 @@ def floewise_img_process(
         ift_to_manual_tp[k] = {'real_floe': v['real_floe'], 'real_floe_area': int(man_stats[v['real_floe']][4]),
                                 'ift_floe_area': int(ift_stats[k][4])}
 
-    return floe_conf_matrix, false_positives, false_negatives, ift_to_manual_tp, intersections, labeled_image
+    if threshold_params:
+        props['TP'] = ''
+
+        for open, labeled in open_to_labeled_map.items():
+            props.loc[props['label'] == labeled, 'TP'] = (open in ift_to_manual_tp.keys())
+
+    return floe_conf_matrix, false_positives, false_negatives, ift_to_manual_tp, intersections, labeled_image, props
