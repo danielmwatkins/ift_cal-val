@@ -8,20 +8,18 @@ import pandas as pd
 
 # Example:
 png_loc = '../data/validation_images/labeled_floes_png/'
-save_loc = '../data/validation_images/labeled_floes_gtiff/'
+save_loc = '../data/validation_images/labeled_floes_geotiff/'
 ref_loc = '../data/validation_images/truecolor/'
 
 labeled_images = [f for f in os.listdir(png_loc) if 'png' in f]
 
-site_defs = pd.read_csv('../data/location_specifications/region_definitions.csv')
-regions = list(site_defs['location'].values)
+site_defs = pd.read_csv('../data/metadata/region_definitions.csv')
+regions = list(site_defs['region'].values)
 
 for lb_image in labeled_images:
     for region in regions:
         if region in lb_image:
-            # stick a hyphen in where the _ is
-            # TBD: update naming to not have _ so that this isn't needed
-            cn, reg, date, sat = lb_image.replace(region, region.replace('_', '')).split('_')
+            cn, reg, date, sat, _, _ = lb_image.replace(region, region.replace('_', '')).split('_')
             sat = sat.replace('.png', '')
             break
     ref_image = '_'.join([cn, region, '100km', date]) + '.' + sat + '.truecolor.250m.tiff'
