@@ -237,11 +237,6 @@ def analyze_algo(ift_path,
         plt.xlabel('Relative difference between real and predicted areas')
         plt.ylabel('Cumulative probability')
 
-        print(np.std(area_errors_all))
-        print(np.std(area_errors_tp))
-        print(np.std(centroid_errors_all))
-        print(np.std(centroid_errors_tp))
-
         plt.savefig(dir_name + '/area_error_tp_pdf_cdf.png', dpi=300)
 
         area_plots(processed_floes, dir_name)
@@ -398,15 +393,17 @@ def qualitative_effects(processed_floes: str, dir_name: str):
 
     axs = axs.flatten()
 
-    axs[1].bar(artifact_types, artifact_f1s)
+    bar_width = 0.4
+
+    axs[1].bar(artifact_types, artifact_f1s, width=bar_width)
     axs[1].set_xlabel('Artifacts Present?')
     axs[1].set_ylabel('Average image F1 Score')
 
-    axs[0].bar(landfast_types, landfast_f1s)
+    axs[0].bar(landfast_types, landfast_f1s, width=bar_width)
     axs[0].set_xlabel('Landfast Ice Present?')
     axs[0].set_ylabel('Average image F1 Score')
 
-    axs[2].bar(cloud_types, cloud_f1s)
+    axs[2].bar(cloud_types, cloud_f1s, width=bar_width)
     axs[2].set_xlabel('Cloud Type Present?')
     axs[2].set_ylabel('Average image F1 Score')
 

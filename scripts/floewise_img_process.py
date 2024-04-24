@@ -286,6 +286,7 @@ def floewise_img_process(
 
     if threshold_params:
         props['TP'] = ''
+        props['ift_path'] = ift_path
 
         for open, labeled in open_to_labeled_map.items():
             props.loc[props['label'] == labeled, 'TP'] = (open in ift_to_manual_tp.keys())

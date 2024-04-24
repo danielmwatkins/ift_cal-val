@@ -14,7 +14,10 @@ def process_floes(ift_path, validation_path, land_mask_path, algo_name, threshol
 
     results = {}
 
-    data = pd.DataFrame()
+    export_data = True
+
+    if export_data:
+        data = pd.DataFrame()
 
     for _, row in tqdm(complete_cases.iterrows(), total=len(complete_cases)):
 
@@ -30,7 +33,8 @@ def process_floes(ift_path, validation_path, land_mask_path, algo_name, threshol
         pix_conf_mx = pixel_image_process(row['manual_path'], labeled_image, row['case_number'], 
                                     row['satellite'], str(row['land_mask_path']), algo_name, save_images=not suppress_file_outputs)
 
-        data = pd.concat([data, props])
+        if export_data:
+            data = pd.concat([data, props])
         
 
         case_dict.update(pix_conf_mx)
@@ -47,6 +51,7 @@ def process_floes(ift_path, validation_path, land_mask_path, algo_name, threshol
     with open(f'process_results/out_{algo_name}.json', 'w') as f:
         json.dump(results, f)
 
-    # data.to_csv('df_with_tp_classifications.csv')
+    if export_data:
+        data.to_csv('df_with_tp_classifications.csv')
 
     return results

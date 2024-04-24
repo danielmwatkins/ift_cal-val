@@ -117,7 +117,7 @@ def k_fold_cv(ift, valdiation, land):
         k_output_data = {'k': i, 'Best solidity': best_params[0], 'Best circularity': best_params[1], 'F_Beta Score': F1}
 
         output_data.append(k_output_data)
-        print(output_data)
+        
 
     output_data = pd.DataFrame(output_data)
 
