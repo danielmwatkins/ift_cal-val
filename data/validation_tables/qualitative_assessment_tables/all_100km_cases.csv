@@ -34,13 +34,13 @@
 32,141,141-beaufort_sea-100km_by_100km-20200808-20200809,beaufort_sea,2020-08-08,2020-08-09,aqua,100,yes,no,yes,1.0,opaque,no,daniel,minki,,,Ice floe-visible,
 33,141,141-beaufort_sea-100km_by_100km-20200808-20200809,beaufort_sea,2020-08-08,2020-08-09,terra,100,yes,no,yes,0.7,opaque,no,daniel,minki,,,Ice floe-visible; changed cloud fraction to 0.7,
 34,142,142-beaufort_sea-100km_by_100km-20210427-20210428,beaufort_sea,2021-04-27,2021-04-28,aqua,100,yes,yes,yes,0.0,none,no,daniel,minki,,,,
-35,142,142-beaufort_sea-100km_by_100km-20210427-20210428,beaufort_sea,2021-04-27,2021-04-28,terra,100,yes,yes,yes,0.0,none,no,daniel,minki,,,,
-36,144,144-beaufort_sea-100km_by_100km-20210718-20210719,beaufort_sea,2021-07-18,2021-07-19,aqua,100,yes,no,yes,0.9,opaque,yes,daniel,minki,,,,
+35,142,142-beaufort_sea-100km_by_100km-20210427-20210428,beaufort_sea,2021-04-27,2021-04-28,terra,100,yes,yes,yes,0.0,none,no,daniel,minki,daniel,,,
+36,144,144-beaufort_sea-100km_by_100km-20210718-20210719,beaufort_sea,2021-07-18,2021-07-19,aqua,100,yes,no,yes,0.9,opaque,yes,daniel,minki,daniel,,,
 37,144,144-beaufort_sea-100km_by_100km-20210718-20210719,beaufort_sea,2021-07-18,2021-07-19,terra,100,yes,no,yes,0.9,opaque,no,daniel,minki,,,,
 38,145,145-beaufort_sea-100km_by_100km-20220302-20220303,beaufort_sea,2022-03-02,2022-03-03,aqua,100,yes,yes,yes,0.8,opaque,yes,daniel,minki,,,,
 39,145,145-beaufort_sea-100km_by_100km-20220302-20220303,beaufort_sea,2022-03-02,2022-03-03,terra,100,yes,yes,yes,0.9,opaque,no,daniel,minki,,,,
-40,146,146-beaufort_sea-100km_by_100km-20220523-20220524,beaufort_sea,2022-05-23,2022-05-24,aqua,100,yes,yes,yes,0.2,thin,no,daniel,minki,,,,
-41,146,146-beaufort_sea-100km_by_100km-20220523-20220524,beaufort_sea,2022-05-23,2022-05-24,terra,100,yes,yes,yes,0.3,thin,yes,daniel,minki,,,,
+40,146,146-beaufort_sea-100km_by_100km-20220523-20220524,beaufort_sea,2022-05-23,2022-05-24,aqua,100,yes,yes,yes,0.2,thin,no,daniel,minki,daniel,,,
+41,146,146-beaufort_sea-100km_by_100km-20220523-20220524,beaufort_sea,2022-05-23,2022-05-24,terra,100,yes,yes,yes,0.3,thin,yes,daniel,minki,daniel,,,
 0,155,155-bering_strait-100km_by_100km-20040620-20040621,bering_strait,2004-06-20,2004-06-21,aqua,100,yes,yes,no,0.7,thin,no,ethan,daniel,,,,
 1,155,155-bering_strait-100km_by_100km-20040620-20040621,bering_strait,2004-06-20,2004-06-21,terra,100,yes,yes,no,0.7,thin,no,ethan,daniel,,,,
 2,156,156-bering_strait-100km_by_100km-20040823-20040824,bering_strait,2004-08-23,2004-08-24,aqua,100,no,no,no,0.9,opaque,no,ethan,daniel,,,,
@@ -103,8 +103,8 @@
 17,20,020-baffin_bay-100km_by_100km-20120419-20120420,baffin_bay,2012-04-19,2012-04-20,terra,100,yes,yes,no,0.8,thin,yes,daniel,emma,,,,
 18,21,021-baffin_bay-100km_by_100km-20120422-20120423,baffin_bay,2012-04-22,2012-04-23,aqua,100,yes,yes,yes,0.4,thin,yes,ethan,daniel,emma,daniel,,daniel
 19,21,021-baffin_bay-100km_by_100km-20120422-20120423,baffin_bay,2012-04-22,2012-04-23,terra,100,yes,yes,yes,0.7,scattered,no,daniel,emma,emma,daniel,,daniel
-20,22,022-baffin_bay-100km_by_100km-20130308-20130309,baffin_bay,2013-03-08,2013-03-09,aqua,100,yes,yes,yes,0.3,scattered,no,ethan,daniel,,,,daniel
-21,22,022-baffin_bay-100km_by_100km-20130308-20130309,baffin_bay,2013-03-08,2013-03-09,terra,100,yes,yes,yes,0.1,scattered,no,daniel,emma,,,,daniel
+20,22,022-baffin_bay-100km_by_100km-20130308-20130309,baffin_bay,2013-03-08,2013-03-09,aqua,100,yes,yes,yes,0.3,scattered,no,ethan,daniel,daniel,,,daniel
+21,22,022-baffin_bay-100km_by_100km-20130308-20130309,baffin_bay,2013-03-08,2013-03-09,terra,100,yes,yes,yes,0.1,scattered,no,daniel,emma,daniel,,,daniel
 22,23,023-baffin_bay-100km_by_100km-20140329-20140330,baffin_bay,2014-03-29,2014-03-30,aqua,100,yes,no,yes,0.8,opaque,no,ethan,daniel,emma,daniel,,daniel
 23,23,023-baffin_bay-100km_by_100km-20140329-20140330,baffin_bay,2014-03-29,2014-03-30,terra,100,yes,no,yes,0.8,thin,no,daniel,emma,emma,daniel,,daniel
 24,24,024-baffin_bay-100km_by_100km-20150312-20150313,baffin_bay,2015-03-12,2015-03-13,aqua,100,yes,yes,no,0.2,thin,no,ethan,daniel,,,,
@@ -195,8 +195,8 @@
 25,279,279-greenland_sea-100km_by_100km-20160811-20160812,greenland_sea,2016-08-11,2016-08-12,terra,100,yes,no,yes,0.8,opaque,no,minki,ellen,,,,
 26,281,281-greenland_sea-100km_by_100km-20170805-20170806,greenland_sea,2017-08-05,2017-08-06,aqua,100,yes,yes,yes,1.0,thin,no,minki,ellen,emma,daniel,added a few floes,
 27,281,281-greenland_sea-100km_by_100km-20170805-20170806,greenland_sea,2017-08-05,2017-08-06,terra,100,yes,yes,yes,1.0,thin,no,minki,ellen,emma,daniel,added floes,
-28,283,283-greenland_sea-100km_by_100km-20180610-20180611,greenland_sea,2018-06-10,2018-06-11,aqua,100,yes,yes,yes,0.6,thin,no,minki,ellen,,,,
-29,283,283-greenland_sea-100km_by_100km-20180610-20180611,greenland_sea,2018-06-10,2018-06-11,terra,100,yes,yes,yes,0.6,thin,no,minki,ellen,,,,
+28,283,283-greenland_sea-100km_by_100km-20180610-20180611,greenland_sea,2018-06-10,2018-06-11,aqua,100,yes,yes,yes,0.6,thin,no,minki,ellen,daniel,,,
+29,283,283-greenland_sea-100km_by_100km-20180610-20180611,greenland_sea,2018-06-10,2018-06-11,terra,100,yes,yes,yes,0.6,thin,no,minki,ellen,daniel,,,
 30,286,286-greenland_sea-100km_by_100km-20200318-20200319,greenland_sea,2020-03-18,2020-03-19,aqua,100,yes,no,yes,0.2,thin,no,minki,ellen,emma,daniel,added floes,
 31,286,286-greenland_sea-100km_by_100km-20200318-20200319,greenland_sea,2020-03-18,2020-03-19,terra,100,yes,no,yes,0.2,thin,no,minki,ellen,emma,daniel,added floes,
 32,287,287-greenland_sea-100km_by_100km-20210921-20210922,greenland_sea,2021-09-21,2021-09-22,aqua,100,yes,no,yes,1.0,opaque,yes,minki,ellen,,,,
@@ -321,8 +321,8 @@
 25,377,377-laptev_sea-100km_by_100km-20130904-20130905,laptev_sea,2013-09-04,2013-09-05,terra,100,no,no,no,0.9,scattered,no,ellen,ethan,ethan,daniel,,
 26,378,378-laptev_sea-100km_by_100km-20140301-20140302,laptev_sea,2014-03-01,2014-03-02,aqua,100,yes,no,no,1.0,opaque,yes,ellen,ethan,,,,
 27,378,378-laptev_sea-100km_by_100km-20140301-20140302,laptev_sea,2014-03-01,2014-03-02,terra,100,yes,no,no,1.0,opaque,yes,ellen,ethan,,,,
-28,379,379-laptev_sea-100km_by_100km-20140403-20140404,laptev_sea,2014-04-03,2014-04-04,aqua,100,yes,no,yes,1.0,scattered,no,ellen,ethan,,,,
-29,379,379-laptev_sea-100km_by_100km-20140403-20140404,laptev_sea,2014-04-03,2014-04-04,terra,100,yes,no,yes,1.0,scattered,yes,ellen,ethan,,,,
+28,379,379-laptev_sea-100km_by_100km-20140403-20140404,laptev_sea,2014-04-03,2014-04-04,aqua,100,yes,no,yes,1.0,scattered,no,ellen,ethan,daniel,,,
+29,379,379-laptev_sea-100km_by_100km-20140403-20140404,laptev_sea,2014-04-03,2014-04-04,terra,100,yes,no,yes,1.0,scattered,yes,ellen,ethan,daniel,,,
 30,381,381-laptev_sea-100km_by_100km-20160402-20160403,laptev_sea,2016-04-02,2016-04-03,aqua,100,no,no,no,1.0,opaque,yes,ellen,ethan,,,,
 31,381,381-laptev_sea-100km_by_100km-20160402-20160403,laptev_sea,2016-04-02,2016-04-03,terra,100,yes,no,no,1.0,opaque,no,ellen,ethan,,,,
 32,382,382-laptev_sea-100km_by_100km-20160904-20160905,laptev_sea,2016-09-04,2016-09-05,aqua,100,yes,no,yes,0.0,none,no,ellen,ethan,,,,
