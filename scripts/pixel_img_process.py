@@ -55,16 +55,16 @@ def pixel_image_process(
             os.mkdir(dir_name + '/overlaid')
 
         new_img_im = Image.fromarray(new_img.astype('uint8'))
-        new_img_im.save(dir_name + "/manual/results_manual_" + str(case_no) + satellite + ".jpg")
+        new_img_im.save(dir_name + "/manual/results_manual_" + str(case_no) + satellite + ".png")
 
         land_img_im = Image.fromarray(land_mask_img.astype('uint8'))
-        land_img_im.save(dir_name + "/landmask/results_landmask_" + str(case_no) + satellite + ".jpg")
+        land_img_im.save(dir_name + "/landmask/results_landmask_" + str(case_no) + satellite + ".png")
 
         labeled_image_im = Image.fromarray(labeled_image)
-        labeled_image_im.save(dir_name + "/ift/results_ift_" + str(case_no) + satellite + ".jpg")
+        labeled_image_im.save(dir_name + "/ift/results_ift_" + str(case_no) + satellite + ".png")
 
         overlaid_im = Image.blend(labeled_image_im, new_img_im, 0.2)
-        overlaid_im.save(dir_name + "/overlaid/overlaid_" + str(case_no) + satellite + ".jpg")
+        overlaid_im.save(dir_name + "/overlaid/overlaid_" + str(case_no) + satellite + ".png")
 
 
     # Compute absolute confusion matrix

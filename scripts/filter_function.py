@@ -8,9 +8,9 @@ def ift_filter(labeled_image,
                truecolor_image,
                falsecolor_image,
                min_area = 100,
-               max_area = 90000,
-               circ_threshold = 0.6,
-               solidity_threshold = 0.8, # Ratio of area to convex area - measure of gaps. 
+               max_area = (391**2),
+               circ_threshold = 0,
+               solidity_threshold = 1, # Ratio of area to convex area - measure of gaps. 
                tc_intensity_thresholds = (0, 0, 0), # No idea what the best numbers for these are! Also not sure if we want max or min. 0 means the threshold will always be exceeded.
                fc_intensity_thresholds = (0, 0, 0)): 
     """Filter function for use with the labeled image output from Ice Floe Tracker. The function uses the regionprops_table function from 

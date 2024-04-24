@@ -5,6 +5,7 @@ import json
 import numpy as np
 import matplotlib.pyplot as plt
 from automate_floes import process_floes
+from scipy.stats import gaussian_kde
 import warnings
 
 def analyze_algo(ift_path, 
@@ -21,19 +22,16 @@ def analyze_algo(ift_path,
 
     if process:
         print('Processing ' + algorithm_name + ' results:')
-        process_floes(ift_path, validation_path, land_mask_path, algorithm_name, threshold_params=threshold_params, suppress_file_outputs=suppress_file_outputs)
+        processed_floes = process_floes(ift_path, validation_path, land_mask_path, algorithm_name, threshold_params=threshold_params, suppress_file_outputs=suppress_file_outputs)
+    else:
+        try:
+            with open(f'process_results/out_{algorithm_name}.json', 'r') as f:
+                processed_floes = json.load(f)
+        except FileNotFoundError:
+            raise FileNotFoundError(f"Can't find JSON results for {algorithm_name} processing in process_results directory. Try rerunning with processing.")
 
     print(f"Analyzing {algorithm_name} results...", end='')
     sys.stdout.flush()
-
-    try:
-        with open(f'process_results/out_{algorithm_name}.json', 'r') as f:
-            processed_floes = json.load(f)
-    except FileNotFoundError:
-        print(f"Can't find results for {algorithm_name} processing. Try rerunning with processing.")
-
-    if suppress_file_outputs:
-        os.remove(f'process_results/out_{algorithm_name}.json')
 
     # Get number of t/f p/n floes/pixels in all images
     pix_vals = {"t_pos": 0, "f_pos": 0, "t_neg": 0, "f_neg": 0}
@@ -51,6 +49,7 @@ def analyze_algo(ift_path,
     pix_params = calculate_performance_params(pix_vals, object_wise=False)
     floe_params = calculate_performance_params(floe_vals, object_wise=True)
 
+    fsd_plot = None
 
     if not suppress_file_outputs:
         centroid_errors_all = []
@@ -74,20 +73,31 @@ def analyze_algo(ift_path,
         # Calculate the cumulative distribution function (CDF)
         cdf = np.cumsum(pdf)
 
-        # Plot the PDF
+        
+
         plt.figure(figsize=(10, 5))
         plt.subplot(1, 2, 1)
-        plt.bar(bin_centers, pdf, width=0.5*(bin_centers[1]-bin_centers[0]))
+        # plt.bar(bin_centers, pdf, width=0.5*(bin_centers[1]-bin_centers[0]))
+        kde = gaussian_kde(centroid_errors_all)
+
+        x = np.linspace(min(centroid_errors_all), max(centroid_errors_all), 1000)
+
+        # Evaluate the PDF at the given points
+        pdf_values = kde(x)
+
+        plt.plot(x, pdf_values, label='PDF')
+        
         plt.title('Abs. centroid error PDF')
-        plt.xlabel('Value (px)')
-        plt.ylabel('Probability')
+        plt.xlabel('Absolute centroid error distance (px)')
+        plt.ylabel('Probability density')
 
         # Plot the CDF
         plt.subplot(1, 2, 2)
-        plt.plot(bin_edges[1:], cdf, marker='o')
+        plt.plot(bin_edges[1:], cdf)
         plt.title('Abs. centroid error CDF')
-        plt.xlabel('Value (px)')
-        plt.ylabel('Cumulative Probability')
+        plt.suptitle('Figure X: PDF and CDF of centroid error for all identified floe intersections')
+        plt.xlabel('Absolute centroid error distance (px)')
+        plt.ylabel('Cumulative probability')
         plt.tight_layout()
 
         dir_name = './out_' + algorithm_name + '/plots'
@@ -114,17 +124,27 @@ def analyze_algo(ift_path,
         # Plot the PDF
         plt.figure(figsize=(10, 5))
         plt.subplot(1, 2, 1)
-        plt.bar(bin_centers, pdf, width=0.5*(bin_centers[1]-bin_centers[0]))
+        # plt.bar(bin_centers, pdf, width=0.5*(bin_centers[1]-bin_centers[0]))
+
+        kde = gaussian_kde(centroid_errors_tp)
+
+        x = np.linspace(min(centroid_errors_tp), max(centroid_errors_tp), 1000)
+
+        # Evaluate the PDF at the given points
+        pdf_values = kde(x)
+
+        plt.plot(x, pdf_values, label='PDF')
         plt.title('Abs. centroid error PDF')
-        plt.xlabel('Value (px)')
-        plt.ylabel('Probability')
+        plt.suptitle('Figure X: PDF and CDF of centroid error for floes identified as true positives')
+        plt.xlabel('Absolute centroid error distance (px)')
+        plt.ylabel('Probability density')
 
         # Plot the CDF
         plt.subplot(1, 2, 2)
-        plt.plot(bin_edges[1:], cdf, marker='o')
+        plt.plot(bin_edges[1:], cdf)
         plt.title('Abs. centroid error CDF')
-        plt.xlabel('Value (px)')
-        plt.ylabel('Cumulative Probability')
+        plt.xlabel('Absolute centroid error distance (px)')
+        plt.ylabel('Cumulative probability')
 
         plt.savefig(dir_name + '/centroid_error_tp_pdf_cdf.png', dpi=300)
 
@@ -145,7 +165,7 @@ def analyze_algo(ift_path,
         area_errors_all = np.sort(area_errors_all)
 
         # Calculate the histogram and bin edges for the PDF
-        bins = int(len(centroid_errors_all)/8) + 2
+        bins = int(len(area_errors_all)/8) + 2
         hist, bin_edges = np.histogram(area_errors_all, bins=bins, density=True)
         pdf = hist / np.sum(hist)
         bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
@@ -156,17 +176,26 @@ def analyze_algo(ift_path,
         # Plot the PDF
         plt.figure(figsize=(10, 5))
         plt.subplot(1, 2, 1)
-        plt.bar(bin_centers, pdf, width=0.5*(bin_centers[1]-bin_centers[0]))
+        # plt.bar(bin_centers, pdf, width=0.5*(bin_centers[1]-bin_centers[0]))
+        kde = gaussian_kde(area_errors_all)
+
+        x = np.linspace(min(area_errors_all), max(area_errors_all), 1000)
+
+        # Evaluate the PDF at the given points
+        pdf_values = kde(x)
+
+        plt.plot(x, pdf_values, label='PDF')
         plt.title('Area percent error PDF')
-        plt.xlabel('Value')
-        plt.ylabel('Probability')
+        plt.xlabel('Relative difference between real and predicted areas')
+        plt.ylabel('Probability density')
 
         # Plot the CDF
         plt.subplot(1, 2, 2)
-        plt.plot(bin_edges[1:], cdf, marker='o')
+        plt.plot(bin_edges[1:], cdf)
         plt.title('Area percent error CDF')
-        plt.xlabel('Value')
-        plt.ylabel('Cumulative Probability')
+        plt.suptitle('Figure X: PDF and CDF of floe area error for all identified floe intersections')
+        plt.xlabel('Relative difference between real and predicted areas')
+        plt.ylabel('Cumulative probability')
 
         plt.tight_layout()
 
@@ -187,28 +216,41 @@ def analyze_algo(ift_path,
         # Plot the PDF
         plt.figure(figsize=(10, 5))
         plt.subplot(1, 2, 1)
-        plt.bar(bin_centers, pdf, width=0.5*(bin_centers[1]-bin_centers[0]))
+        # plt.bar(bin_centers, pdf, width=0.5*(bin_centers[1]-bin_centers[0]))
+        kde = gaussian_kde(area_errors_tp)
+
+        x = np.linspace(min(area_errors_tp), max(area_errors_tp), 1000)
+
+        # Evaluate the PDF at the given points
+        pdf_values = kde(x)
+
+        plt.plot(x, pdf_values, label='PDF')
         plt.title('Area percent error PDF')
-        plt.xlabel('Value')
-        plt.ylabel('Probability')
+        plt.xlabel('Relative difference between real and predicted areas')
+        plt.ylabel('Probability density')
 
         # Plot the CDF
         plt.subplot(1, 2, 2)
-        plt.plot(bin_edges[1:], cdf, marker='o')
+        plt.plot(bin_edges[1:], cdf)
         plt.title('Area percent error CDF')
-        plt.xlabel('Value')
-        plt.ylabel('Cumulative Probability')
+        plt.suptitle('Figure X: PDF and CDF of floe area error for true positive identified floes')
+        plt.xlabel('Relative difference between real and predicted areas')
+        plt.ylabel('Cumulative probability')
 
         plt.savefig(dir_name + '/area_error_tp_pdf_cdf.png', dpi=300)
 
-        if fsd:
-            fsd_for_images(processed_floes, dir_name)
-
         area_plots(processed_floes, dir_name)
+
+        qualitative_effects(processed_floes, dir_name)
+
+
+        if fsd:
+            fsd_plot = fsd_for_images(processed_floes, dir_name)
+            
 
     print('done.')
 
-    return pix_params, floe_params
+    return pix_params, floe_params, fsd_plot
 
 
 def area_plots(processed_floes: str, dir_name: str):
@@ -263,6 +305,7 @@ def area_plots(processed_floes: str, dir_name: str):
             plt.ylabel('Predicted floe area (px)')
             plt.title(f"Predicted vs. real floe area  for case {image['case_number']}, {image['satellite'].title()}")
             plt.legend(prop={'size': 7})
+            plt.axis([0, max(x_line), 0, max(y_line2)])
 
             # Show plot
             loc_dir = dir_name + '/' + case
@@ -270,6 +313,7 @@ def area_plots(processed_floes: str, dir_name: str):
                 os.mkdir(loc_dir)
 
             plt.savefig(f"{loc_dir}/{case}_area_comparisons.png", dpi=300)
+            plt.close()
             
 
         except TypeError:
@@ -302,16 +346,101 @@ def area_plots(processed_floes: str, dir_name: str):
         plt.ylabel('Predicted floe area (px)')
         plt.title(f"Figure X: Predicted vs. real floe area for all cases")
         plt.legend(prop={'size': 7})
+        plt.axis([0, max(x_line), 0, max(y_line2)])
 
         # Show plot
         if not os.path.exists(dir_name):
             os.mkdir(dir_name)
 
         plt.savefig(f"{dir_name}/area_comparisons.png", dpi=300)
+        plt.close()
 
     except TypeError as e:
         plt.close()
         print('Unable to generate predicted area vs. real area plot for algorithm')
+
+
+def qualitative_effects(processed_floes: str, dir_name: str):
+
+    if not os.path.exists(dir_name):
+        os.mkdir(dir_name)
+
+    for _, image in processed_floes.items():
+        image['f1_obj'] = 2 * image['t_pos_floes'] / (2 * image['t_pos_floes'] + image['f_pos_floes'] + image['f_neg_floes'])
+
+    landfast_types = ["yes", "no"]
+    landfast_f1s = []
+    for label in landfast_types:
+        landfast_f1s.append(np.mean([x['f1_obj'] for x in processed_floes.values() if x['visible_landfast_ice'] == label]))
+
+    cloud_types = list(set([x['cloud_category'] for x in processed_floes.values()]))
+    cloud_f1s = []
+    for type in cloud_types:
+        cloud_f1s.append(np.mean([x['f1_obj'] for x in processed_floes.values() if x['cloud_category'] == type]))
+
+    artifact_types = ["yes", "no"]
+    artifact_f1s = []
+    for type in artifact_types:
+        artifact_f1s.append(np.mean([x['f1_obj'] for x in processed_floes.values() if x['artifacts'] == type]))
+
+    # floes_types = ["yes", "no"]
+    # floes_f1s = []
+    # for type in floes_types:
+    #     floes_f1s.append(np.mean([x['f1_obj'] for x in processed_floes.values() if x['visible_floes'] == type]))
+
+
+    _, axs = plt.subplots(1, 3, figsize=(15, 5))
+
+    axs = axs.flatten()
+
+    bar_width = 0.4
+
+    axs[1].bar(artifact_types, artifact_f1s, width=bar_width)
+    axs[1].set_xlabel('Artifacts Present?')
+    axs[1].set_ylabel('Average image F1 Score')
+
+    axs[0].bar(landfast_types, landfast_f1s, width=bar_width)
+    axs[0].set_xlabel('Landfast Ice Present?')
+    axs[0].set_ylabel('Average image F1 Score')
+
+    axs[2].bar(cloud_types, cloud_f1s, width=bar_width)
+    axs[2].set_xlabel('Cloud Type Present?')
+    axs[2].set_ylabel('Average image F1 Score')
+
+    plt.suptitle('Figure X: Algorithm performance vs. qualitatively assessed image properties')
+
+
+    # Display the bar chart
+    plt.savefig(f"{dir_name}/qualitative.png", dpi=300)
+    plt.close()
+
+    f1s = []
+    cloud_fracs = []
+    for value in processed_floes.values():
+        f1s.append(value['f1_obj'])
+        cloud_fracs.append(value['cloud_fraction'])
+
+    m1, b1 = np.polyfit(cloud_fracs, f1s, 1)
+    x_line = np.array([min(cloud_fracs), max(cloud_fracs)])
+    y_line1 = m1 * x_line + b1
+    corr_matrix1 = round(np.corrcoef(cloud_fracs, f1s)[0, 1], 4)
+
+    plt.figure(figsize=(6, 5))
+
+    # Plot the scatter plot and line of best fit
+    plt.scatter(cloud_fracs, f1s, label='Matched Floes')
+    plt.plot(x_line, y_line1, color='red', label=f"Line of Best Fit: F(x) = {round(m1, 3)}x + {round(b1, 3)}, R = {corr_matrix1}")
+
+    # Add labels and legend
+    plt.xlabel('Cloud fraction')
+    plt.ylabel('F1 Score')
+    plt.title(f"Figure X: Image F1 score vs. image cloud fraction")
+    plt.legend(prop={'size': 7})
+
+    plt.savefig(f"{dir_name}/cloud_cover_f1.png", dpi=300)
+    plt.close()
+
+    return
 
 
 def fsd_for_images(processed_floes: str, dir_name: str):
@@ -397,8 +526,6 @@ def fsd_for_images(processed_floes: str, dir_name: str):
     sys.stderr = sys.__stderr__
 
     try:
-        plt.figure(figsize=(5, 5))
-        
         fig2 = actual_results.plot_pdf(color='b', linewidth=2, label='Manual FSD')
         actual_results.power_law.plot_pdf(color='b', linestyle='--', ax=fig2, label=f"Manual fit line, alpha = {str(round(man_alpha, 3))}")
         fig2 = predicted_results.plot_pdf(color='r', linewidth=2, ax=fig2, label='IFT FSD, all floes')
@@ -410,7 +537,7 @@ def fsd_for_images(processed_floes: str, dir_name: str):
         except ValueError:
             pass
         
-        plt.title(f"FSD for all cases")
+        plt.title(f"Figure X: FSD for all cases, filtered IFT")
         plt.xlabel('Floe area x')
         plt.ylabel('Probability P(x)')
 
@@ -425,22 +552,25 @@ def fsd_for_images(processed_floes: str, dir_name: str):
 
         plt.close()
 
+        return fig2
+
     except ValueError:
         plt.close()
 
 
 
-def calculate_performance_params(values, object_wise: bool):
+def calculate_performance_params(values, object_wise: bool, beta: float = 1.0):
     tp, tn, fp, fn = values['t_pos'], values['t_neg'], values['f_pos'], values['f_neg']
 
-    tpr = (tp + fn) and tp / (tp + fn) or 0
+    tpr = (tp + fn) and tp / (tp + fn) or 0 # recall
     tnr = (tn + fp) and tn / (tn + fp) or 0 # not for obia
-    ppv = (tp + fp) and tp / (tp + fp) or 0
+    ppv = (tp + fp) and tp / (tp + fp) or 0 # precision
     npv = (tn + fn) and tn / (tn + fn) or 0 # not for obia
     
     accuracy = (tp + tn + fp + fn) and (tp + tn) / (tp + tn + fp + fn) or 0 # not for obia
     balanced_accuracy = (tpr + tnr) / 2 # not for obia
     f1 = (ppv + tpr) and (2 * ppv * tpr) / (ppv + tpr) or 0
+    fb = (ppv + tpr) and (1 + beta**2) * (ppv * tpr)/((beta**2 * ppv) + tpr) or 0
     fowlkes_mallows = np.sqrt(ppv * tpr)
 
     fpr, FOR = 1 - tnr, 1 - npv # not for obia
@@ -454,9 +584,9 @@ def calculate_performance_params(values, object_wise: bool):
 
     if not object_wise:
 
-        return {'tpr': tpr, 'tnr': tnr, 'ppv': ppv, 'npv': npv, 'acc': accuracy, "bal_acc": balanced_accuracy, 'f1': f1,
-                'fowlkes-mallows': fowlkes_mallows, 'mcc': mcc, 'lr_pos': lr_pos, 'lr_neg': lr_neg, 'dor': dor, 
-                'iou': iou}
+        return {'Pixel TPR': tpr, 'Pixel TNR': tnr, 'Pixel PPV': ppv, 'Pixel NPV': npv, 'Pixel Accuracy': accuracy, "Pixel Balanced Accuracy": balanced_accuracy, 'Pixel F1': f1,
+                'Pixel Fowlkes-Mallows': fowlkes_mallows, 'Pixel MCC': mcc, 'Pixel Pos. Likelihood Ratio': lr_pos, 'Pixel Neg. Likelihood Ratio': lr_neg, 'Pixel Diagnostic Odds Ratio': dor, 
+                'Pixel IoU': iou, "Pixel FB": fb}
 
-    return {'tpr': tpr, 'ppv': ppv, 'f1': f1, 'fowlkes-mallows': fowlkes_mallows, 'iou': iou}
+    return {'Floe TPR': tpr, 'Floe PPV': ppv, 'Floe F1': f1, 'Floe Fowlkes-Mallows': fowlkes_mallows, 'Floe IoU': iou, "Floe FB": fb}
     
