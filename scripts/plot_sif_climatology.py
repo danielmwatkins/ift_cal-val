@@ -15,15 +15,17 @@ colors = {region: c['color'] for region, c in zip(
             pplt.Cycle('dark2', len(regions)))}
 linestyles = {region: ls for region, ls in zip(regions.index,
                         ['-', '-.', '--', '-', '-.', '--', '-.', '-', '--'])}
-
+regions = regions.sort_values('center_lon')
+regions['idx_num'] = np.arange(1, len(regions)+1)
 fig, ax = pplt.subplots(width=6, height=4)
-for region in colors:
+for region in regions.index:
     ax.plot(sic_timeseries[region].groupby(sic_timeseries[region].index.dayofyear).median(),
             shadedata=[sic_timeseries[region].groupby(sic_timeseries[region].index.dayofyear).quantile(0.25),
                        sic_timeseries[region].groupby(sic_timeseries[region].index.dayofyear).quantile(0.75)],
             fadedata=[sic_timeseries[region].groupby(sic_timeseries[region].index.dayofyear).quantile(0.1),
                        sic_timeseries[region].groupby(sic_timeseries[region].index.dayofyear).quantile(0.9)],
-            c=colors[region], lw=2, ls=linestyles[region], label=regions.loc[region, 'print_title'])
+            c=colors[region], lw=2, ls=linestyles[region], 
+            label='({n}) {t}'.format(n=regions.loc[region, 'idx_num'], t=regions.loc[region, 'print_title']))
 ax.legend(loc='b', ncols=3,lw=2, order='F')
 ax.format(ylabel='Sea Ice Fraction', xlabel='Day of Year', ylim=(0, 1),
          ylocator=np.arange(0.1, 0.91, 0.2))
