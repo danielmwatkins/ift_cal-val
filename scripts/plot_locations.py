@@ -28,8 +28,6 @@ for idx, region, lat, lon in zip(range(len(regions)), regions.index, regions.cen
 
     xbox = np.array(regions.loc[region, ['left_x', 'left_x', 'right_x', 'right_x', 'left_x']].astype(float))
     ybox = np.array(regions.loc[region, ['lower_y', 'top_y', 'top_y', 'lower_y', 'lower_y']].astype(float))
-
-    title =
     
     ax.plot(xbox, ybox, transform=ccrs.CRS('epsg:3413'),
             label='({n}) {t}'.format(n=idx + 1, t=regions.loc[region, 'print_title']), 
