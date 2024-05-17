@@ -48,5 +48,51 @@ Key properties that we need to account for, in no particular order
 ## Validation data
 The validation data consists of a set of 100 km by 100 km images, randomly sampled across spring and summer months, within 9 regions of the Arctic Ocean and its marginal seas. The folder `data/validation_tables` contains two folders. In the folder `data/validation_tables/quantitative_assessment_tables/`, there are CSV files for each region as well as a file `all_100km_cases.csv` that is a simple concatenation of the other files. The CSV files include case metadata, including a case number, the file name (`long_name`), the region name, start and end dates, satellite name, and image size. The quantitative assessment results are "yes/no" data for `visible_sea_ice`, `visible_landfast_ice`, `visible_floes`, and  `artifacts` (errors in the image, missing data, or obvious overlap of different images), manual assessment of cloud fraction (0 to 1, to the nearest 0.1), and cloud category (none, thin, scattered, opaque). These values were first estimated by `qa_analyst`, then checked by `qa_reviewer`. Adjustments to the values in the first assessment are noted in `notes`. The columns `fl_analyst` and `fl_reviewer` indicate the analysts who manually labeled the images and who reviewed and/or corrected the manual labeling. 
 
-The floe labeling task was carried out by first selecting all the images where the quantitative assessment indicated visible ice floes, then randomly dividing the images between the 5 analysts. The images in Baffin Bay were each labeled twice to provide a measure of the subjectivity in floe labeling. Floe labeling ass
+The floe labeling task was carried out by first selecting all the images where the quantitative assessment indicated visible ice floes, then randomly dividing the images between the 5 analysts. The images in Baffin Bay were each labeled twice to provide a measure of the subjectivity in floe labeling. Floe labeling assignments
 
+
+# Next steps
+- Calculate fraction of land pixels using the actual land mask
+- Calculate cloud fraction using the false color images, save the cloud mask
+- Download additional MASIE images based on the updated sample selection
+- Calculate ice fraction from MASIE image, save MASIE subset with the validation images
+- Update the image download section and access the additional imagery
+- Updating the data tables for Google Drive with the new samples
+- Make list of new samples that need to have the quantitative assessment done on them
+- Make a list of all the remaining images for floe labeling
+- Set up CSV files to run the extended cases on Oscar
+- Set up script to copy and rename the falsecolor and truecolor images from the Oscar runs into the validation imagery folders
+
+
+# Data file structure (adjust with correct structure)
+Small images are saved in the github repository currently for convenience. During project development, we are storing the full set of images and output on Google Drive and on files.brown.edu, and will eventually place the data in a repository (probably the Brown Data Repository).  
+
+```
+<data_loc>
+├── validation_images
+│   ├── <region_name>
+│   │   ├── <dimensions>
+│   │   │   ├── <case_number>_<region_name>_<startdate>
+│   │   │   │   ├── landmask.tiff
+│   │   │   │   ├── truecolor
+│   │   │   │   │   ├── YYYYMMDD.<satellite>.truecolor.250m.tiff
+│   │   │   │   ├── falsecolor
+│   │   │   │   │   ├── YYYYMMDD.<satellite>.falsecolor.250m.tiff
+│   │   │   │   ├── labeled
+│   │   │   │   │   ├── <case_number>_<region_name>_<dimensions>_<satellite>_labeled_floes.png
+│   │   │   │   │   ├── <case_number>_<region_name>_<dimensions>_<satellite>_labeled_floes.tiff
+│   │   │   │   │   ├── <case_number>_<region_name>_<dimensions>_<satellite>_labeled_landfast.png
+│   │   │   │   │   ├── <case_number>_<region_name>_<dimensions>_<satellite>_labeled_landfast.tiff
+│   │   │   │   │   ├── <case_number>_<region_name>_<dimensions>_<satellite>.psd
+│   │   │   │   ├── ift_results
+│   │   │   │   │   ├── landmasks
+│   │   │   │   │   ├── preprocess
+│   │   │   │   │   │   ├── hdf5-files
+│   │   │   │   │   │   ├── filenames.jls
+│   │   │   │   │   │   ├── floe_props.jls
+│   │   │   │   │   │   ├── passtimes.jls
+│   │   │   │   │   │   ├── segmented_floes.jls
+│   │   │   │   │   │   ├── timedeltas.jls
+│   │   │   │   │   ├── soit
+│   │   │   │   │   ├── tracker
+```

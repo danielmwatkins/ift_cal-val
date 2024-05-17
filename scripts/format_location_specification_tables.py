@@ -6,9 +6,7 @@ import pandas as pd
 import pyproj
 import numpy as np
 
-overview = pd.read_csv('../data/cca_cases_overview.csv')
-overview = overview.loc[overview.satellite == 'aqua'] # Only need one row per date, the pipeline will download both aqua and terra
-overview['location'] = ''
+overview = pd.read_csv('../data/metadata/validation_dataset_case_list.csv')
 overview.rename({'start_date': 'startdate'}, axis=1, inplace=True)
 overview['dx'] = 100 # km
 overview['dy'] = 100 # km
@@ -64,6 +62,10 @@ new_columns = ['top_left_lat', 'top_left_lon', 'lower_left_lat', 'lower_left_lon
 for c in new_columns:
     overview[c] = np.nan
 
+# Add end date column for 1 day later
+end_dates = [(pd.to_datetime(x) + pd.to_timedelta('1D')).strftime('%Y-%m-%d') for x in overview.startdate]
+overview['enddate'] = end_dates
+
 for idx in overview.index:
     lon = overview.loc[idx, 'center_lon']
     lat = overview.loc[idx, 'center_lat']
@@ -78,25 +80,23 @@ for idx in overview.index:
     for c in new_columns:
         overview.loc[idx, c] = corner_coords[c]
 
-# Add end date column for 1 day later
-end_dates = [(pd.to_datetime(x) + pd.to_timedelta('1D')).strftime('%Y-%m-%d') for x in overview.startdate]
-overview['enddate'] = end_dates
-
 # Generate a case_id that is unique to each sample
 for idx in overview.index:
     dx = overview.loc[idx, 'dx']
     dy = overview.loc[idx, 'dy']
-    imsize = str(dx) + 'km_by_' + str(dy) + 'km'
+    imsize = str(dx) + 'km'
     region = overview.loc[idx, 'region']
     startdate = overview.loc[idx, 'startdate']
     enddate = overview.loc[idx, 'enddate']
-    case_id = '-'.join([region, imsize, startdate.replace('-', ''), enddate.replace('-', '')])
+    cn = overview.loc[idx, 'case_number']
+    case_id = '-'.join([str(cn).zfill(3), region, imsize, startdate.replace('-', ''), enddate.replace('-', '')])
     overview.loc[idx, 'location'] = case_id
 
 # Finally, format to the specifications needed for IFT-pipeline
 columns = ['location', 'center_lat', 'center_lon', 'top_left_lat', 'top_left_lon',
            'lower_right_lat', 'lower_right_lon', 'left_x', 'right_x', 'lower_y',
            'top_y', 'startdate', 'enddate']
+
 for region, group in overview.groupby('region'):
     overview.loc[overview.region==region, columns].to_csv(
-        '../data/location_specifications/' + region + '_100km_cases.csv', index=False)
+        '../data/ift_data/ift_case_definitions/' + region + '_100km_cases.csv', index=False)
