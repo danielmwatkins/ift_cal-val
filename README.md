@@ -1,10 +1,5 @@
-# Ice Floe Tracker Calibration and Validation
-Code and data supporting the calibration and validation of the Ice Floe Tracker algorithm. 
-
-The goal of the calibration and validation process is to identify the best choice of parameters for the algorithm, and to quantify uncertainty and biases in the data. In order to do this, we need to develop a set of metrics that measure the performance of the algorithm. The set of parameters that minimizes the error in the set of metrics is considered the best choice. It is not expected that the optimal parameter set reduces all the uncertainty to zero, of course, so an additional step is to report the error metrics with the optimal paramter set. For that to be a valid measure of uncertainty, though, we need to maintain separation between testing and training data. This may require increasing the sample size -- time will tell.
-
-TBD: Overview of IFT algorithm. Stages of the algorithm that need calibrating, and what knobs we can turn.  
-TBD: Overview of the IFT output. What comes out of the algorithm, and what do we need to know to use the data?
+# Ice Floe Tracker Calibration and Validation, Part One
+This project has three aims: (1) creation of a manually labeled validation dataset, (2) implementation of appropriate metrics for segmentation evaluation, and (3) application of the dataset and the metrics for creation of a classifier to remove false positives from ice floe segmentation results.
 
 ## Software setup
 The calibration and validation code includes both Python and Julia scripts. The file `cal-val.yml` contains a list of the package dependencies. Using `micromamba`, you can create an environment with the command 
@@ -15,6 +10,14 @@ The package `proplot` is used for figures. There are issues with `proplot` for n
 
 For Julia, `IceFloeTracker.jl` requires at least Julia 1.9. Instructions for installing IFT are on the IFT github repository.
 TBD: Check whether we need to explicitly include `iJulia` in the `micromamba` yaml file in order to run Julia notebooks.
+
+
+
+The goal of the calibration and validation process is to identify the best choice of parameters for the algorithm, and to quantify uncertainty and biases in the data. In order to do this, we need to develop a set of metrics that measure the performance of the algorithm. The set of parameters that minimizes the error in the set of metrics is considered the best choice. It is not expected that the optimal parameter set reduces all the uncertainty to zero, of course, so an additional step is to report the error metrics with the optimal paramter set. For that to be a valid measure of uncertainty, though, we need to maintain separation between testing and training data. This may require increasing the sample size -- time will tell.
+
+TBD: Overview of IFT algorithm. Stages of the algorithm that need calibrating, and what knobs we can turn.  
+TBD: Overview of the IFT output. What comes out of the algorithm, and what do we need to know to use the data?
+
 
 ## Sample selection
 Sample selection is described and carried out in the Jupyter notebook `sample_selection.ipynb`. We sample scenes from 9 regions spanning the circumpolar Arctic, as seen in the figure below.
