@@ -21,6 +21,13 @@ linestyles = {region: ls for region, ls in zip(regions.index,
 regions['print_title'] = [c.replace('_', ' ').title().replace('Of', 'of') for c in regions.index]
 regions = regions.sort_values('center_lon')
 
+for idx, row in regions.iterrows():
+    if row.print_title == 'Barents Kara Seas':
+        regions.loc[idx, 'print_title'] = 'Barents-Kara Seas'
+    if row.print_title == 'Chukchi East Siberian Seas':
+        regions.loc[idx, 'print_title'] = 'Chukchi-East Siberian Seas'
+    
+
 fig, ax = pplt.subplots(width=4.5, proj='npstere', proj_kw={'lon_0': -45})
 ax.format(land=True, color='k', boundinglat=52, landzorder=0, latmax=90)
 

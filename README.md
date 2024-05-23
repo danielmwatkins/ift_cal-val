@@ -2,18 +2,24 @@
 This project has three aims: (1) creation of a manually labeled validation dataset, (2) implementation of appropriate metrics for segmentation evaluation, and (3) application of the dataset and the metrics for creation of a classifier to remove false positives from ice floe segmentation results.
 
 ## Software setup
-The calibration and validation code includes both Python and Julia scripts. The file `cal-val.yml` contains a list of the package dependencies. Using `micromamba`, you can create an environment with the command 
+The calibration and validation code includes both Python and Julia scripts. The file `cal-val.yml` contains a list of the package dependencies. Using `conda`, you can create an environment with the command 
 
-```> micromamba create -f cal-val.yml```
+```> conda env create -f cal-val.yml```
 
-The package `proplot` is used for figures. There are issues with `proplot` for newer versions of `matplotlib`, hence the version is set as 0.9.7 for `proplot` and 3.4.3 for `matplotlib`. If a newer version of `scikit-image` is needed, we may need to choose a different tool for figure creation.
+The package `proplot` is used for figures. There are issues with `proplot` for newer versions of `matplotlib`, hence the version is set as 0.9.7 for `proplot` and 3.4.3 for `matplotlib`, and Python is set to version 3.9.13. If a newer version of `scikit-image` is needed, we may need to choose a different tool for figure creation.
 
 For Julia, `IceFloeTracker.jl` requires at least Julia 1.9. Instructions for installing IFT are on the IFT github repository.
-TBD: Check whether we need to explicitly include `iJulia` in the `micromamba` yaml file in order to run Julia notebooks.
+TBD: Check whether we need to explicitly include `iJulia` in the `conda` yaml file in order to run Julia notebooks. What are the minimal setup steps to get a Julia notebook up and running?
+
+The Ice Floe Tracker algorithm is encoded in the ice-floe-tracker-pipeline repository for use in the Brown University computing cluster, Oscar. Scripts here are used to prepare specification files for running the algorithm, and a portion of the output is stored locally.
+
+## Creating the validation dataset
+The goal of the calibration and validation process is to identify the best choice of parameters for the algorithm, and to quantify uncertainty and biases in the data. A crucial first step is the set of "truth values" for 
 
 
 
-The goal of the calibration and validation process is to identify the best choice of parameters for the algorithm, and to quantify uncertainty and biases in the data. In order to do this, we need to develop a set of metrics that measure the performance of the algorithm. The set of parameters that minimizes the error in the set of metrics is considered the best choice. It is not expected that the optimal parameter set reduces all the uncertainty to zero, of course, so an additional step is to report the error metrics with the optimal paramter set. For that to be a valid measure of uncertainty, though, we need to maintain separation between testing and training data. This may require increasing the sample size -- time will tell.
+
+In order to do this, we need to develop a set of metrics that measure the performance of the algorithm. The set of parameters that minimizes the error in the set of metrics is considered the best choice. It is not expected that the optimal parameter set reduces all the uncertainty to zero, of course, so an additional step is to report the error metrics with the optimal paramter set. For that to be a valid measure of uncertainty, though, we need to maintain separation between testing and training data. This may require increasing the sample size -- time will tell.
 
 TBD: Overview of IFT algorithm. Stages of the algorithm that need calibrating, and what knobs we can turn.  
 TBD: Overview of the IFT output. What comes out of the algorithm, and what do we need to know to use the data?

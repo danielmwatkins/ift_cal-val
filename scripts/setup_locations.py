@@ -20,10 +20,10 @@ data = [['bering_strait', 65,  -170],
         ['hudson_bay', 60, -83],
         ['baffin_bay', 75, -65],        
         ['greenland_sea', 77,   -10],
-        ['barents-kara_seas', 75,   54],        
+        ['barents_kara_seas', 75,   54],        
         ['sea_of_okhostk', 58,   148],
         ['laptev_sea',  75, 125],
-        ['chukchi-east_siberian_sea', 75,   166]]
+        ['chukchi_east_siberian_seas', 75,   166]]
 
 def find_box(center_lon, center_lat, length_x, length_y, return_coords='stere'):
     """Find the coordinates of each corner for a box centered at center_lon,
@@ -130,4 +130,4 @@ locations_pretty.set_index('print_title', drop=True, inplace=True)
 print(locations_pretty.loc[:, ['Latitude', 'Longitude', '$\Delta X$ (km)', '$\Delta Y$ (km)']].style.to_latex(hrules=True))
     
 # Save the names and mid points
-locations.loc[:, ['center_lat', 'center_lon', 'center_x', 'center_y', 'left_x', 'right_x', 'lower_y', 'top_y']].to_csv('../data/region_definitions.csv')
+locations.loc[:, ['center_lat', 'center_lon', 'center_x', 'center_y', 'left_x', 'right_x', 'lower_y', 'top_y']].to_csv('../data/metadata/region_definitions.csv')
