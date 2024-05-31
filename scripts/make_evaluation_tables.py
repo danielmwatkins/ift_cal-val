@@ -7,9 +7,10 @@ import pandas as pd
 
 results_loc = '../data/ift_data/'
 case_loc = '../data/ift_data/ift_case_definitions/'
-scenarios = ['ift_pipeline_default', 'ift_pipeline_minarea_100px']
-regions = ['baffin_bay','bering_strait', 'beaufort_sea', 'barents-kara_seas', 'chukchi-east_siberian_sea',
-        'greenland_sea', 'hudson_bay', 'laptev_sea', 'sea_of_okhostk']
+scenarios = ['ift_pipeline_default']
+regions = ['baffin_bay','bering_strait', 'beaufort_sea', 'barents_kara_seas', 
+           'chukchi_east_siberian_seas', 'greenland_sea', 'hudson_bay',
+           'laptev_sea', 'sea_of_okhostk']
 
 for scenario in scenarios:
     save_loc = results_loc + scenario + '/eval_tables/'
@@ -29,8 +30,8 @@ for scenario in scenarios:
             df_cases[step] = 'NA'
         
         for case in df_cases.index:
-            if case in os.listdir(os.path.join(results_loc, scenario, 'ift_results', region)):
-                case_path = os.path.join(results_loc, scenario, 'ift_results', region, case)
+            if case in os.listdir(os.path.join(results_loc, scenario, region)):
+                case_path = os.path.join(results_loc, scenario, region, case)
                 
                 # check soit successes    
                 if 'soit' in os.listdir(case_path):
