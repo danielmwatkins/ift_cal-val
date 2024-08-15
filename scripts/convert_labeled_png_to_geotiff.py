@@ -9,7 +9,7 @@ import pandas as pd
 # Example:
 png_loc = '../data/validation_images/labeled_floes_png/'
 save_loc = '../data/validation_images/labeled_floes_geotiff/'
-ref_loc = '../data/validation_images/truecolor/'
+ref_loc = '../data/modis/truecolor/'
 
 labeled_images = [f for f in os.listdir(png_loc) if 'png' in f]
 
@@ -23,7 +23,6 @@ for lb_image in labeled_images:
             sat = sat.replace('.png', '')
             break
     ref_image = '_'.join([cn, region, '100km', date]) + '.' + sat + '.truecolor.250m.tiff'
-    
 
     with rasterio.open(ref_loc + ref_image) as src_dataset:
         
