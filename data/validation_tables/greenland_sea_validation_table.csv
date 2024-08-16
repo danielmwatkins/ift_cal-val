@@ -1,43 +1,43 @@
-case_number,long_name,region,start_date,end_date,satellite,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction,cloud_category,artifacts,qa_analyst,qa_reviewer,fl_analyst,fl_reviewer,notes
-245,245-greenland_sea-100km-20030807-20030808,greenland_sea,2003-08-07,2003-08-08,aqua,yes,no,yes,0.7,scattered,yes,minki,ellen,,,landfast ice and artifacts added by dmw
-245,245-greenland_sea-100km-20030807-20030808,greenland_sea,2003-08-07,2003-08-08,terra,yes,no,yes,0.8,thin,no,minki,ellen,,,changed to 0.4 to 0.8
-247,247-greenland_sea-100km-20040623-20040624,greenland_sea,2004-06-23,2004-06-24,aqua,no,no,yes,0.9,thin,no,minki,ellen,,,increased to 0.9
-247,247-greenland_sea-100km-20040623-20040624,greenland_sea,2004-06-23,2004-06-24,terra,no,no,no,0.9,scattered,no,minki,ellen,,,increased to 0.10
-255,255-greenland_sea-100km-20050919-20050920,greenland_sea,2005-09-19,2005-09-20,aqua,no,no,no,0.8,opaque,yes,minki,ellen,,,1 to 0.8
-255,255-greenland_sea-100km-20050919-20050920,greenland_sea,2005-09-19,2005-09-20,terra,no,no,no,0.9,opaque,no,minki,ellen,,,1 to 0.9
-256,256-greenland_sea-100km-20060616-20060617,greenland_sea,2006-06-16,2006-06-17,aqua,yes,no,yes,0.9,thin,yes,minki,ellen,,,changed from 1 to 0.9
-256,256-greenland_sea-100km-20060616-20060617,greenland_sea,2006-06-16,2006-06-17,terra,yes,no,yes,1,thin,no,minki,ellen,,,
-258,258-greenland_sea-100km-20090314-20090315,greenland_sea,2009-03-14,2009-03-15,aqua,no,yes,no,0.7,scattered,yes,minki,ellen,,,
-258,258-greenland_sea-100km-20090314-20090315,greenland_sea,2009-03-14,2009-03-15,terra,no,yes,no,0.7,scattered,no,minki,ellen,,,
-261,261-greenland_sea-100km-20100728-20100729,greenland_sea,2010-07-28,2010-07-29,aqua,yes,no,yes,0.2,thin,no,minki,ellen,,,
-261,261-greenland_sea-100km-20100728-20100729,greenland_sea,2010-07-28,2010-07-29,terra,yes,no,yes,0.3,thin,no,minki,ellen,,,
-263,263-greenland_sea-100km-20120406-20120407,greenland_sea,2012-04-06,2012-04-07,aqua,yes,no,yes,0.2,thin,no,minki,ellen,,,
-263,263-greenland_sea-100km-20120406-20120407,greenland_sea,2012-04-06,2012-04-07,terra,yes,no,yes,0.2,thin,no,minki,ellen,,,
-270,270-greenland_sea-100km-20120508-20120509,greenland_sea,2012-05-08,2012-05-09,aqua,no,no,no,0.9,opaque,no,minki,ellen,,,
-270,270-greenland_sea-100km-20120508-20120509,greenland_sea,2012-05-08,2012-05-09,terra,no,no,no,0.8,opaque,no,minki,ellen,,,
-273,273-greenland_sea-100km-20130521-20130522,greenland_sea,2013-05-21,2013-05-22,aqua,no,no,no,1,opaque,no,minki,ellen,,,
-273,273-greenland_sea-100km-20130521-20130522,greenland_sea,2013-05-21,2013-05-22,terra,yes,no,yes,0.7,opaque,no,minki,ellen,,,
-275,275-greenland_sea-100km-20150405-20150406,greenland_sea,2015-04-05,2015-04-06,aqua,yes,no,no,0.4,scattered,no,minki,ellen,,,increased to 0.4
-275,275-greenland_sea-100km-20150405-20150406,greenland_sea,2015-04-05,2015-04-06,terra,yes,no,no,0.8,opaque,no,minki,ellen,,,
-276,276-greenland_sea-100km-20150430-20150501,greenland_sea,2015-04-30,2015-05-01,aqua,yes,no,yes,0.9,scattered,no,minki,ellen,,,changed thin to scattered
-276,276-greenland_sea-100km-20150430-20150501,greenland_sea,2015-04-30,2015-05-01,terra,yes,no,yes,0.9,scattered,no,minki,ellen,,,changed thin to scattered
-277,277-greenland_sea-100km-20150513-20150514,greenland_sea,2015-05-13,2015-05-14,aqua,yes,no,no,0.7,thin,no,minki,ellen,,,
-277,277-greenland_sea-100km-20150513-20150514,greenland_sea,2015-05-13,2015-05-14,terra,yes,no,no,0.7,thin,no,minki,ellen,,,
-279,279-greenland_sea-100km-20160811-20160812,greenland_sea,2016-08-11,2016-08-12,aqua,no,no,no,1,opaque,no,minki,ellen,,,
-279,279-greenland_sea-100km-20160811-20160812,greenland_sea,2016-08-11,2016-08-12,terra,yes,no,yes,0.8,opaque,no,minki,ellen,,,
-281,281-greenland_sea-100km-20170805-20170806,greenland_sea,2017-08-05,2017-08-06,aqua,yes,yes,yes,1,thin,no,minki,ellen,emma,daniel,added a few floes
-281,281-greenland_sea-100km-20170805-20170806,greenland_sea,2017-08-05,2017-08-06,terra,yes,yes,yes,1,thin,no,minki,ellen,emma,daniel,added floes
-283,283-greenland_sea-100km-20180610-20180611,greenland_sea,2018-06-10,2018-06-11,aqua,yes,yes,yes,0.6,thin,no,minki,ellen,daniel,,
-283,283-greenland_sea-100km-20180610-20180611,greenland_sea,2018-06-10,2018-06-11,terra,yes,yes,yes,0.6,thin,no,minki,ellen,daniel,,
-286,286-greenland_sea-100km-20200318-20200319,greenland_sea,2020-03-18,2020-03-19,aqua,yes,no,yes,0.2,thin,no,minki,ellen,emma,daniel,added floes
-286,286-greenland_sea-100km-20200318-20200319,greenland_sea,2020-03-18,2020-03-19,terra,yes,no,yes,0.2,thin,no,minki,ellen,emma,daniel,added floes
-287,287-greenland_sea-100km-20210921-20210922,greenland_sea,2021-09-21,2021-09-22,aqua,yes,no,yes,1,opaque,yes,minki,ellen,,,
-287,287-greenland_sea-100km-20210921-20210922,greenland_sea,2021-09-21,2021-09-22,terra,yes,no,yes,0.8,opaque,yes,minki,ellen,,,
-288,288-greenland_sea-100km-20220316-20220317,greenland_sea,2022-03-16,2022-03-17,aqua,yes,no,no,0.8,thin,no,minki,ellen,,,
-288,288-greenland_sea-100km-20220316-20220317,greenland_sea,2022-03-16,2022-03-17,terra,yes,no,no,0.6,thin,yes,minki,ellen,,,
-290,290-greenland_sea-100km-20220723-20220724,greenland_sea,2022-07-23,2022-07-24,aqua,yes,no,yes,0.8,opaque,no,minki,ellen,ethan,daniel,
-290,290-greenland_sea-100km-20220723-20220724,greenland_sea,2022-07-23,2022-07-24,terra,yes,no,yes,0.7,opaque,yes,minki,ellen,ethan,daniel,
-291,291-greenland_sea-100km-20220728-20220729,greenland_sea,2022-07-28,2022-07-29,aqua,yes,yes,yes,0.3,scattered,no,minki,ellen,,,
-291,291-greenland_sea-100km-20220728-20220729,greenland_sea,2022-07-28,2022-07-29,terra,yes,yes,yes,0.5,scattered,yes,minki,ellen,,,changed from 0.5 to 0.6
-292,292-greenland_sea-100km-20220919-20220920,greenland_sea,2022-09-19,2022-09-20,aqua,no,no,no,1,opaque,yes,minki,ellen,,,
-292,292-greenland_sea-100km-20220919-20220920,greenland_sea,2022-09-19,2022-09-20,terra,no,no,no,1,opaque,yes,minki,ellen,,,
+case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction_manual,cloud_category_manual,artifacts,qa_analyst,qa_reviewer,fl_analyst,fl_reviewer,notes
+245,greenland_sea,2003-08-07,aqua,yes,no,yes,0.7,scattered,yes,minki,ellen,daniel,,landfast ice and artifacts added by dmw
+245,greenland_sea,2003-08-07,terra,yes,no,yes,0.8,thin,no,minki,ellen,daniel,,changed to 0.4 to 0.8
+247,greenland_sea,2004-06-23,aqua,no,no,yes,0.9,thin,no,minki,ellen,daniel,,increased to 0.9
+247,greenland_sea,2004-06-23,terra,no,no,no,0.9,scattered,no,minki,ellen,daniel,,increased to 0.10
+255,greenland_sea,2005-09-19,aqua,no,no,no,0.8,opaque,yes,minki,ellen,,,1 to 0.8
+255,greenland_sea,2005-09-19,terra,no,no,no,0.9,opaque,no,minki,ellen,,,1 to 0.9
+256,greenland_sea,2006-06-16,aqua,yes,no,yes,0.9,thin,yes,minki,ellen,,,changed from 1 to 0.9
+256,greenland_sea,2006-06-16,terra,yes,no,yes,1,thin,no,minki,ellen,,,
+258,greenland_sea,2009-03-14,aqua,no,yes,no,0.7,scattered,yes,minki,ellen,,,
+258,greenland_sea,2009-03-14,terra,no,yes,no,0.7,scattered,no,minki,ellen,,,
+261,greenland_sea,2010-07-28,aqua,yes,no,yes,0.2,thin,no,minki,ellen,,,
+261,greenland_sea,2010-07-28,terra,yes,no,yes,0.3,thin,no,minki,ellen,,,
+263,greenland_sea,2012-04-06,aqua,yes,no,yes,0.2,thin,no,minki,ellen,,,
+263,greenland_sea,2012-04-06,terra,yes,no,yes,0.2,thin,no,minki,ellen,,,
+270,greenland_sea,2012-05-08,aqua,no,no,no,0.9,opaque,no,minki,ellen,,,
+270,greenland_sea,2012-05-08,terra,no,no,no,0.8,opaque,no,minki,ellen,,,
+273,greenland_sea,2013-05-21,aqua,no,no,no,1,opaque,no,minki,ellen,,,
+273,greenland_sea,2013-05-21,terra,yes,no,yes,0.7,opaque,no,minki,ellen,,,
+275,greenland_sea,2015-04-05,aqua,yes,no,no,0.4,scattered,no,minki,ellen,,,increased to 0.4
+275,greenland_sea,2015-04-05,terra,yes,no,no,0.8,opaque,no,minki,ellen,,,
+276,greenland_sea,2015-04-30,aqua,yes,no,yes,0.9,scattered,no,minki,ellen,,,changed thin to scattered
+276,greenland_sea,2015-04-30,terra,yes,no,yes,0.9,scattered,no,minki,ellen,,,changed thin to scattered
+277,greenland_sea,2015-05-13,aqua,yes,no,no,0.7,thin,no,minki,ellen,,,
+277,greenland_sea,2015-05-13,terra,yes,no,no,0.7,thin,no,minki,ellen,,,
+279,greenland_sea,2016-08-11,aqua,no,no,no,1,opaque,no,minki,ellen,,,
+279,greenland_sea,2016-08-11,terra,yes,no,yes,0.8,opaque,no,minki,ellen,,,
+281,greenland_sea,2017-08-05,aqua,yes,yes,yes,1,thin,no,minki,ellen,emma,daniel,added a few floes
+281,greenland_sea,2017-08-05,terra,yes,yes,yes,1,thin,no,minki,ellen,emma,daniel,added floes
+283,greenland_sea,2018-06-10,aqua,yes,yes,yes,0.6,thin,no,minki,ellen,daniel,,
+283,greenland_sea,2018-06-10,terra,yes,yes,yes,0.6,thin,no,minki,ellen,daniel,,
+286,greenland_sea,2020-03-18,aqua,yes,no,yes,0.2,thin,no,minki,ellen,emma,daniel,added floes
+286,greenland_sea,2020-03-18,terra,yes,no,yes,0.2,thin,no,minki,ellen,emma,daniel,added floes
+287,greenland_sea,2021-09-21,aqua,yes,no,yes,1,opaque,yes,minki,ellen,,,
+287,greenland_sea,2021-09-21,terra,yes,no,yes,0.8,opaque,yes,minki,ellen,,,
+288,greenland_sea,2022-03-16,aqua,yes,no,no,0.8,thin,no,minki,ellen,,,
+288,greenland_sea,2022-03-16,terra,yes,no,no,0.6,thin,yes,minki,ellen,,,
+290,greenland_sea,2022-07-23,aqua,yes,no,yes,0.8,opaque,no,minki,ellen,ethan,daniel,
+290,greenland_sea,2022-07-23,terra,yes,no,yes,0.7,opaque,yes,minki,ellen,ethan,daniel,
+291,greenland_sea,2022-07-28,aqua,yes,yes,yes,0.3,scattered,no,minki,ellen,daniel,,
+291,greenland_sea,2022-07-28,terra,yes,yes,yes,0.5,scattered,yes,minki,ellen,daniel,,changed from 0.5 to 0.6
+292,greenland_sea,2022-09-19,aqua,no,no,no,1,opaque,yes,minki,ellen,,,
+292,greenland_sea,2022-09-19,terra,no,no,no,1,opaque,yes,minki,ellen,,,
