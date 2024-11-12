@@ -1,4 +1,4 @@
-case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction_manual,cloud_category_manual,artifacts,qa_analyst,qa_reviewer,fl_analyst,fl_reviewer,notes
+case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction,cloud_category,artifacts,qa_analyst,qa_reviewer,fl_analyst,fl_reviewer,notes
 155,bering_strait,2004-06-20,aqua,yes,yes,no,0.7,thin,no,ethan,daniel,,,
 155,bering_strait,2004-06-20,terra,yes,yes,no,0.7,thin,no,ethan,daniel,,,
 157,bering_strait,2005-03-03,aqua,yes,yes,yes,1,thin,no,ethan,daniel,,,Add to floe_labeling
@@ -13,14 +13,14 @@ case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,vis
 168,bering_strait,2011-03-19,terra,no,no,no,0.9,opaque,no,ethan,daniel,,,Changed cloud fraction from 0.8 to 0.9
 170,bering_strait,2012-05-13,aqua,yes,no,yes,1,thin,no,ethan,daniel,,,Ice floes are actually visible here. Add to floe labeling.
 170,bering_strait,2012-05-13,terra,yes,no,yes,1,thin,no,ethan,daniel,,,
-171,bering_strait,2012-05-23,aqua,yes,yes,yes,1,thin,yes,ethan,daniel,,,
-171,bering_strait,2012-05-23,terra,yes,yes,yes,1,thin,no,ethan,daniel,,,
+171,bering_strait,2012-05-23,aqua,yes,yes,yes,1,thin,yes,ethan,daniel,daniel,,
+171,bering_strait,2012-05-23,terra,yes,yes,yes,1,thin,no,ethan,daniel,daniel,,
 172,bering_strait,2012-06-07,aqua,no,no,no,1,opaque,no,ethan,daniel,,,
 172,bering_strait,2012-06-07,terra,yes,yes,yes,0.8,thin,no,ethan,daniel,,,
 176,bering_strait,2013-04-23,aqua,yes,no,yes,0.7,thin,no,ethan,daniel,,,No landfast ice visible. Reduced cloud fraction from 1 to 0.7
 176,bering_strait,2013-04-23,terra,yes,no,yes,0.8,thin,no,ethan,daniel,,,No landfast ice visible. Reduced cloud fraction from 1 to 0.8
-178,bering_strait,2015-03-20,aqua,yes,no,yes,0.9,thin,no,ethan,daniel,,,Reduced cloud fraction from 1 to 0.9. No landfast ice.
-178,bering_strait,2015-03-20,terra,yes,no,yes,0.9,thin,yes,ethan,daniel,,,Reduced cloud fraction from 1 to 0.9. No landfast ice.
+178,bering_strait,2015-03-20,aqua,yes,no,yes,0.9,thin,no,ethan,daniel,daniel,,Reduced cloud fraction from 1 to 0.9. No landfast ice. Image quality poor.
+178,bering_strait,2015-03-20,terra,yes,no,yes,0.9,thin,yes,ethan,daniel,daniel,,Reduced cloud fraction from 1 to 0.9. No landfast ice. Image quality poor.
 179,bering_strait,2016-04-15,aqua,yes,yes,no,0.8,scattered,no,ethan,daniel,,,"Reduced cloud frac from 1 to 0.8, cloud type to scattered. No floes visible."
 179,bering_strait,2016-04-15,terra,yes,yes,no,0.8,scattered,no,ethan,daniel,,,"Reduced cloud frac from 1 to 0.8, cloud type to scattered. No floes visible."
 187,bering_strait,2018-07-23,aqua,yes,no,yes,0.4,thin,no,ethan,daniel,,,No landfast ice visible.
