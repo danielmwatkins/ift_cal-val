@@ -1,4 +1,4 @@
-case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction_manual,cloud_category_manual,artifacts,qa_analyst,qa_reviewer,fl_analyst,fl_reviewer,notes
+case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction,cloud_category,artifacts,qa_analyst,qa_reviewer,fl_analyst,fl_reviewer,notes
 401,sea_of_okhostk,2009-05-24,aqua,yes,no,no,1,thin,no,emma,ellen,,,
 401,sea_of_okhostk,2009-05-24,terra,yes,no,no,1,thin,no,emma,ellen,,,
 402,sea_of_okhostk,2010-03-08,aqua,yes,no,no,0.7,scattered,no,emma,ellen,,,
@@ -37,7 +37,7 @@ case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,vis
 463,sea_of_okhostk,2014-03-08,terra,yes,no,no,0.9,scattered,no,daniel,minki,,,
 464,sea_of_okhostk,2013-04-29,aqua,yes,yes,no,1,thin,yes,daniel,minki,,,Artifacts detected; changed to yes
 464,sea_of_okhostk,2013-04-29,terra,yes,yes,no,1,thin,no,daniel,minki,,,
-465,sea_of_okhostk,2015-03-12,aqua,yes,no,yes,1,opaque,no,daniel,minki,,,
-465,sea_of_okhostk,2015-03-12,terra,yes,no,yes,1,opaque,yes,daniel,minki,,,
+465,sea_of_okhostk,2015-03-12,aqua,yes,no,yes,1,opaque,no,daniel,minki,daniel,,floe outlines unclear -- checked against falsecolor image and previous day image on worldview
+465,sea_of_okhostk,2015-03-12,terra,yes,no,yes,1,opaque,yes,daniel,minki,daniel,,
 466,sea_of_okhostk,2004-04-21,aqua,no,no,no,1,opaque,no,daniel,minki,,,Clouds seems to be thick -- changed to opaquie from thin
 466,sea_of_okhostk,2004-04-21,terra,yes,no,yes,1,thin,no,daniel,minki,,,

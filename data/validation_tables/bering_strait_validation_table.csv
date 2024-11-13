@@ -25,19 +25,19 @@ case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,vis
 179,bering_strait,2016-04-15,terra,yes,yes,no,0.8,scattered,no,ethan,daniel,,,"Reduced cloud frac from 1 to 0.8, cloud type to scattered. No floes visible."
 187,bering_strait,2018-07-23,aqua,yes,no,yes,0.4,thin,no,ethan,daniel,,,No landfast ice visible.
 187,bering_strait,2018-07-23,terra,yes,no,yes,0.5,thin,no,ethan,daniel,,,No landfast ice visible.
-192,bering_strait,2020-06-28,aqua,yes,no,yes,0.3,thin,no,ethan,daniel,,,No landfast ice visible.
-192,bering_strait,2020-06-28,terra,yes,no,yes,0.3,opaque,no,ethan,daniel,,,No landfast ice visible.
-443,bering_strait,2007-07-27,aqua,yes,no,yes,1,opaque,no,daniel,Minki,,,
-443,bering_strait,2007-07-27,terra,yes,no,yes,1,opaque,yes,daniel,Minki,,,
-444,bering_strait,2013-08-06,aqua,yes,no,yes,1,thin,yes,daniel,Minki,,,
-444,bering_strait,2013-08-06,terra,yes,no,yes,1,thin,no,daniel,Minki,,,
-445,bering_strait,2011-08-04,aqua,no,no,no,0.7,scattered,no,daniel,Minki,,,
-445,bering_strait,2011-08-04,terra,no,no,no,0.7,scattered,yes,daniel,Minki,,,corrupted pixels in part of image
-448,bering_strait,2011-07-15,aqua,no,no,no,0.9,scattered,yes,daniel,Minki,,,"Artifacts detected, changed to yes"
-448,bering_strait,2011-07-15,terra,no,no,no,0.9,scattered,no,daniel,Minki,,,
-449,bering_strait,2005-07-09,aqua,yes,no,yes,0.8,scattered,no,daniel,Minki,,,
-449,bering_strait,2005-07-09,terra,yes,no,yes,0.9,scattered,no,daniel,Minki,,,
-450,bering_strait,2008-05-07,aqua,yes,no,yes,1,opaque,no,daniel,Minki,,,
-450,bering_strait,2008-05-07,terra,yes,no,yes,1,opaque,no,daniel,Minki,,,
-451,bering_strait,2011-06-14,aqua,yes,no,yes,1,scattered,no,daniel,Minki,,,
-451,bering_strait,2011-06-14,terra,yes,no,yes,1,scattered,no,daniel,Minki,,,
+192,bering_strait,2020-06-28,aqua,yes,no,yes,0.3,thin,no,ethan,daniel,daniel,,No landfast ice visible.
+192,bering_strait,2020-06-28,terra,yes,no,yes,0.3,opaque,no,ethan,daniel,daniel,,No landfast ice visible.
+443,bering_strait,2007-07-27,aqua,yes,no,yes,1,opaque,no,daniel,minki,,,
+443,bering_strait,2007-07-27,terra,yes,no,yes,1,opaque,yes,daniel,minki,,,
+444,bering_strait,2013-08-06,aqua,yes,no,yes,1,thin,yes,daniel,minki,,,
+444,bering_strait,2013-08-06,terra,yes,no,yes,1,thin,no,daniel,minki,,,
+445,bering_strait,2011-08-04,aqua,no,no,no,0.7,scattered,no,daniel,minki,,,
+445,bering_strait,2011-08-04,terra,no,no,no,0.7,scattered,yes,daniel,minki,,,corrupted pixels in part of image
+448,bering_strait,2011-07-15,aqua,no,no,no,0.9,scattered,yes,daniel,minki,,,"Artifacts detected, changed to yes"
+448,bering_strait,2011-07-15,terra,no,no,no,0.9,scattered,no,daniel,minki,,,
+449,bering_strait,2005-07-09,aqua,yes,no,yes,0.8,scattered,no,daniel,minki,,,
+449,bering_strait,2005-07-09,terra,yes,no,yes,0.9,scattered,no,daniel,minki,,,
+450,bering_strait,2008-05-07,aqua,yes,no,yes,1,opaque,no,daniel,minki,,,
+450,bering_strait,2008-05-07,terra,yes,no,yes,1,opaque,no,daniel,minki,,,
+451,bering_strait,2011-06-14,aqua,yes,no,yes,1,scattered,no,daniel,minki,,,
+451,bering_strait,2011-06-14,terra,yes,no,yes,1,scattered,no,daniel,minki,,,

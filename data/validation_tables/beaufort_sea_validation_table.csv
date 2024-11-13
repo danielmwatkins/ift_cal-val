@@ -1,4 +1,4 @@
-case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction_manual,cloud_category_manual,artifacts,qa_analyst,qa_reviewer,fl_analyst,fl_reviewer,notes
+case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction,cloud_category,artifacts,qa_analyst,qa_reviewer,fl_analyst,fl_reviewer,notes
 98,beaufort_sea,2003-04-22,aqua,yes,yes,no,0.6,thin,no,daniel,minki,,,
 98,beaufort_sea,2003-04-22,terra,yes,yes,no,0.6,thin,no,daniel,minki,,,
 99,beaufort_sea,2003-05-27,aqua,yes,no,yes,1,thin,no,daniel,minki,ellen,daniel,
@@ -17,8 +17,8 @@ case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,vis
 118,beaufort_sea,2010-09-25,terra,yes,no,yes,0.8,scattered,no,daniel,minki,ethan,daniel,
 119,beaufort_sea,2011-06-08,aqua,yes,yes,yes,0.2,scattered,no,daniel,minki,minki,daniel,removed labeled floes that were too small or too similar to clouds
 119,beaufort_sea,2011-06-08,terra,yes,yes,yes,0.2,scattered,no,daniel,minki,minki,daniel,removed labeled floes that were too small or too similar to clouds
-122,beaufort_sea,2014-08-18,aqua,yes,no,yes,0.1,scattered,no,daniel,minki,,,
-122,beaufort_sea,2014-08-18,terra,yes,no,yes,0.1,scattered,yes,daniel,minki,,,
+122,beaufort_sea,2014-08-18,aqua,yes,no,yes,0.1,scattered,no,daniel,minki,daniel,,
+122,beaufort_sea,2014-08-18,terra,yes,no,yes,0.1,scattered,yes,daniel,minki,daniel,,
 132,beaufort_sea,2017-05-25,aqua,yes,yes,yes,1,thin,no,daniel,minki,ellen,daniel,changed cloud fraction to 1
 132,beaufort_sea,2017-05-25,terra,yes,yes,yes,1,thin,no,daniel,minki,ellen,daniel,
 134,beaufort_sea,2017-09-25,aqua,yes,no,no,0.7,scattered,no,daniel,minki,,,
@@ -31,7 +31,7 @@ case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,vis
 140,beaufort_sea,2020-07-08,terra,yes,no,yes,0.3,scattered,no,daniel,minki,emma,daniel,
 141,beaufort_sea,2020-08-08,aqua,yes,no,yes,1,opaque,no,daniel,minki,,,Ice floe-visible
 141,beaufort_sea,2020-08-08,terra,yes,no,yes,0.7,opaque,no,daniel,minki,,,Ice floe-visible; changed cloud fraction to 0.7
-142,beaufort_sea,2021-04-27,aqua,yes,yes,yes,0,none,no,daniel,minki,,,
+142,beaufort_sea,2021-04-27,aqua,yes,yes,yes,0,none,no,daniel,minki,daniel,,
 142,beaufort_sea,2021-04-27,terra,yes,yes,yes,0,none,no,daniel,minki,daniel,,
 144,beaufort_sea,2021-07-18,aqua,yes,no,yes,0.9,opaque,yes,daniel,minki,daniel,,
 144,beaufort_sea,2021-07-18,terra,yes,no,yes,0.9,opaque,no,daniel,minki,,,

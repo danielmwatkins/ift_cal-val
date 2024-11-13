@@ -1,20 +1,20 @@
-case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction_manual,cloud_category_manual,artifacts,qa_analyst,qa_reviewer,fl_analyst_comparison,fl_analyst,fl_reviewer,notes
-0,baffin_bay,2004-07-25,aqua,yes,no,yes,1,thin,no,ethan,daniel,daniel,,,added landfast ice to all - es
-0,baffin_bay,2004-07-25,terra,yes,no,yes,1,thin,no,daniel,emma,daniel,,,
+case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction,cloud_category,artifacts,qa_analyst,qa_reviewer,fl_analyst_comparison,fl_analyst,fl_reviewer,notes
+0,baffin_bay,2004-07-25,aqua,yes,no,yes,1,thin,no,ethan,daniel,,daniel,,added landfast ice to all - es
+0,baffin_bay,2004-07-25,terra,yes,no,yes,1,thin,no,daniel,emma,,daniel,,
 2,baffin_bay,2004-09-21,aqua,no,no,no,1,opaque,no,ethan,daniel,,,,
 2,baffin_bay,2004-09-21,terra,no,no,no,1,opaque,no,daniel,emma,,,,
 4,baffin_bay,2005-08-19,aqua,yes,yes,no,0.1,thin,no,ethan,daniel,,,,
 4,baffin_bay,2005-08-19,terra,yes,yes,no,0.1,thin,no,daniel,emma,,,,
-5,baffin_bay,2005-08-27,aqua,yes,no,yes,0.8,scattered,yes,ethan,daniel,daniel,,,
-5,baffin_bay,2005-08-27,terra,yes,no,yes,1,scattered,yes,daniel,emma,daniel,,,
-7,baffin_bay,2007-06-05,aqua,yes,no,yes,0.9,thin,yes,ethan,daniel,daniel,,,
-7,baffin_bay,2007-06-05,terra,yes,no,yes,0.9,thin,yes,daniel,emma,daniel,,,
-8,baffin_bay,2008-07-04,aqua,yes,no,yes,1,thin,no,ethan,daniel,daniel,,,
-8,baffin_bay,2008-07-04,terra,yes,no,yes,1,thin,no,daniel,emma,daniel,,,
+5,baffin_bay,2005-08-27,aqua,yes,no,yes,0.8,scattered,yes,ethan,daniel,,daniel,,
+5,baffin_bay,2005-08-27,terra,yes,no,yes,1,scattered,yes,daniel,emma,,daniel,,
+7,baffin_bay,2007-06-05,aqua,yes,no,yes,0.9,thin,yes,ethan,daniel,,daniel,,
+7,baffin_bay,2007-06-05,terra,yes,no,yes,0.9,thin,yes,daniel,emma,,daniel,,
+8,baffin_bay,2008-07-04,aqua,yes,no,yes,1,thin,no,ethan,daniel,,daniel,,
+8,baffin_bay,2008-07-04,terra,yes,no,yes,1,thin,no,daniel,emma,,daniel,,
 16,baffin_bay,2009-04-26,aqua,yes,yes,yes,0.1,scattered,yes,ethan,daniel,daniel,ellen,,
-16,baffin_bay,2009-04-26,terra,yes,yes,yes,0.2,scattered,no,daniel,emma,daniel,ellen,,
-19,baffin_bay,2011-05-06,aqua,yes,yes,yes,0.7,opaque,no,ethan,daniel,daniel,ellen,,
-19,baffin_bay,2011-05-06,terra,yes,yes,yes,0.7,scattered,no,daniel,emma,daniel,ellen,,ellen: no floes identified. double check this is intentional!
+16,baffin_bay,2009-04-26,terra,yes,yes,yes,0.2,scattered,no,daniel,emma,daniel,ellen,,daniel: added landfast ice labels
+19,baffin_bay,2011-05-06,aqua,yes,yes,yes,0.7,opaque,no,ethan,daniel,daniel,ellen,,daniel: added a few additional floes
+19,baffin_bay,2011-05-06,terra,yes,yes,yes,0.7,scattered,no,daniel,emma,daniel,ellen,,ellen: no floes identified. double check this is intentional! daniel: added a few floes based on my best estimates
 20,baffin_bay,2012-04-19,aqua,yes,yes,no,0.8,thin,no,ethan,daniel,,,,
 20,baffin_bay,2012-04-19,terra,yes,yes,no,0.8,thin,yes,daniel,emma,,,,
 21,baffin_bay,2012-04-22,aqua,yes,yes,yes,0.4,thin,yes,ethan,daniel,daniel,emma,daniel,
@@ -29,8 +29,8 @@ case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,vis
 32,baffin_bay,2019-05-23,terra,yes,yes,yes,0.1,scattered,no,daniel,emma,daniel,emma,daniel,
 33,baffin_bay,2019-09-25,aqua,yes,yes,yes,0.8,scattered,yes,ethan,daniel,daniel,emma,daniel,
 33,baffin_bay,2019-09-25,terra,yes,yes,yes,0.6,scattered,yes,daniel,emma,daniel,emma,daniel,
-36,baffin_bay,2021-06-02,aqua,yes,no,yes,1,thin,no,ethan,daniel,daniel,,,
-36,baffin_bay,2021-06-02,terra,yes,no,yes,0.9,thin,yes,daniel,emma,daniel,,,
+36,baffin_bay,2021-06-02,aqua,yes,no,yes,1,thin,no,ethan,daniel,,daniel,,
+36,baffin_bay,2021-06-02,terra,yes,no,yes,0.9,thin,yes,daniel,emma,,daniel,,
 37,baffin_bay,2021-08-04,aqua,yes,yes,yes,0.7,thin,no,ethan,daniel,daniel,ethan,daniel,
 37,baffin_bay,2021-08-04,terra,yes,yes,yes,0.4,scattered,no,daniel,emma,daniel,ethan,daniel,
 45,baffin_bay,2022-05-30,aqua,yes,no,yes,0.1,opaque,yes,ethan,daniel,daniel,emma,daniel,
