@@ -1,4 +1,4 @@
-case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction_manual,cloud_category_manual,artifacts,qa_analyst,qa_reviewer,fl_analyst,fl_reviewer,notes
+case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction,cloud_category,artifacts,qa_analyst,qa_reviewer,fl_analyst,fl_reviewer,notes
 345,laptev_sea,2004-06-02,aqua,no,no,no,1,opaque,no,ellen,ethan,,,rounded cloud frac to nearest tenth and assigned single cloud category (dmw)
 345,laptev_sea,2004-06-02,terra,yes,no,yes,0.9,opaque,no,ellen,ethan,,,
 347,laptev_sea,2004-09-23,aqua,yes,no,no,0.7,scattered,yes,ellen,ethan,,,
@@ -39,5 +39,5 @@ case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,vis
 386,laptev_sea,2018-07-20,terra,no,no,no,1,opaque,no,ellen,ethan,,,
 387,laptev_sea,2019-08-16,aqua,yes,no,no,1,opaque,no,ellen,ethan,,,
 387,laptev_sea,2019-08-16,terra,yes,no,yes,0.8,thin,no,ellen,ethan,,,
-389,laptev_sea,2021-08-07,aqua,yes,no,yes,0.5,thin,yes,ellen,ethan,,,
-389,laptev_sea,2021-08-07,terra,yes,no,yes,0.6,thin,no,ellen,ethan,,,
+389,laptev_sea,2021-08-07,aqua,yes,no,no,0.5,thin,yes,ellen,ethan,,,floes are too small to include
+389,laptev_sea,2021-08-07,terra,yes,no,no,0.6,thin,no,ellen,ethan,,,floes are too small to include

@@ -1,4 +1,4 @@
-case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction_manual,cloud_category_manual,artifacts,qa_analyst,qa_reviewer,fl_analyst,fl_reviewer,notes
+case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction,cloud_category,artifacts,qa_analyst,qa_reviewer,fl_analyst,fl_reviewer,notes
 49,barents_kara_seas,2003-09-02,aqua,yes,no,yes,0.9,opaque,yes,daniel,ethan,,,
 49,barents_kara_seas,2003-09-02,terra,no,no,no,1,opaque,no,ethan,daniel,,,
 50,barents_kara_seas,2004-05-19,aqua,yes,yes,yes,0,none,yes,daniel,ethan,ethan,daniel,
@@ -35,8 +35,8 @@ case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,vis
 84,barents_kara_seas,2015-04-28,terra,yes,no,no,0.9,thin,yes,daniel,ethan,,,
 86,barents_kara_seas,2016-08-29,aqua,no,no,no,0.3,scattered,no,daniel,ethan,,,
 86,barents_kara_seas,2016-08-29,terra,no,no,no,0.3,scattered,no,daniel,ethan,,,
-89,barents_kara_seas,2017-06-21,aqua,yes,no,yes,1,opaque,no,daniel,ethan,,,
-89,barents_kara_seas,2017-06-21,terra,yes,no,yes,1,thin,no,daniel,ethan,,,
+89,barents_kara_seas,2017-06-21,aqua,yes,no,no,1,opaque,no,daniel,ethan,,,floes too indistinct to trace
+89,barents_kara_seas,2017-06-21,terra,yes,no,no,1,thin,no,daniel,ethan,,,floes too indistinct to trace
 92,barents_kara_seas,2020-07-01,aqua,yes,no,yes,1,opaque,yes,daniel,ethan,emma,daniel,
 92,barents_kara_seas,2020-07-01,terra,no,no,no,1,opaque,no,daniel,ethan,emma,daniel,
 95,barents_kara_seas,2021-08-25,aqua,no,no,no,0.5,scattered,no,daniel,ethan,,,

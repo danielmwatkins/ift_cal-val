@@ -13,8 +13,8 @@ case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,vis
 431,sea_of_okhostk,2016-03-31,terra,no,no,no,1,opaque,yes,emma,ellen,,,
 432,sea_of_okhostk,2017-04-28,aqua,no,no,no,1,opaque,no,emma,ellen,,,
 432,sea_of_okhostk,2017-04-28,terra,no,no,no,1,opaque,no,emma,ellen,,,changed frac from 0.9 to 1
-433,sea_of_okhostk,2017-05-23,aqua,yes,yes,yes,0.4,thin,no,emma,ellen,,,
-433,sea_of_okhostk,2017-05-23,terra,yes,yes,no,0.6,thin,no,emma,ellen,,,
+433,sea_of_okhostk,2017-05-23,aqua,yes,yes,yes,0.4,thin,no,emma,ellen,daniel,,
+433,sea_of_okhostk,2017-05-23,terra,yes,yes,no,0.6,thin,no,emma,ellen,daniel,,
 435,sea_of_okhostk,2019-04-27,aqua,yes,no,no,0.2,thin,no,emma,ellen,,,changed from 0 to 0.2 thin
 435,sea_of_okhostk,2019-04-27,terra,yes,no,no,0.1,thin,no,emma,ellen,,,changed from 0 to 0.2 thin
 439,sea_of_okhostk,2021-04-05,aqua,yes,no,no,0.2,thin,no,emma,ellen,,,
