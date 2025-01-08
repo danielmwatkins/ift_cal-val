@@ -1,4 +1,4 @@
-case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction,cloud_category,artifacts,qa_analyst,qa_reviewer,fl_analyst_comparison,fl_analyst,fl_reviewer,notes
+case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction_manual,cloud_category,artifacts,qa_analyst,qa_reviewer,fl_analyst_comparison,fl_analyst,fl_reviewer,notes
 0,baffin_bay,2004-07-25,aqua,yes,no,yes,1,thin,no,ethan,daniel,,daniel,,added landfast ice to all - es
 0,baffin_bay,2004-07-25,terra,yes,no,yes,1,thin,no,daniel,emma,,daniel,,
 2,baffin_bay,2004-09-21,aqua,no,no,no,1,opaque,no,ethan,daniel,,,,

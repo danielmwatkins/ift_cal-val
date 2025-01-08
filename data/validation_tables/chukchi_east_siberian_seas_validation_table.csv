@@ -1,13 +1,13 @@
 case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,visible_floes,cloud_fraction_manual,cloud_category_manual,artifacts,qa_analyst,qa_reviewer,fl_analyst,fl_reviewer,notes
 196,chukchi_east_siberian_seas,2004-07-17,aqua,yes,no,no,0.8,opaque,no,minki,emma,,,added if artifact for first six cases es
 196,chukchi_east_siberian_seas,2004-07-17,terra,yes,no,no,0.8,opaque,no,minki,emma,,,
-198,chukchi_east_siberian_seas,2005-07-30,aqua,yes,no,yes,0,thin,no,minki,emma,,,
-198,chukchi_east_siberian_seas,2005-07-30,terra,yes,no,yes,0,thin,no,minki,emma,,,
+198,chukchi_east_siberian_seas,2005-07-30,aqua,yes,no,yes,0,thin,no,minki,emma,,,difficult to discern floes
+198,chukchi_east_siberian_seas,2005-07-30,terra,yes,no,yes,0,thin,no,minki,emma,,,difficult to discern floes
 199,chukchi_east_siberian_seas,2006-06-11,aqua,yes,yes,yes,0.8,thin,no,minki,emma,,,
 199,chukchi_east_siberian_seas,2006-06-11,terra,yes,yes,yes,0.5,thin,no,minki,emma,,,
-200,chukchi_east_siberian_seas,2006-09-27,aqua,no,no,no,0.9,opaque,no,minki,emma,,,
-200,chukchi_east_siberian_seas,2006-09-27,terra,yes,no,yes,0.6,scattered,no,minki,emma,,,
-202,chukchi_east_siberian_seas,2007-07-23,aqua,yes,no,yes,0.8,thin,no,minki,emma,,,
+200,chukchi_east_siberian_seas,2006-09-27,aqua,no,no,no,0.9,opaque,no,minki,emma,,,obscured
+200,chukchi_east_siberian_seas,2006-09-27,terra,yes,no,yes,0.6,scattered,no,minki,emma,,,one or two floes visible
+202,chukchi_east_siberian_seas,2007-07-23,aqua,yes,no,yes,0.8,thin,no,minki,emma,,,"patches of ice, may or may not actually be floes"
 202,chukchi_east_siberian_seas,2007-07-23,terra,yes,no,yes,0.5,thin,yes,minki,emma,,,changed cloud fraction from 0.3 to 0.5 es
 206,chukchi_east_siberian_seas,2009-09-03,aqua,no,no,no,0.9,opaque,no,minki,emma,,,
 206,chukchi_east_siberian_seas,2009-09-03,terra,no,no,no,0.9,opaque,no,minki,emma,,,
@@ -37,7 +37,7 @@ case_number,region,start_date,satellite,visible_sea_ice,visible_landfast_ice,vis
 241,chukchi_east_siberian_seas,2020-03-30,terra,yes,no,yes,1,opaque,no,minki,emma,,,Rounded 0.95 up to 1
 244,chukchi_east_siberian_seas,2022-05-20,aqua,yes,yes,yes,0.8,thin,no,minki,emma,,,
 244,chukchi_east_siberian_seas,2022-05-20,terra,yes,yes,yes,0.8,thin,no,minki,emma,,,
-446,chukchi_east_siberian_seas,2007-03-26,aqua,yes,yes,yes,1,thin,no,daniel,Minki,,,checked on map. close enough to Russian coast that I assume the visible ice sheet is landfast ice
-446,chukchi_east_siberian_seas,2007-03-26,terra,yes,yes,yes,1,thin,no,daniel,Minki,,,checked on map. close enough to Russian coast that I assume the visible ice sheet is landfast ice
-447,chukchi_east_siberian_seas,2018-04-22,aqua,yes,yes,yes,1,thin,no,daniel,Minki,,,checked on map. patch of ice at top of image is landfast ice. near island.
-447,chukchi_east_siberian_seas,2018-04-22,terra,yes,yes,yes,1,thin,no,daniel,Minki,,,checked on map. patch of ice at top of image is landfast ice. near island.
+446,chukchi_east_siberian_seas,2007-03-26,aqua,yes,yes,yes,1,thin,no,daniel,minki,daniel,,checked on map. close enough to Russian coast that I assume the visible ice sheet is landfast ice
+446,chukchi_east_siberian_seas,2007-03-26,terra,yes,yes,yes,1,thin,no,daniel,minki,daniel,,checked on map. close enough to Russian coast that I assume the visible ice sheet is landfast ice
+447,chukchi_east_siberian_seas,2018-04-22,aqua,yes,yes,yes,1,thin,no,daniel,minki,daniel,,checked on map. patch of ice at top of image is landfast ice. near island.
+447,chukchi_east_siberian_seas,2018-04-22,terra,yes,yes,yes,1,thin,no,daniel,minki,daniel,,checked on map. patch of ice at top of image is landfast ice. near island.
